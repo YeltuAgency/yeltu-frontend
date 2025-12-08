@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./styles/global.css";
 import "./i18n";
 
-import { HelmetProvider } from "react-helmet-async";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 import { BrowserRouter } from "react-router-dom";
@@ -15,12 +14,12 @@ import CookieBanner from "./components/CookieBanner";
 import CookieModal from "./components/CookieModal";
 
 // ========================================
-//   GTM WRAPPER (depends on CookieConsent)
+//   GTM WRAPPER
 // ========================================
 function GTMWrapper({ children }) {
   const { consent } = useCookieConsent();
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!consent.analytics) return;
 
     const sendPageView = () => {
@@ -33,10 +32,8 @@ function GTMWrapper({ children }) {
       });
     };
 
-    // Fire on initial load
     sendPageView();
 
-    // Patch router events
     const originalPush = history.pushState;
     const originalReplace = history.replaceState;
 
@@ -70,21 +67,17 @@ function GTMWrapper({ children }) {
 // RENDER ROOT
 // ================================
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <HelmetProvider>
-    {/* Language must be OUTSIDE so SEO can use it even in ErrorBoundary */}
-    <LanguageProvider>
-      <CookieConsentProvider>
-        <BrowserRouter>
-          <GTMWrapper>
-            {/* ErrorBoundary now lives INSIDE router & language provider */}
-            <ErrorBoundary>
-              <App />
-              <CookieBanner />
-              <CookieModal />
-            </ErrorBoundary>
-          </GTMWrapper>
-        </BrowserRouter>
-      </CookieConsentProvider>
-    </LanguageProvider>
-  </HelmetProvider>
+  <LanguageProvider>
+    <CookieConsentProvider>
+      <BrowserRouter>
+        <GTMWrapper>
+          <ErrorBoundary>
+            <App />
+            <CookieBanner />
+            <CookieModal />
+          </ErrorBoundary>
+        </GTMWrapper>
+      </BrowserRouter>
+    </CookieConsentProvider>
+  </LanguageProvider>
 );
