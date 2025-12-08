@@ -1,0 +1,529 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================================================
+   GLOBAL BASE LAYER – Typography, CSS Variables, Reset
+   =========================================================== */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    margin: 0;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  h1 { font-size: 3.5rem; line-height: 1.32 !important; font-weight: 800; letter-spacing: -0.02em; }
+  h2 { font-size: 2.5rem; line-height: 1.32 !important; font-weight: 700; letter-spacing: -0.01em; }
+  h3 { font-size: 1.5rem; line-height: 1.32 !important; font-weight: 600; }
+  p  { font-size: 1rem; line-height: 1.6; }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.25rem; }
+  }
+}
+
+/* ===========================================================
+   RAW CSS – ADMIN PANEL (UNCHANGED)
+   =========================================================== */
+.ProseMirror { min-height: 180px; padding: 12px 14px; border: 1px solid #d1d5db; border-radius: 6px; background: white; color: #111827; line-height: 1.6; outline: none; }
+.ProseMirror p { margin: 0 0 10px; }
+.ProseMirror h1, .ProseMirror h2, .ProseMirror h3 { margin-top: 16px; margin-bottom: 8px; font-weight: 600; }
+.ProseMirror ul, .ProseMirror ol { padding-left: 22px; margin-bottom: 10px; }
+.ProseMirror blockquote { border-left: 3px solid #2563eb; padding-left: 12px; margin-left: 0; color: #374151; font-style: italic; }
+.ProseMirror a { color: #2563eb; text-decoration: underline; }
+.ProseMirror img { max-width: 100%; border-radius: 6px; margin: 12px 0; }
+.ProseMirror:focus { border-color: #2563eb; box-shadow: 0 0 0 1px #2563eb; }
+.tiptap-menu { display: flex; gap: 8px; margin-bottom: 8px; }
+.tiptap-menu button { padding: 6px 10px; border: 1px solid #d1d5db; background: white; border-radius: 6px; cursor: pointer; font-size: 14px; }
+.tiptap-menu button.active { background: #2563eb; color: white; border-color: #2563eb; }
+
+/* ===========================================================
+   UTILITIES LAYER – Animations + NEW HERO UTILITIES
+   =========================================================== */
+@layer utilities {
+
+  /* ------------------------------------
+     ★ ADDED FOR FIGMA HERO (BACKGROUND)
+  ------------------------------------ */
+
+  /* Figma gradient */
+  .hero-bg {
+    background: linear-gradient(
+      90deg,
+      #0f172a 0%,
+      #1e1b4b 40%,
+      #312e81 70%,
+      #3b2ca3 100%
+    );
+  }
+
+  /* CSS Grid overlay */
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 70px 70px;
+    opacity: 0.4;
+  }
+
+
+
+  /* ------------------------------------
+     FLOATING, ORBIT, ETC.
+  ------------------------------------ */
+  @keyframes float { 0%,100%{transform:translate(0,0);} 33%{transform:translate(10px,-20px);} 66%{transform:translate(-10px,-10px);} }
+  .animate-float { animation: float 6s ease-in-out infinite; }
+
+  @keyframes float-soft { 0%{transform:translate(0px,0px);} 50%{transform:translate(6px,-18px);} 100%{transform:translate(0px,0px);} }
+  .animate-float-soft { animation: float-soft 6s ease-in-out infinite; }
+
+  @keyframes floating-dot { 0%{transform:translate(0,0);} 50%{transform:translate(20px,-20px);} 100%{transform:translate(0,0);} }
+  .animate-floating-dot { animation: floating-dot 3s ease-in-out infinite; }
+
+  @keyframes orbit { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+  .animate-orbit { animation: orbit 15s linear infinite; }
+
+  @keyframes orbit-reverse { from{transform:rotate(360deg);} to{transform:rotate(0deg);} }
+  .animate-orbit-reverse { animation: orbit-reverse 18s linear infinite; }
+
+  /* ------------------------------------
+     HERO FINAL ANIMATION SYSTEM
+  ------------------------------------ */
+  .fade-in-1 { animation: fadeUp 0.6s ease-out 0.05s both; }
+  .fade-in-2 { animation: fadeUp 0.6s ease-out 0.10s both; }
+  .fade-in-3 { animation: fadeUp 0.6s ease-out 0.15s both; }
+  .fade-in-4 { animation: fadeUp 0.6s ease-out 0.20s both; }
+  .fade-in-5 { animation: fadeUp 0.6s ease-out 0.25s both; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .slide-in-right {
+    animation: slideRight 0.8s ease-out both;
+  }
+
+  @keyframes slideRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  .animate-pulse-slow {
+    animation: pulseSlow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulseSlow {
+    0%,100% { opacity: 0.6; }
+    50%     { opacity: 1; }
+  }
+
+  /* Gradient text (unchanged) */
+  @keyframes gradient-shift {
+    0%,100% { background-position: 0% 50%; }
+    50%     { background-position: 100% 50%; }
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg,#3b82f6,#7c3aed,#3b82f6);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  .gradient-text-blog {
+    background: linear-gradient(135deg,#22d3ee,#3b82f6,#8b5cf6,#c084fc,#22d3ee);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 10s ease infinite;
+  }
+  .hero-wave svg path {
+  transition: fill 0.3s ease;
+  }
+
+  /* Section fade observer */
+  .section-hidden { opacity: 0; transform: translateY(10px); }
+  .section-visible { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s ease; }
+
+  /* Smooth fade */
+  .smooth-fade { opacity: 0; transform: translateY(10px); animation: fadeInUpCheap 0.7s ease forwards; }
+
+  @keyframes fadeInUpCheap {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Utility helpers */
+  .glass {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style:none; scrollbar-width:none; }
+}
+
+/* ============================================================
+   YELTU LOADING OVERLAY (UNCHANGED)
+   ============================================================ */
+.loading-overlay { position: fixed; inset:0; background: rgba(15,23,42,.85); backdrop-filter: blur(12px); z-index:99999; display:flex; align-items:center; justify-content:center; animation: fadeIn .4s ease forwards; }
+.loading-logo { width:180px; height:180px; object-fit:contain; animation: yeltuGlow 2.8s ease-in-out infinite; filter: drop-shadow(0 0 18px rgba(99,102,241,.8)) drop-shadow(0 0 38px rgba(168,85,247,.6)); }
+
+@keyframes yeltuGlow { 0%,100% { transform: scale(.94); } 50% { transform: scale(1.08); } }
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+@keyframes fadeOut { from{opacity:1;} to{opacity:0;} }
+
+/* ===============================
+   FIX CODE EDITOR RESIZING
+================================ */
+/* Fix line wrapping completely */
+.no-wrap-code {
+  white-space: pre;
+  overflow-x: hidden;
+}
+
+/* Fix the editor from expanding/shrinking */
+.code-editor-frame {
+  width: 640px; /* EXACT width from Figma */
+  height: 480px; /* Matches Figma aspect */
+}
+
+/* Matches the blue grid editor area Figma */
+.code-editor-content {
+  height: calc(100% - 48px);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+}
+
+
+/* ===============================
+   Figma Bubbles Animation
+================================ */
+@keyframes bubble-move {
+  0%   { transform: translateX(-200px) translateY(0); opacity: 0.2; }
+  50%  { opacity: 0.6; }
+  100% { transform: translateX(1400px) translateY(-40px); opacity: 0.2; }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(25px);
+  pointer-events: none;
+}
+/* Floating icon subtle animation */
+@keyframes icon-float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Letter animations */
+@keyframes letter-bounce {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-4px); }
+}
+
+@keyframes letter-wiggle {
+  0%,100% { transform: rotate(0deg); }
+  50%     { transform: rotate(5deg); }
+}
+
+@keyframes letter-pulse {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.12); }
+}
+
+@keyframes letter-swing {
+  0%      { transform: rotate(-3deg); }
+  50%     { transform: rotate(3deg); }
+  100%    { transform: rotate(-3deg); }
+}
+
+@keyframes letter-pop {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.25); }
+}
+@keyframes icon-rotate {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(180deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes comingSoonMaster {
+  0% {
+    background-position: 0% 50%;
+    transform: scale(1);
+    letter-spacing: 0.25em;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 4px rgba(139,92,246,0.35));
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scale(1.07);
+    letter-spacing: 0.3em;
+    opacity: 1;
+    filter: drop-shadow(0 0 14px rgba(139,92,246,0.65));
+  }
+  100% {
+    background-position: 0% 50%;
+    transform: scale(1);
+    letter-spacing: 0.25em;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 4px rgba(139,92,246,0.35));
+  }
+}
+
+.animate-comingSoonMaster {
+  animation: comingSoonMaster 4.5s ease-in-out infinite;
+  background-size: 300% 300%;
+}
+
+/* BLOG GRID (Hybrid opacity version) */
+.blog-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* ============================
+   FLOATING STAT CARD ANIMATION
+   ============================ */
+@keyframes floatCard1 {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes floatCard2 {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-14px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes floatCard3 {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-18px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float-card-1 {
+  animation: floatCard1 5s ease-in-out infinite;
+}
+
+.animate-float-card-2 {
+  animation: floatCard2 6s ease-in-out infinite;
+}
+
+.animate-float-card-3 {
+  animation: floatCard3 7s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* Moving gradient bar that travels across the line */
+/* ================================
+   SLIDING + COLOR CHANGING LINE
+================================ */
+
+@keyframes processLine {
+  0% {
+    transform: translateX(-100%);
+    background: #3b82f6; /* blue */
+  }
+  25% {
+    background: #8b5cf6; /* violet */
+  }
+  50% {
+    background: #f43f5e; /* rose */
+  }
+  75% {
+    background: #d946ef; /* fuchsia */
+  }
+  100% {
+    transform: translateX(100%);
+    background: #3b82f6; /* back to blue */
+  }
+}
+
+.animate-process-line {
+  animation: processLine 10s ease-in-out infinite;
+}
+
+/* ============================
+   AUTO STEP HIGHLIGHT SYNCED TO LINE
+============================ */
+
+/* STEP 1 active: 0s → 2.5s */
+@keyframes stepActive1 {
+  0%, 25% { transform: scale(1.12); opacity: 1; }
+  26%, 100% { transform: scale(1); opacity: 1; }
+}
+
+/* STEP 2 active: 2.5s → 5s */
+@keyframes stepActive2 {
+  0%, 24% { transform: scale(1); }
+  25%, 50% { transform: scale(1.12); }
+  51%, 100% { transform: scale(1); }
+}
+
+/* STEP 3 active: 5s → 7.5s */
+@keyframes stepActive3 {
+  0%, 49% { transform: scale(1); }
+  50%, 75% { transform: scale(1.12); }
+  76%, 100% { transform: scale(1); }
+}
+
+/* STEP 4 active: 7.5s → 10s */
+@keyframes stepActive4 {
+  0%, 74% { transform: scale(1); }
+  75%, 100% { transform: scale(1.12); }
+}
+
+/* Apply animation classes */
+.animate-step-1 { animation: stepActive1 10s infinite ease-in-out; }
+.animate-step-2 { animation: stepActive2 10s infinite ease-in-out; }
+.animate-step-3 { animation: stepActive3 10s infinite ease-in-out; }
+.animate-step-4 { animation: stepActive4 10s infinite ease-in-out; }
+
+/* PARTICLE MATCHING */
+@keyframes dotFlash {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.animate-stepDot-1 { animation: dotFlash 10s infinite ease-in-out; animation-delay: 0s; }
+.animate-stepDot-2 { animation: dotFlash 10s infinite ease-in-out; animation-delay: 2.5s; }
+.animate-stepDot-3 { animation: dotFlash 10s infinite ease-in-out; animation-delay: 5s; }
+.animate-stepDot-4 { animation: dotFlash 10s infinite ease-in-out; animation-delay: 7.5s; }
+
+/* Hide scrollbar on mobile horizontal scroll */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* ===========================================
+   FIX BLOG TEXT FORMATTING (BOLD / UNDERLINE)
+=========================================== */
+
+.prose strong,
+.prose b {
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+.prose u {
+  text-decoration: underline !important;
+  text-decoration-color: #38bdf8 !important; /* cyan underline */
+  text-underline-offset: 3px !important;
+}
+
+.prose a {
+  color: #38bdf8; /* light blue (Tailwind sky-400) */
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(56,189,248,0.4);
+  padding-bottom: 2px;
+  transition: 
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.prose a:hover {
+  color: #7dd3fc; /* lighter sky-blue */
+  border-bottom-color: #7dd3fc;
+  box-shadow: 0 2px 8px rgba(56,189,248,0.3);
+}
+
+/* Optional glowing gradient underline */
+.prose a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  margin-top: 2px;
+  background: linear-gradient(to right, #38bdf8, #8b5cf6);
+  transition: width 0.35s ease;
+}
+
+.prose a:hover::after {
+  width: 100%;
+}
+
+.prose em,
+.prose i {
+  color: #e0e7ff !important; /* light indigo */
+}

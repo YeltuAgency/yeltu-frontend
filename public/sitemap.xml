@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+
+  <!-- HOME -->
+  <url>
+    <loc>https://yeltu.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yeltu.com/" />
+    <xhtml:link rel="alternate" hreflang="az" href="https://yeltu.com/az/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yeltu.com/ru/" />
+  </url>
+
+  <!-- ABOUT -->
+  <url>
+    <loc>https://yeltu.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yeltu.com/about" />
+    <xhtml:link rel="alternate" hreflang="az" href="https://yeltu.com/az/about" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yeltu.com/ru/about" />
+  </url>
+
+  <!-- SERVICES -->
+  <url>
+    <loc>https://yeltu.com/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yeltu.com/services" />
+    <xhtml:link rel="alternate" hreflang="az" href="https://yeltu.com/az/services" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yeltu.com/ru/services" />
+  </url>
+
+  <!-- PROJECTS -->
+  <url>
+    <loc>https://yeltu.com/projects</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yeltu.com/projects" />
+    <xhtml:link rel="alternate" hreflang="az" href="https://yeltu.com/az/projects" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yeltu.com/ru/projects" />
+  </url>
+
+  <!-- BLOG (LIST PAGE) -->
+  <url>
+    <loc>https://yeltu.com/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yeltu.com/blog" />
+    <xhtml:link rel="alternate" hreflang="az" href="https://yeltu.com/az/blog" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yeltu.com/ru/blog" />
+  </url>
+
+  <!-- CONTACT -->
+  <url>
+    <loc>https://yeltu.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yeltu.com/contact" />
+    <xhtml:link rel="alternate" hreflang="az" href="https://yeltu.com/az/contact" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://yeltu.com/ru/contact" />
+  </url>
+
+  <!-- LEGAL PAGES -->
+  <url><loc>https://yeltu.com/privacy</loc></url>
+  <url><loc>https://yeltu.com/terms</loc></url>
+  <url><loc>https://yeltu.com/cookies</loc></url>
+  <url><loc>https://yeltu.com/cookie-preferences</loc></url>
+
+</urlset>

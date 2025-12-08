@@ -1,0 +1,386 @@
+{
+  "welcome": "Xoş gəlmisiniz",
+
+  "nav": {
+    "home": "Ana səhifə",
+    "about": "Haqqımızda",
+    "services": "Xidmətlər",
+    "projects": "Layihələr",
+    "contact": "Əlaqə"
+  },
+  "hero": {
+    "title": "Fərqlənən Brendlər Yaradırıq",
+    "subtitle": "Ambisiyalı brendlər üçün sürətli, müasir və xüsusi hazırlanmış rəqəmsal təcrübələr qururuq.",
+    "cta": "Başla",
+    "viewWork": "İşlərimizə Bax",
+    "stats": {
+      "support": "Dəstək",
+      "dedicated": "Həsr olunmuş xidmət",
+      "solutions": "Həllər",
+      "custom": "Xüsusi"
+    }
+  },
+  "services": {
+    "expertise": "Xidmət Sahələri",
+    "hero": {
+      "title": "Xidmətlərimiz",
+      "subtitle": "Biznesinizi inkişaf etdirmək üçün hazırlanmış premium rəqəmsal həllər."
+    },
+
+    "process": {
+      "title": "Necə İşləyirik"
+    },
+
+    "cta": {
+      "title": "Layihəyə Başlamağa Hazırsınız?",
+      "subtitle": "Gəlin birlikdə yüksək keyfiyyətli rəqəmsal həll yaradaq.",
+      "button": "Bizimlə Əlaqə"
+    },
+    "info": {
+      "title1": "Xidmətlərimiz",
+      "title2": "Nələr Təklif Edirik",
+      "description": "Biz hər ölçüdə biznes üçün müasir, etibarlı və effektiv rəqəmsal həllər təqdim edirik."
+    },
+    "webDev": {
+      "title": "Veb İnkişafı",
+      "desc": "Performans, təhlükəsizlik və təmiz dizayn üçün xüsusi hazırlanmış vebsaytlar."
+    },
+    "mobile": {
+      "title": "Mobil İnkişaf",
+      "desc": "Biznesinizə uyğunlaşdırılmış iOS və Android tətbiqləri."
+    },
+    "growth": {
+      "title": "Böyümə və Marketinq",
+      "desc": "Müştəri cəlb edən və biznesinizi böyüdən rəqəmsal strategiyalar."
+    },
+    "brand": {
+      "title": "Brendinq",
+      "desc": "Şirkətinizin dəyərlərini əks etdirən peşəkar brend kimliyi."
+    },
+    "seo": {
+      "title": "SEO Optimizasiya",
+      "desc": "Effektiv SEO texnikaları ilə görünürlüğü, sıralamaları və trafiki artırın."
+    },
+    "consulting": {
+      "title": "İT Konsultasiya",
+      "desc": "Düzgün rəqəmsal həlləri seçməyiniz üçün texniki məsləhətlər."
+    },
+    "allbutton": "Bütün Xidmətlərə Bax",
+    "learnmore": "Ətraflı Bax",
+    "end": "Biz biznesinizin inkişafı üçün müasir və effektiv rəqəmsal həllər təqdim edirik."
+  },
+  "homepage": {
+    "projects": {
+      "title": "Seçilmiş Layihələrimiz",
+      "subtitle": "Müştərilərimiz üçün hazırladığımız rəqəmsal layihələrdən bir neçə nümunə.",
+      "comingSoon": "Daha çox layihə tezliklə əlavə olunacaq...",
+      "button": "Bütün Layihələrə Bax"
+    },
+    "blog": {
+      "title": "Son Məqalələr və Fikirlər",
+      "subtitle": "Komandamızdan xəbərlər, məsləhətlər və trendlərlə tanış olun.",
+      "readMore": "Daha Çox Oxu",
+      "button": "Bütün Yazılara Bax"
+    },
+    "about": {
+      "badge": "Niyə Biz?",
+      "title1": "Etibarlı Rəqəmsal Həllər",
+      "title2": "Uğurunuz Üçün Hazırlanıb",
+      "description": "Bizneslərin tələblərinə uyğun müasir, etibarlı və effektiv rəqəmsal xidmətlərlə inkişafına dəstək oluruq.",
+      "cta": "Haqqımızda Daha Çox",
+
+      "stats": {
+        "services": "Təklif Edilən Xidmətlər",
+        "support": "24/7 Dəstək",
+        "quality": "Keyfiyyətə Zəmanət"
+      }
+    },
+    "cta": {
+      "title": "Layihənizə Başlamağa Hazırsınız?",
+      "subtitle": "Gəlin birlikdə mükəmməl bir iş ortaya çıxaraq.",
+      "button": "Bizimlə Əlaqə"
+    }
+  },
+  "footer": {
+    "tagline": "Müasir rəqəmsal təcrübələr yaradırıq.",
+
+    "quicklinks": "Sürətli Keçidlər",
+    "links": {
+      "about": "Haqqımızda",
+      "projects": "Layihələr",
+      "blog": "Blog",
+      "services": "Xidmətlər",
+      "contact": "Əlaqə",
+      "privacy": "Məxfilik Siyasəti",
+      "terms": "İstifadə Şərtləri",
+      "cookies": "Cookie Siyasəti",
+      "cookiePreferences": "Cookie Parametrləri"
+    },
+
+    "contact": "Əlaqə",
+    "follow": "Bizi İzləyin",
+
+    "rights": "Bütün hüquqlar qorunur."
+  },
+  "about": {
+    "badge": "Haqqımızda",
+
+    "heroTitle": "Biz Kimik?",
+    "heroSubtitle": "Müasir, etibarlı və təsirli rəqəmsal həllər yaradan yaradıcı bir agentlik.",
+
+    "mission": {
+      "title": "Missiyamız",
+      "body1": "Biz biznesləri səmərəliliyi və inkişafı artıran müasir rəqəmsal alətlərlə gücləndirməyi hədəfləyirik.",
+      "body2": "Hər layihə diqqət, dəqiqlik və keyfiyyətə olan ehtirasla hazırlanır."
+    },
+
+    "story": {
+      "title": "Hekayəmiz",
+      "body1": "Yeltu Agency hər ölçüdə biznes üçün yüksək keyfiyyətli dizayn və inkişaf xidmətlərini əlçatan etmək məqsədi ilə yaradıldı.",
+      "body2": "Bu gün keyfiyyətə, aydın ünsiyyətə və uzunmüddətli əməkdaşlığa dəyər verən bizneslərlə tərəfdaşlıq edirik."
+    },
+
+    "values": {
+      "title": "Əsas Dəyərlərimiz",
+      "subtitle": "Hər layihədə bizi istiqamətləndirən prinsiplər.",
+      "innovation": {
+        "title": "İnnovasiya",
+        "description": "Ən son texnologiyaları araşdıraraq müasir və gələcəyə hazır həllər təqdim edirik."
+      },
+      "reliability": {
+        "title": "Etibarlılıq",
+        "description": "Layihəniz məsuliyyət, şəffaflıq və sabit keyfiyyətlə idarə olunur."
+      },
+      "creativity": {
+        "title": "Yaradıcılıq",
+        "description": "Dizayn və texnologiyanı birləşdirərək gözəl və funksional rəqəmsal təcrübələr yaradırıq."
+      },
+      "results": {
+        "title": "Nəticə",
+        "description": "Hər zaman ölçülə bilən dəyər və uzunmüddətli uğur əldə etməyə fokuslanırıq."
+      }
+    },
+
+    "cta": {
+      "title": "Bizimlə İşləməyə Hazırsınız?",
+      "subtitle": "Gəlin birlikdə mükəmməl bir layihə yaradaq.",
+      "button": "Əlaqə"
+    }
+  },
+  "portfolio": {
+    "hero": {
+      "badge": "İşlərimiz",
+      "title": "Təsir Yaradan Layihələr",
+      "subtitle": "Brendlər üçün yaratdığımız rəqəmsal təcrübələri kəşf edin.",
+      "text": "Biz nəticə verən vebsaytlar, tətbiqlər və brend kimliyi hazırlayırıq."
+    },
+
+    "filters": {
+      "all": "Bütün Layihələr",
+      "web": "Veb İnkişafı",
+      "marketing": "Marketinq",
+      "design": "Dizayn"
+    },
+
+    "cta": {
+      "title": "Ağlınızda Layihə Var?",
+      "subtitle": "Gəlin ideyanızı premium dizayn və inkişafla reallaşdıraq.",
+      "button": "Layihəyə Başla"
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Bloq",
+      "title": "Biliklər, Hekayələr və Rəqəmsal Təcrübə",
+      "subtitle": "Texnologiya, dizayn, marketinq və rəqəmsal inkişaf haqqında məqalələri kəşf edin."
+    },
+
+    "search": {
+      "placeholder": "Məqalə axtarın..."
+    },
+
+    "categories": {
+      "all": "Hamısı",
+      "tech": "Texnologiya",
+      "design": "Dizayn",
+      "marketing": "Marketinq",
+      "seo": "SEO",
+      "dev": "İnkişaf"
+    },
+
+    "featured": {
+      "title": "Seçilmiş Məqalələr"
+    },
+
+    "all": {
+      "title": "Bütün Məqalələr"
+    },
+
+    "cta": {
+      "title": "Bizimlə İşləmək İstəyirsiniz?",
+      "subtitle": "Gəlin birlikdə qeyri-adi bir şey yaradaq.",
+      "button": "Layihəyə Başla"
+    }
+  },
+  "contact": {
+    "tag": "Əlaqə",
+    "seo": {
+      "title": "Yeltu Agentliyi ilə Əlaqə – Rəqəmsal Uğurunuzu Birlikdə Quraq",
+        "desc": "Web inkişafı, brendinq, SEO və rəqəmsal həllər üçün Yeltu Agentliyi ilə əlaqə saxlayın. Layihənizi müzakirə edək və ən yaxşı nəticəni birlikdə yaradaq."
+    },
+    "error": {
+      "title": "Xəta Baş Verdi",
+      "subtitle": "Mesaj göndərilə bilmədi. Zəhmət olmasa, bir daha cəhd edin."
+    },
+    "title": "Gəlin Əlaqə Quraq",
+    "subtitle": "Əməkdaşlıq, suallar və ya layihələr üçün bizimlə əlaqə saxlayın.",
+
+    "cards": {
+      "email": {
+        "label": "Email",
+        "value": "info@yeltu.com"
+      },
+      "phone": {
+        "label": "Telefon",
+        "value": "+994 (10) 324-07-82"
+      },
+      "location": {
+        "label": "Ünvan",
+        "value": "Bakı, Azərbaycan"
+      },
+      "hours": {
+        "label": "İş Saatları",
+        "value": "B.e – C., 10:00–18:00"
+      }
+    },
+
+    "form": {
+      "title": "Bizə Mesaj Göndərin",
+      "subtitle": "Adətən bir neçə saat ərzində cavab veririk.",
+      "success": {
+        "title": "Mesaj Göndərildi!",
+        "subtitle": "Əlaqə saxladığınız üçün təşəkkür edirik. Komandamız qısa zamanda sizə cavab verəcək."
+      },
+
+      "heading": "Əlaqə Formu",
+
+      "name": "Adınız",
+      "namePlaceholder": "Adınızı daxil edin",
+
+      "email": "Emailiniz",
+      "emailPlaceholder": "Email ünvanınızı daxil edin",
+
+      "message": "Mesaj",
+      "messagePlaceholder": "Mesajınızı yazın...",
+
+      "submit": "Mesaj Göndər"
+    },
+
+    "whatsapp": "WhatsApp ilə Yazın",
+
+    "why": {
+      "fast": {
+        "title": "Sürətli Cavab",
+        "description": "Vaxtınızı dəyərləndiririk və bütün sorğulara tez cavab veririk."
+      },
+      "global": {
+        "title": "Qlobal Əməkdaşlıq",
+        "description": "Hər ölkədən və hər saat qurşağından müştərilərlə işləyirik."
+      }
+    },
+
+    "socials": {
+      "title": "Bizi İzləyin"
+    },
+
+    "map": {
+      "title": "Xəritədə Bizimlə Tanış Olun",
+      "subtitle": "Ofisimizə yaxınlaşa və ya istiqamət üçün əlaqə saxlaya bilərsiniz.",
+      "button": "Google Xəritədə Aç"
+    }
+  },
+  "legal": {
+    "common": {
+      "companyName": "Yeltu Agency LLC",
+      "companyShort": "Yeltu Agentliyi",
+      "companyCountry": "Azərbaycan",
+      "companyCity": "Bakı",
+      "contactEmail": "info@yeltu.com",
+      "lastUpdated": "Son yeniləmə: 3 dekabr 2025"
+    },
+
+    "privacy": {
+      "seoTitle": "Məxfilik Siyasəti | Yeltu Agency LLC",
+      "seoDescription": "Yeltu Agentliyinin şəxsi məlumatları necə topladığını və qoruduğunu oxuyun.",
+      "title": "Məxfilik Siyasəti",
+      "lastUpdatedLabel": "Son yeniləmə: 3 dekabr 2025",
+      "intro": "Bu Məxfilik Siyasəti Yeltu Agency LLC-nin şəxsi məlumatları necə topladığını və istifadə etdiyini izah edir.",
+
+      "content1": "Saytdan istifadə etməklə bu siyasətlə razılaşırsınız.",
+      "content2": "Biz Bakı, Azərbaycanda yerləşən rəqəmsal agentlikyik.",
+      "content3": "Ad, email, telefon, mesaj və analitika məlumatlarını toplaya bilərik.",
+      "content4": "Bu məlumatlar sizinlə əlaqə saxlamaq və xidmətləri yaxşılaşdırmaq üçün istifadə olunur.",
+      "content5": "Saytda kukilərdən istifadə edilə bilər.",
+      "content6": "Şəxsi məlumatlarınızı qorumaq üçün tədbirlər görürük.",
+      "content7": "İstənilən vaxt info@yeltu.com vasitəsi ilə məlumatlarınızın silinməsini tələb edə bilərsiniz.",
+      "content8": "Bu siyasət vaxtaşırı yenilənə bilər.",
+      "contactTitle": "Məxfiliklə bağlı əlaqə",
+      "contactText": "Suallar üçün info@yeltu.com ünvanı ilə əlaqə saxlayın."
+    },
+
+    "terms": {
+      "seoTitle": "Şərtlər və Qaydalar | Yeltu Agency LLC",
+      "seoDescription": "Yeltu Agentliyi üçün rəsmi istifadə qaydaları.",
+      "title": "Şərtlər və Qaydalar",
+      "lastUpdatedLabel": "Son yeniləmə: 3 dekabr 2025",
+      "intro": "Bu şərtlər Yeltu Agentliyinin saytından istifadənizi tənzimləyir.",
+
+      "content1": "Saytdan istifadə etməklə şərtlərlə razılaşırsınız.",
+      "content2": "Saytdakı məlumat yalnız tanıtım məqsədi daşıyır.",
+      "content3": "Bütün materiallar Yeltu Agentliyinə məxsusdur.",
+      "content4": "Saytın fasiləsiz işləyəcəyinə zəmanət verilmir.",
+      "content5": "Üçüncü tərəf keçidlərinə görə məsuliyyət daşımırıq.",
+      "content6": "Şərtlər yenilənə bilər.",
+      "content7": "Hüquqi mübahisələr Azərbaycan qanunlarına əsasən həll olunur."
+    },
+
+    "cookies": {
+      "seoTitle": "Kuki Siyasəti | Yeltu Agency LLC",
+      "seoDescription": "Kukilərdən istifadə haqqında məlumat.",
+      "title": "Kuki Siyasəti",
+      "lastUpdatedLabel": "Son yeniləmə: 3 dekabr 2025",
+      "intro": "Bu Kukilər Siyasəti kukilərdən necə istifadə etdiyimizi izah edir.",
+
+      "content1": "Kuki — cihazda saxlanılan kiçik mətn faylıdır.",
+      "content2": "Zəruri, analitika və marketinq kukilərindən istifadə edilə bilər.",
+      "content3": "Google Analytics kimi üçüncü tərəflər kukilər qura bilər.",
+      "content4": "Kukiləri brauzer ayarlarından idarə etmək mümkündür.",
+      "content5": "Siyasət vaxtaşırı yenilənə bilər."
+    },
+
+    "cookiePrefs": {
+      "seoTitle": "Kuki Üstünlükləri | Yeltu Agency LLC",
+      "seoDescription": "Kuki seçimlərinizi idarə edin.",
+      "title": "Kuki Üstünlükləri",
+      "intro": "Kukilərin hansı növlərinə icazə verdiyinizi seçə bilərsiniz.",
+
+      "necessaryTitle": "Zəruri Kukilər",
+      "necessaryText": "Saytın işləməsi üçün tələb olunur.",
+      "analyticsTitle": "Analitika Kukiləri",
+      "analyticsText": "Sayt istifadəsini başa düşməyə kömək edir.",
+      "marketingTitle": "Marketinq Kukiləri",
+      "marketingText": "Reklam kampaniyalarının ölçülməsi üçün istifadə olunur.",
+
+      "labelOn": "Açıq",
+      "labelOff": "Bağlı",
+
+      "saveButton": "Seçimləri yadda saxla",
+      "acceptAllButton": "Hamısına icazə ver",
+      "rejectAllButton": "Zəruri olmayanları rədd et",
+      "backToSiteButton": "Sayta qayıt",
+      "statusSaved": "Seçimləriniz yadda saxlanıldı."
+    }
+}
+}
+
+
