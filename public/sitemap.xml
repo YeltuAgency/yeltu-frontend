@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
+<urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
@@ -7,6 +7,10 @@
   <!-- HOME -->
   <url>
     <loc>https://yeltu.com/</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
     <xhtml:link rel="alternate" hreflang="en" href="https://yeltu.com/" />
     <xhtml:link rel="alternate" hreflang="az" href="https://yeltu.com/az/" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://yeltu.com/ru/" />
@@ -15,6 +19,10 @@
   <!-- ABOUT -->
   <url>
     <loc>https://yeltu.com/about</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+
     <xhtml:link rel="alternate" hreflang="en" href="https://yeltu.com/about" />
     <xhtml:link rel="alternate" hreflang="az" href="https://yeltu.com/az/about" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://yeltu.com/ru/about" />
@@ -23,6 +31,10 @@
   <!-- SERVICES -->
   <url>
     <loc>https://yeltu.com/services</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+
     <xhtml:link rel="alternate" hreflang="en" href="https://yeltu.com/services" />
     <xhtml:link rel="alternate" hreflang="az" href="https://yeltu.com/az/services" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://yeltu.com/ru/services" />
@@ -31,14 +43,22 @@
   <!-- PROJECTS -->
   <url>
     <loc>https://yeltu.com/projects</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+
     <xhtml:link rel="alternate" hreflang="en" href="https://yeltu.com/projects" />
     <xhtml:link rel="alternate" hreflang="az" href="https://yeltu.com/az/projects" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://yeltu.com/ru/projects" />
   </url>
 
-  <!-- BLOG (LIST PAGE) -->
+  <!-- BLOG -->
   <url>
     <loc>https://yeltu.com/blog</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+
     <xhtml:link rel="alternate" hreflang="en" href="https://yeltu.com/blog" />
     <xhtml:link rel="alternate" hreflang="az" href="https://yeltu.com/az/blog" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://yeltu.com/ru/blog" />
@@ -47,15 +67,42 @@
   <!-- CONTACT -->
   <url>
     <loc>https://yeltu.com/contact</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+
     <xhtml:link rel="alternate" hreflang="en" href="https://yeltu.com/contact" />
     <xhtml:link rel="alternate" hreflang="az" href="https://yeltu.com/az/contact" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://yeltu.com/ru/contact" />
   </url>
 
   <!-- LEGAL PAGES -->
-  <url><loc>https://yeltu.com/privacy</loc></url>
-  <url><loc>https://yeltu.com/terms</loc></url>
-  <url><loc>https://yeltu.com/cookies</loc></url>
-  <url><loc>https://yeltu.com/cookie-preferences</loc></url>
+  <url>
+    <loc>https://yeltu.com/privacy</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://yeltu.com/terms</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://yeltu.com/cookies</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://yeltu.com/cookie-preferences</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
 
 </urlset>

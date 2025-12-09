@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yeltu.com/api/sitemap
+Sitemap: https://yeltu.com/sitemap.xml
