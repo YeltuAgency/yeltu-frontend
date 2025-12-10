@@ -8,7 +8,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import ClientLayout from "./layouts/ClientLayout";
 import AdminLayout from "./layouts/AdminLayout";
 
-// LOADING OVERLAY (Suspense fallback)
+import LanguageRouter from "./components/LanguageRouter";
 import LoadingOverlay from "./components/LoadingOverlay";
 
 // ---- LAZY LOADED CLIENT PAGES ---- //
@@ -29,7 +29,6 @@ const AdminBlogForm = lazy(() => import("./pages/AdminBlogForm"));
 const AdminPortfolioList = lazy(() => import("./pages/AdminPortfolioList"));
 const AdminPortfolioForm = lazy(() => import("./pages/AdminPortfolioForm"));
 
-// PROTECTED ROUTE
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
 import PrivacyPolicy from "./components/legal/PrivacyPolicy";
@@ -42,7 +41,11 @@ export default function App() {
     <AuthProvider>
       <Suspense fallback={<LoadingOverlay />}>
         <Routes>
-          {/* CLIENT WEBSITE */}
+
+          {/* 🔥 Universal Language Router /en/* /az/* /ru/* */}
+          <Route path="/:lang/*" element={<LanguageRouter />} />
+
+          {/* ==================== CLIENT PAGES ==================== */}
           <Route element={<ClientLayout />}>
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<AboutPage />} />
@@ -58,10 +61,9 @@ export default function App() {
             <Route path="/cookie-preferences" element={<CookiePreferences />} />
           </Route>
 
-          {/* ADMIN LOGIN */}
+          {/* ==================== ADMIN ROUTES ==================== */}
           <Route path="/admin/login" element={<AdminLogin />} />
 
-          {/* ADMIN PROTECTED ROUTES */}
           <Route
             path="/admin/*"
             element={
@@ -71,13 +73,9 @@ export default function App() {
             }
           >
             <Route index element={<AdminDashboard />} />
-
-            {/* BLOGS */}
             <Route path="blogs" element={<AdminBlogsList />} />
             <Route path="blogs/new" element={<AdminBlogForm />} />
             <Route path="blogs/:id/edit" element={<AdminBlogForm />} />
-
-            {/* PORTFOLIO */}
             <Route path="portfolio" element={<AdminPortfolioList />} />
             <Route path="portfolio/new" element={<AdminPortfolioForm />} />
             <Route path="portfolio/:id/edit" element={<AdminPortfolioForm />} />

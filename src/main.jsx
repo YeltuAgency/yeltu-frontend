@@ -67,9 +67,9 @@ function GTMWrapper({ children }) {
 // RENDER ROOT
 // ================================
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <LanguageProvider>
-    <CookieConsentProvider>
-      <BrowserRouter>
+  <CookieConsentProvider>
+    <BrowserRouter>
+      <LanguageProvider>
         <GTMWrapper>
           <ErrorBoundary>
             <App />
@@ -77,7 +77,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <CookieModal />
           </ErrorBoundary>
         </GTMWrapper>
-      </BrowserRouter>
-    </CookieConsentProvider>
-  </LanguageProvider>
+      </LanguageProvider>
+    </BrowserRouter>
+  </CookieConsentProvider>
 );

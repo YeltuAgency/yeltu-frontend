@@ -2,12 +2,12 @@
   "rewrites": [
     { "source": "/en", "destination": "/" },
     { "source": "/az", "destination": "/" },
-    { "source": "/ru", "destination": "/" },
-
-    { "source": "/en/(.*)", "destination": "/" },
-    { "source": "/az/(.*)", "destination": "/" },
-    { "source": "/ru/(.*)", "destination": "/" },
-
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/ru", "destination": "/" }
+  ],
+  "routes": [
+    { "src": "/en/.*", "dest": "/" },
+    { "src": "/az/.*", "dest": "/" },
+    { "src": "/ru/.*", "dest": "/" },
+    { "src": "/.*", "dest": "/" }
   ]
 }
