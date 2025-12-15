@@ -51,11 +51,6 @@ export default function PortfolioPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // ⚡ Custom cursor refs (no re-renders)
-  const cursorRef = useRef(null);
-  const cursorVariantRef = useRef("default");
-  const mousePosRef = useRef({ x: 0, y: 0 });
-
   /* ----------------------------------------------
      SEO TEXT (memoized)
   ---------------------------------------------- */
@@ -167,43 +162,6 @@ export default function PortfolioPage() {
     };
   }, [activeFilter, language]);
 
-  /* ----------------------------------------------
-     CUSTOM CURSOR (no React re-renders)
-  ---------------------------------------------- */
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      mousePosRef.current = { x: e.clientX, y: e.clientY };
-    };
-
-    const element = cursorRef.current;
-    if (!element) return;
-
-    let frameId;
-
-    const render = () => {
-      const { x, y } = mousePosRef.current;
-      const scale = cursorVariantRef.current === "hover" ? 1.5 : 1;
-
-      // 24px = cursor size, so subtract half to center
-      element.style.transform = `translate(${x - 12}px, ${
-        y - 12
-      }px) scale(${scale})`;
-
-      frameId = requestAnimationFrame(render);
-    };
-
-    render();
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      if (frameId) cancelAnimationFrame(frameId);
-    };
-  }, []);
-
-  const setCursorVariant = useCallback((variant) => {
-    cursorVariantRef.current = variant;
-  }, []);
 
   const featuredTopTwo = useMemo(
     () => featured.slice(0, 2),
@@ -234,26 +192,6 @@ export default function PortfolioPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-
-      {/* CUSTOM CURSOR (desktop only) */}
-      <div
-        ref={cursorRef}
-        className="fixed z-50 pointer-events-none mix-blend-difference hidden md:block"
-        style={{
-          width: "24px",
-          height: "24px",
-          left: 0,
-          top: 0,
-        }}
-        aria-hidden="true"
-      >
-        <div className="relative w-6 h-6">
-          <div className="absolute inset-0 rounded-full border-2 border-white" />
-          <div className="absolute inset-0 rounded-full blur-xl bg-white/40 opacity-60" />
-          <div className="absolute inset-1 rounded-full bg-white" />
-        </div>
-      </div>
-
       {/* HERO */}
       <Suspense fallback={null}>
         <PortfolioHero />
@@ -265,7 +203,6 @@ export default function PortfolioPage() {
           filters={filters}
           activeFilter={activeFilter}
           setActiveFilter={setActiveFilter}
-          setCursorVariant={setCursorVariant}
         />
       </Suspense>
 

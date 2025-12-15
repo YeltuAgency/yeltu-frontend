@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react"; // ✅ added useEffect
 
 // CONTEXTS
 import { AuthProvider } from "./contexts/AuthContext";
@@ -37,6 +37,29 @@ import CookiePolicy from "./components/legal/CookiePolicy";
 import CookiePreferences from "./components/legal/CookiePreferences";
 
 export default function App() {
+
+  // ✅ iOS Safari orientation-change reflow fix (DO NOT REMOVE)
+  useEffect(() => {
+    const isIOS =
+      /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+      !window.MSStream;
+
+    if (!isIOS) return;
+
+    const forceReflow = () => {
+      document.body.style.display = "none";
+      // force layout recalculation
+      void document.body.offsetHeight;
+      document.body.style.display = "";
+    };
+
+    window.addEventListener("orientationchange", forceReflow);
+
+    return () => {
+      window.removeEventListener("orientationchange", forceReflow);
+    };
+  }, []);
+
   return (
     <AuthProvider>
       <Suspense fallback={<LoadingOverlay />}>

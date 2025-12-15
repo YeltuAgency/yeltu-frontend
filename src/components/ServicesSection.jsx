@@ -21,28 +21,34 @@ const AnimatedText = ({ text, isHovered }) => {
   ];
 
   return (
-    <>
-      {text.split("").map((char, index) => {
-        const animation = animations[index % animations.length];
+    <span className="flex flex-wrap gap-x-1">
+      {text.split(" ").map((word, wordIndex) => (
+        <span key={wordIndex} className="inline-flex">
+          {word.split("").map((char, charIndex) => {
+            const animation =
+              animations[(charIndex + wordIndex) % animations.length];
 
-        return (
-          <span
-            key={index}
-            className="inline-block"
-            style={{
-              animation: isHovered
-                ? `${animation} 0.6s ease-in-out infinite`
-                : "none",
-              animationDelay: `${index * 0.03}s`,
-            }}
-          >
-            {char === " " ? "\u00A0" : char}
-          </span>
-        );
-      })}
-    </>
+            return (
+              <span
+                key={charIndex}
+                className="inline-block"
+                style={{
+                  animation: isHovered
+                    ? `${animation} 0.6s ease-in-out infinite`
+                    : "none",
+                  animationDelay: `${charIndex * 0.03}s`,
+                }}
+              >
+                {char}
+              </span>
+            );
+          })}
+        </span>
+      ))}
+    </span>
   );
 };
+
 
 
 export default function ServicesSection({ onNavigate }) {
@@ -201,7 +207,7 @@ export default function ServicesSection({ onNavigate }) {
                         />
                       </div>
 
-                      <h3 className="text-2xl font-semibold text-slate-800 leading-snug">
+                      <h3 className="text-2xl font-semibold text-slate-800 leading-snug break-words">
                         <AnimatedText text={service.title} isHovered={isHovered} />
                       </h3>
                     </div>

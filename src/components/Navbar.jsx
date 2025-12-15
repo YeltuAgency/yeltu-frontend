@@ -90,7 +90,7 @@ export function Navbar() {
         {/* Main Bar */}
         <div
           className="
-            h-[55px]
+            min-h-[55px]
             flex items-center justify-between
 
             bg-gradient-to-r from-[rgba(236,245,255,0.75)] via-[rgba(220,235,255,0.65)] to-[rgba(236,245,255,0.78)]
@@ -121,11 +121,12 @@ export function Navbar() {
             "
             aria-label="Go to Yeltu Agency homepage"
           >
-            <Logo className="h-20 w-auto sm:h-22 md:h-24 lg:h-24" />
+          <Logo className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto" />
 
             <span
               className="
                 hidden md:inline-block
+                hidden md:inline-block [@media(max-height:480px)]:hidden
                 text-[1.25rem] font-italic
                 font-jakarta
                 bg-[#1f0c31]

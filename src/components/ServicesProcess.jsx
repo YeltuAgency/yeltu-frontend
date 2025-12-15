@@ -84,8 +84,11 @@ function ServicesProcess({ processPhases }) {
               />
 
               {/* TEXT */}
-              <div className="flex flex-col items-center text-center max-md:flex-1">
-                <h3 className="mt-6 text-xl font-semibold text-slate-800 max-md:mt-0">
+              <div className="
+                flex flex-col items-center text-center
+                max-md:flex-1 max-md:items-start max-md:text-left
+              ">
+                <h3 className="mt-6 text-xl font-semibold text-slate-800 max-md:mt-0 leading-tight">
                   {step.title}
                 </h3>
 
