@@ -1,39 +1,60 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Logo from "./Logo";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useLanguage } from "../contexts/LanguageContext";
 
+function stripLangPrefix(pathname) {
+  return pathname.replace(/^\/(az|ru)(?=\/|$)/, "") || "/";
+}
+
+function withLang(path, lang) {
+  // EN has no prefix
+  if (!path.startsWith("/")) path = `/${path}`;
+  if (lang === "en") return path;
+  return `/${lang}${path === "/" ? "" : path}`;
+}
+
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const location = useLocation();
   const navigate = useNavigate();
 
-  const navLinks = [
-    { name: t("nav.home"), path: "/" },
-    { name: t("nav.about"), path: "/about" },
-    { name: t("nav.services"), path: "/services" },
-    { name: t("nav.projects"), path: "/projects" },
-    { name: "Blog", path: "/blog" },
-    { name: t("nav.contact"), path: "/contact" },
-  ];
+  // if you're on /az/about -> cleanPath = /about
+  const cleanPath = useMemo(
+    () => stripLangPrefix(location.pathname),
+    [location.pathname]
+  );
+
+  const navLinks = useMemo(
+    () => [
+      { name: t("nav.home"), path: "/" },
+      { name: t("nav.about"), path: "/about" },
+      { name: t("nav.services"), path: "/services" },
+      { name: t("nav.projects"), path: "/projects" },
+      { name: "Blog", path: "/blog" },
+      { name: t("nav.contact"), path: "/contact" },
+    ],
+    [t]
+  );
 
   const handleNavigate = (path) => {
-    navigate(path);
+    // Never touch admin routes
+    if (location.pathname.startsWith("/admin")) {
+      navigate(path);
+    } else {
+      const next = withLang(path, language);
+      navigate(next);
+    }
+
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <header
-      className="
-        sticky top-0 z-50
-        bg-transparent
-        backdrop-blur-xl
-      "
-    >
+    <header className="sticky top-0 z-50 bg-transparent backdrop-blur-xl">
       {/* 🔹 TOP GRADIENT LINE */}
       <div className="h-[2px] w-full bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500" />
 
@@ -72,7 +93,6 @@ export function Navbar() {
             h-[55px]
             flex items-center justify-between
 
-            /* 🌟 Premium glossy blue navbar */
             bg-gradient-to-r from-[rgba(236,245,255,0.75)] via-[rgba(220,235,255,0.65)] to-[rgba(236,245,255,0.78)]
             backdrop-blur-2xl
 
@@ -108,11 +128,8 @@ export function Navbar() {
                 hidden md:inline-block
                 text-[1.25rem] font-italic
                 font-jakarta
-                
-                /* 🔥 Gradient-clipped brand name using your requested color */
                 bg-[#1f0c31]
                 bg-clip-text text-transparent
-
                 tracking-wide
               "
             >
@@ -123,7 +140,10 @@ export function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              // Active should match the "clean" path, not the prefixed one
+              const isActive =
+                cleanPath === link.path ||
+                (link.path !== "/" && cleanPath.startsWith(`${link.path}/`));
 
               return (
                 <button
@@ -151,7 +171,6 @@ export function Navbar() {
                 >
                   {link.name}
 
-                  {/* Active dot */}
                   {isActive && (
                     <span
                       aria-hidden="true"
@@ -210,7 +229,9 @@ export function Navbar() {
         >
           <div className="max-w-[92rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-2">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive =
+                cleanPath === link.path ||
+                (link.path !== "/" && cleanPath.startsWith(`${link.path}/`));
 
               return (
                 <button

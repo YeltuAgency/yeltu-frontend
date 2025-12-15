@@ -11,7 +11,7 @@ import {
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { useLanguage } from "../contexts/LanguageContext";
-import { useNavigate } from "react-router-dom";
+import { useLangNavigate } from "../utils/useLangNavigate";
 
 import {
   fetchPortfolio,
@@ -42,7 +42,7 @@ const mapProject = (p) => ({
 
 export default function PortfolioPage() {
   const { t, language } = useLanguage();
-  const navigate = useNavigate();
+  const navigate = useLangNavigate();
   const goContact = () => navigate("/contact");
   const [activeFilter, setActiveFilter] = useState("All");
   const [projects, setProjects] = useState([]);

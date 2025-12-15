@@ -1,46 +1,101 @@
 import { Helmet } from "react-helmet";
 import { useLanguage } from "../contexts/LanguageContext";
 
-export default function SEO({ title, description, keywords, image, url }) {
-  let lang = "en";
+export default function SEO({
+  title,
+  description,
+  ogTitle,
+  ogDescription,
+  image,
+  canonical,
+  meta = [],
+  slug,
+}) {
+  /* --------------------------------
+     LANGUAGE (SAFE, BACKWARD-COMPAT)
+  -------------------------------- */
+  let language = "en";
 
   try {
-    lang = useLanguage().lang || "en";
+    const ctx = useLanguage();
+    language = ctx?.language || ctx?.lang || "en";
   } catch (err) {
-    console.warn("SEO rendered before LanguageProvider. Using fallback lang='en'.");
+    // SEO may render outside LanguageProvider (SSR / early render)
+    language = "en";
   }
 
-  const localeMap = {
+  const locales = {
     en: "en_US",
     az: "az_AZ",
     ru: "ru_RU",
   };
 
-  const canonicalUrl = url || "https://yeltu.com/";
+  const baseUrl = "https://yeltu.com";
+
+  // Safety fallbacks
+  const safeSlug = slug || "";
+  const safeCanonical =
+    canonical || `${baseUrl}/blog/post/${safeSlug}`;
 
   return (
     <Helmet>
+      {/* BASIC */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={canonicalUrl} />
 
-      <link rel="alternate" href="https://yeltu.com/" hrefLang="en" />
-      <link rel="alternate" href="https://yeltu.com/az/" hrefLang="az" />
-      <link rel="alternate" href="https://yeltu.com/ru/" hrefLang="ru" />
-      <link rel="alternate" href="https://yeltu.com/" hrefLang="x-default" />
+      {/* CANONICAL */}
+      <link rel="canonical" href={safeCanonical} />
 
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="website" />
-      <meta property="og:locale" content={localeMap[lang] || "en_US"} />
+      {/* HREFLANG */}
+      <link
+        rel="alternate"
+        href={`${baseUrl}/blog/post/${safeSlug}`}
+        hrefLang="en"
+      />
+      <link
+        rel="alternate"
+        href={`${baseUrl}/az/blog/post/${safeSlug}`}
+        hrefLang="az"
+      />
+      <link
+        rel="alternate"
+        href={`${baseUrl}/ru/blog/post/${safeSlug}`}
+        hrefLang="ru"
+      />
+      <link
+        rel="alternate"
+        href={`${baseUrl}/blog/post/${safeSlug}`}
+        hrefLang="x-default"
+      />
 
+      {/* OPEN GRAPH */}
+      <meta property="og:title" content={ogTitle || title} />
+      <meta
+        property="og:description"
+        content={ogDescription || description}
+      />
+      {image && <meta property="og:image" content={image} />}
+      <meta property="og:url" content={safeCanonical} />
+      <meta property="og:type" content="article" />
+      <meta
+        property="og:locale"
+        content={locales[language] || "en_US"}
+      />
+
+      {/* TWITTER */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:title" content={ogTitle || title} />
+      <meta
+        name="twitter:description"
+        content={ogDescription || description}
+      />
       {image && <meta name="twitter:image" content={image} />}
+
+      {/* CUSTOM META */}
+      {meta.map((m, i) => {
+        if (!m?.name || !m?.content) return null;
+        return <meta key={i} name={m.name} content={m.content} />;
+      })}
     </Helmet>
   );
 }

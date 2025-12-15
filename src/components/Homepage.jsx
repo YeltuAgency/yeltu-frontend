@@ -3,9 +3,8 @@ import { Button } from "./ui/button";
 import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "./SEO";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { fetchBlogs } from "../api/blogApi";
-
+import { useLangNavigate } from "../utils/useLangNavigate";
 import { lazy, Suspense, useCallback } from "react";
 import { useSectionObserver } from "../hooks/useSectionObserver";
 
@@ -19,7 +18,7 @@ export default function Homepage() {
   const { t, language } = useLanguage();   // ✅ FIXED
   const [blogs, setBlogs] = useState([]);
   const [loadingBlogs, setLoadingBlogs] = useState(true);
-  const navigate = useNavigate();
+  const navigate = useLangNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleScroll = (e) => {

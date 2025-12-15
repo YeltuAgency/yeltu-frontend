@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import Logo from "./Logo.jsx";
 import { useLanguage } from "../contexts/LanguageContext";
-import { useNavigate } from "react-router-dom";
+import { useLangNavigate } from "../utils/useLangNavigate";
 
 export function Footer({ onNavigate }) {
   const { t } = useLanguage();
@@ -20,7 +20,7 @@ export function Footer({ onNavigate }) {
     { icon: Facebook, href: "https://www.facebook.com/YeltuAgency", label: "Facebook" },
   ];
 
-  const navigate = useNavigate();
+  const navigate = useLangNavigate();
     const handleNavigate = (section) => {
       navigate(`/${section}`);
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -72,30 +72,39 @@ export function Footer({ onNavigate }) {
               ))}
 
               {/* LEGAL LINKS */}
-              <a
-                href="/privacy"
-                className="text-sm text-slate-400 hover:text-blue-400 transition block"
+              {/* LEGAL LINKS */}
+              <button
+                type="button"
+                onClick={() => handleNavigate("privacy")}
+                className="text-sm text-slate-400 hover:text-blue-400 transition block text-left"
               >
                 {t("footer.links.privacy")}
-              </a>
-              <a
-                href="/terms"
-                className="text-sm text-slate-400 hover:text-blue-400 transition block"
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleNavigate("terms")}
+                className="text-sm text-slate-400 hover:text-blue-400 transition block text-left"
               >
                 {t("footer.links.terms")}
-              </a>
-              <a
-                href="/cookies"
-                className="text-sm text-slate-400 hover:text-blue-400 transition block"
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleNavigate("cookies")}
+                className="text-sm text-slate-400 hover:text-blue-400 transition block text-left"
               >
                 {t("footer.links.cookies")}
-              </a>
-              <a
-                href="/cookie-preferences"
-                className="text-sm text-slate-400 hover:text-blue-400 transition block"
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleNavigate("cookie-preferences")}
+                className="text-sm text-slate-400 hover:text-blue-400 transition block text-left"
               >
                 {t("footer.links.cookiePreferences")}
-              </a>
+              </button>
+
             </div>
           </nav>
 

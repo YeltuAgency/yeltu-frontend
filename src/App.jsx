@@ -8,7 +8,6 @@ import { AuthProvider } from "./contexts/AuthContext";
 import ClientLayout from "./layouts/ClientLayout";
 import AdminLayout from "./layouts/AdminLayout";
 
-import LanguageRouter from "./components/LanguageRouter";
 import LoadingOverlay from "./components/LoadingOverlay";
 
 // ---- LAZY LOADED CLIENT PAGES ---- //
@@ -31,6 +30,7 @@ const AdminPortfolioForm = lazy(() => import("./pages/AdminPortfolioForm"));
 
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
+// LEGAL
 import PrivacyPolicy from "./components/legal/PrivacyPolicy";
 import TermsConditions from "./components/legal/TermsConditions";
 import CookiePolicy from "./components/legal/CookiePolicy";
@@ -42,10 +42,7 @@ export default function App() {
       <Suspense fallback={<LoadingOverlay />}>
         <Routes>
 
-          {/* 🔥 Universal Language Router /en/* /az/* /ru/* */}
-          <Route path="/:lang/*" element={<LanguageRouter />} />
-
-          {/* ==================== CLIENT PAGES ==================== */}
+          {/* ==================== CLIENT (DEFAULT = EN) ==================== */}
           <Route element={<ClientLayout />}>
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<AboutPage />} />
@@ -61,7 +58,23 @@ export default function App() {
             <Route path="/cookie-preferences" element={<CookiePreferences />} />
           </Route>
 
-          {/* ==================== ADMIN ROUTES ==================== */}
+          {/* ==================== CLIENT (LANG PREFIXED) ==================== */}
+          <Route path="/:lang" element={<ClientLayout />}>
+            <Route index element={<Homepage />} />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="services" element={<ServicesPage />} />
+            <Route path="projects" element={<PortfolioPage />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="blog/post/:slug" element={<BlogPost />} />
+            <Route path="contact" element={<ContactPage />} />
+
+            <Route path="privacy" element={<PrivacyPolicy />} />
+            <Route path="terms" element={<TermsConditions />} />
+            <Route path="cookies" element={<CookiePolicy />} />
+            <Route path="cookie-preferences" element={<CookiePreferences />} />
+          </Route>
+
+          {/* ==================== ADMIN ==================== */}
           <Route path="/admin/login" element={<AdminLogin />} />
 
           <Route
@@ -81,8 +94,9 @@ export default function App() {
             <Route path="portfolio/:id/edit" element={<AdminPortfolioForm />} />
           </Route>
 
-          {/* 404 */}
+          {/* ==================== 404 ==================== */}
           <Route path="*" element={<NotFound />} />
+
         </Routes>
       </Suspense>
     </AuthProvider>

@@ -4,10 +4,31 @@ import api from "../api/axios";
 import ImageUpload from "../components/ImageUpload";
 import RichTextEditor from "../components/RichTextEditor";
 
+/* --------------------------------
+   DEFAULT STATES
+-------------------------------- */
 const emptyTranslations = {
-  en: { title: "", content: "" },
-  az: { title: "", content: "" },
-  ru: { title: "", content: "" },
+  en: { title: "", excerpt: "", content: "" },
+  az: { title: "", excerpt: "", content: "" },
+  ru: { title: "", excerpt: "", content: "" },
+};
+
+const emptySeoLang = {
+  title: "",
+  description: "",
+  ogTitle: "",
+  ogDescription: "",
+  keywords: "",
+};
+
+const emptySeo = {
+  slug: "",
+  canonical: "",
+  ogImage: "",
+  meta: [],
+  en: { ...emptySeoLang },
+  az: { ...emptySeoLang },
+  ru: { ...emptySeoLang },
 };
 
 export default function AdminBlogForm() {
@@ -16,43 +37,38 @@ export default function AdminBlogForm() {
   const navigate = useNavigate();
 
   const [translations, setTranslations] = useState(emptyTranslations);
-  const [featured, setFeatured] = useState(false);
+  const [seo, setSeo] = useState(emptySeo);
+
   const [image, setImage] = useState("");
-
-  // ⭐ NEW CATEGORY STATE
+  const [featured, setFeatured] = useState(false);
   const [category, setCategory] = useState("other");
-
-  // ⭐ SEO STATES
-  const [seoTitle, setSeoTitle] = useState("");
-  const [seoDescription, setSeoDescription] = useState("");
-  const [seoSlug, setSeoSlug] = useState("");
-  const [seoOgImage, setSeoOgImage] = useState("");
 
   const [activeLang, setActiveLang] = useState("en");
   const [loading, setLoading] = useState(false);
 
-  // Load existing blog if editing
+  /* --------------------------------
+     LOAD BLOG (EDIT)
+  -------------------------------- */
   useEffect(() => {
+    if (!isEdit) return;
+
     const fetchBlog = async () => {
-      if (!isEdit) return;
       setLoading(true);
-
       try {
-        const res = await api.get(`/admin/blogs/${id}`);
-        const blog = res.data;
+        const { data } = await api.get(`/admin/blogs/${id}`);
 
-        setTranslations(blog.translations || emptyTranslations);
-        setFeatured(blog.featured || false);
-        setImage(blog.image || "");
+        setTranslations(data.translations || emptyTranslations);
+        setImage(data.image || "");
+        setFeatured(!!data.featured);
+        setCategory(data.category || "other");
 
-        // ⭐ LOAD CATEGORY
-        setCategory(blog.category || "other");
-
-        // SEO
-        setSeoTitle(blog.seo?.title || "");
-        setSeoDescription(blog.seo?.description || "");
-        setSeoSlug(blog.seo?.slug || "");
-        setSeoOgImage(blog.seo?.ogImage || "");
+        setSeo({
+          ...emptySeo,
+          ...data.seo,
+          en: { ...emptySeoLang, ...data.seo?.en },
+          az: { ...emptySeoLang, ...data.seo?.az },
+          ru: { ...emptySeoLang, ...data.seo?.ru },
+        });
       } catch (err) {
         console.error(err);
         alert("Failed to load blog");
@@ -64,43 +80,111 @@ export default function AdminBlogForm() {
     fetchBlog();
   }, [id, isEdit]);
 
-  const handleChange = (lang, field, value) => {
+  /* --------------------------------
+     HANDLERS
+  -------------------------------- */
+  const handleTranslationChange = (lang, field, value) => {
     setTranslations((prev) => ({
       ...prev,
-      [lang]: {
-        ...prev[lang],
-        [field]: value,
-      },
+      [lang]: { ...prev[lang], [field]: value },
     }));
 
-    if (lang === "en" && field === "title" && !seoSlug) {
-      const generated = value
+    if (lang === "en" && field === "title" && !seo.slug) {
+      const slug = value
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/^-|-$/g, "");
-      setSeoSlug(generated);
+      setSeo((prev) => ({ ...prev, slug }));
     }
   };
 
-  // Submit
+  const handleSeoChange = (lang, field, value) => {
+    setSeo((prev) => ({
+      ...prev,
+      [lang]: { ...prev[lang], [field]: value },
+    }));
+  };
+
+  /* --------------------------------
+     SUBMIT (🔥 FIXED PAYLOAD)
+  -------------------------------- */
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const payload = {
-        translations,
-        featured,
-        image,
+      // HARD VALIDATION
+      ["en", "az", "ru"].forEach((lang) => {
+        if (
+          !translations[lang].title ||
+          !translations[lang].content ||
+          !translations[lang].excerpt
+        ) {
+          throw new Error(`Missing ${lang.toUpperCase()} content`);
+        }
+      });
 
-        // ⭐ INCLUDE CATEGORY
+      const payload = {
+        translations: {
+          en: { ...translations.en },
+          az: { ...translations.az },
+          ru: { ...translations.ru },
+        },
+
+        image,
+        featured,
         category,
 
         seo: {
-          title: seoTitle,
-          description: seoDescription,
-          slug: seoSlug,
-          ogImage: seoOgImage,
+          slug: seo.slug,
+          canonical: seo.canonical,
+          ogImage: seo.ogImage,
+          meta: seo.meta || [],
+
+          en: {
+            ...seo.en,
+            ...(seo.en.keywords?.trim()
+              ? { keywords: seo.en.keywords }
+              : {}),
+            title: seo.en.title || translations.en.title,
+            description: seo.en.description || translations.en.excerpt,
+            ogTitle: seo.en.ogTitle || seo.en.title || translations.en.title,
+            ogDescription:
+              seo.en.ogDescription ||
+              seo.en.description ||
+              translations.en.excerpt,
+          },
+          az: {
+            ...seo.az,
+            ...(seo.az.keywords?.trim()
+              ? { keywords: seo.az.keywords }
+              : {}),
+            title: seo.az.title || translations.az.title,
+            description: seo.az.description || translations.az.excerpt,
+            ogTitle: seo.az.ogTitle || seo.az.title || translations.az.title,
+            ogDescription:
+              seo.az.ogDescription ||
+              seo.az.description ||
+              translations.az.excerpt,
+          },
+          ru: {
+            ...seo.ru,
+            ...(seo.ru.keywords?.trim()
+              ? { keywords: seo.ru.keywords }
+              : {}),
+            title: seo.ru.title || translations.ru.title,
+            description: seo.ru.description || translations.ru.excerpt,
+            ogTitle: seo.ru.ogTitle || seo.ru.title || translations.ru.title,
+            ogDescription:
+              seo.ru.ogDescription ||
+              seo.ru.description ||
+              translations.ru.excerpt,
+          },
+
+          // LEGACY FALLBACK (IMPORTANT)
+          title: seo.en.title || translations.en.title,
+          description:
+            seo.en.description || translations.en.excerpt,
         },
       };
 
@@ -113,7 +197,7 @@ export default function AdminBlogForm() {
       navigate("/admin/blogs");
     } catch (err) {
       console.error(err);
-      alert("Save failed");
+      alert(err.message || "Save failed");
     } finally {
       setLoading(false);
     }
@@ -126,17 +210,17 @@ export default function AdminBlogForm() {
     border: "1px solid #d1d5db",
   };
 
+  /* --------------------------------
+     RENDER
+  -------------------------------- */
   return (
     <div>
-      <h1 style={{ fontSize: 22, marginBottom: 16 }}>
+      <h1 style={{ fontSize: 22 }}>
         {isEdit ? "Edit Blog" : "New Blog"}
       </h1>
 
-      <form
-        onSubmit={handleSubmit}
-        style={{ display: "grid", gap: 16, maxWidth: 900 }}
-      >
-        {/* Language Tabs */}
+      <form onSubmit={handleSubmit} style={{ maxWidth: 900, display: "grid", gap: 16 }}>
+        {/* LANGUAGE TABS */}
         <div style={{ display: "flex", gap: 8 }}>
           {["en", "az", "ru"].map((lang) => (
             <button
@@ -146,11 +230,9 @@ export default function AdminBlogForm() {
               style={{
                 padding: "6px 12px",
                 borderRadius: 999,
+                background: activeLang === lang ? "#2563eb" : "#fff",
+                color: activeLang === lang ? "#fff" : "#111",
                 border: "1px solid #e5e7eb",
-                background: activeLang === lang ? "#2563eb" : "white",
-                color: activeLang === lang ? "white" : "#111827",
-                cursor: "pointer",
-                fontSize: 13,
               }}
             >
               {lang.toUpperCase()}
@@ -158,128 +240,113 @@ export default function AdminBlogForm() {
           ))}
         </div>
 
-        {/* Title */}
-        <div>
-          <label style={{ display: "block", fontSize: 14, marginBottom: 4 }}>
-            Title ({activeLang.toUpperCase()})
-          </label>
-          <input
-            type="text"
-            value={translations[activeLang]?.title || ""}
-            onChange={(e) =>
-              handleChange(activeLang, "title", e.target.value)
-            }
-            required
-            style={inputStyle}
-          />
-        </div>
+        <input
+          placeholder={`Title (${activeLang})`}
+          value={translations[activeLang].title}
+          onChange={(e) =>
+            handleTranslationChange(activeLang, "title", e.target.value)
+          }
+          style={inputStyle}
+          required
+        />
 
-        {/* Content */}
-        <div>
-          <label style={{ display: "block", fontSize: 14, marginBottom: 4 }}>
-            Content ({activeLang.toUpperCase()})
-          </label>
-          <RichTextEditor
-            value={translations[activeLang]?.content || ""}
-            onChange={(val) => handleChange(activeLang, "content", val)}
-          />
-        </div>
+        <textarea
+          placeholder={`Excerpt (${activeLang})`}
+          value={translations[activeLang].excerpt}
+          onChange={(e) =>
+            handleTranslationChange(activeLang, "excerpt", e.target.value)
+          }
+          rows={3}
+          style={inputStyle}
+          required
+        />
 
-        {/* Image */}
+        <RichTextEditor
+          value={translations[activeLang].content}
+          onChange={(val) =>
+            handleTranslationChange(activeLang, "content", val)
+          }
+        />
+
         <ImageUpload label="Blog Image" value={image} onChange={setImage} />
 
-        {/* Featured */}
-        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <label>
           <input
             type="checkbox"
             checked={featured}
             onChange={(e) => setFeatured(e.target.checked)}
-          />
-          <span style={{ fontSize: 14 }}>Featured</span>
-        </div>
+          />{" "}
+          Featured
+        </label>
 
-        {/* ⭐ CATEGORY SELECT */}
-        <div>
-          <label style={{ display: "block", fontSize: 14, marginBottom: 4 }}>
-            Category
-          </label>
-          <select
-            style={inputStyle}
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-          >
-            <option value="design">Design</option>
-            <option value="seo">SEO</option>
-            <option value="marketing">Marketing</option>
-            <option value="technology">Technology</option>
-            <option value="development">Development</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
+        <select value={category} onChange={(e) => setCategory(e.target.value)} style={inputStyle}>
+          <option value="design">Design</option>
+          <option value="seo">SEO</option>
+          <option value="marketing">Marketing</option>
+          <option value="technology">Technology</option>
+          <option value="development">Development</option>
+          <option value="other">Other</option>
+        </select>
 
-        {/* SEO SECTION */}
-        <hr style={{ margin: "20px 0" }} />
-        <h2 style={{ fontSize: 18 }}>SEO Settings</h2>
+        <hr />
+        <h2>SEO ({activeLang.toUpperCase()})</h2>
 
-        {/* SEO Title */}
-        <div>
-          <label style={{ display: "block", marginBottom: 4 }}>SEO Title</label>
-          <input
-            type="text"
-            value={seoTitle}
-            onChange={(e) => setSeoTitle(e.target.value)}
-            style={inputStyle}
-          />
-        </div>
+        {["title", "description", "ogTitle", "ogDescription", "keywords"].map(
+          (field) => (
+            <input
+              key={field}
+              placeholder={field}
+              value={seo[activeLang][field]}
+              onChange={(e) =>
+                handleSeoChange(activeLang, field, e.target.value)
+              }
+              style={inputStyle}
+            />
+          )
+        )}
 
-        {/* SEO Description */}
-        <div>
-          <label style={{ display: "block", marginBottom: 4 }}>
-            SEO Description
-          </label>
-          <textarea
-            value={seoDescription}
-            onChange={(e) => setSeoDescription(e.target.value)}
-            rows={3}
-            style={inputStyle}
-          />
-        </div>
+        <hr />
+        <h2>Global SEO</h2>
 
-        {/* Slug */}
-        <div>
-          <label style={{ display: "block", marginBottom: 4 }}>Slug</label>
-          <input
-            type="text"
-            value={seoSlug}
-            onChange={(e) => setSeoSlug(e.target.value)}
-            placeholder="auto-generated from title"
-            style={inputStyle}
-          />
-        </div>
+        <input
+          placeholder="Slug"
+          value={seo.slug}
+          onChange={(e) =>
+            setSeo((p) => ({ ...p, slug: e.target.value }))
+          }
+          style={inputStyle}
+        />
 
-        {/* OG Image */}
-        <div>
-          <label style={{ marginBottom: 4, display: "block" }}>
-            OpenGraph Image (Recommended)
-          </label>
-          <ImageUpload value={seoOgImage} onChange={setSeoOgImage} />
-        </div>
+        <input
+          placeholder="Canonical"
+          value={seo.canonical}
+          onChange={(e) =>
+            setSeo((p) => ({ ...p, canonical: e.target.value }))
+          }
+          style={inputStyle}
+        />
 
-        {/* Save Button */}
+        <ImageUpload
+          label="OG Image"
+          value={seo.ogImage}
+          onChange={(v) =>
+            setSeo((p) => ({ ...p, ogImage: v }))
+          }
+        />
+
         <button
           type="submit"
           disabled={loading}
           style={{
             padding: "10px 14px",
-            borderRadius: 8,
-            border: "none",
             background: loading ? "#9ca3af" : "#16a34a",
-            color: "white",
-            cursor: loading ? "default" : "pointer",
+            color: "#fff",
+            border: "none",
+            borderRadius: 8,
             width: 160,
           }}
         >
-          {loading ? "Saving..." : "Save"}
+          {loading ? "Saving…" : "Save"}
         </button>
       </form>
     </div>

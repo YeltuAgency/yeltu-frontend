@@ -17,7 +17,7 @@ const pushToDataLayer = (eventName, params = {}) => {
 
 export default function BlogPost() {
   const { slug } = useParams();
-  const { language } = useLanguage();   // ✅ FIXED!!
+  const { language } = useLanguage();
 
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -32,12 +32,12 @@ export default function BlogPost() {
       try {
         const res = await fetchBlogBySlug({
           slug,
-          lang: language || "en",   // ✅ FIXED!!
+          lang: language || "en",
         });
 
         if (!cancelled) setPost(res.data);
-      } catch (e) {
-        console.error(e);
+      } catch (err) {
+        console.error(err);
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -45,33 +45,46 @@ export default function BlogPost() {
 
     loadBlog();
     return () => (cancelled = true);
-  }, [slug, language]);   // ✅ FIXED!!
+  }, [slug, language]);
 
   /* -----------------------------
-     SEO + JSON-LD
+     RESOLVED SEO (FROM BACKEND)
   ----------------------------- */
   const seo = useMemo(() => {
-    if (!post) return {};
-    return {
-      title: post.title,
-      description: post.excerpt,
-      image: post.image,
-      url: `https://yeltu.com/blog/post/${slug}`,
-    };
-  }, [post, slug]);
+    if (!post?.seo) return {};
 
+    return {
+      title: post.seo.title || post.title,
+      description: post.seo.description || post.excerpt,
+      ogTitle: post.seo.ogTitle || post.seo.title || post.title,
+      ogDescription:
+        post.seo.ogDescription ||
+        post.seo.description ||
+        post.excerpt,
+      image: post.seo.ogImage || post.image,
+      canonical:
+        post.seo.canonical ||
+        `https://yeltu.com/blog/post/${post.seo.slug}`,
+      meta: post.seo.meta || [],
+      slug: post.seo.slug,
+    };
+  }, [post]);
+
+  /* -----------------------------
+     JSON-LD
+  ----------------------------- */
   const jsonLd = useMemo(() => {
     if (!post) return "{}";
+
     return JSON.stringify({
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      headline: seo.title,
-      description: seo.description,
+      headline: seo.ogTitle || seo.title,
+      description: seo.ogDescription || seo.description,
       image: seo.image,
-      author: {
-        "@type": "Organization",
-        name: "Yeltu Agency",
-      },
+      datePublished: post.createdAt || new Date().toISOString(),
+      inLanguage: language,
+      mainEntityOfPage: seo.canonical,
       publisher: {
         "@type": "Organization",
         name: "Yeltu Agency",
@@ -80,11 +93,8 @@ export default function BlogPost() {
           url: "https://yeltu.com/og-home-en.jpg",
         },
       },
-      datePublished: post.createdAt || new Date().toISOString(),
-      url: seo.url,
-      inLanguage: language,    // ✅ FIXED
     });
-  }, [seo, post, language]);
+  }, [post, seo, language]);
 
   /* -----------------------------
      TRACK VIEW EVENTS
@@ -115,7 +125,7 @@ export default function BlogPost() {
   /* -----------------------------
      SAFE RETURN STATES
   ----------------------------- */
-  if (loading)
+  if (loading) {
     return (
       <div
         className="py-32 text-center text-blue-300 text-xl animate-pulse"
@@ -125,8 +135,9 @@ export default function BlogPost() {
         Loading article…
       </div>
     );
+  }
 
-  if (!post)
+  if (!post) {
     return (
       <div
         className="py-32 text-center text-red-400 text-xl"
@@ -136,6 +147,7 @@ export default function BlogPost() {
         Article not found.
       </div>
     );
+  }
 
   /* -----------------------------
      RENDER
@@ -146,9 +158,12 @@ export default function BlogPost() {
       <SEO
         title={seo.title}
         description={seo.description}
-        keywords="yeltu blog, web development, marketing, design, seo"
+        ogTitle={seo.ogTitle}
+        ogDescription={seo.ogDescription}
         image={seo.image}
-        url={seo.url}
+        canonical={seo.canonical}
+        meta={seo.meta}
+        slug={seo.slug}
       />
 
       {/* JSON-LD */}
@@ -179,15 +194,18 @@ export default function BlogPost() {
 
             <div className="text-sm text-blue-300">
               <span>{post.category} · </span>
-              <time dateTime={new Date().toISOString()}>
-                {new Date().toLocaleDateString()}
+              <time dateTime={post.createdAt}>
+                {new Date(post.createdAt).toLocaleDateString()}
               </time>
             </div>
           </div>
         </header>
 
         {/* COVER IMAGE */}
-        <figure className="max-w-5xl mx-auto px-4 mb-16" aria-labelledby="blog-title">
+        <figure
+          className="max-w-5xl mx-auto px-4 mb-16"
+          aria-labelledby="blog-title"
+        >
           <div className="rounded-3xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-white/10 bg-white/5 backdrop-blur-xl">
             <ImageWithFallback
               src={post.image}
@@ -199,18 +217,23 @@ export default function BlogPost() {
         </figure>
 
         {/* ARTICLE BODY */}
-        <article className="max-w-3xl mx-auto px-4 pb-32" aria-describedby="blog-excerpt">
+        <article
+          className="max-w-3xl mx-auto px-4 pb-32"
+          aria-describedby="blog-excerpt"
+        >
           <div
-          className="
-            prose prose-invert prose-lg max-w-none leading-relaxed
-            prose-a:text-blue-400 prose-a:underline prose-a:decoration-blue-500
-            hover:prose-a:text-purple-300
-          "
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+            className="
+              prose prose-invert prose-lg max-w-none leading-relaxed
+              prose-a:text-blue-400 prose-a:underline prose-a:decoration-blue-500
+              hover:prose-a:text-purple-300
+            "
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
 
-
-          <div className="mt-16 p-8 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 text-center" role="note">
+          <div
+            className="mt-16 p-8 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 text-center"
+            role="note"
+          >
             <h3 className="text-2xl font-semibold mb-2 bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
               Enjoyed the article?
             </h3>

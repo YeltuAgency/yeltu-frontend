@@ -8,14 +8,30 @@ import { Input } from "./ui/input";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
 import SEO from "./SEO";
+import { useLangNavigate } from "../utils/useLangNavigate";
+
 
 import { fetchBlogs, fetchFeaturedBlogs } from "../api/blogApi";
 
 export default function Blog() {
   const { t, language } = useLanguage();
   const navigate = useNavigate();
+  const langNavigate = useLangNavigate();
 
-  /* SEO TEXT */
+  /* -----------------------------
+     LANGUAGE-SAFE BASE URLS
+  ----------------------------- */
+  const blogBase =
+    language === "en" ? "/blog" : `/${language}/blog`;
+
+  const blogBaseUrl =
+    language === "en"
+      ? "https://yeltu.com/blog"
+      : `https://yeltu.com/${language}/blog`;
+
+  /* -----------------------------
+     SEO TEXT
+  ----------------------------- */
   const seoText = useMemo(
     () =>
       ({
@@ -48,15 +64,17 @@ export default function Blog() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  /* CATEGORY CONFIG */
+  /* -----------------------------
+     CATEGORY CONFIG (MATCHES BACKEND ENUM)
+  ----------------------------- */
   const categoryConfig = useMemo(
     () => [
       { id: "all", label: t("blog.categories.all") || "All" },
-      { id: "tech", label: t("blog.categories.tech") || "Technology" },
+      { id: "technology", label: t("blog.categories.tech") || "Technology" },
       { id: "design", label: t("blog.categories.design") || "Design" },
       { id: "marketing", label: t("blog.categories.marketing") || "Marketing" },
       { id: "seo", label: t("blog.categories.seo") || "SEO" },
-      { id: "dev", label: t("blog.categories.dev") || "Development" },
+      { id: "development", label: t("blog.categories.dev") || "Development" },
     ],
     [t]
   );
@@ -66,7 +84,9 @@ export default function Blog() {
     [categoryConfig]
   );
 
-  /* FETCH BLOGS + FEATURED */
+  /* -----------------------------
+     FETCH BLOGS + FEATURED
+  ----------------------------- */
   useEffect(() => {
     let cancelled = false;
 
@@ -89,13 +109,13 @@ export default function Blog() {
         if (cancelled) return;
 
         const mapBlog = (b) => ({
-          id: b._id,
+          id: b.id,
           title: b.title,
           excerpt: b.excerpt,
           category: b.category,
           image: b.image,
           featured: b.featured,
-          date: new Date().toLocaleDateString(),
+          date: new Date(b.createdAt).toLocaleDateString(),
           color: "from-blue-500 to-purple-500",
           seo: b.seo || {},
         });
@@ -114,7 +134,9 @@ export default function Blog() {
     return () => (cancelled = true);
   }, [selectedCategory, searchQuery, language]);
 
-  /* FILTERED POSTS */
+  /* -----------------------------
+     FILTERED POSTS
+  ----------------------------- */
   const { filteredPosts, featuredPosts, hasResults } = useMemo(() => {
     const normalized = searchQuery.trim().toLowerCase();
 
@@ -132,14 +154,16 @@ export default function Blog() {
     };
   }, [blogs, featured, searchQuery]);
 
-  /* JSON-LD */
+  /* -----------------------------
+     JSON-LD
+  ----------------------------- */
   const jsonLd = useMemo(
     () => ({
       "@context": "https://schema.org",
       "@type": "Blog",
       name: seoText.title,
       description: seoText.desc,
-      url: "https://yeltu.com/blog",
+      url: blogBaseUrl,
       image: seoText.image,
       blogPost: blogs.map((b) => ({
         "@type": "BlogPosting",
@@ -148,10 +172,10 @@ export default function Blog() {
         image: b.image,
         genre: b.category,
         datePublished: b.date,
-        url: `https://yeltu.com/blog/post/${b.seo?.slug || b.id}`,
+        url: `${blogBaseUrl}/post/${b.seo?.slug || b.id}`,
       })),
     }),
-    [seoText, blogs]
+    [seoText, blogs, blogBaseUrl]
   );
 
   /* RENDER */
@@ -161,11 +185,8 @@ export default function Blog() {
       <SEO
         title={seoText.title}
         description={seoText.desc}
-        keywords="blog, yeltu blog, tech blog, digital marketing blog, web development blog"
         image={seoText.image}
-        url={`https://yeltu.com/blog/${
-          language === "en" ? "" : language + "/"
-        }`}
+        canonical={blogBaseUrl}
       />
 
       {/* JSON-LD Accessible */}
@@ -347,7 +368,7 @@ export default function Blog() {
                       key={slug}
                       className="group cursor-pointer"
                       aria-label={`Featured article: ${post.title}`}
-                      onClick={() => navigate(`/blog/post/${slug}`)}
+                      onClick={() => navigate(`${blogBase}/post/${slug}`)}
                     >
                       <AnimatedCard
                         delay={index * 0.1}
@@ -428,7 +449,7 @@ export default function Blog() {
                       key={slug}
                       className="group cursor-pointer"
                       aria-label={`Article: ${post.title}`}
-                      onClick={() => navigate(`/blog/post/${slug}`)}
+                      onClick={() => navigate(`${blogBase}/post/${slug}`)}
                     >
                       <AnimatedCard
                         delay={index * 0.05}
@@ -536,7 +557,7 @@ export default function Blog() {
           </p>
 
           <Button
-            onClick={() => navigate("/contact")}
+            onClick={() => langNavigate("/contact")}
             size="lg"
             aria-label="Go to contact page"
             className="

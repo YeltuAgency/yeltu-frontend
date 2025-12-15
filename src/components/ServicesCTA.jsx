@@ -3,11 +3,11 @@ import { memo } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { useLanguage } from "../contexts/LanguageContext";
-import { useNavigate } from "react-router-dom";
+import { useLangNavigate } from "../utils/useLangNavigate";
 
 function ServicesCTA() {
   const { t } = useLanguage();
-  const navigate = useNavigate();
+  const navigate = useLangNavigate();
   const goContact = () => navigate("/contact");
 
   return (

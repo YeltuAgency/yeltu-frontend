@@ -3,12 +3,11 @@ import { useEffect } from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { useLanguage } from "../contexts/LanguageContext";
-import ScrollToTop from "../components/ScrollToTop";   // ✅ ADD THIS
-
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function ClientLayout() {
   const location = useLocation();
-  const { lang } = useLanguage();
+  const { language } = useLanguage();
 
   // --------- GTM PAGEVIEW TRACKING ----------
   useEffect(() => {
@@ -18,15 +17,14 @@ export default function ClientLayout() {
       event: "page_view",
       page_path: location.pathname + location.search,
       page_title: document.title,
-      page_language: lang || "en",
+      page_language: language,
     });
 
-    // Debug in console
     console.log("GTM page_view ▸", {
-      page_path: location.pathname,
-      lang,
+      page_path: location.pathname + location.search,
+      lang: language,
     });
-  }, [location, lang]);
+  }, [location.pathname, location.search, language]);
 
   return (
     <>
