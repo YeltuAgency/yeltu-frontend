@@ -116,29 +116,35 @@ export default function RichTextEditor({ value, onChange }) {
           gap: 8,
         }}
       >
-        <button onClick={() => editor.chain().focus().toggleBold().run()}><b>B</b></button>
-        <button onClick={() => editor.chain().focus().toggleItalic().run()}><i>I</i></button>
-        <button onClick={() => editor.chain().focus().toggleUnderline().run()}><u>U</u></button>
-        <button onClick={() => editor.chain().focus().toggleStrike().run()}><s>S</s></button>
+        <button type="button" onClick={() => editor.chain().focus().toggleBold().run()}><b>B</b></button>
+        <button type="button" onClick={() => editor.chain().focus().toggleItalic().run()}><i>I</i></button>
+        <button type="button" onClick={() => editor.chain().focus().toggleUnderline().run()}><u>U</u></button>
+        <button type="button" onClick={() => editor.chain().focus().toggleStrike().run()}><s>S</s></button>
 
-        <button onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}>H2</button>
-        <button onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}>H3</button>
+        <button type="button" onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}>H2</button>
+        <button type="button" onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}>H3</button>
 
-        <button onClick={() => editor.chain().focus().toggleBulletList().run()}>• List</button>
-        <button onClick={() => editor.chain().focus().toggleOrderedList().run()}>1. List</button>
+        <button type="button" onClick={() => editor.chain().focus().toggleBulletList().run()}>• List</button>
+        <button type="button" onClick={() => editor.chain().focus().toggleOrderedList().run()}>1. List</button>
 
-        <button onClick={addLink}>🔗 Link</button>
+        <button type="button" onClick={addLink}>🔗 Link</button>
 
-        <button onClick={() => editor.chain().focus().setTextAlign("left").run()}>⬅ Left</button>
-        <button onClick={() => editor.chain().focus().setTextAlign("center").run()}>⬆ Center</button>
-        <button onClick={() => editor.chain().focus().setTextAlign("right").run()}>➡ Right</button>
+        <button type="button" onClick={() => editor.chain().focus().setTextAlign("left").run()}>⬅ Left</button>
+        <button type="button" onClick={() => editor.chain().focus().setTextAlign("center").run()}>⬆ Center</button>
+        <button type="button" onClick={() => editor.chain().focus().setTextAlign("right").run()}>➡ Right</button>
 
         <label style={{ cursor: "pointer" }}>
           📷 Image
-          <input type="file" accept="image/*" style={{ display: "none" }} onChange={uploadImage} />
+          <input
+            type="file"
+            accept="image/*"
+            style={{ display: "none" }}
+            onChange={uploadImage}
+          />
         </label>
 
         <button
+          type="button"
           onClick={() => {
             const url = prompt("YouTube URL:");
             if (url) editor.chain().focus().setYoutubeVideo({ src: url }).run();
@@ -147,14 +153,16 @@ export default function RichTextEditor({ value, onChange }) {
           ▶ YouTube
         </button>
 
-        <button onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3 }).run()}>
+        <button type="button" onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3 }).run()}>
           📊 Table
         </button>
 
-        <button onClick={() => editor.chain().focus().toggleCodeBlock().run()}>{`</>`}</button>
+        <button type="button" onClick={() => editor.chain().focus().toggleCodeBlock().run()}>
+          {`</>`}
+        </button>
 
-        <button onClick={() => editor.chain().focus().undo().run()}>↶ Undo</button>
-        <button onClick={() => editor.chain().focus().redo().run()}>↷ Redo</button>
+        <button type="button" onClick={() => editor.chain().focus().undo().run()}>↶ Undo</button>
+        <button type="button" onClick={() => editor.chain().focus().redo().run()}>↷ Redo</button>
       </div>
 
       {/* --------- CONTENT AREA --------- */}

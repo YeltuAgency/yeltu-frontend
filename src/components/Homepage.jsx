@@ -79,16 +79,16 @@ export default function Homepage() {
   const seoText =
     {
       en: {
-        title: "Modern Web Agency in Azerbaijan",
-        desc: "Yeltu Agency builds premium websites with MERN, animation, SEO optimization, and UX craftsmanship.",
+        title: "Digital & Web Agency in Azerbaijan | Yeltu",
+        desc: "Yeltu is a digital and web agency in Azerbaijan providing web development, MERN, SEO, digital marketing, and UX-driven solutions.",
       },
       az: {
-        title: "Azərbaycanın Müasir Veb Agentliyi",
-        desc: "Yeltu Agentliyi MERN texnologiyası ilə premium veb saytlar, animasiyalar və SEO optimizasiyası hazırlayır.",
+        title: "Rəqəmsal Marketinq və Vebsayt Agentliyi | Yeltu Azərbaycan",
+        desc: "Yeltu Azərbaycanın aparıcı rəqəmsal və veb agentliyidir. Veb sayt, SEO və rəqəmsal marketinq xidmətləri təqdim edirik.",
       },
       ru: {
-        title: "Современное веб-агентство в Азербайджане",
-        desc: "Агентство Yeltu создаёт премиальные сайты с MERN, анимациями, SEO и UX-дизайном.",
+        title: "Цифровое и веб-агентство в Азербайджане | Yeltu",
+        desc: "Yeltu — цифровое и веб-агентство в Азербайджане. Веб-разработка, SEO, digital-маркетинг и UX-дизайн.",
       },
     }[language] || {
       title: "Yeltu Agency",
@@ -101,7 +101,26 @@ export default function Homepage() {
       <SEO
         title={seoText.title}
         description={seoText.desc}
-        keywords="web development, design, SEO, MERN"
+        keywords="
+          digital agency azerbaijan,
+          web agency azerbaijan,
+          digital marketing azerbaijan,
+          seo agency azerbaijan,
+          web development baku,
+          mobile app development,
+          custom mobile app development,
+          veb agentliyi,
+          rəqəmsal marketinq agentliyi,
+          seo xidməti azərbaycan,
+          smm xidməti,
+          google ads,
+          sosial media idarəetməsi,
+          meta ads,
+          veb sayt hazırlanması,
+          mobil tətbiq hazırlanması,
+          biznes üçün veb sayt,
+          biznes üçün mobil tətbiq
+        "
         image={`https://yeltu.com/og-home-${language}.jpg`}
         url={`https://yeltu.com/${language === "en" ? "" : language + "/"}`}
         lang={language}
@@ -113,22 +132,38 @@ export default function Homepage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": ["Organization", "ProfessionalService"],
             name: "Yeltu Agency",
             url: "https://yeltu.com",
-            logo: "https://yeltu.com/og-home-en.jpg",
+            logo: "https://yeltu.com/yeltu_logopng.png",
             description: seoText.desc,
             inLanguage: language,
+
+            areaServed: {
+              "@type": "Country",
+              name: "Azerbaijan",
+            },
+
+            knowsAbout: [
+              "Web Development",
+              "Digital Marketing",
+              "SEO",
+              "Mobile App Development",
+              "UX/UI Design",
+            ],
+
             sameAs: [
-              "https://instagram.com/yeltu",
+              "https://instagram.com/yeltuagency",
               "https://linkedin.com/company/yeltu",
             ],
+
             contactPoint: {
               "@type": "ContactPoint",
               email: "info@yeltu.com",
               contactType: "customer support",
               availableLanguage: ["en", "az", "ru"],
             },
+
             address: {
               "@type": "PostalAddress",
               addressCountry: "AZ",
@@ -301,14 +336,19 @@ export default function Homepage() {
                 </Suspense>
               ))}
             </div>
-          ) : (
-            <div className="flex justify-center py-24 mb-20">
+                    ) : (
+            <div className="flex flex-col items-center py-28 mb-20 text-center">
+              {/* subtle animated divider */}
+              <div className="relative mb-8">
+                <span className="block h-[2px] w-20 bg-gradient-to-r from-transparent via-violet-400/70 to-transparent" />
+              </div>
+
+              {/* existing text – redesigned */}
               <h3
                 className="
-                  text-6xl md:text-7xl font-extrabold uppercase 
-                  bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-500 
-                  bg-clip-text text-transparent 
-                  animate-comingSoonMaster tracking-[0.25em] text-center
+                  text-4xl md:text-5xl font-semibold uppercase
+                  tracking-[0.18em]
+                  text-slate-400
                 "
               >
                 {t("homepage.projects.comingSoon")}
