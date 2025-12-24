@@ -12,7 +12,7 @@ const services = [
     icon: Code,
     title: "Veb İnkişafı",
     description:
-      "Müasir frameworklərdən istifadə edərək güclü və genişlənəbilən veb tətbiqləri hazırlayın.",
+      "Müasir frameworklərdən istifadə edərək güclü və ölçüləbilən veb tətbiqləri hazırlayın.",
     features: [
       "Xüsusi veb tətbiqlər",
       "E-ticarət",
@@ -26,7 +26,7 @@ const services = [
     icon: Smartphone,
     title: "Mobil Tətbiq İnkişafı",
     description:
-      "Yerlinə & cross-platform mobil tətbiqlər — yüksək sürət və UX ilə.",
+      "Native & cross-platform mobil tətbiqlər — yüksək sürət və UX ilə.",
     features: [
       "iOS və Android",
       "Cross-platform",
@@ -66,7 +66,7 @@ const services = [
   {
     icon: Share2,
     title: "Sosial Media Marketinqi",
-    description: "İzləyiciləri cəlb edin və brend görünürlüğünüzü artırın.",
+    description: "İzləyiciləri cəlb edin və brend görünürlüyünüzü artırın.",
     features: [
       "Kontent yaradılması",
       "Cəmiyyət idarəçiliyi",

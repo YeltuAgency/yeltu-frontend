@@ -7,6 +7,8 @@ import { fetchBlogs } from "../api/blogApi";
 import { useLangNavigate } from "../utils/useLangNavigate";
 import { lazy, Suspense, useCallback } from "react";
 import { useSectionObserver } from "../hooks/useSectionObserver";
+import { Link } from "react-router-dom";
+
 
 // Lazy-load heavy components
 const FloatingElements = lazy(() => import("./FloatingElements"));
@@ -52,9 +54,9 @@ export default function Homepage() {
   const goAbout = () => navigate("/about");
   const goBlogLists = () => navigate("/blog");
 
-  const goBlog = (slug) => {
-    if (slug) navigate(`/blog/post/${slug}`);
-    else navigate("/blog");
+  const goBlogUrl = (slug) => {
+    if (!slug) return "/blog";
+    return `/blog/post/${slug}`;
   };
 
   // ✅ FIX: MISSING NAVIGATOR FOR SERVICES SECTION
@@ -135,7 +137,7 @@ export default function Homepage() {
             "@type": ["Organization", "ProfessionalService"],
             name: "Yeltu Agency",
             url: "https://yeltu.com",
-            logo: "https://yeltu.com/yeltu_logopng.png",
+            logo: "https://yeltu.com/yeltu-logo.png",
             description: seoText.desc,
             inLanguage: language,
 
@@ -394,57 +396,66 @@ export default function Homepage() {
             <p className="text-blue-200">{t("homepage.blog.subtitle")}</p>
           </div>
 
-          {/* ░▒░ MOBILE SCROLL WRAPPER ░▒░  */}
-          {/* MOBILE VERSION — SHOW 1 CARD ONLY */}
+          {/* ░▒░ MOBILE SCROLL WRAPPER ░▒░ */}
           <div className="md:hidden w-screen overflow-x-scroll no-scrollbar snap-x snap-mandatory">
             <div className="flex" style={{ width: "300vw" }}>
               {(loadingBlogs ? [1, 2, 3] : blogs.slice(0, 3)).map((blog, i) => (
-                <Suspense key={blog.id || i} fallback={null}>
-                  <AnimatedCard
-                    onClick={() => !loadingBlogs && goBlog(blog.seo?.slug)}
-                    className="
-                      w-screen shrink-0 snap-center
-                      bg-white/5 border border-white/10 rounded-2xl p-6
-                      mx-auto
-                      transition-all duration-300
-                    "
-                  >
-                    {/* IMAGE */}
-                    <div
-                      className="h-56 rounded-xl mb-5 bg-cover bg-center bg-no-repeat"
-                      style={{ backgroundImage: loadingBlogs ? "none" : `url(${blog.image})` }}
-                    />
+                <Suspense key={blog?.id || i} fallback={null}>
+                  {loadingBlogs ? (
+                    <AnimatedCard
+                      className="
+                        w-screen shrink-0 snap-center
+                        bg-white/5 border border-white/10 rounded-2xl p-6
+                        mx-auto animate-pulse
+                      "
+                    >
+                      <div className="h-56 rounded-xl mb-5 bg-slate-700/50" />
+                      <div className="h-4 bg-white/20 w-2/3 rounded mb-3" />
+                      <div className="h-3 bg-white/10 w-1/2 rounded" />
+                    </AnimatedCard>
+                  ) : (
+                    <Link
+                      to={goBlogUrl(blog.seo?.slug)}
+                      className="block w-screen shrink-0 snap-center"
+                    >
+                      <AnimatedCard
+                        className="
+                          bg-white/5 border border-white/10 rounded-2xl p-6
+                          mx-auto transition-all duration-300 cursor-pointer
+                        "
+                      >
+                        <div
+                          className="h-56 rounded-xl mb-5 bg-cover bg-center bg-no-repeat"
+                          style={{ backgroundImage: `url(${blog.image})` }}
+                        />
 
-                    {/* CATEGORY */}
-                    {!loadingBlogs && blog.category && (
-                      <span className="absolute top-4 left-4 px-3 py-1 text-xs font-semibold
-                          rounded-full bg-white/10 backdrop-blur-md 
-                          border border-white/20 text-purple-200">
-                        {blog.category}
-                      </span>
-                    )}
+                        {blog.category && (
+                          <span className="absolute top-4 left-4 px-3 py-1 text-xs font-semibold
+                            rounded-full bg-white/10 backdrop-blur-md
+                            border border-white/20 text-purple-200">
+                            {blog.category}
+                          </span>
+                        )}
 
-                    {/* TITLE */}
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      {loadingBlogs ? "Loading..." : blog.title}
-                    </h3>
+                        <h3 className="text-xl font-bold text-white mb-2">
+                          {blog.title}
+                        </h3>
 
-                    {/* DESCRIPTION */}
-                    <p className="text-blue-200/80 mb-4 line-clamp-2">
-                      {loadingBlogs ? "" : blog.excerpt}
-                    </p>
+                        <p className="text-blue-200/80 mb-4 line-clamp-2">
+                          {blog.excerpt}
+                        </p>
 
-                    {/* READ MORE */}
-                    {!loadingBlogs && (
-                      <button className="flex items-center gap-2 text-blue-300 group-hover:text-white">
-                        {t("homepage.blog.readMore")}
-                        <ArrowRight size={16} />
-                      </button>
-                    )}
-                  </AnimatedCard>
+                        <div className="flex items-center gap-2 text-blue-300">
+                          {t("homepage.blog.readMore")}
+                          <ArrowRight size={16} />
+                        </div>
+                      </AnimatedCard>
+                    </Link>
+                  )}
                 </Suspense>
               ))}
             </div>
+
             <div className="flex justify-center mt-4 gap-2">
               {(loadingBlogs ? [1, 2, 3] : blogs.slice(0, 3)).map((_, i) => (
                 <div
@@ -458,15 +469,14 @@ export default function Homepage() {
             </div>
           </div>
 
-
-          {/* ░▒░ DESKTOP GRID (unchanged) ░▒░ */}
+          {/* ░▒░ DESKTOP GRID ░▒░ */}
           <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             <div aria-hidden="true" className="absolute inset-0 blog-grid opacity-[0.05]" />
 
             {loadingBlogs
               ? [1, 2, 3].map((i) => (
                   <Suspense key={i} fallback={null}>
-                    <AnimatedCard className="relative group bg-white/5 border border-white/10 rounded-2xl p-6 animate-pulse">
+                    <AnimatedCard className="relative bg-white/5 border border-white/10 rounded-2xl p-6 animate-pulse">
                       <div className="h-48 bg-slate-700/50 rounded-xl mb-6" />
                       <div className="h-4 bg-white/20 w-2/3 rounded mb-3" />
                       <div className="h-3 bg-white/10 w-1/2 rounded" />
@@ -475,44 +485,46 @@ export default function Homepage() {
                 ))
               : blogs.slice(0, 3).map((blog) => (
                   <Suspense key={blog.id} fallback={null}>
-                    <AnimatedCard
-                      role="button"
-                      onClick={() => goBlog(blog.seo.slug)}
-                      className="relative group cursor-pointer bg-white/5 border border-white/10 
-                                hover:border-purple-400/40 rounded-2xl p-6 overflow-hidden 
-                                transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-500/20"
-                    >
-                      <div
-                        className="absolute left-0 top-0 h-full w-[3px] 
-                                      bg-gradient-to-b from-purple-400 to-blue-500 
-                                      opacity-0 group-hover:opacity-100 transition-all"
-                      />
-
-                      <div
-                        className="h-48 rounded-xl mb-6 bg-cover bg-center bg-no-repeat"
-                        style={{ backgroundImage: `url(${blog.image})` }}
-                      />
-
-                      {blog.category && (
-                        <span className="absolute top-4 left-4 px-3 py-1 text-xs font-semibold
-                                          rounded-full bg-white/10 backdrop-blur-md 
-                                          border border-white/20 text-purple-200">
-                          {blog.category}
-                        </span>
-                      )}
-
-                      <h3 className="text-xl font-bold text-white mb-2">{blog.title}</h3>
-
-                      <p className="text-blue-200/80 mb-4 line-clamp-2">{blog.excerpt}</p>
-
-                      <button
-                        onClick={() => goBlog(blog.seo.slug)}
-                        className="flex items-center gap-2 text-blue-300 group-hover:text-white transition-all"
+                    <Link to={goBlogUrl(blog.seo.slug)} className="block">
+                      <AnimatedCard
+                        className="relative group cursor-pointer bg-white/5 border border-white/10
+                          hover:border-purple-400/40 rounded-2xl p-6 overflow-hidden
+                          transition-all duration-500 hover:-translate-y-2
+                          hover:shadow-xl hover:shadow-purple-500/20"
                       >
-                        {t("homepage.blog.readMore")}
-                        <ArrowRight size={16} />
-                      </button>
-                    </AnimatedCard>
+                        <div
+                          className="absolute left-0 top-0 h-full w-[3px]
+                            bg-gradient-to-b from-purple-400 to-blue-500
+                            opacity-0 group-hover:opacity-100 transition-all"
+                        />
+
+                        <div
+                          className="h-48 rounded-xl mb-6 bg-cover bg-center bg-no-repeat"
+                          style={{ backgroundImage: `url(${blog.image})` }}
+                        />
+
+                        {blog.category && (
+                          <span className="absolute top-4 left-4 px-3 py-1 text-xs font-semibold
+                            rounded-full bg-white/10 backdrop-blur-md
+                            border border-white/20 text-purple-200">
+                            {blog.category}
+                          </span>
+                        )}
+
+                        <h3 className="text-xl font-bold text-white mb-2">
+                          {blog.title}
+                        </h3>
+
+                        <p className="text-blue-200/80 mb-4 line-clamp-2">
+                          {blog.excerpt}
+                        </p>
+
+                        <div className="flex items-center gap-2 text-blue-300 group-hover:text-white transition-all">
+                          {t("homepage.blog.readMore")}
+                          <ArrowRight size={16} />
+                        </div>
+                      </AnimatedCard>
+                    </Link>
                   </Suspense>
                 ))}
           </div>
@@ -536,6 +548,7 @@ export default function Homepage() {
         </div>
       </section>
 
+
       {/* ---------------------------------- */}
       {/* ABOUT */}
       {/* ---------------------------------- */}
@@ -546,7 +559,7 @@ export default function Homepage() {
           showAbout ? "section-visible" : "section-hidden"
         }`}
       >
-        <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-100/40 via-purple-100/30 to-transparent rounded-full blur-[100px]" />
           <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-violet-100/40 via-pink-100/30 to-transparent rounded-full blur-[120px]" />
         </div>
@@ -564,11 +577,34 @@ export default function Homepage() {
                 </span>
               </div>
 
-              <h2 id="about-title" className="mb-8 leading-tight tracking-tight">
-                <span className="block text-5xl md:text-6xl lg:text-7xl font-bold mb-3 bg-gradient-to-r from-slate-900 to-slate-800 bg-clip-text text-transparent">
+              <h2
+                id="about-title"
+                className="mb-8 tracking-tight leading-tight pt-[0.28em] pb-[0.06em]"
+              >
+                <span
+                  className="
+                    inline-block
+                    text-5xl md:text-6xl lg:text-7xl
+                    font-bold mb-3
+                    leading-[1.25]
+                    pt-[0.18em]
+                    bg-gradient-to-r from-slate-900 to-slate-800
+                    bg-clip-text text-transparent
+                  "
+                >
                   {t("homepage.about.title1")}
                 </span>
-                <span className="block text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+                <span
+                  className="
+                    inline-block
+                    text-5xl md:text-6xl lg:text-7xl
+                    font-bold
+                    leading-[1.25]
+                    pt-[0.18em]
+                    bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600
+                    bg-clip-text text-transparent
+                  "
+                >
                   {t("homepage.about.title2")}
                 </span>
               </h2>
