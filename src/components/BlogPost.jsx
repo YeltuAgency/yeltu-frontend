@@ -4,6 +4,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import SEO from "./SEO";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { fetchBlogBySlug } from "../api/blogApi";
+import { t } from "i18next";
 
 // GTM helper
 const pushToDataLayer = (eventName, params = {}) => {
@@ -132,7 +133,7 @@ export default function BlogPost() {
         role="status"
         aria-live="polite"
       >
-        Loading article…
+        {t("blog.loadingpost") || "Loading blog posts..."}
       </div>
     );
   }

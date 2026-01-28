@@ -8,6 +8,7 @@ import { useLangNavigate } from "../utils/useLangNavigate";
 import { lazy, Suspense, useCallback } from "react";
 import { useSectionObserver } from "../hooks/useSectionObserver";
 import { Link } from "react-router-dom";
+import ConstellationPlaceholder from "./ConstellationPlaceholder";
 
 
 // Lazy-load heavy components
@@ -291,46 +292,29 @@ export default function Homepage() {
       <section
         ref={projectsRef}
         aria-labelledby="projects-title"
-        className={`pt-12 pb-16 bg-white relative overflow-hidden ${
-          showProjects ? "section-visible" : "section-hidden"
-        }`}
+        className="w-full p-0" // Removed bg-white, set padding to 0 so the canvas fills it
       >
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-            <h2
-              id="projects-title"
-              className="text-5xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent"
-            >
-              {t("homepage.projects.title")}
-            </h2>
-            <p className="text-slate-500 mt-4">{t("homepage.projects.subtitle")}</p>
-          </div>
-
-          {hasProjects ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
+        <ConstellationPlaceholder 
+          t={t} 
+          goProjects={goProjects} 
+          hasProjects={hasProjects}
+        >
+          {/* PASSING THE GRID AS CHILDREN */}
+          {hasProjects && (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {[1, 2, 3].map((x) => (
                 <Suspense key={x} fallback={null}>
                   <AnimatedCard
                     role="button"
                     tabIndex={0}
-                    aria-label="Upcoming project item"
-                    onKeyDown={(e) => (e.key === "Enter" ? goProjects() : null)}
                     onClick={goProjects}
-                    className="group cursor-pointer bg-white/90 backdrop-blur-3xl rounded-[2.5rem] border border-slate-200/60 hover:-translate-y-2 transition-all"
+                    // OPTIONAL: I updated the card style slightly to look good on Dark Background (Glass style)
+                    // If you prefer solid white, change bg-white/10 to bg-white/90
+                    className="group cursor-pointer bg-white/10 backdrop-blur-2xl rounded-[2.5rem] border border-white/10 hover:border-cyan-400/50 hover:-translate-y-2 transition-all duration-300"
                   >
-                    <div
-                      aria-hidden="true"
-                      className="relative aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200 animate-pulse rounded-t-[2.5rem]"
-                    />
+                    <div className="relative aspect-[4/3] bg-gradient-to-br from-white/5 to-white/10 animate-pulse rounded-t-[2.5rem]" />
                     <div className="p-7">
-                      <h3
-                        className="
-                          text-6xl md:text-7xl font-extrabold uppercase
-                          bg-clip-text text-transparent
-                          bg-[linear-gradient(90deg,#8C52FF,#5CE1E6)]
-                          tracking-[0.25em] text-center
-                        "
-                      >
+                      <h3 className="text-6xl md:text-7xl font-extrabold uppercase bg-clip-text text-transparent bg-gradient-to-r from-violet-200 to-cyan-200 tracking-[0.25em] text-center">
                         {t('homepage.projects.comingSoon')}
                       </h3>
                     </div>
@@ -338,116 +322,96 @@ export default function Homepage() {
                 </Suspense>
               ))}
             </div>
-                    ) : (
-            <div className="flex flex-col items-center py-28 mb-20 text-center">
-              {/* subtle animated divider */}
-              <div className="relative mb-8">
-                <span className="block h-[2px] w-20 bg-gradient-to-r from-transparent via-violet-400/70 to-transparent" />
-              </div>
-
-              {/* existing text – redesigned */}
-              <h3
-                className="
-                  text-4xl md:text-5xl font-semibold uppercase
-                  tracking-[0.18em]
-                  text-slate-400
-                "
-              >
-                {t("homepage.projects.comingSoon")}
-              </h3>
-            </div>
           )}
-
-          <div className="flex justify-center">
-            <button
-              aria-label="See all projects"
-              onClick={goProjects}
-              className="group relative inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-full transition-all hover:-translate-y-1"
-            >
-              <span className="relative z-10 font-semibold">
-                {t("homepage.projects.button")}
-              </span>
-              <ArrowRight
-                size={20}
-                className="relative z-10 group-hover:translate-x-1 transition-transform"
-              />
-            </button>
-          </div>
-        </div>
+        </ConstellationPlaceholder>
       </section>
-
       {/* ---------------------------------- */}
       {/* BLOG */}
       {/* ---------------------------------- */}
       <section
         ref={blogRef}
         aria-labelledby="blog-title"
-        className={`pt-12 pb-20 text-white relative overflow-hidden hero-bg ${
+        className={`py-24 relative overflow-hidden bg-gradient-to-b from-white to-slate-50 ${
           showBlog ? "section-visible" : "section-hidden"
         }`}
       >
-        <div aria-hidden="true" className="absolute inset-0 hero-grid opacity-[0.15]" />
+        {/* ░▒░ BACKGROUND DECORATION ░▒░ */}
+        <div aria-hidden="true" className="absolute top-0 right-0 w-[800px] h-[800px] bg-cyan-50/50 blur-[120px] rounded-full pointer-events-none translate-x-1/3 -translate-y-1/4" />
+        <div aria-hidden="true" className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-violet-50/50 blur-[100px] rounded-full pointer-events-none -translate-x-1/3 translate-y-1/4" />
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-            <h2 id="blog-title" className="text-5xl font-bold gradient-text-blog mb-3">
-              {t("homepage.blog.title")}
+          <div className="text-center mb-16">
+            <h2 id="blog-title" className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-slate-900">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-blue-900 to-slate-700">
+                {t("homepage.blog.title")}
+              </span>
             </h2>
-            <p className="text-blue-200">{t("homepage.blog.subtitle")}</p>
+            <p className="text-slate-500 max-w-2xl mx-auto text-lg font-light leading-relaxed">
+              {t("homepage.blog.subtitle")}
+            </p>
           </div>
 
           {/* ░▒░ MOBILE SCROLL WRAPPER ░▒░ */}
-          <div className="md:hidden w-screen overflow-x-scroll no-scrollbar snap-x snap-mandatory">
-            <div className="flex" style={{ width: "300vw" }}>
+          <div className="md:hidden w-screen overflow-x-scroll no-scrollbar snap-x snap-mandatory pb-8">
+            <div className="flex px-4 gap-4" style={{ width: "max-content" }}>
               {(loadingBlogs ? [1, 2, 3] : blogs.slice(0, 3)).map((blog, i) => (
                 <Suspense key={blog?.id || i} fallback={null}>
                   {loadingBlogs ? (
                     <AnimatedCard
                       className="
-                        w-screen shrink-0 snap-center
-                        bg-white/5 border border-white/10 rounded-2xl p-6
-                        mx-auto animate-pulse
+                        w-[85vw] shrink-0 snap-center
+                        bg-white border border-slate-200 rounded-[2rem] overflow-hidden
+                        animate-pulse shadow-sm
                       "
                     >
-                      <div className="h-56 rounded-xl mb-5 bg-slate-700/50" />
-                      <div className="h-4 bg-white/20 w-2/3 rounded mb-3" />
-                      <div className="h-3 bg-white/10 w-1/2 rounded" />
+                      <div className="h-56 bg-slate-900" />
+                      <div className="p-6">
+                        <div className="h-4 bg-slate-100 w-2/3 rounded mb-3" />
+                        <div className="h-3 bg-slate-50 w-1/2 rounded" />
+                      </div>
                     </AnimatedCard>
                   ) : (
                     <Link
                       to={goBlogUrl(blog.seo?.slug)}
-                      className="block w-screen shrink-0 snap-center"
+                      className="block w-[85vw] shrink-0 snap-center"
                     >
                       <AnimatedCard
                         className="
-                          bg-white/5 border border-white/10 rounded-2xl p-6
-                          mx-auto transition-all duration-300 cursor-pointer
+                          h-full bg-white shadow-lg shadow-slate-200/50
+                          border border-slate-100 rounded-[2rem] overflow-hidden
+                          transition-all duration-300 flex flex-col
                         "
                       >
-                        <div
-                          className="h-56 rounded-xl mb-5 bg-cover bg-center bg-no-repeat"
-                          style={{ backgroundImage: `url(${blog.image})` }}
-                        />
+                         {/* Edge-to-Edge Dark Image Header */}
+                        <div className="h-56 bg-slate-900 relative flex items-center justify-center overflow-hidden">
+                             <div 
+                                className="w-full h-full bg-cover bg-center bg-no-repeat opacity-90"
+                                style={{ backgroundImage: `url(${blog.image})` }}
+                             />
+                             {/* Gradient Overlay for depth */}
+                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60" />
 
-                        {blog.category && (
-                          <span className="absolute top-4 left-4 px-3 py-1 text-xs font-semibold
-                            rounded-full bg-white/10 backdrop-blur-md
-                            border border-white/20 text-purple-200">
-                            {blog.category}
-                          </span>
-                        )}
+                             {blog.category && (
+                                <span className="absolute top-4 left-4 px-4 py-1.5 text-[10px] uppercase tracking-wider font-bold
+                                rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 shadow-sm">
+                                {blog.category}
+                                </span>
+                            )}
+                        </div>
 
-                        <h3 className="text-xl font-bold text-white mb-2">
-                          {blog.title}
-                        </h3>
+                        <div className="p-6 flex flex-col flex-grow">
+                            <h3 className="text-xl font-bold text-slate-900 mb-3 leading-tight">
+                            {blog.title}
+                            </h3>
 
-                        <p className="text-blue-200/80 mb-4 line-clamp-2">
-                          {blog.excerpt}
-                        </p>
+                            <p className="text-slate-500 text-sm mb-6 line-clamp-2 leading-relaxed flex-grow">
+                            {blog.excerpt}
+                            </p>
 
-                        <div className="flex items-center gap-2 text-blue-300">
-                          {t("homepage.blog.readMore")}
-                          <ArrowRight size={16} />
+                            <div className="flex items-center gap-2 text-violet-600 font-bold text-sm mt-auto">
+                            {t("homepage.blog.readMore")}
+                            <ArrowRight size={16} />
+                            </div>
                         </div>
                       </AnimatedCard>
                     </Link>
@@ -455,73 +419,77 @@ export default function Homepage() {
                 </Suspense>
               ))}
             </div>
-
-            <div className="flex justify-center mt-4 gap-2">
-              {(loadingBlogs ? [1, 2, 3] : blogs.slice(0, 3)).map((_, i) => (
-                <div
-                  key={i}
-                  className={`
-                    w-3 h-3 rounded-full transition-all
-                    ${currentIndex === i ? "bg-white" : "bg-white/30"}
-                  `}
-                />
-              ))}
-            </div>
           </div>
 
           {/* ░▒░ DESKTOP GRID ░▒░ */}
           <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            <div aria-hidden="true" className="absolute inset-0 blog-grid opacity-[0.05]" />
-
+            
             {loadingBlogs
               ? [1, 2, 3].map((i) => (
                   <Suspense key={i} fallback={null}>
-                    <AnimatedCard className="relative bg-white/5 border border-white/10 rounded-2xl p-6 animate-pulse">
-                      <div className="h-48 bg-slate-700/50 rounded-xl mb-6" />
-                      <div className="h-4 bg-white/20 w-2/3 rounded mb-3" />
-                      <div className="h-3 bg-white/10 w-1/2 rounded" />
+                    <AnimatedCard className="relative bg-white border border-slate-200 rounded-[2rem] overflow-hidden animate-pulse shadow-sm">
+                      <div className="h-64 bg-slate-900" />
+                      <div className="p-8">
+                        <div className="h-4 bg-slate-100 w-2/3 rounded mb-3" />
+                        <div className="h-3 bg-slate-50 w-1/2 rounded" />
+                      </div>
                     </AnimatedCard>
                   </Suspense>
                 ))
               : blogs.slice(0, 3).map((blog) => (
                   <Suspense key={blog.id} fallback={null}>
-                    <Link to={goBlogUrl(blog.seo.slug)} className="block">
+                    <Link to={goBlogUrl(blog.seo.slug)} className="block h-full">
                       <AnimatedCard
-                        className="relative group cursor-pointer bg-white/5 border border-white/10
-                          hover:border-purple-400/40 rounded-2xl p-6 overflow-hidden
+                        className="
+                          relative group cursor-pointer h-full
+                          bg-white
+                          border border-slate-100
+                          hover:border-violet-100
+                          rounded-[2rem] overflow-hidden
                           transition-all duration-500 hover:-translate-y-2
-                          hover:shadow-xl hover:shadow-purple-500/20"
+                          shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]
+                          hover:shadow-[0_25px_50px_-12px_rgba(124,58,237,0.15)]
+                          flex flex-col
+                        "
                       >
-                        <div
-                          className="absolute left-0 top-0 h-full w-[3px]
-                            bg-gradient-to-b from-purple-400 to-blue-500
-                            opacity-0 group-hover:opacity-100 transition-all"
-                        />
+                        {/* 1. DARK HEADER (The Fix for the Logo) */}
+                        <div className="h-64 bg-slate-900 relative overflow-hidden group-hover:shadow-inner transition-all">
+                            
+                            {/* The Image (Scales on hover) */}
+                            <div
+                              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90
+                                       transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                              style={{ backgroundImage: `url(${blog.image})` }}
+                            />
+                            
+                            {/* Subtle dark overlay so white logos pop */}
+                            <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors" />
 
-                        <div
-                          className="h-48 rounded-xl mb-6 bg-cover bg-center bg-no-repeat"
-                          style={{ backgroundImage: `url(${blog.image})` }}
-                        />
+                            {/* Category Tag */}
+                            {blog.category && (
+                              <span className="absolute top-5 left-5 px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest
+                                  rounded-full bg-white/10 backdrop-blur-md
+                                  text-white border border-white/20 shadow-lg
+                                  group-hover:bg-white group-hover:text-violet-700 group-hover:border-white transition-all">
+                                  {blog.category}
+                              </span>
+                            )}
+                        </div>
 
-                        {blog.category && (
-                          <span className="absolute top-4 left-4 px-3 py-1 text-xs font-semibold
-                            rounded-full bg-white/10 backdrop-blur-md
-                            border border-white/20 text-purple-200">
-                            {blog.category}
-                          </span>
-                        )}
+                        {/* 2. WHITE BODY */}
+                        <div className="p-8 flex flex-col flex-grow">
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4 leading-snug group-hover:text-violet-700 transition-colors">
+                              {blog.title}
+                            </h3>
 
-                        <h3 className="text-xl font-bold text-white mb-2">
-                          {blog.title}
-                        </h3>
+                            <p className="text-slate-500 mb-8 line-clamp-2 text-base leading-relaxed flex-grow font-light">
+                              {blog.excerpt}
+                            </p>
 
-                        <p className="text-blue-200/80 mb-4 line-clamp-2">
-                          {blog.excerpt}
-                        </p>
-
-                        <div className="flex items-center gap-2 text-blue-300 group-hover:text-white transition-all">
-                          {t("homepage.blog.readMore")}
-                          <ArrowRight size={16} />
+                            <div className="flex items-center gap-2 text-slate-400 group-hover:text-violet-600 transition-all border-t border-slate-100 pt-6 mt-auto">
+                              <span className="text-sm font-bold tracking-wide uppercase">{t("homepage.blog.readMore")}</span>
+                              <ArrowRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
+                            </div>
                         </div>
                       </AnimatedCard>
                     </Link>
@@ -529,26 +497,33 @@ export default function Homepage() {
                 ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button
+          <div className="text-center mt-20">
+            {/* CHANGED TO STANDARD HTML BUTTON TO FORCE STYLES */}
+            <button
               aria-label="View all blog posts"
-              variant="outline"
               onClick={goBlogLists}
               className="
-                border-2 border-blue-400/50 bg-white/10 text-white px-8 py-6
-                transition-all duration-300
-                hover:bg-white/20 hover:shadow-lg hover:shadow-blue-500/20
-                hover:scale-[1.03]
+                group relative inline-flex items-center gap-2
+                px-10 py-4 rounded-full
+                bg-white text-slate-900 border border-slate-200
+                font-semibold text-base tracking-wide
+                overflow-hidden transition-all duration-300
+                hover:border-transparent hover:text-white
+                hover:shadow-lg hover:shadow-violet-600/20 hover:-translate-y-1
+                cursor-pointer
               "
             >
-              {t("homepage.blog.button")}
-              <ArrowRight className="ml-2" />
-            </Button>
+              {/* Gradient layer for hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-violet-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out" />
+              
+              <span className="relative z-10 flex items-center gap-2">
+                {t("homepage.blog.button")}
+                <ArrowRight className="transition-transform group-hover:translate-x-1" size={18} />
+              </span>
+            </button>
           </div>
         </div>
       </section>
-
-
       {/* ---------------------------------- */}
       {/* ABOUT */}
       {/* ---------------------------------- */}

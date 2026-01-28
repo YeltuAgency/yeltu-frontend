@@ -322,7 +322,7 @@ export default function Blog() {
           aria-live="polite"
           role="status"
         >
-          Loading articles…
+          {t("blog.loading") || "Loading blog posts..."}
         </div>
       )}
 

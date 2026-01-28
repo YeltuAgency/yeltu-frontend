@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import { useCookieConsent } from "../contexts/CookieConsentContext";
 
 export default function CookieBanner() {
@@ -17,14 +18,12 @@ export default function CookieBanner() {
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
         <p className="text-white text-sm md:text-base leading-relaxed max-w-3xl">
-          We use cookies to improve your experience, analyze traffic, and
-          provide personalized content. You can accept all, reject all, or
-          customize your preferences.{" "}
+          {t("cookieBanner.message")}{" "}
           <a
             href="/privacy"
             className="underline text-blue-300 hover:text-blue-200"
           >
-            Privacy Policy
+            {t("cookieBanner.privacyPolicy")}
           </a>
           .
         </p>
@@ -34,21 +33,21 @@ export default function CookieBanner() {
             onClick={rejectAll}
             className="px-5 py-2 rounded-xl bg-white/10 text-white hover:bg-white/20 text-sm"
           >
-            Reject All
+            {t("cookieBanner.rejectAll")}
           </button>
 
           <button
             onClick={openModal}
             className="px-5 py-2 rounded-xl bg-gradient-to-r from-blue-500 to-violet-600 text-white text-sm"
           >
-            Customize
+            {t("cookieBanner.customize")}
           </button>
 
           <button
             onClick={acceptAll}
             className="px-5 py-2 rounded-xl bg-white text-slate-900 hover:bg-slate-200 text-sm font-semibold"
           >
-            Accept All
+            {t("cookieBanner.acceptAll")}
           </button>
         </div>
       </div>

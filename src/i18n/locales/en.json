@@ -81,7 +81,9 @@
       "title": "Our Featured Projects",
       "subtitle": "A selection of digital products we've built for our clients.",
       "comingSoon": "More projects coming soon...",
-      "button": "View All Projects"
+      "button": "View All Projects",
+      "building": "Building the",
+      "future": "Next Big Thing"
     },
     "blog": {
       "title": "Latest Articles & Insights",
@@ -112,6 +114,7 @@
     "tagline": "Building modern digital experiences.",
 
     "quicklinks": "Quick Links",
+    "legal": "Privacy & Terms",
     "links": {
       "about": "About Us",
       "projects": "Projects",
@@ -201,6 +204,9 @@
       "title": "Insights, Stories & Digital Expertise",
       "subtitle": "Explore articles on technology, design, marketing and digital growth."
     },
+
+    "loading": "Loading articles…",
+    "loadingpost": "Loading article…",
 
     "search": {
       "placeholder": "Search articles..."
@@ -388,5 +394,12 @@
       "backToSiteButton": "Back to website",
       "statusSaved": "Your cookie preferences have been saved."
     }
+  },
+  "cookieBanner": {
+    "message": "We use cookies to improve your experience, analyze traffic, and provide personalized content.",
+    "privacyPolicy": "Privacy Policy",
+    "rejectAll": "Reject All",
+    "customize": "Customize",
+    "acceptAll": "Accept All"
   }
 }

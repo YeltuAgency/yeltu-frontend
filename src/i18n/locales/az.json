@@ -74,7 +74,9 @@
       "title": "Seçilmiş Layihələrimiz",
       "subtitle": "Müştərilərimiz üçün hazırladığımız rəqəmsal layihələrdən bir neçə nümunə.",
       "comingSoon": "Daha çox layihə tezliklə əlavə olunacaq...",
-      "button": "Bütün Layihələrə Bax"
+      "button": "Bütün Layihələrə Bax",
+      "building": "NÖVBƏTİ BÖYÜK ŞEYLƏRİ",
+      "future": "Yaradırıq"
     },
     "blog": {
       "title": "Son Məqalələr və Fikirlər",
@@ -105,6 +107,7 @@
     "tagline": "Müasir rəqəmsal təcrübələr yaradırıq.",
 
     "quicklinks": "Sürətli Keçidlər",
+    "legal": "Məxfilik & Şərtlər",
     "links": {
       "about": "Haqqımızda",
       "projects": "Layihələr",
@@ -194,7 +197,8 @@
       "title": "Biliklər, Hekayələr və Rəqəmsal Təcrübə",
       "subtitle": "Texnologiya, dizayn, marketinq və rəqəmsal inkişaf haqqında məqalələri kəşf edin."
     },
-
+    "loading": "Məqalələr yüklənir...",
+    "loadingpost": "Məqalə yüklənir...",
     "search": {
       "placeholder": "Məqalə axtarın..."
     },
@@ -380,7 +384,14 @@
       "backToSiteButton": "Sayta qayıt",
       "statusSaved": "Seçimləriniz yadda saxlanıldı."
     }
-}
+  },
+  "cookieBanner": {
+    "message": "Biz təcrübənizi yaxşılaşdırmaq, trafiki analiz etmək və fərdiləşdirilmiş məzmun təqdim etmək üçün kukilərdən istifadə edirik.",
+    "privacyPolicy": "Məxfilik Siyasəti",
+    "rejectAll": "Hamısını rədd et",
+    "customize": "Fərdiləşdir",
+    "acceptAll": "Hamısına icazə ver"
+  }
 }
 
 
