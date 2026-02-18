@@ -1,7 +1,35 @@
 {
   "rewrites": [
-    { "source": "/(en|az|ru)", "destination": "/" },
-    { "source": "/(en|az|ru)/(.*)", "destination": "/" },
-    { "source": "/(.*)", "destination": "/" }
+
+    {
+      "source": "/sitemap.xml",
+      "destination": "https://yeltu-backend.onrender.com/sitemap.xml"
+    },
+    {
+      "source": "/sitemap-pages.xml",
+      "destination": "https://yeltu-backend.onrender.com/sitemap-pages.xml"
+    },
+    {
+      "source": "/sitemap-blog.xml",
+      "destination": "https://yeltu-backend.onrender.com/sitemap-blog.xml"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "https://yeltu-backend.onrender.com/robots.txt"
+    },
+
+    {
+      "source": "/(en|az|ru)",
+      "destination": "/"
+    },
+    {
+      "source": "/(en|az|ru)/(.*)",
+      "destination": "/"
+    },
+    
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
   ]
 }
