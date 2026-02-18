@@ -1,10 +1,11 @@
 import {
   Code,
-  Palette,
   Search,
   Share2,
   Briefcase,
   Smartphone,
+  ShieldCheck
+
 } from "lucide-react";
 
 const services = [
@@ -13,13 +14,13 @@ const services = [
     title: "Web Development",
     description:
       "Build powerful, scalable web applications using modern frameworks.",
-    features: [
+    features: [ 
       "Custom web apps",
       "E-commerce",
-      "PWAs",
-      "API integration",
+      "Business websites",
+      "API integration", 
       "Performance optimization",
-    ],
+      ], 
     color: "from-blue-500 to-blue-600",
   },
   {
@@ -37,42 +38,42 @@ const services = [
     color: "from-cyan-500 to-blue-600",
   },
   {
-    icon: Palette,
-    title: "UI/UX Design",
+    icon: ShieldCheck, // or Server / Network
+    title: "IT Consulting",
     description:
-      "User-centric, stunning designs backed by strategy and research.",
+      "Strategic IT consulting to align technology with your business goals, improve efficiency, and build scalable, secure systems.",
     features: [
-      "Personas",
-      "Wireframing",
-      "Design systems",
-      "Responsive design",
-      "Usability testing",
+      "IT strategy",
+      "Digital transformation",
+      "System integration",
+      "Cloud & infrastructure",
+      "Security & compliance",
     ],
     color: "from-violet-500 to-violet-600",
   },
   {
     icon: Search,
-    title: "SEO Optimization",
+    title: "Search Engine Optimization",
     description: "Increase rankings and drive organic traffic.",
     features: [
-      "Keyword research",
-      "On-page SEO",
-      "Technical audits",
-      "Backlinks",
-      "Analytics",
+      "SEO audit",
+      "E-commerce SEO",
+      "Technical SEO",
+      "Local SEO",
+      "Taxonomy",
     ],
     color: "from-blue-500 to-violet-600",
   },
   {
     icon: Share2,
-    title: "Social Media Marketing",
+    title: "Digital Marketing",
     description: "Engage audiences and grow your brand presence.",
     features: [
       "Content creation",
-      "Community management",
-      "Advertising",
-      "Analytics",
-      "Influencers",
+      "SMM",
+      "E-mail marketing",
+      "Paid ads",
+      "Market research",
     ],
     color: "from-purple-500 to-pink-600",
   },
@@ -84,8 +85,8 @@ const services = [
       "Positioning",
       "Visual identity",
       "Brand guidelines",
-      "Messaging",
-      "Audits",
+      "Communication strategy",
+      "Experience design",
     ],
     color: "from-indigo-500 to-purple-600",
   },

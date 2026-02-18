@@ -19,6 +19,8 @@ const ContactPage = lazy(() => import("./components/ContactPage"));
 const Blog = lazy(() => import("./components/Blog"));
 const BlogPost = lazy(() => import("./components/BlogPost"));
 const NotFound = lazy(() => import("./components/NotFound"));
+const WebDevelopmentPage = lazy(() => import("./pages/services/WebDevelopmentPage"));
+const CustomWebAppsPage = lazy(() => import("./pages/services/CustomWebAppsPage"));
 
 // ---- LAZY LOADED ADMIN PAGES ---- //
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
@@ -70,6 +72,8 @@ export default function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/web-development" element={<WebDevelopmentPage />} />
+            <Route path="/services/web-development/custom-web-apps" element={<CustomWebAppsPage />} />
             <Route path="/projects" element={<PortfolioPage />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/post/:slug" element={<BlogPost />} />
@@ -86,6 +90,8 @@ export default function App() {
             <Route index element={<Homepage />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="services" element={<ServicesPage />} />
+            <Route path="services/web-development" element={<WebDevelopmentPage />} />
+            <Route path="services/web-development/custom-web-apps" element={<CustomWebAppsPage />} />
             <Route path="projects" element={<PortfolioPage />} />
             <Route path="blog" element={<Blog />} />
             <Route path="blog/post/:slug" element={<BlogPost />} />
