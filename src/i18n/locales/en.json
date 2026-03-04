@@ -401,5 +401,123 @@
     "rejectAll": "Reject All",
     "customize": "Customize",
     "acceptAll": "Accept All"
+  },
+  "webdev":{
+    "hero":{
+      "title": "Web Development Services",
+      "hook": "Collaborate with a leading custom web development agency to build a high-performance website engineered for growth and conversions.",
+      "link": {
+        "custom": "Custom web apps",
+        "ecommerce": "E-commerce websites",
+        "business": "Business websites"
+      },
+      "cta":"Get Started"
+    },
+    "intro": {
+      "title": "How Strategic Website Development Increases Conversions and Business Growth",
+      "p1": "Your website is where first impressions turn into real business opportunities. At YELTU Agency, we design and develop conversion-focused digital experiences that guide users naturally from interest to action. Every element from structure to speed is optimized to build trust and encourage engagement.",
+      "p2":"Beyond aesthetics, we prioritize user psychology, seamless navigation, and performance optimization. The result is a fast, responsive, and secure platform that improves customer satisfaction and drives measurable results. With YELTU, your website becomes a revenue-generating asset built for sustainable growth."
+    },
+    "features":{
+      "title":"The foundation of a high-performing website.",
+      "readMore":"Read More",
+      "uiux":{
+        "title": "UI/UX",
+        "desc":"Great design is more than just visual appeal. UI/UX ensures users can navigate your website easily, find what they need quickly, and enjoy a smooth experience. We build clean, intuitive interfaces that guide visitors naturally and strengthen trust from the first interaction. A well-structured UI/UX not only improves user satisfaction but also increases engagement and conversions."
+      },
+      "perf":{
+        "title":"Performance Optimization",
+        "desc":"A fast and stable website keeps visitors engaged. Performance optimization ensures faster loading times, smoother functionality, and fewer technical issues. We optimize code structure, media files, and server configurations to deliver a website that performs efficiently under any traffic condition. Speed not only improves user experience but also supports better search engine rankings."
+      },
+      "resp":{
+        "title":"Responsive Development",
+        "desc": "Users access your website from various devices. Responsive development ensures your site works seamlessly on mobile, tablet, and desktop screens. We adapt both design and functionality to different screen sizes, providing a consistent and smooth experience everywhere. This approach improves user satisfaction and also contributes positively to your SEO performance."
+      },
+      "maint": {
+        "title": "Maintenance & Support",
+        "desc": "Launching a website is only the beginning. Ongoing maintenance and support are essential to keep it secure and running smoothly. We provide regular monitoring, security checks, and system updates to ensure long-term stability. If any technical issue arises, our team responds quickly to resolve it and keep your business uninterrupted."
+      },
+      "seo": {
+        "title": "SEO-Friendly Development",
+        "desc": "SEO-friendly development helps your website rank higher in search engines. Clean code structure, proper metadata setup, speed optimization, and mobile compatibility are key factors. We build websites aligned with technical SEO standards to create a strong foundation for long-term visibility and organic traffic growth."
+      }
+    },
+    "deepdive":{
+      "h1":{
+        "title": "Web Development Services That Drive Real Business Growth",
+        "p1": "Success in today’s digital landscape requires more than just having a website - it demands a strategically built, performance-driven, and scalable platform. At YELTU Agency, we don’t simply design websites; we build digital systems engineered to generate measurable business results.",
+        "p2": "Whether you need a business website, a custom web application, or a fully optimized e-commerce platform, our goal is to transform every project into a revenue-generating digital asset. We combine technology with strategy to create a strong foundation for sustainable growth."
+      },
+      "h2": {
+        "title": "Why Professional Website Development Matters",
+        "p1": "A professionally developed website enhances credibility, improves user experience, and increases conversion rates. Speed, security, and mobile responsiveness are no longer optional. They are essential standards.",
+        "p2": "If your platform is not supported by SEO optimization, performance architecture, and conversion-focused UX design, you risk falling behind competitors. Strategic development ensures your digital presence works as a growth engine rather than just an online placeholder."
+      }
+    },
+    "process": {
+      "title": "Our Strategic Web Development Process",
+      "subtitle": "At YELTU Agency, we follow a structured and results-driven development framework. This approach minimizes risks, maximizes efficiency, and ensures measurable outcomes.",
+      "step1": {
+        "title": "Discovery & Digital Strategy",
+        "desc": "We begin by analyzing your business model, target audience, and competitive landscape. This stage lays the groundwork for a customized development roadmap aligned with your long-term goals."
+      },
+      "step2": {
+        "title": "UX Architecture & Wireframing",
+        "desc": "We map the complete user journey to define structure, content flow, and functional priorities. This phase is critical for optimizing usability and improving conversion performance."
+      },
+      "step3": {
+        "title": "UI Design & Experience Layer",
+        "desc": "Design is more than aesthetics — it is strategic communication. We craft intuitive interfaces that enhance engagement and guide users toward meaningful actions."
+      },
+      "step4": {
+        "title": "Full-Stack Development",
+        "desc": "Our frontend and backend teams develop secure, scalable, and high-performance systems. During this phase, we prioritize API integration, performance optimization, and system security."
+      },
+      "step5": {
+        "title": "Testing, Launch & Continuous Optimization",
+        "desc": "Before launch, we conduct comprehensive testing to ensure stability and functionality. After deployment, we provide ongoing optimization and technical support to maintain peak performance."
+      }
+    },
+    "solutions": {
+      "learnMore": "Learn more",
+      "title": "Web Solutions We Specialize In",
+      "subtitle": "YELTU Agency delivers tailored solutions to meet diverse business needs",
+      "custom": {
+        "title": "Custom Web Development",
+        "desc": "Your business isn’t generic — your website shouldn’t be either. When your workflows, goals, and growth plans are unique, you need a digital solution built specifically for you. At YELTU Agency, we develop fully customized web platforms designed around your exact operational and strategic needs."
+      },
+      "ecommerce": {
+        "title": " E-Commerce Website Development",
+        "desc": "An online store is more than a product catalog — it’s your revenue engine. At YELTU Agency, we create high-performance, secure, and conversion-focused e-commerce platforms designed to turn visitors into customers and streamline your entire sales process."
+      },
+      "business": {
+        "title": "Business Website Development",
+        "desc": "Your website is often the first interaction customers have with your brand. A professionally developed business website builds credibility, communicates value, and positions you competitively. At YELTU Agency, we create structured, performance-driven websites that strengthen your digital presence."
+      }
+    },
+    "closing": {
+      "title": "Dominate the Digital Market with YELTU’s Web Development Power",
+      "p1": "In a highly competitive digital environment, visibility alone is not enough - dominance requires strategy, technology, and precision. At YELTU Agency, we build powerful web platforms designed to strengthen your market position. Our focus is on technical excellence, performance architecture, and scalable systems that give your brand a long-term competitive advantage.",
+      "p2": "We analyze industry trends, competitor movements, and evolving digital behaviors to ensure your platform stays ahead of the curve. With YELTU, your website becomes more than an online presence - it becomes a strategic growth engine built to outperform, adapt, and lead in your industry.",
+      "cta": "Contact us",
+      "cards": {
+        "tech": {
+          "title": "Adopt Smarter Technology Solutions",
+          "desc": "Whatever your digital goal or challenge may be, we deliver the right solution. If your needs are specific, our custom web development ensures your product performs efficiently and grows with confidence"
+        },
+        "product": {
+          "title": "Create Your Digital Product with Confidence",
+          "desc": "Whether you need a website or an application, we handle the entire process with precision. From planning to launch, we ensure a smooth workflow, eliminate complications, and make the experience simple and stress-free for you."
+        },
+        "perf":{
+          "title": "Enhance Performance with Continuous Improvements",
+          "desc": "In a rapidly evolving digital landscape, staying updated is essential to remain competitive. Businesses risk falling behind without regular improvements. We ensure your product stays current, optimized, and running smoothly to support long-term relevance and consistent performance."
+        },
+        "secure": {
+          "title": "Secure Infrastructure and Reliable Support",
+          "desc": "We implement strong security standards across your platform to protect it from external threats and vulnerabilities. At the same time, we help you create a positive, lasting impression by ensuring your website supports customers effectively, even after the purchase experience."
+        }
+      }
+    }
   }
 }

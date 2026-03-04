@@ -1,372 +1,41 @@
-import { useMemo } from "react";
-import { Link, useLocation } from "react-router-dom";
-import SEO from "../../components/SEO";
+import { useState, Suspense, lazy, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../../contexts/LanguageContext";
+import SEO from "../../components/SEO";
 import { Card, CardContent } from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
 import webImg from "../../assets/services/webdevelopment.webp";
-// Icons for the pillars (Imported but not used in render per previous request to remove icons, kept for safety or can be removed if strictly cleaning up)
-import { Code2, ShoppingBag, Globe, Share2, Zap } from "lucide-react";
+import customWebAppsImg from "../../assets/services/customwebapps.webp";
+import ecommerceImg from "../../assets/services/e-commerce.webp";
+import businessImg from "../../assets/services/business.webp";
+import { 
+  ArrowRight, X, LayoutTemplate, Zap, Smartphone, 
+  Wrench, LineChart, Search, SearchCheck, PenTool, 
+  Code, CheckCircle, MonitorSmartphone, ShoppingCart, Briefcase, 
+  ArrowDown, Plus, ChevronLeft, ChevronRight, ChevronDown
+} from "lucide-react";
 
-function getServiceContent(lang) {
-  const dict = {
-    en: {
-      h1: "Website Development Services",
-      heroTitle: "Grow your web presence with YELTU Agency",
-      heroIntro:
-        "A high-performing website is more than just a digital storefront — it’s the foundation of your online success. At YELTU Agency, we provide comprehensive website development services designed to meet your business needs and strengthen your brand’s digital presence.",
-      heroIntro2:
-        "Whether you need a custom-built website, mobile-friendly functionality, or continuous technical support, our experienced team ensures your website performs smoothly while delivering an excellent user experience.",
-
-      // Pillars
-      pillarsTitle: "Specialized Solutions",
-      pillars: [
-        { label: "Custom Web Apps", to: "/services/web-development/custom-web-apps" },
-        { label: "E-commerce", to: "/services/web-development/ecommerce" },
-        { label: "Business Websites", to: "/services/web-development/business-websites" },
-        { label: "API Integration", to: "/services/web-development/api-integration" },
-        { label: "Performance", to: "/services/web-development/performance-optimization" },
-      ],
-
-      sections: [
-        {
-          kicker: "How website development builds a business",
-          title: "How website development builds a business",
-          paragraphs: [
-            "Your website is often the first point of contact between your brand and potential customers. That’s why making a strong first impression is critical. YELTU Agency’s website development services focus on creating reliable, modern, and user-friendly websites that build trust and credibility from the very first visit.",
-            "Our development solutions are built to improve usability, enhance performance, and increase conversions — helping your business stand out in a competitive digital environment.",
-            "Beyond visual appeal, we focus on speed, responsiveness, scalability, and long-term growth. By working with YELTU Agency, you get a website that is not only attractive but also strategically developed to deliver real business results and adapt to evolving digital trends.",
-          ],
-        },
-        {
-          kicker: "Our web development services",
-          title: "Our web development services",
-          paragraphs: [
-            "We offer a full range of website development solutions covering performance, functionality, security, and scalability — ensuring your website grows alongside your business.",
-          ],
-        },
-        {
-          kicker: "Strategic web solutions",
-          title: "Results-driven website development services",
-          paragraphs: [
-            "At YELTU Agency, we don’t just build websites — we create digital solutions that drive measurable results. From strengthening brand identity to improving operational efficiency and maximizing ROI, our development services are aligned with your business goals.",
-            "Our strategic, results-oriented approach is supported by practical experience and proven methodologies. Every project is developed with long-term success in mind, ensuring your digital presence delivers consistent value.",
-            "Partnering with YELTU Agency means working with a dedicated team that aligns every development decision with your growth strategy. We are committed to innovation, quality, and measurable outcomes.",
-          ],
-        },
-        {
-          kicker: "Why YELTU Agency?",
-          title: "Why choose YELTU Agency as your web development partner?",
-          paragraphs: [
-            "YELTU Agency combines technical expertise with a client-focused approach to build websites that truly support your business. Our end-to-end development process ensures your website is optimized for performance, scalability, and security from start to finish.",
-            "We handle everything — from planning and development to optimization and ongoing support — so you can focus on growing your business. With cross-platform expertise and a collaborative workflow, we deliver solutions tailored to your industry, audience, and objectives.",
-            "Whether you are launching a new website, redesigning an existing one, or enhancing functionality, YELTU Agency is committed to delivering measurable digital success that empowers your brand.",
-          ],
-        },
-      ],
-
-      ecommerceTitle: "Custom eCommerce website development",
-      ecommerceParas: [
-        "YELTU Agency integrates essential features such as advanced product search, detailed product information, seamless order processing, and secure transactional systems into eCommerce website design to deliver a high-quality online shopping experience.",
-        "We have refined our expertise in custom eCommerce website development to support a wide range of business models, providing scalable, mobile-friendly, and performance-driven solutions tailored to each client’s needs.",
-        "YELTU Agency specializes in custom eCommerce website development, integrating essential features such as advanced product search, detailed product pages, streamlined order processing, and secure payment and transactional systems. Our eCommerce website design solutions are built to deliver a fast, intuitive, and high-quality online shopping experience that increases conversions and customer satisfaction.",
-        "We have refined our expertise to support all types of business models, from startups to enterprise-level online stores. Every eCommerce website we develop is mobile-friendly, scalable, SEO-ready, and performance-driven, ensuring your online store ranks well in search engines and performs seamlessly across desktop, tablet, and mobile devices.",
-      ],
-
-      seoTitle: "Website Development Services | Yeltu Agency",
-      seoDesc:
-        "Website development by YELTU Agency: high-performing websites, scalable solutions, and custom eCommerce development with secure payments, fast UX, and mobile-friendly performance.",
-    },
-
-    az: {
-      h1: "Veb Sayt Hazırlanması Xidmətləri",
-      heroTitle: "YELTU Agency ilə veb mövcudluğunuzu gücləndirin",
-      heroIntro:
-        "Yüksək performanslı veb sayt təkcə rəqəmsal vitrindən ibarət deyil — o, onlayn uğurunuzun təməlidir. YELTU Agency olaraq, biznes ehtiyaclarınıza uyğun və brendinizin rəqəmsal mövcudluğunu gücləndirən hərtərəfli veb sayt hazırlanması xidmətləri təqdim edirik.",
-      heroIntro2:
-        "İstər sıfırdan xüsusi sayt, istər mobil uyğun funksionallıq, istərsə də davamlı texniki dəstək lazım olsun — təcrübəli komandamız saytınızın stabil işləməsini təmin edir və mükəmməl istifadəçi təcrübəsi yaradır.",
-
-      pillarsTitle: "İxtisaslaşdırılmış Həllər",
-      pillars: [
-        { label: "Xüsusi Veb Tətbiqlər", to: "/services/web-development/custom-web-apps" },
-        { label: "E-ticarət", to: "/services/web-development/ecommerce" },
-        { label: "Biznes Saytları", to: "/services/web-development/business-websites" },
-        { label: "API İnteqrasiyası", to: "/services/web-development/api-integration" },
-        { label: "Optimizasiya", to: "/services/web-development/performance-optimization" },
-      ],
-
-      sections: [
-        {
-          kicker: "Veb sayt hazırlanması biznesi necə böyüdür",
-          title: "Veb sayt hazırlanması biznesi necə böyüdür",
-          paragraphs: [
-            "Veb saytınız çox vaxt brendinizlə potensial müştərilər arasındakı ilk təmas nöqtəsidir. Buna görə də ilk təəssüratın güclü olması çox vacibdir. YELTU Agency-nin veb sayt hazırlanması xidmətləri ilk ziyarətdən etibarən etibar və güvən yaradan, müasir, etibarlı və istifadəçi dostu saytların hazırlanmasına fokuslanır.",
-            "Hazırladığımız həllər istifadə rahatlığını artırmaq, performansı yaxşılaşdırmaq və konversiyanı yüksəltmək üçün qurulur — beləliklə biznesiniz rəqabətli rəqəmsal mühitdə daha çox seçilir.",
-            "Vizual görünüşdən əlavə, biz sürət, responsivlik, miqyaslana bilmə və uzunmüddətli böyüməyə önəm veririk. YELTU Agency ilə işlədikdə, siz təkcə gözəl görünən deyil, həm də real biznes nəticələri gətirən və rəqəmsal trendlərə uyğun inkişaf edən strateji sayt əldə edirsiniz.",
-          ],
-        },
-        {
-          kicker: "Veb inkişaf xidmətlərimiz",
-          title: "Veb inkişaf xidmətlərimiz",
-          paragraphs: [
-            "Biz performans, funksionallıq, təhlükəsizlik və miqyaslana bilmə üzrə tam spektrli veb sayt hazırlanması həlləri təqdim edirik — saytınızın biznesinizlə birlikdə böyüməsini təmin edirik.",
-          ],
-        },
-        {
-          kicker: "Strateji veb həllər",
-          title: "Nəticə yönümlü veb sayt hazırlanması xidmətləri",
-          paragraphs: [
-            "YELTU Agency-də biz sadəcə sayt hazırlamırıq — ölçülə bilən nəticələr verən rəqəmsal həllər yaradırıq. Brend identikliyini gücləndirməkdən əməliyyat səmərəliliyini artırmağa və ROI-ni maksimumlaşdırmağa qədər, inkişaf xidmətlərimizi biznes hədəflərinizə uyğunlaşdırırıq.",
-            "Strateji və nəticə yönümlü yanaşmamız praktiki təcrübə və yoxlanmış metodologiyalarla dəstəklənir. Hər bir layihə uzunmüddətli uğur üçün hazırlanır ki, rəqəmsal mövcudluğunuz davamlı dəyər yaratsın.",
-            "YELTU Agency ilə tərəfdaşlıq etdikdə, inkişaf qərarlarını böyümə strategiyanızla uyğunlaşdıran xüsusi komanda ilə işləyirsiniz. Biz innovasiya, keyfiyyət və ölçülə bilən nəticələrə sadiqik.",
-          ],
-        },
-        {
-          kicker: "Niyə YELTU Agency?",
-          title: "Niyə veb inkişaf tərəfdaşı olaraq YELTU Agency-ni seçməlisiniz?",
-          paragraphs: [
-            "YELTU Agency texniki ekspertizanı müştəriyönümlü yanaşma ilə birləşdirərək biznesinizi həqiqətən dəstəkləyən saytlar hazırlayır. Ucdan-uca prosesimiz planlama, inkişaf, optimizasiya və təhlükəsizlik üzrə bütün mərhələləri əhatə edir.",
-            "Biz hər şeyi idarə edirik — planlama və inkişafdan tutmuş optimizasiya və davamlı dəstəyə qədər — siz isə biznesinizi böyütməyə fokuslana bilərsiniz. Kross-platform təcrübə və əməkdaşlığa əsaslanan iş axını ilə sənayenizə, auditoriyanıza və məqsədlərinizə uyğun həllər təqdim edirik.",
-            "İstər yeni sayt açın, istər mövcud saytı yeniləyin, istərsə də funksionallığı artırın — YELTU Agency brendinizi gücləndirən ölçülə bilən rəqəmsal uğur təqdim etməyə sadiqdir.",
-          ],
-        },
-      ],
-
-      ecommerceTitle: "Xüsusi eCommerce sayt hazırlanması",
-      ecommerceParas: [
-        "YELTU Agency eCommerce sayt dizaynında yüksək keyfiyyətli onlayn alış-veriş təcrübəsi yaratmaq üçün inkişaf etmiş məhsul axtarışı, detallı məhsul məlumatları, problemsiz sifariş emalı və təhlükəsiz tranzaksiya sistemləri kimi əsas funksiyaları inteqrasiya edir.",
-        "Biz fərqli biznes modellərini dəstəkləmək üçün xüsusi eCommerce sayt hazırlanması üzrə ekspertizamızı inkişaf etdirmişik və hər bir müştərinin ehtiyacına uyğun miqyaslana bilən, mobil uyğun və performans yönümlü həllər təqdim edirik.",
-        "YELTU Agency xüsusi eCommerce sayt hazırlanmasında ixtisaslaşır: inkişaf etmiş məhsul axtarışı, detallı məhsul səhifələri, sadələşdirilmiş sifariş prosesi və təhlükəsiz ödəniş/tranzaksiya sistemlərini inteqrasiya edirik. eCommerce dizayn həllərimiz sürətli, intuitiv və yüksək keyfiyyətli alış-veriş təcrübəsi yaradaraq konversiyanı və müştəri məmnuniyyətini artırır.",
-        "Startaplardan enterprise səviyyəli onlayn mağazalara qədər bütün modelləri dəstəkləyirik. Hazırladığımız hər bir eCommerce sayt mobil uyğundur, miqyaslana bilir, SEO-ya hazırdır və performans yönümlüdür — mağazanızın axtarış nəticələrində yaxşı sıralanmasına və bütün cihazlarda problemsiz işləməsinə kömək edir.",
-      ],
-
-      seoTitle: "Veb Sayt Hazırlanması | Yeltu Agency",
-      seoDesc:
-        "YELTU Agency veb sayt hazırlanması: yüksək performanslı saytlar, miqyaslana bilən həllər və təhlükəsiz ödənişli, mobil uyğun, sürətli eCommerce inkişafı.",
-    },
-
-    ru: {
-      h1: "Услуги разработки сайтов",
-      heroTitle: "Развивайте онлайн-присутствие вместе с YELTU Agency",
-      heroIntro:
-        "Высокопроизводительный сайт — это не просто цифровая витрина, а фундамент вашего онлайн-успеха. В YELTU Agency мы предоставляем комплексные услуги по разработке сайтов, чтобы закрыть потребности бизнеса и усилить цифровое присутствие вашего бренда.",
-      heroIntro2:
-        "Нужен сайт «с нуля», адаптация под мобильные устройства или постоянная техническая поддержка — наша команда обеспечивает стабильную работу сайта и отличный пользовательский опыт.",
-
-      pillarsTitle: "Специализированные Решения",
-      pillars: [
-        { label: "Веб-приложения", to: "/services/web-development/custom-web-apps" },
-        { label: "E-commerce", to: "/services/web-development/ecommerce" },
-        { label: "Бизнес Сайты", to: "/services/web-development/business-websites" },
-        { label: "Интеграция API", to: "/services/web-development/api-integration" },
-        { label: "Оптимизация", to: "/services/web-development/performance-optimization" },
-      ],
-
-      sections: [
-        {
-          kicker: "Как разработка сайта помогает бизнесу",
-          title: "Как разработка сайта помогает бизнесу",
-          paragraphs: [
-            "Ваш сайт часто становится первой точкой контакта между брендом и потенциальными клиентами. Поэтому сильное первое впечатление критически важно. Услуги YELTU Agency по разработке сайтов ориентированы на создание надежных, современных и удобных решений, которые формируют доверие с первого визита.",
-            "Наши решения улучшают удобство использования, повышают производительность и увеличивают конверсию — помогая вашему бизнесу выделяться в конкурентной цифровой среде.",
-            "Помимо визуальной части мы уделяем внимание скорости, адаптивности, масштабируемости и долгосрочному росту. Работая с YELTU Agency, вы получаете не только красивый, но и стратегически продуманный сайт, который приносит бизнес-результат и развивается вместе с трендами.",
-          ],
-        },
-        {
-          kicker: "Наши услуги",
-          title: "Наши услуги веб-разработки",
-          paragraphs: [
-            "Мы предлагаем полный спектр решений по разработке сайтов — производительность, функциональность, безопасность и масштабируемость — чтобы ваш сайт рос вместе с бизнесом.",
-          ],
-        },
-        {
-          kicker: "Стратегические веб-решения",
-          title: "Разработка сайтов, ориентированная на результат",
-          paragraphs: [
-            "В YELTU Agency мы не просто делаем сайты — мы создаем цифровые решения, которые дают измеримые результаты. От усиления бренда до повышения эффективности процессов и максимизации ROI — наша разработка всегда связана с целями вашего бизнеса.",
-            "Наш подход опирается на практический опыт и проверенные методологии. Каждый проект строится с прицелом на долгосрочный успех, чтобы ваше онлайн-присутствие приносило стабильную ценность.",
-            "Партнерство с YELTU Agency — это работа с командой, которая выстраивает каждое техническое решение в соответствии со стратегией роста. Мы ориентированы на инновации, качество и измеримый эффект.",
-          ],
-        },
-        {
-          kicker: "Почему YELTU Agency?",
-          title: "Почему стоит выбрать YELTU Agency как партнера по веб-разработке?",
-          paragraphs: [
-            "YELTU Agency сочетает техническую экспертизу и клиентоориентированный подход, создавая сайты, которые действительно поддерживают ваш бизнес. Наш полный цикл разработки обеспечивает оптимизацию по производительности, масштабируемости и безопасности на каждом этапе.",
-            "Мы берем на себя всё — от планирования и разработки до оптимизации и поддержки — чтобы вы могли сосредоточиться на росте бизнеса. Благодаря кроссплатформенной экспертизе и совместной работе мы создаем решения под вашу отрасль, аудиторию и задачи.",
-            "Запускаете новый сайт, делаете редизайн или расширяете функциональность — YELTU Agency нацелено на измеримый цифровой успех, который усиливает ваш бренд.",
-          ],
-        },
-      ],
-
-      ecommerceTitle: "Индивидуальная разработка eCommerce-сайтов",
-      ecommerceParas: [
-        "YELTU Agency интегрирует ключевые функции в eCommerce-дизайн: продвинутый поиск товаров, подробную информацию о продукте, удобную обработку заказов и безопасные транзакционные системы — чтобы обеспечить качественный онлайн-шопинг.",
-        "Мы развили экспертизу в кастомной разработке eCommerce-сайтов для широкого спектра бизнес-моделей, предлагая масштабируемые, адаптивные и производительные решения под задачи каждого клиента.",
-        "YELTU Agency специализируется на разработке eCommerce-сайтов под ключ: продвинутый поиск, детальные карточки товаров, упрощенный процесс заказа, безопасные платежи и транзакции. Наши решения обеспечивают быстрый, интуитивный опыт покупок, повышая конверсию и удовлетворенность клиентов.",
-        "Мы поддерживаем любые модели — от стартапов до enterprise-магазинов. Каждый eCommerce-сайт, который мы создаем, адаптивный, масштабируемый, SEO-готовый и ориентирован на производительность — чтобы ваш магазин хорошо ранжировался и стабильно работал на десктопе, планшете и смартфоне.",
-      ],
-
-      seoTitle: "Разработка сайтов | Yeltu Agency",
-      seoDesc:
-        "Разработка сайтов от YELTU Agency: производительные решения, масштабируемая архитектура и кастомная разработка eCommerce с безопасными платежами, быстрым UX и адаптацией под мобильные устройства.",
-    },
-  };
-
-  return dict[lang] || dict.en;
-}
+// Assuming you have this from your homepage imports
+const FloatingElements = lazy(() => import("../../components/FloatingElements"));
 
 export default function WebDevelopmentPage() {
-  const { language } = useLanguage();
-  const location = useLocation();
-  const t = useMemo(() => getServiceContent(language), [language]);
+  const { t, language } = useLanguage(); 
+  const navigate = useNavigate();
 
-  const baseUrl = "https://yeltu.com";
+  const [selectedFeatureCard, setSelectedFeatureCard] = useState(null);
+  const [activeTab, setActiveTab] = useState("custom"); 
 
-  const canonicalPath =
-    language === "en"
-      ? "/services/web-development"
-      : `/${language}/services/web-development`;
-
-  const pageUrl = `${baseUrl}${canonicalPath}`;
-
-  const servicesUrl =
-    language === "en"
-      ? `${baseUrl}/services`
-      : `${baseUrl}/${language}/services`;
-
-  // Keywords per language (kept realistic and not spammy)
-  const keywordsByLang = {
-    en: [
-      "website development",
-      "web development agency",
-      "custom website development",
-      "business website",
-      "ecommerce website development",
-      "responsive web design",
-      "website maintenance",
-      "performance optimization",
-      "API integration",
-      "Yeltu Agency",
-      "Baku web development",
-      "Azerbaijan web development",
-    ],
-    az: [
-      "veb sayt hazırlanması",
-      "veb inkişaf",
-      "xüsusi veb sayt",
-      "biznes saytı",
-      "e-ticarət sayt hazırlanması",
-      "responsiv dizayn",
-      "sayt dəstəyi",
-      "performans optimizasiyası",
-      "API inteqrasiyası",
-      "Yeltu Agency",
-      "Bakı veb inkişaf",
-      "Azərbaycan veb inkişaf",
-    ],
-    ru: [
-      "разработка сайтов",
-      "веб разработка",
-      "создание сайта",
-      "корпоративный сайт",
-      "разработка интернет-магазина",
-      "адаптивный сайт",
-      "поддержка сайта",
-      "оптимизация скорости",
-      "интеграция API",
-      "Yeltu Agency",
-      "веб разработка Баку",
-      "веб разработка Азербайджан",
-    ],
+  // Apple-style horizontal scrolling logic (1 by 1)
+  const scrollContainerRef = useRef(null);
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const { current } = scrollContainerRef;
+      // Get the exact width of one card + the gap (gap-6 is 24px)
+      const cardWidth = current.firstElementChild?.clientWidth || 0;
+      const scrollAmount = cardWidth + 24; 
+      current.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
+    }
   };
-
-  const keywords = (keywordsByLang[language] || keywordsByLang.en).join(", ");
-
-  // Breadcrumbs
-  const breadcrumbs = [
-    {
-      name: language === "az" ? "Xidmətlər" : language === "ru" ? "Услуги" : "Services",
-      item: servicesUrl,
-    },
-    {
-      name: t.h1,
-      item: pageUrl,
-    },
-  ];
-
-  // JSON-LD (array supported by your SEO.jsx)
-  const jsonLd = [
-    // Organization
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": `${baseUrl}/#organization`,
-      name: "YELTU Agency",
-      url: baseUrl,
-      logo: `${baseUrl}/logo.webp`,
-      sameAs: [
-        "https://instagram.com/yeltu",
-        "https://linkedin.com/company/yeltu",
-      ],
-    },
-
-    // Website
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": `${baseUrl}/#website`,
-      url: baseUrl,
-      name: "YELTU Agency",
-      publisher: { "@id": `${baseUrl}/#organization` },
-      inLanguage: language,
-    },
-
-    // WebPage
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": `${pageUrl}#webpage`,
-      url: pageUrl,
-      name: t.seoTitle,
-      description: t.seoDesc,
-      inLanguage: language,
-      isPartOf: { "@id": `${baseUrl}/#website` },
-      about: { "@id": `${pageUrl}#service` },
-      primaryImageOfPage: {
-        "@type": "ImageObject",
-        url: `${baseUrl}${String(webImg).startsWith("/") ? "" : "/"}${webImg}`,
-      },
-    },
-
-    // Service
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": `${pageUrl}#service`,
-      name: `${t.h1} – YELTU Agency`,
-      description: t.seoDesc,
-      url: pageUrl,
-      inLanguage: language,
-      provider: { "@id": `${baseUrl}/#organization` },
-      areaServed: {
-        "@type": "Country",
-        name: "Azerbaijan",
-      },
-      serviceType: "Website Development",
-    },
-
-    // BreadcrumbList
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: breadcrumbs.map((b, idx) => ({
-        "@type": "ListItem",
-        position: idx + 1,
-        name: b.name,
-        item: b.item,
-      })),
-    },
-  ];
 
   const withLang = (to) => {
     if (to.startsWith("http")) return to;
@@ -374,136 +43,472 @@ export default function WebDevelopmentPage() {
     return `/${language}${to === "/" ? "" : to}`;
   };
 
+  const featureCards = [
+    { id: "uiux", icon: LayoutTemplate, titleKey: "webdev.features.uiux.title", descKey: "webdev.features.uiux.desc" },
+    { id: "perf", icon: Zap, titleKey: "webdev.features.perf.title", descKey: "webdev.features.perf.desc" },
+    { id: "resp", icon: Smartphone, titleKey: "webdev.features.resp.title", descKey: "webdev.features.resp.desc" },
+    { id: "maint", icon: Wrench, titleKey: "webdev.features.maint.title", descKey: "webdev.features.maint.desc" },
+    { id: "seo", icon: SearchCheck, titleKey: "webdev.features.seo.title", descKey: "webdev.features.seo.desc" },
+  ];
+
+  const processSteps = [
+    { icon: Search, titleKey: "webdev.process.step1.title", descKey: "webdev.process.step1.desc" },
+    { icon: LayoutTemplate, titleKey: "webdev.process.step2.title", descKey: "webdev.process.step2.desc" },
+    { icon: PenTool, titleKey: "webdev.process.step3.title", descKey: "webdev.process.step3.desc" },
+    { icon: Code, titleKey: "webdev.process.step4.title", descKey: "webdev.process.step4.desc" },
+    { icon: CheckCircle, titleKey: "webdev.process.step5.title", descKey: "webdev.process.step5.desc" },
+  ];
+
+  const solutions = {
+    custom: {
+      icon: MonitorSmartphone,
+      titleKey: "webdev.solutions.custom.title",
+      descKey: "webdev.solutions.custom.desc",
+      link: "/services/web-development/custom-web-apps",
+      image: customWebAppsImg
+    },
+    ecommerce: {
+      icon: ShoppingCart,
+      titleKey: "webdev.solutions.ecommerce.title",
+      descKey: "webdev.solutions.ecommerce.desc",
+      link: "/services/web-development/ecommerce",
+      image: ecommerceImg
+    },
+    business: {
+      icon: Briefcase,
+      titleKey: "webdev.solutions.business.title",
+      descKey: "webdev.solutions.business.desc",
+      link: "/services/web-development/business-websites",
+      image: businessImg
+    }
+  };
+
+  const closingCards = [
+    { titleKey: "webdev.closing.cards.tech.title", descKey: "webdev.closing.cards.tech.desc" },
+    { titleKey: "webdev.closing.cards.product.title", descKey: "webdev.closing.cards.product.desc" },
+    { titleKey: "webdev.closing.cards.perf.title", descKey: "webdev.closing.cards.perf.desc" },
+    { titleKey: "webdev.closing.cards.secure.title", descKey: "webdev.closing.cards.secure.desc" },
+  ];
+
   return (
-    <main
-      className="min-h-screen bg-white smooth-fade relative overflow-hidden"
-      role="main"
-      aria-label="Web Development Page"
-    >
-      {/* Background aurora-style pulses */}
-      <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-400/5 blur-[120px] rounded-full animate-pulse" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-400/5 blur-[120px] rounded-full" />
-      </div>
+    <main className="min-h-screen bg-white relative overflow-hidden font-sans">
+      <SEO title={t("webdev.seo.title")} description={t("webdev.seo.desc")} />
 
-      <SEO
-        title={t.seoTitle}
-        description={t.seoDesc}
-        canonical={canonicalPath}
-        image={webImg}
-        lang={language}
-        meta={[
-          { name: "keywords", content: keywords },
-        ]}
-        jsonLd={jsonLd}
-      />
+      {/* 1. HERO SECTION */}
+      <section
+        aria-labelledby="hero-title"
+        className="relative overflow-hidden text-white min-h-[90vh] flex items-center hero-bg"
+      >
+        <Suspense fallback={null}>
+          <FloatingElements aria-hidden="true" />
+        </Suspense>
 
-      {/* HERO SECTION - Light Blue Theme (bg-blue-50) */}
-      <section className="pt-24 pb-20 relative z-10">
-        <div className="max-w-7xl mx-auto px-4">
-          <Card className="bg-blue-50 shadow-none border-none rounded-[3rem] overflow-hidden">
-            <CardContent className="p-8 md:p-14 lg:p-16 grid gap-12 lg:grid-cols-12 items-center">
-              {/* Text Side - Adjusted to 6 columns */}
-              <div className="lg:col-span-6 space-y-8">
-                <div>
-                  <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.1]">
-                    {t.h1}
-                  </h1>
-                  <p className="mt-4 text-lg font-medium text-blue-600 tracking-wide">
-                    {t.heroTitle}
-                  </p>
-                </div>
-                <div className="space-y-6 text-slate-600 text-lg leading-relaxed font-light">
-                  <p>{t.heroIntro}</p>
-                  <p>{t.heroIntro2}</p>
-                </div>
+        <div aria-hidden="true" className="absolute inset-0 hero-grid" />
+
+        {/* Scroll Indicator (Left Side) */}
+        <div className="absolute left-4 md:left-8 bottom-32 hidden lg:flex flex-col items-center gap-6 z-20 opacity-80 fade-in-5">
+          <span className="transform -rotate-90 tracking-[0.3em] text-[10px] text-blue-200 uppercase font-bold mb-4">Scroll</span>
+          <div className="w-[1px] h-12 bg-white/20" />
+          <ArrowDown className="transform rotate-90 w-4 h-4 text-blue-400 animate-bounce" />
+        </div>
+
+        {/* Background Bubbles */}
+        <div className="bubble w-16 h-16 bg-blue-500/20 top-40 left-[-150px] animate-[bubble-move_12s_linear_infinite]" />
+        <div className="bubble w-10 h-10 bg-violet-400/25 top-72 left-[-180px] animate-[bubble-move_16s_linear_infinite]" />
+        <div className="bubble w-20 h-20 bg-purple-300/20 top-96 left-[-120px] animate-[bubble-move_20s_linear_infinite]" />
+
+        <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-purple-500/35 blur-[160px]" />
+        <div className="absolute top-40 left-0 w-[320px] h-[320px] bg-indigo-500/30 blur-[130px]" />
+
+        {/* Hero Content Grid */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-14 items-center w-full">
+          
+          <div className="z-10 flex flex-col h-full justify-center lg:pl-8">
+            <h1
+              id="hero-title"
+              className="font-extrabold tracking-tight fade-in-2"
+              style={{
+                fontSize: "50px",
+                lineHeight: "1.05",
+                background: "linear-gradient(180deg, #a78bfa 0%, #8b5cf6 40%, #8c52ff 70%, #5ce1e6 100%)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            >
+              {t("webdev.hero.title")}
+            </h1>
+
+            <p className="mt-6 pb-6 text-lg text-blue-100 max-w-lg fade-in-3">
+              {t("webdev.hero.hook")}
+            </p>
+
+            {/* Bottom Group: CTA pushed down slightly, followed immediately by links */}
+
+              {/* Links - Raw text with Arrow Icons */}
+              <div className="flex flex-col gap-4 fade-in-5">
+                <Link to={withLang(solutions.custom.link)} className="group flex items-center gap-3 text-base font-medium text-slate-300 hover:text-white transition-colors w-fit">
+                  <ArrowRight className="w-5 h-5 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                  {t("webdev.hero.link.custom")}
+                </Link>
+                <Link to={withLang(solutions.ecommerce.link)} className="group flex items-center gap-3 text-base font-medium text-slate-300 hover:text-white transition-colors w-fit">
+                  <ArrowRight className="w-5 h-5 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                  {t("webdev.hero.link.ecommerce")}
+                </Link>
+                <Link to={withLang(solutions.business.link)} className="group flex items-center gap-3 text-base font-medium text-slate-300 hover:text-white transition-colors w-fit">
+                  <ArrowRight className="w-5 h-5 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                  {t("webdev.hero.link.business")}
+                </Link>
               </div>
-
-              {/* Image Box - Adjusted to 6 columns (Balanced with text) */}
-              <div className="lg:col-span-6 relative flex justify-end">
-                <div className="relative w-full overflow-hidden rounded-[2rem] shadow-2xl">
-                  <img
-                    src={webImg}
-                    alt={t.h1}
-                    className="w-full h-full object-cover scale-100 hover:scale-105 transition-transform duration-1000"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* PILLARS - Enhanced Visibility & Animation */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-4">
-            {t.pillars?.map((p) => (
-              <Link
-                key={p.to}
-                to={withLang(p.to)}
-                className="group flex flex-col items-center justify-center p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-blue-300 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+              <div className="mt-14 fade-in-4">
+              <Button
+                aria-label="Start Project"
+                onClick={() => navigate(withLang("/contact"))}
+                size="lg"
+                className="px-8 py-5 text-base bg-gradient-to-r from-blue-500 to-violet-600 rounded-xl hover:scale-105 transition shadow-lg shadow-blue-500/20 mb-8"
               >
-                <span className="text-[11px] font-bold tracking-[0.15em] text-slate-500 uppercase text-center transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent">
-                  {p.label}
-                </span>
-              </Link>
-            ))}
+                {t("webdev.hero.cta")}
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </div>
+          </div>
+
+          {/* Right Side Image - Raw Image without the bounding container */}
+          <div className="relative hidden lg:flex justify-end items-center slide-in-right z-10">
+            <img 
+              src={webImg} 
+              alt="Web Development Solutions" 
+              className="w-full max-w-[800px] h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.5)] transform lg:scale-110 hover:-translate-y-2 transition-transform duration-700" 
+            />
+          </div>
+        </div>
+
+        <div className="hero-wave absolute bottom-0 left-0 w-full h-24 pointer-events-none overflow-hidden">
+          <svg viewBox="0 0 1440 120" className="w-full h-full" preserveAspectRatio="none">
+            <path 
+              d="M0,0 C220,120 1220,-40 1440,80 L1440,120 L0,120 Z" 
+              fill="#ffffff"
+            />
+          </svg>
+        </div>
+      </section>
+
+     {/* 2. INTRO PARAGRAPHS */}
+      <section className="py-24 px-4 pt-4 pb-12 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          {/* Left Side: Paragraphs */}
+          <div className="order-2 lg:order-1 space-y-6">
+            <p className="text-lg text-slate-600 leading-relaxed">
+              {t("webdev.intro.p1")}
+            </p>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              {t("webdev.intro.p2")}
+            </p>
+          </div>
+
+          {/* Right Side: Title */}
+          <div className="order-1 lg:order-2">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent leading-tight lg:pl-10">
+              {t("webdev.intro.title")}
+            </h2>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 3. APPLE-STYLE HORIZONTAL SCROLL CARDS */}
+      <section className="py-24 pt-10 pb-12 bg-slate-50 overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 mb-12 flex justify-between items-end">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight max-w-2xl leading-tight">
+            {t("webdev.features.title")}
+          </h2>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto">
+          {/* Scroll Container - Force hiding scrollbar completely */}
+          <div 
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 md:px-8 pb-8 scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          >
+            {featureCards.map((card) => {
+              const Icon = card.icon;
+              return (
+                <div 
+                  key={card.id} 
+                  onClick={() => setSelectedFeatureCard(card)}
+                  className="relative snap-center shrink-0 w-[85vw] md:w-[400px] min-h-[340px] bg-white rounded-[2.5rem] p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group flex flex-col"
+                >
+                  {/* Clean Icon Top Left */}
+                  <Icon className="w-8 h-8 text-blue-600 mb-8 transition-transform group-hover:scale-110" strokeWidth={1.5} />
+                  
+                  {/* Blue Texts */}
+                  <h3 className="text-2xl font-bold text-blue-900 mb-4 tracking-tight">{t(card.titleKey)}</h3>
+                  <p className="text-blue-800/70 text-lg leading-relaxed line-clamp-3 mb-10">{t(card.descKey)}</p>
+                  
+                  {/* Blue Plus Button Bottom Right */}
+                  <div className="absolute bottom-8 right-8 w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center group-hover:bg-blue-700 transition-colors mt-auto shadow-md shadow-blue-600/20">
+                    <Plus className="w-6 h-6 text-white" />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Navigation Arrows */}
+          <div className="flex justify-end gap-4 px-4 md:px-8 mt-4">
+            <button 
+              onClick={() => scroll("left")} 
+              aria-label="Scroll left"
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-200/60 hover:bg-slate-300 text-slate-900 transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6" strokeWidth={2} />
+            </button>
+            <button 
+              onClick={() => scroll("right")} 
+              aria-label="Scroll right"
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-200/60 hover:bg-slate-300 text-slate-900 transition-colors"
+            >
+              <ChevronRight className="w-6 h-6" strokeWidth={2} />
+            </button>
           </div>
         </div>
       </section>
 
-      {/* CONTENT SECTIONS */}
-      <section className="pb-24 relative z-10">
-        <div className="max-w-7xl mx-auto px-4 space-y-12">
-          {t.sections.map((s) => (
-            <Card
-              key={s.title}
-              className="group bg-white rounded-[3rem] border border-slate-100 p-10 md:p-14 hover:bg-blue-50/40 transition-all duration-700 shadow-sm"
+      {/* MODAL FOR FEATURE CARDS (GLASSMORPHISM) */}
+      {selectedFeatureCard && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-md transition-opacity">
+          <div className="relative w-full max-w-lg bg-white/90 backdrop-blur-xl border border-white/50 rounded-[2rem] p-8 md:p-10 shadow-2xl transform animate-in fade-in zoom-in-95 duration-200">
+            <button 
+              onClick={() => setSelectedFeatureCard(null)}
+              className="absolute top-6 right-6 p-2 bg-slate-100 rounded-full hover:bg-slate-200 text-slate-600 transition-colors"
             >
-              <CardContent className="p-0">
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
-                  {s.title}
-                </h2>
-                <div className="mt-10">
-                  {s.paragraphs.map((p, i) => (
-                    <p key={i} className="text-slate-500 text-lg leading-relaxed font-light max-w-5xl mb-4">
-                      {p}
-                    </p>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-
-          {/* ECOMMERCE SECTION */}
-          <Card className="group bg-white rounded-[3rem] border border-slate-100 p-10 md:p-14 hover:bg-blue-50/40 transition-all duration-700 shadow-sm">
-            <CardContent className="p-0">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
-                {t.ecommerceTitle}
-              </h2>
-              <div className="mt-10">
-                {t.ecommerceParas.map((p, i) => (
-                  <p key={i} className="text-slate-500 text-lg leading-relaxed font-light max-w-5xl mb-4">
-                    {p}
-                  </p>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* FOOTER ACTIONS */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-16">
-            <Link
-              to={withLang("/contact")}
-              className="w-full sm:w-auto px-12 py-6 bg-blue-600 text-white rounded-2xl font-bold text-lg shadow-[0_15px_30px_rgba(37,99,235,0.2)] hover:bg-blue-700 hover:-translate-y-1 transition-all"
-            >
-              {language === "az" ? "Layihəni müzakirə edək" : language === "ru" ? "Обсудить проект" : "Discuss a project"}
-            </Link>
-            <Link
-              to={withLang("/services")}
-              className="w-full sm:w-auto px-12 py-6 bg-white text-slate-900 border border-slate-200 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all shadow-sm"
-            >
-              {language === "az" ? "Xidmətlərə qayıt" : language === "ru" ? "Назад к услугам" : "Back to services"}
-            </Link>
+              <X className="w-5 h-5" />
+            </button>
+            <selectedFeatureCard.icon className="w-12 h-12 text-blue-600 mb-6" />
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">{t(selectedFeatureCard.titleKey)}</h3>
+            <p className="text-slate-600 leading-relaxed">{t(selectedFeatureCard.descKey)}</p>
           </div>
+        </div>
+      )}
+
+      {/* 4. DEEP DIVE TEXT */}
+      {/* 4A. DEEP DIVE TEXT - BLOCK 1 */}
+      <section className="py-24 px-4 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="order-1">
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent leading-tight lg:pr-10">
+                {t("webdev.deepdive.h1.title")}
+              </h1>
+            </div>
+            <div className="order-2 space-y-6 text-xl text-slate-600 leading-relaxed font-light">
+              <p>{t("webdev.deepdive.h1.p1")}</p>
+              <p>{t("webdev.deepdive.h1.p2")}</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 4B. DEEP DIVE TEXT - BLOCK 2 (Reversed & Different Background) */}
+      <section className="py-24 px-4 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="order-2 lg:order-1 space-y-6 text-xl text-slate-600 leading-relaxed font-light">
+              <p>{t("webdev.deepdive.h2.p1")}</p>
+              <p>{t("webdev.deepdive.h2.p2")}</p>
+            </div>
+            <div className="order-1 lg:order-2">
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent leading-tight lg:pl-10">
+                {t("webdev.deepdive.h2.title")}
+              </h1>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 5. STRATEGIC WEB DEV PROCESS */}
+      <section className="py-24 pt-12 bg-slate-900 text-white px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">{t("webdev.process.title")}</h2>
+            <p className="text-slate-400 text-lg">{t("webdev.process.subtitle")}</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {processSteps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <div key={index} className="relative bg-slate-800/50 border border-slate-700 p-8 rounded-3xl hover:bg-slate-800 transition-colors">
+                  <div className="text-5xl font-black text-slate-700/50 absolute top-4 right-6 pointer-events-none">0{index + 1}</div>
+                  <Icon className="w-10 h-10 text-blue-400 mb-6" />
+                  <h3 className="text-xl font-bold mb-3">{t(step.titleKey)}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{t(step.descKey)}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. WEB SOLUTIONS WE SPECIALIZE IN (TABS) */}
+      {/* 6. WEB SOLUTIONS WE SPECIALIZE IN (TABS) */}
+      <section className="py-24 pt-14 pb-16 bg-white px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">{t("webdev.solutions.title")}</h2>
+            <p className="text-slate-600 mt-4 text-lg">{t("webdev.solutions.subtitle")}</p>
+          </div>
+
+          {/* Interactive Wide Tabs - SCROLLBAR COMPLETELY KILLED */}
+          <div className="flex justify-start lg:justify-center items-end border-b border-slate-200 mb-20 overflow-x-auto lg:overflow-visible w-full pt-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            {Object.keys(solutions).map((key) => {
+              const sol = solutions[key];
+              const Icon = sol.icon;
+              const isActive = activeTab === key;
+              return (
+                <button
+                  key={key}
+                  onClick={() => setActiveTab(key)}
+                  className={`
+                    relative flex flex-col items-center justify-center flex-1 min-w-[220px] pt-8 pb-8 px-6 transition-all duration-300
+                    ${isActive 
+                      ? "bg-white shadow-[0_-15px_30px_-15px_rgba(0,0,0,0.1)] border-t-4 border-t-violet-600 z-10 translate-y-[1px]" 
+                      : "bg-transparent hover:bg-slate-50 text-slate-500 border-t-4 border-t-transparent border-b-2 border-b-transparent"
+                    }
+                  `}
+                >
+                  <Icon className={`w-10 h-10 mb-4 transition-colors ${isActive ? "text-violet-600" : "text-slate-400"}`} strokeWidth={1.5} />
+                  <span className={`text-sm md:text-base font-bold tracking-widest uppercase text-center transition-colors ${isActive ? "text-violet-600" : "text-slate-500"}`}>
+                    {t(sol.titleKey)}
+                  </span>
+                  
+                  {/* Downward Chevron indicator */}
+                  <div className={`absolute -bottom-6 transition-all duration-300 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"}`}>
+                    <ChevronDown className="w-8 h-8 text-violet-600" strokeWidth={2.5} />
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Content Area for Active Tab */}
+          <div key={activeTab} className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            
+            {/* Text Left */}
+            <div className="order-2 lg:order-1 space-y-6">
+              <h3 className="text-3xl md:text-4xl font-bold text-slate-900">{t(solutions[activeTab].titleKey)}</h3>
+              <p className="text-lg text-slate-600 leading-relaxed font-light">
+                {t(solutions[activeTab].descKey)}
+              </p>
+              
+              <div className="pt-4">
+                <Link to={withLang(solutions[activeTab].link)} className="inline-flex items-center px-8 py-4 bg-slate-900 text-white font-semibold rounded-xl hover:bg-violet-600 transition-all shadow-lg hover:shadow-violet-600/30">
+                  {t("webdev.solutions.learnMore")}
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+            
+            {/* Clean Image Right */}
+            <div className="order-1 lg:order-2 relative w-full flex justify-center">
+               <img 
+                 src={solutions[activeTab].image} 
+                 alt={t(solutions[activeTab].titleKey)} 
+                 className="w-full max-w-[600px] h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)] transform hover:scale-105 transition-transform duration-700" 
+               />
+            </div>
+
+          </div>
+        </div>
+      </section>
+{/* 7 & 8. CLOSING SPLIT SCREEN */}
+      <section className="relative py-24 pt-14 text-white overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 px-4">
+        
+        {/* GRID BACKGROUND (ULTRA LIGHTWEIGHT) */}
+        <div
+          className="absolute inset-0 opacity-[0.08] pointer-events-none"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(34,211,238,0.25) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(139,92,246,0.25) 1px, transparent 1px)
+            `,
+            backgroundSize: "50px 50px",
+            opacity: 0.2,
+          }}
+        />
+
+        {/* FLOATING ORBS (GPU-ACCELERATED) */}
+        <div className="absolute -top-20 -left-20 w-56 h-56 rounded-full bg-cyan-400/20 blur-3xl animate-float" />
+        <div
+          className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float"
+          style={{ animationDelay: "1.5s" }}
+        />
+
+        {/* MOVING SCAN LINE */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent, rgba(34,211,238,0.25), transparent)",
+            maskImage:
+              "radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 90%)",
+            animation: "scan 4s linear infinite",
+          }}
+        />
+
+        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start z-10">
+          
+          {/* Left Column: Text & CTA */}
+          <div className="space-y-8 lg:sticky lg:top-24">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-br from-white to-slate-300 bg-clip-text text-transparent">
+              {t("webdev.closing.title")}
+            </h2>
+            <div className="space-y-6 text-blue-100/80 text-lg leading-relaxed">
+              <p>{t("webdev.closing.p1")}</p>
+              <p>{t("webdev.closing.p2")}</p>
+            </div>
+            
+            {/* DESKTOP BUTTON: Hidden on mobile */}
+            <div className="pt-4 hidden lg:block">
+              <Button
+                aria-label="Contact Yeltu Agency"
+                onClick={() => navigate(withLang("/contact"))}
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-blue-50 shadow-xl hover:scale-105 transition-all duration-300 px-8 py-6 text-base font-bold rounded-xl"
+              >
+                {t("webdev.closing.cta")}
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </div>
+          </div>
+
+          {/* Right Column: Cards (Icons removed, items-start keeps height aligned to text) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
+            {closingCards.map((card, idx) => (
+              <div key={idx} className="bg-slate-800/40 backdrop-blur-md border border-slate-700/50 p-8 rounded-3xl hover:bg-slate-800/60 transition-all group">
+                <h3 className="text-xl font-bold mb-4">{t(card.titleKey)}</h3>
+                <p className="text-blue-100/70 text-sm leading-relaxed">{t(card.descKey)}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* MOBILE BUTTON: Shows under the cards on mobile, hidden on desktop */}
+          <div className="pt-2 lg:hidden flex justify-start">
+            <Button
+              aria-label="Contact Yeltu Agency"
+              onClick={() => navigate(withLang("/contact"))}
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-blue-50 shadow-xl hover:scale-105 transition-all duration-300 px-8 py-6 text-base font-bold rounded-xl"
+            >
+              {t("webdev.closing.cta")}
+              <ArrowRight className="ml-2" size={20} />
+            </Button>
+          </div>
+
         </div>
       </section>
     </main>
