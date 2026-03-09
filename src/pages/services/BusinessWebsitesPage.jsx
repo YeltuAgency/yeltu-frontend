@@ -2,38 +2,52 @@ import { useState, Suspense, lazy, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../../contexts/LanguageContext";
 import SEO from "../../components/SEO";
-import { Card, CardContent } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
-import webImg from "../../assets/services/webdevelopment.webp";
 import customWebAppsImg from "../../assets/services/customwebapps.webp";
 import ecommerceImg from "../../assets/services/e-commerce.webp";
 import businessImg from "../../assets/services/business.webp";
-import { 
-  ArrowRight, X, LayoutTemplate, Zap, Smartphone, 
-  Wrench, LineChart, Search, SearchCheck, PenTool, 
-  Code, CheckCircle, MonitorSmartphone, ShoppingCart, Briefcase, 
-  ArrowDown, Plus, ChevronLeft, ChevronRight, ChevronDown
+import webImg from "../../assets/services/webdevelopment.webp";
+import {
+  ArrowRight,
+  X,
+  LayoutTemplate,
+  Zap,
+  Search,
+  PenTool,
+  Code,
+  CheckCircle,
+  MonitorSmartphone,
+  ShoppingCart,
+  ArrowDown,
+  Plus,
+  ChevronLeft,
+  ChevronRight,
+  ChevronDown,
+  Network,
+  ShieldCheck,
+  Database,
 } from "lucide-react";
 
-// Assuming you have this from your homepage imports
 const FloatingElements = lazy(() => import("../../components/FloatingElements"));
 
-export default function WebDevelopmentPage() {
-  const { t, language } = useLanguage(); 
+export default function BusinessWebsitesPage() {
+  const { t, language } = useLanguage();
   const navigate = useNavigate();
 
   const [selectedFeatureCard, setSelectedFeatureCard] = useState(null);
-  const [activeTab, setActiveTab] = useState("custom"); 
+  const [activeTab, setActiveTab] = useState("ecommerce");
 
-  // Apple-style horizontal scrolling logic (1 by 1)
   const scrollContainerRef = useRef(null);
+
   const scroll = (direction) => {
     if (scrollContainerRef.current) {
       const { current } = scrollContainerRef;
-      // Get the exact width of one card + the gap (gap-6 is 24px)
       const cardWidth = current.firstElementChild?.clientWidth || 0;
-      const scrollAmount = cardWidth + 24; 
-      current.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
+      const scrollAmount = cardWidth + 24;
+      current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -44,43 +58,94 @@ export default function WebDevelopmentPage() {
   };
 
   const featureCards = [
-    { id: "uiux", icon: LayoutTemplate, titleKey: "webdev.features.uiux.title", descKey: "webdev.features.uiux.desc" },
-    { id: "perf", icon: Zap, titleKey: "webdev.features.perf.title", descKey: "webdev.features.perf.desc" },
-    { id: "resp", icon: Smartphone, titleKey: "webdev.features.resp.title", descKey: "webdev.features.resp.desc" },
-    { id: "maint", icon: Wrench, titleKey: "webdev.features.maint.title", descKey: "webdev.features.maint.desc" },
-    { id: "seo", icon: SearchCheck, titleKey: "webdev.features.seo.title", descKey: "webdev.features.seo.desc" },
+    {
+      id: "architecture",
+      icon: LayoutTemplate,
+      titleKey: "business.features.architecture.title",
+      descKey: "business.features.architecture.desc",
+    },
+    {
+      id: "integration",
+      icon: Network,
+      titleKey: "business.features.integration.title",
+      descKey: "business.features.integration.desc",
+    },
+    {
+      id: "uiux",
+      icon: PenTool,
+      titleKey: "business.features.uiux.title",
+      descKey: "business.features.uiux.desc",
+    },
+    {
+      id: "performance",
+      icon: Zap,
+      titleKey: "business.features.performance.title",
+      descKey: "business.features.performance.desc",
+    },
+    {
+      id: "security",
+      icon: ShieldCheck,
+      titleKey: "business.features.security.title",
+      descKey: "business.features.security.desc",
+    },
+    {
+      id: "scalable",
+      icon: Database,
+      titleKey: "business.features.scalable.title",
+      descKey: "business.features.scalable.desc",
+    },
   ];
 
   const processSteps = [
-    { icon: Search, titleKey: "webdev.process.step1.title", descKey: "webdev.process.step1.desc" },
-    { icon: LayoutTemplate, titleKey: "webdev.process.step2.title", descKey: "webdev.process.step2.desc" },
-    { icon: PenTool, titleKey: "webdev.process.step3.title", descKey: "webdev.process.step3.desc" },
-    { icon: Code, titleKey: "webdev.process.step4.title", descKey: "webdev.process.step4.desc" },
-    { icon: CheckCircle, titleKey: "webdev.process.step5.title", descKey: "webdev.process.step5.desc" },
+    {
+      icon: Search,
+      titleKey: "business.process.step1.title",
+      descKey: "business.process.step1.desc",
+    },
+    {
+      icon: LayoutTemplate,
+      titleKey: "business.process.step2.title",
+      descKey: "business.process.step2.desc",
+    },
+    {
+      icon: PenTool,
+      titleKey: "business.process.step3.title",
+      descKey: "business.process.step3.desc",
+    },
+    {
+      icon: Code,
+      titleKey: "business.process.step4.title",
+      descKey: "business.process.step4.desc",
+    },
+    {
+      icon: CheckCircle,
+      titleKey: "business.process.step5.title",
+      descKey: "business.process.step5.desc",
+    },
   ];
 
   const solutions = {
-    custom: {
+    webdev: {
       icon: MonitorSmartphone,
-      titleKey: "webdev.solutions.custom.title",
-      descKey: "webdev.solutions.custom.desc",
+      titleKey: "business.solutions.webdev.title",
+      descKey: "business.solutions.webdev.desc",
+      link: "/services/web-development",
+      image: webImg,
+    },
+    customwebapp: {
+      icon: LayoutTemplate,
+      titleKey: "business.solutions.customwebapp.title",
+      descKey: "business.solutions.customwebapp.desc",
       link: "/services/web-development/custom-web-apps",
-      image: customWebAppsImg
+      image: customWebAppsImg,
     },
     ecommerce: {
       icon: ShoppingCart,
-      titleKey: "webdev.solutions.ecommerce.title",
-      descKey: "webdev.solutions.ecommerce.desc",
+      titleKey: "business.solutions.ecommerce.title",
+      descKey: "business.solutions.ecommerce.desc",
       link: "/services/web-development/ecommerce",
-      image: ecommerceImg
+      image: ecommerceImg,
     },
-    business: {
-      icon: Briefcase,
-      titleKey: "webdev.solutions.business.title",
-      descKey: "webdev.solutions.business.desc",
-      link: "/services/web-development/business-websites",
-      image: businessImg
-    }
   };
 
   const closingCards = [
@@ -92,7 +157,10 @@ export default function WebDevelopmentPage() {
 
   return (
     <main className="min-h-screen bg-white relative overflow-hidden font-sans">
-      <SEO title={t("webdev.seo.title")} description={t("webdev.seo.desc")} />
+      <SEO
+        title={t("business.seo.title")}
+        description={t("business.seo.desc")}
+      />
 
       {/* 1. HERO SECTION */}
       <section
@@ -105,14 +173,14 @@ export default function WebDevelopmentPage() {
 
         <div aria-hidden="true" className="absolute inset-0 hero-grid" />
 
-        {/* Scroll Indicator (Left Side) */}
         <div className="absolute left-4 md:left-8 bottom-32 hidden lg:flex flex-col items-center gap-6 z-20 opacity-80 fade-in-5">
-          <span className="transform -rotate-90 tracking-[0.3em] text-[10px] text-blue-200 uppercase font-bold mb-4">Scroll</span>
+          <span className="transform -rotate-90 tracking-[0.3em] text-[10px] text-blue-200 uppercase font-bold mb-4">
+            Scroll
+          </span>
           <div className="w-[1px] h-12 bg-white/20" />
           <ArrowDown className="transform rotate-90 w-4 h-4 text-blue-400 animate-bounce" />
         </div>
 
-        {/* Background Bubbles */}
         <div className="bubble w-16 h-16 bg-blue-500/20 top-40 left-[-150px] animate-[bubble-move_12s_linear_infinite]" />
         <div className="bubble w-10 h-10 bg-violet-400/25 top-72 left-[-180px] animate-[bubble-move_16s_linear_infinite]" />
         <div className="bubble w-20 h-20 bg-purple-300/20 top-96 left-[-120px] animate-[bubble-move_20s_linear_infinite]" />
@@ -120,9 +188,7 @@ export default function WebDevelopmentPage() {
         <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-purple-500/35 blur-[160px]" />
         <div className="absolute top-40 left-0 w-[320px] h-[320px] bg-indigo-500/30 blur-[130px]" />
 
-        {/* Hero Content Grid */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-14 items-center w-full">
-          
           <div className="z-10 flex flex-col h-full justify-center lg:pl-8">
             <h1
               id="hero-title"
@@ -130,122 +196,123 @@ export default function WebDevelopmentPage() {
               style={{
                 fontSize: "50px",
                 lineHeight: "1.05",
-                background: "linear-gradient(180deg, #a78bfa 0%, #8b5cf6 40%, #8c52ff 70%, #5ce1e6 100%)",
+                background:
+                  "linear-gradient(180deg, #a78bfa 0%, #8b5cf6 40%, #8c52ff 70%, #5ce1e6 100%)",
                 WebkitBackgroundClip: "text",
                 color: "transparent",
               }}
             >
-              {t("webdev.hero.title")}
+              {t("business.hero.title")}
             </h1>
 
             <p className="mt-6 pb-6 text-lg text-blue-100 max-w-lg fade-in-3">
-              {t("webdev.hero.hook")}
+              {t("business.hero.hook")}
             </p>
 
-            {/* Bottom Group: CTA pushed down slightly, followed immediately by links */}
-
-              {/* Links - Raw text with Arrow Icons */}
-              <div className="flex flex-col gap-4 fade-in-5">
-                <Link to={withLang(solutions.custom.link)} className="group flex items-center gap-3 text-base font-medium text-slate-300 hover:text-white transition-colors w-fit">
-                  <ArrowRight className="w-5 h-5 text-blue-400 group-hover:translate-x-1 transition-transform" />
-                  {t("webdev.hero.link.custom")}
-                </Link>
-                <Link to={withLang(solutions.ecommerce.link)} className="group flex items-center gap-3 text-base font-medium text-slate-300 hover:text-white transition-colors w-fit">
-                  <ArrowRight className="w-5 h-5 text-blue-400 group-hover:translate-x-1 transition-transform" />
-                  {t("webdev.hero.link.ecommerce")}
-                </Link>
-                <Link to={withLang(solutions.business.link)} className="group flex items-center gap-3 text-base font-medium text-slate-300 hover:text-white transition-colors w-fit">
-                  <ArrowRight className="w-5 h-5 text-blue-400 group-hover:translate-x-1 transition-transform" />
-                  {t("webdev.hero.link.business")}
-                </Link>
+            <div className="flex flex-col gap-4 fade-in-5">
+              <div className="flex items-center gap-3 text-base font-medium text-slate-300">
+                <ArrowRight className="w-5 h-5 text-blue-400" />
+                {t("business.hero.points.precision")}
               </div>
-              <div className="mt-14 fade-in-4">
+              <div className="flex items-center gap-3 text-base font-medium text-slate-300">
+                <ArrowRight className="w-5 h-5 text-blue-400" />
+                {t("business.hero.points.integration")}
+              </div>
+              <div className="flex items-center gap-3 text-base font-medium text-slate-300">
+                <ArrowRight className="w-5 h-5 text-blue-400" />
+                {t("business.hero.points.scale")}
+              </div>
+            </div>
+
+            <div className="mt-14 fade-in-4">
               <Button
                 aria-label="Start Project"
                 onClick={() => navigate(withLang("/contact"))}
                 size="lg"
                 className="px-8 py-5 text-base bg-gradient-to-r from-blue-500 to-violet-600 rounded-xl hover:scale-105 transition shadow-lg shadow-blue-500/20 mb-8"
               >
-                {t("webdev.hero.cta")}
+                {t("business.hero.cta")}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </div>
           </div>
 
-          {/* Right Side Image - Raw Image without the bounding container */}
           <div className="relative hidden lg:flex justify-end items-center slide-in-right z-10">
-            <img 
-              src={webImg} 
-              alt="Web Development Solutions" 
-              className="w-full max-w-[800px] h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.5)] transform lg:scale-110 hover:-translate-y-2 transition-transform duration-700" 
+            <img
+              src={businessImg}
+              alt="Business Website Development"
+              className="w-full max-w-[800px] h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.5)] transform lg:scale-110 hover:-translate-y-2 transition-transform duration-700"
             />
           </div>
         </div>
 
         <div className="hero-wave absolute bottom-0 left-0 w-full h-24 pointer-events-none overflow-hidden">
-          <svg viewBox="0 0 1440 120" className="w-full h-full" preserveAspectRatio="none">
-            <path 
-              d="M0,0 C220,120 1220,-40 1440,80 L1440,120 L0,120 Z" 
+          <svg
+            viewBox="0 0 1440 120"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,0 C220,120 1220,-40 1440,80 L1440,120 L0,120 Z"
               fill="#ffffff"
             />
           </svg>
         </div>
       </section>
 
-     {/* 2. INTRO PARAGRAPHS */}
+      {/* 2. INTRO */}
       <section className="py-24 px-4 pt-4 pb-12 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
-          {/* Left Side: Paragraphs */}
           <div className="order-2 lg:order-1 space-y-6">
             <p className="text-lg text-slate-600 leading-relaxed">
-              {t("webdev.intro.p1")}
+              {t("business.intro.p1")}
             </p>
             <p className="text-lg text-slate-600 leading-relaxed">
-              {t("webdev.intro.p2")}
+              {t("business.intro.p2")}
             </p>
           </div>
 
-          {/* Right Side: Title */}
           <div className="order-1 lg:order-2">
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent leading-tight lg:pl-10">
-              {t("webdev.intro.title")}
+              {t("business.intro.title")}
             </h2>
           </div>
-
         </div>
       </section>
 
-      {/* 3. APPLE-STYLE HORIZONTAL SCROLL CARDS */}
+      {/* 3. FEATURE CARDS */}
       <section className="py-24 pt-10 pb-12 bg-slate-50 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 md:px-8 mb-12 flex justify-between items-end">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight max-w-2xl leading-tight">
-            {t("webdev.features.title")}
+            {t("business.features.title")}
           </h2>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto">
-          {/* Scroll Container - Force hiding scrollbar completely */}
-          <div 
+          <div
             ref={scrollContainerRef}
             className="flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 md:px-8 pb-8 scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
           >
             {featureCards.map((card) => {
               const Icon = card.icon;
               return (
-                <div 
-                  key={card.id} 
+                <div
+                  key={card.id}
                   onClick={() => setSelectedFeatureCard(card)}
                   className="relative snap-center shrink-0 w-[85vw] md:w-[400px] min-h-[340px] bg-white rounded-[2.5rem] p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group flex flex-col"
                 >
-                  {/* Clean Icon Top Left */}
-                  <Icon className="w-8 h-8 text-blue-600 mb-8 transition-transform group-hover:scale-110" strokeWidth={1.5} />
-                  
-                  {/* Blue Texts */}
-                  <h3 className="text-2xl font-bold text-blue-900 mb-4 tracking-tight">{t(card.titleKey)}</h3>
-                  <p className="text-blue-800/70 text-lg leading-relaxed line-clamp-3 mb-10">{t(card.descKey)}</p>
-                  
-                  {/* Blue Plus Button Bottom Right */}
+                  <Icon
+                    className="w-8 h-8 text-blue-600 mb-8 transition-transform group-hover:scale-110"
+                    strokeWidth={1.5}
+                  />
+
+                  <h3 className="text-2xl font-bold text-blue-900 mb-4 tracking-tight">
+                    {t(card.titleKey)}
+                  </h3>
+                  <p className="text-blue-800/70 text-lg leading-relaxed line-clamp-3 mb-10">
+                    {t(card.descKey)}
+                  </p>
+
                   <div className="absolute bottom-8 right-8 w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center group-hover:bg-blue-700 transition-colors mt-auto shadow-md shadow-blue-600/20">
                     <Plus className="w-6 h-6 text-white" />
                   </div>
@@ -254,17 +321,16 @@ export default function WebDevelopmentPage() {
             })}
           </div>
 
-          {/* Navigation Arrows */}
           <div className="flex justify-end gap-4 px-4 md:px-8 mt-4">
-            <button 
-              onClick={() => scroll("left")} 
+            <button
+              onClick={() => scroll("left")}
               aria-label="Scroll left"
               className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-200/60 hover:bg-slate-300 text-slate-900 transition-colors"
             >
               <ChevronLeft className="w-6 h-6" strokeWidth={2} />
             </button>
-            <button 
-              onClick={() => scroll("right")} 
+            <button
+              onClick={() => scroll("right")}
               aria-label="Scroll right"
               className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-200/60 hover:bg-slate-300 text-slate-900 transition-colors"
             >
@@ -274,97 +340,71 @@ export default function WebDevelopmentPage() {
         </div>
       </section>
 
-      {/* MODAL FOR FEATURE CARDS (GLASSMORPHISM) */}
+      {/* FEATURE MODAL */}
       {selectedFeatureCard && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-md transition-opacity">
           <div className="relative w-full max-w-lg bg-white/90 backdrop-blur-xl border border-white/50 rounded-[2rem] p-8 md:p-10 shadow-2xl transform animate-in fade-in zoom-in-95 duration-200">
-            <button 
+            <button
               onClick={() => setSelectedFeatureCard(null)}
               className="absolute top-6 right-6 p-2 bg-slate-100 rounded-full hover:bg-slate-200 text-slate-600 transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
             <selectedFeatureCard.icon className="w-12 h-12 text-blue-600 mb-6" />
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">{t(selectedFeatureCard.titleKey)}</h3>
-            <p className="text-slate-600 leading-relaxed">{t(selectedFeatureCard.descKey)}</p>
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">
+              {t(selectedFeatureCard.titleKey)}
+            </h3>
+            <p className="text-slate-600 leading-relaxed">
+              {t(selectedFeatureCard.descKey)}
+            </p>
           </div>
         </div>
       )}
 
-      {/* 4. DEEP DIVE TEXT */}
+      {/* 4. DEEP DIVE */}
       <section className="py-24 px-4 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto">
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div className="order-1">
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent leading-tight lg:pr-10">
-                {t("webdev.deepdive.h1.title")}
+                {t("business.deepdive.title")}
               </h1>
             </div>
-            <div className="order-2 space-y-6 text-xl text-slate-600 leading-relaxed font-light">
-              <p>{t("webdev.deepdive.h1.p1")}</p>
-              <p>{t("webdev.deepdive.h1.p2")}</p>
+            <div className="order-2 text-xl text-slate-600 leading-relaxed font-light">
+              <p>{t("business.deepdive.p1")}</p>
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* --- PURE CSS GEOMETRIC DIVIDER --- */}
-      <div className="relative w-full h-12 md:h-24 bg-white">
-        {/* 1. Gradient Layer (The base shape) */}
-        <div 
-          className="absolute inset-0 bg-gradient-to-r from-blue-600 to-violet-600"
-          style={{ 
-            clipPath: "polygon(0 20%, 35% 20%, 65% 80%, 100% 80%, 100% 150%, 0 150%)" 
-          }}
-        ></div>
-        
-        {/* 2. Slate Background Layer (Shifted down by 4px to reveal the gradient border) */}
-        <div 
-          className="absolute inset-0 bg-slate-50"
-          style={{ 
-            clipPath: "polygon(0 calc(20% + 4px), 35% calc(20% + 4px), 65% calc(80% + 4px), 100% calc(80% + 4px), 100% 150%, 0 150%)" 
-          }}
-        ></div>
-      </div>
-
-      {/* 4B. DEEP DIVE TEXT - BLOCK 2 (Reversed & Different Background) */}
-      <section className="py-24 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            <div className="order-2 lg:order-1 space-y-6 text-xl text-slate-600 leading-relaxed font-light">
-              <p>{t("webdev.deepdive.h2.p1")}</p>
-              <p>{t("webdev.deepdive.h2.p2")}</p>
-            </div>
-            <div className="order-1 lg:order-2">
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent leading-tight lg:pl-10">
-                {t("webdev.deepdive.h2.title")}
-              </h1>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* 5. STRATEGIC WEB DEV PROCESS */}
+      {/* 5. PROCESS */}
       <section className="py-24 pt-12 bg-slate-900 text-white px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">{t("webdev.process.title")}</h2>
-            <p className="text-slate-400 text-lg">{t("webdev.process.subtitle")}</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {t("business.process.title")}
+            </h2>
+            <p className="text-slate-400 text-lg">
+              {t("business.process.subtitle")}
+            </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
             {processSteps.map((step, index) => {
               const Icon = step.icon;
               return (
-                <div key={index} className="relative bg-slate-800/50 border border-slate-700 p-8 rounded-3xl hover:bg-slate-800 transition-colors">
-                  <div className="text-5xl font-black text-slate-700/50 absolute top-4 right-6 pointer-events-none">0{index + 1}</div>
+                <div
+                  key={index}
+                  className="relative bg-slate-800/50 border border-slate-700 p-8 rounded-3xl hover:bg-slate-800 transition-colors"
+                >
+                  <div className="text-5xl font-black text-slate-700/50 absolute top-4 right-6 pointer-events-none">
+                    0{index + 1}
+                  </div>
                   <Icon className="w-10 h-10 text-blue-400 mb-6" />
                   <h3 className="text-xl font-bold mb-3">{t(step.titleKey)}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{t(step.descKey)}</p>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    {t(step.descKey)}
+                  </p>
                 </div>
               );
             })}
@@ -372,40 +412,56 @@ export default function WebDevelopmentPage() {
         </div>
       </section>
 
-      {/* 6. WEB SOLUTIONS WE SPECIALIZE IN (TABS) */}
-      {/* 6. WEB SOLUTIONS WE SPECIALIZE IN (TABS) */}
+      {/* 6. SOLUTIONS TABS */}
       <section className="py-24 pt-14 pb-16 bg-white px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">{t("webdev.solutions.title")}</h2>
-            <p className="text-slate-600 mt-4 text-lg">{t("webdev.solutions.subtitle")}</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+              {t("business.solutions.title")}
+            </h2>
+            <p className="text-slate-600 mt-4 text-lg">
+              {t("business.solutions.subtitle")}
+            </p>
           </div>
 
-          {/* Interactive Wide Tabs - SCROLLBAR COMPLETELY KILLED */}
           <div className="flex justify-start lg:justify-center items-end border-b border-slate-200 mb-20 overflow-x-auto lg:overflow-visible w-full pt-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {Object.keys(solutions).map((key) => {
               const sol = solutions[key];
               const Icon = sol.icon;
               const isActive = activeTab === key;
+
               return (
                 <button
                   key={key}
                   onClick={() => setActiveTab(key)}
                   className={`
                     relative flex flex-col items-center justify-center flex-1 min-w-[220px] pt-8 pb-8 px-6 transition-all duration-300
-                    ${isActive 
-                      ? "bg-white shadow-[0_-15px_30px_-15px_rgba(0,0,0,0.1)] border-t-4 border-t-violet-600 z-10 translate-y-[1px]" 
-                      : "bg-transparent hover:bg-slate-50 text-slate-500 border-t-4 border-t-transparent border-b-2 border-b-transparent"
+                    ${
+                      isActive
+                        ? "bg-white shadow-[0_-15px_30px_-15px_rgba(0,0,0,0.1)] border-t-4 border-t-violet-600 z-10 translate-y-[1px]"
+                        : "bg-transparent hover:bg-slate-50 text-slate-500 border-t-4 border-t-transparent border-b-2 border-b-transparent"
                     }
                   `}
                 >
-                  <Icon className={`w-10 h-10 mb-4 transition-colors ${isActive ? "text-violet-600" : "text-slate-400"}`} strokeWidth={1.5} />
-                  <span className={`text-sm md:text-base font-bold tracking-widest uppercase text-center transition-colors ${isActive ? "text-violet-600" : "text-slate-500"}`}>
+                  <Icon
+                    className={`w-10 h-10 mb-4 transition-colors ${
+                      isActive ? "text-violet-600" : "text-slate-400"
+                    }`}
+                    strokeWidth={1.5}
+                  />
+                  <span
+                    className={`text-sm md:text-base font-bold tracking-widest uppercase text-center transition-colors ${
+                      isActive ? "text-violet-600" : "text-slate-500"
+                    }`}
+                  >
                     {t(sol.titleKey)}
                   </span>
-                  
-                  {/* Downward Chevron indicator */}
-                  <div className={`absolute -bottom-6 transition-all duration-300 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"}`}>
+
+                  <div
+                    className={`absolute -bottom-6 transition-all duration-300 ${
+                      isActive ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                    }`}
+                  >
                     <ChevronDown className="w-8 h-8 text-violet-600" strokeWidth={2.5} />
                   </div>
                 </button>
@@ -413,40 +469,39 @@ export default function WebDevelopmentPage() {
             })}
           </div>
 
-          {/* Content Area for Active Tab */}
           <div key={activeTab} className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-            
-            {/* Text Left */}
             <div className="order-2 lg:order-1 space-y-6">
-              <h3 className="text-3xl md:text-4xl font-bold text-slate-900">{t(solutions[activeTab].titleKey)}</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-slate-900">
+                {t(solutions[activeTab].titleKey)}
+              </h3>
               <p className="text-lg text-slate-600 leading-relaxed font-light">
                 {t(solutions[activeTab].descKey)}
               </p>
-              
+
               <div className="pt-4">
-                <Link to={withLang(solutions[activeTab].link)} className="inline-flex items-center px-8 py-4 bg-slate-900 text-white font-semibold rounded-xl hover:bg-violet-600 transition-all shadow-lg hover:shadow-violet-600/30">
-                  {t("webdev.solutions.learnMore")}
+                <Link
+                  to={withLang(solutions[activeTab].link)}
+                  className="inline-flex items-center px-8 py-4 bg-slate-900 text-white font-semibold rounded-xl hover:bg-violet-600 transition-all shadow-lg hover:shadow-violet-600/30"
+                >
+                  {t("business.solutions.learnMore")}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </div>
             </div>
-            
-            {/* Clean Image Right */}
-            <div className="order-1 lg:order-2 relative w-full flex justify-center">
-               <img 
-                 src={solutions[activeTab].image} 
-                 alt={t(solutions[activeTab].titleKey)} 
-                 className="w-full max-w-[600px] h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)] transform hover:scale-105 transition-transform duration-700" 
-               />
-            </div>
 
+            <div className="order-1 lg:order-2 relative w-full flex justify-center">
+              <img
+                src={solutions[activeTab].image}
+                alt={t(solutions[activeTab].titleKey)}
+                className="w-full max-w-[600px] h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)] transform hover:scale-105 transition-transform duration-700"
+              />
+            </div>
           </div>
         </div>
       </section>
-{/* 7 & 8. CLOSING SPLIT SCREEN */}
+
+      {/* 7 & 8. CLOSING SPLIT SECTION */}
       <section className="relative py-24 pt-14 text-white overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 px-4">
-        
-        {/* GRID BACKGROUND (ULTRA LIGHTWEIGHT) */}
         <div
           className="absolute inset-0 opacity-[0.08] pointer-events-none"
           style={{
@@ -459,14 +514,12 @@ export default function WebDevelopmentPage() {
           }}
         />
 
-        {/* FLOATING ORBS (GPU-ACCELERATED) */}
         <div className="absolute -top-20 -left-20 w-56 h-56 rounded-full bg-cyan-400/20 blur-3xl animate-float" />
         <div
           className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float"
           style={{ animationDelay: "1.5s" }}
         />
 
-        {/* MOVING SCAN LINE */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -479,8 +532,6 @@ export default function WebDevelopmentPage() {
         />
 
         <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start z-10">
-          
-          {/* Left Column: Text & CTA */}
           <div className="space-y-8 lg:sticky lg:top-24">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-br from-white to-slate-300 bg-clip-text text-transparent">
               {t("webdev.closing.title")}
@@ -489,8 +540,7 @@ export default function WebDevelopmentPage() {
               <p>{t("webdev.closing.p1")}</p>
               <p>{t("webdev.closing.p2")}</p>
             </div>
-            
-            {/* DESKTOP BUTTON: Hidden on mobile */}
+
             <div className="pt-4 hidden lg:block">
               <Button
                 aria-label="Contact Yeltu Agency"
@@ -504,17 +554,20 @@ export default function WebDevelopmentPage() {
             </div>
           </div>
 
-          {/* Right Column: Cards (Icons removed, items-start keeps height aligned to text) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
             {closingCards.map((card, idx) => (
-              <div key={idx} className="bg-slate-800/40 backdrop-blur-md border border-slate-700/50 p-8 rounded-3xl hover:bg-slate-800/60 transition-all group">
+              <div
+                key={idx}
+                className="bg-slate-800/40 backdrop-blur-md border border-slate-700/50 p-8 rounded-3xl hover:bg-slate-800/60 transition-all group"
+              >
                 <h3 className="text-xl font-bold mb-4">{t(card.titleKey)}</h3>
-                <p className="text-blue-100/70 text-sm leading-relaxed">{t(card.descKey)}</p>
+                <p className="text-blue-100/70 text-sm leading-relaxed">
+                  {t(card.descKey)}
+                </p>
               </div>
             ))}
           </div>
 
-          {/* MOBILE BUTTON: Shows under the cards on mobile, hidden on desktop */}
           <div className="pt-2 lg:hidden flex justify-start">
             <Button
               aria-label="Contact Yeltu Agency"
@@ -526,7 +579,6 @@ export default function WebDevelopmentPage() {
               <ArrowRight className="ml-2" size={20} />
             </Button>
           </div>
-
         </div>
       </section>
     </main>

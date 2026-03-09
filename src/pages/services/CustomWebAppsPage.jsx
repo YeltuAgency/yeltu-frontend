@@ -1,291 +1,56 @@
-import { useMemo } from "react";
-import { Link, useLocation } from "react-router-dom";
-import SEO from "../../components/SEO";
+import { useState, Suspense, lazy, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../../contexts/LanguageContext";
-import { Card, CardContent } from "../../components/ui/card";
-import webImg from "../../assets/services/customwebapps.webp";
+import SEO from "../../components/SEO";
+import { Button } from "../../components/ui/button";
+import customWebAppsImg from "../../assets/services/customwebapps.webp";
+import ecommerceImg from "../../assets/services/e-commerce.webp";
+import businessImg from "../../assets/services/business.webp";
+import webImg from "../../assets/services/webdevelopment.webp";
+import {
+  ArrowRight,
+  X,
+  LayoutTemplate,
+  Zap,
+  Search,
+  PenTool,
+  Code,
+  CheckCircle,
+  MonitorSmartphone,
+  ShoppingCart,
+  Briefcase,
+  ArrowDown,
+  Plus,
+  ChevronLeft,
+  ChevronRight,
+  ChevronDown,
+  Network,
+  ShieldCheck,
+  Database,
+} from "lucide-react";
 
-function getServiceContent(lang) {
-  const dict = {
-    en: {
-      h1: "Custom Web Apps Service",
-      heroTitle: "Build interactive systems that run your business",
-      heroIntro:
-        "At YELTU Agency, we design and develop custom web applications that solve real business problems. Unlike standard websites, our web apps are interactive systems built to improve efficiency, automate processes, and support scalability. Each solution is tailored to your workflows, helping your business operate smarter, faster, and more effectively.",
-
-      sections: [
-        {
-          kicker: "What is a custom web application?",
-          title: "What Is a Custom Web Application?",
-          paragraphs: [
-            "A custom web application is a software solution that runs in a web browser and is built for a specific business purpose. It allows users to log in, manage data, perform actions, and interact with the system in real time.",
-            "Unlike ready-made platforms, a custom web application is designed around your company’s exact processes, ensuring it fits your operational needs rather than forcing you to adapt.",
-          ],
-        },
-        {
-          kicker: "Website vs web app",
-          title: "How Are They Different from a Standard Website?",
-          paragraphs: [
-            "A standard website is mainly informational. It presents content such as company details, services, or articles, with limited user interaction.",
-            "A custom web application, however, is functional and interactive. Users can enter data, manage accounts, track progress, and complete tasks.",
-            "If the main value lies in performing actions rather than reading content, the solution is a web application, not a website.",
-          ],
-        },
-        {
-          kicker: "Web app vs native app",
-          title: "Custom Web App vs. Mobile App (Native)",
-          paragraphs: [
-            "A native mobile app must be downloaded and developed separately for each platform, such as iOS or Android. A custom web application works directly in a browser and can be accessed from any device.",
-            "This makes web apps easier to maintain, faster to update, and more cost-effective. For many businesses, a web app delivers the same functionality without the complexity of native app development.",
-          ],
-        },
-        {
-          kicker: "Business value",
-          title: "Why Invest in a Custom Web Application?",
-          paragraphs: [
-            "A custom web application helps businesses increase efficiency by automating workflows, reducing manual work, and centralizing data. It offers full control over features, security, and scalability.",
-            "Unlike subscription-based tools, a custom solution grows with your business and becomes a long-term digital asset rather than an ongoing limitation.",
-          ],
-        },
-        {
-          kicker: "Examples",
-          title: "Real-World Examples: What Does a Custom Web App Look Like?",
-          paragraphs: [
-            "Custom web applications can include internal dashboards, booking and reservation systems, client portals, CRM platforms, reporting tools, and custom eCommerce systems.",
-            "These applications are designed to handle daily operations, manage data, and support decision-making in a way that standard websites or off-the-shelf tools cannot.",
-          ],
-        },
-        {
-          kicker: "Project brief",
-          title: "How to Write an Effective Project Brief (RFP)",
-          paragraphs: [
-            "An effective project brief clearly explains your business, the problem you want to solve, and who will use the application.",
-            "It should outline required features, integrations with existing systems, and your expected timeline and budget.",
-            "A clear brief helps ensure accurate planning, development efficiency, and successful project delivery.",
-          ],
-        },
-      ],
-
-      backlinksTitle: "Related links",
-      backlinks: [
-        { label: "Web Development", to: "/services/web-development" },
-        { label: "All Services", to: "/services" },
-        { label: "Contact", to: "/contact" },
-      ],
-
-      seoTitle: "Custom Web Applications | YELTU Agency",
-      seoDesc:
-        "Custom web application development by YELTU Agency: interactive systems that automate workflows, centralize data, and scale with your business.",
-    },
-
-    az: {
-      h1: "Xüsusi Veb Tətbiqlər Xidməti",
-      heroTitle: "Biznesinizi idarə edən interaktiv sistemlər qurun",
-      heroIntro:
-        "YELTU Agency olaraq real biznes problemlərini həll edən xüsusi veb tətbiqlər hazırlayırıq. Standart saytlardan fərqli olaraq, veb tətbiqlərimiz effektivliyi artıran, prosesləri avtomatlaşdıran və miqyaslana bilməni dəstəkləyən interaktiv sistemlərdir. Hər bir həll iş axınlarınıza uyğunlaşdırılır və biznesinizin daha ağıllı, daha sürətli və daha səmərəli işləməsinə kömək edir.",
-
-      sections: [
-        {
-          kicker: "Xüsusi veb tətbiq nədir?",
-          title: "Xüsusi Veb Tətbiq Nədir?",
-          paragraphs: [
-            "Xüsusi veb tətbiq brauzerdə işləyən və müəyyən biznes məqsədi üçün hazırlanan proqram həllidir. İstifadəçilər sistemə daxil ola, məlumatları idarə edə, əməliyyatlar icra edə və real vaxtda qarşılıqlı əlaqə qura bilirlər.",
-            "Hazır platformalardan fərqli olaraq, xüsusi veb tətbiq şirkətinizin dəqiq prosesləri əsasında qurulur — yəni siz sistemi deyil, sistem sizi dəstəkləyir.",
-          ],
-        },
-        {
-          kicker: "Sayt vs veb tətbiq",
-          title: "Standart Veb Saytdan Nə ilə Fərqlənir?",
-          paragraphs: [
-            "Standart veb sayt əsasən məlumat xarakterlidir. Şirkət, xidmətlər və ya məqalələr kimi kontenti təqdim edir və istifadəçi interaksiyası məhduddur.",
-            "Xüsusi veb tətbiq isə funksional və interaktivdir. İstifadəçilər məlumat daxil edə, hesabları idarə edə, prosesləri izləyə və tapşırıqları tamamlayırlar.",
-            "Əsas dəyər kontenti oxumaq deyil, əməliyyat icra etməkdirsə — bu artıq sayt yox, veb tətbiqdir.",
-          ],
-        },
-        {
-          kicker: "Veb tətbiq vs mobil tətbiq",
-          title: "Xüsusi Veb Tətbiq vs. Mobil Tətbiq (Native)",
-          paragraphs: [
-            "Native mobil tətbiq yüklənməli və iOS/Android kimi hər platforma üçün ayrıca hazırlanmalıdır. Xüsusi veb tətbiq isə birbaşa brauzerdə işləyir və istənilən cihazdan açılır.",
-            "Bu isə veb tətbiqləri daha asan saxlanılan, daha sürətli yenilənən və daha sərfəli edir. Bir çox biznes üçün veb tətbiq native inkişafın mürəkkəbliyi olmadan eyni funksionallığı verir.",
-          ],
-        },
-        {
-          kicker: "Biznes faydası",
-          title: "Niyə Xüsusi Veb Tətbiqə İnvestisiya Etməlisiniz?",
-          paragraphs: [
-            "Xüsusi veb tətbiq iş axınlarını avtomatlaşdırmaqla, əl əməyini azaltmaqla və məlumatları mərkəzləşdirməklə səmərəliliyi artırır. Funksiyalar, təhlükəsizlik və miqyaslana bilmə üzərində tam nəzarət verir.",
-            "Abunəlik əsaslı alətlərdən fərqli olaraq, xüsusi həll biznesinizlə birlikdə böyüyür və uzunmüddətli rəqəmsal aktivə çevrilir.",
-          ],
-        },
-        {
-          kicker: "Nümunələr",
-          title: "Real Nümunələr: Xüsusi Veb Tətbiq Necə Görünür?",
-          paragraphs: [
-            "Xüsusi veb tətbiqlərə daxili idarəetmə panelləri, rezervasiya sistemləri, müştəri portalları, CRM platformaları, hesabat alətləri və xüsusi eCommerce sistemləri daxildir.",
-            "Bu tətbiqlər gündəlik əməliyyatları idarə etmək, məlumatları toplamaq və qərarverməni dəstəkləmək üçün hazırlanır — standart sayt və ya hazır alətlərin edə bilmədiyi səviyyədə.",
-          ],
-        },
-        {
-          kicker: "Texniki tapşırıq",
-          title: "Effektiv Layihə Brifi (RFP) Necə Yazılmalıdır?",
-          paragraphs: [
-            "Yaxşı layihə brifi biznesinizi, həll etmək istədiyiniz problemi və tətbiqdən kimlərin istifadə edəcəyini aydın izah edir.",
-            "Tələb olunan funksiyalar, mövcud sistemlərlə inteqrasiyalar, gözlənilən zaman planı və büdcə qeyd olunmalıdır.",
-            "Aydın brif planlamanı dəqiq edir, inkişaf prosesini sürətləndirir və layihənin uğurlu təhvilini təmin edir.",
-          ],
-        },
-      ],
-
-      backlinksTitle: "Faydalı keçidlər",
-      backlinks: [
-        { label: "Veb Proqramlaşdırma", to: "/services/web-development" },
-        { label: "Bütün Xidmətlər", to: "/services" },
-        { label: "Əlaqə", to: "/contact" },
-      ],
-
-      seoTitle: "Xüsusi Veb Tətbiqlər | YELTU Agency",
-      seoDesc:
-        "YELTU Agency ilə xüsusi veb tətbiq hazırlanması: proseslərin avtomatlaşdırılması, məlumatların mərkəzləşdirilməsi və biznesinizlə birlikdə miqyaslanan interaktiv sistemlər.",
-    },
-
-    ru: {
-      h1: "Услуга разработки кастомных веб-приложений",
-      heroTitle: "Создайте интерактивную систему для управления бизнесом",
-      heroIntro:
-        "В YELTU Agency мы проектируем и разрабатываем кастомные веб-приложения, которые решают реальные задачи бизнеса. В отличие от обычных сайтов, наши веб-приложения — это интерактивные системы для повышения эффективности, автоматизации процессов и масштабирования. Каждое решение создается под ваши рабочие процессы, чтобы бизнес работал быстрее, умнее и эффективнее.",
-
-      sections: [
-        {
-          kicker: "Что такое веб-приложение?",
-          title: "Что такое кастомное веб-приложение?",
-          paragraphs: [
-            "Кастомное веб-приложение — это программное решение, которое работает в браузере и создается под конкретную задачу бизнеса. Пользователи могут входить в систему, управлять данными, выполнять действия и взаимодействовать с сервисом в реальном времени.",
-            "В отличие от готовых платформ, кастомное веб-приложение проектируется вокруг процессов вашей компании — оно подстраивается под вас, а не заставляет менять работу под шаблон.",
-          ],
-        },
-        {
-          kicker: "Сайт vs веб-приложение",
-          title: "Чем оно отличается от обычного сайта?",
-          paragraphs: [
-            "Обычный сайт чаще всего информационный: он показывает контент — о компании, услугах или статьях — и имеет ограниченную интерактивность.",
-            "Кастомное веб-приложение — функциональное и интерактивное. Пользователи вводят данные, управляют аккаунтами, отслеживают процессы и выполняют задачи.",
-            "Если основная ценность в действиях, а не в чтении контента — вам нужно веб-приложение, а не сайт.",
-          ],
-        },
-        {
-          kicker: "Веб vs native",
-          title: "Веб-приложение vs мобильное приложение (Native)",
-          paragraphs: [
-            "Нативное мобильное приложение нужно скачивать и разрабатывать отдельно под каждую платформу — iOS или Android. Кастомное веб-приложение работает в браузере и доступно с любого устройства.",
-            "Это упрощает поддержку, ускоряет обновления и снижает стоимость. Для многих компаний веб-приложение дает ту же функциональность без сложности нативной разработки.",
-          ],
-        },
-        {
-          kicker: "Польза для бизнеса",
-          title: "Зачем инвестировать в кастомное веб-приложение?",
-          paragraphs: [
-            "Кастомное веб-приложение повышает эффективность: автоматизирует процессы, уменьшает ручную работу и централизует данные. Оно дает полный контроль над функционалом, безопасностью и масштабированием.",
-            "В отличие от подписочных инструментов, кастомное решение растет вместе с бизнесом и становится долгосрочным цифровым активом, а не постоянным ограничением.",
-          ],
-        },
-        {
-          kicker: "Примеры",
-          title: "Примеры: как выглядит кастомное веб-приложение?",
-          paragraphs: [
-            "Это могут быть внутренние дашборды, системы бронирования, клиентские порталы, CRM-платформы, отчётные инструменты и кастомные eCommerce-системы.",
-            "Такие приложения управляют ежедневными операциями, данными и поддерживают принятие решений — на уровне, недоступном стандартным сайтам и готовым решениям.",
-          ],
-        },
-        {
-          kicker: "ТЗ / RFP",
-          title: "Как написать эффективный проектный бриф (RFP)?",
-          paragraphs: [
-            "Хороший бриф ясно описывает ваш бизнес, проблему, которую нужно решить, и пользователей системы.",
-            "Укажите необходимые функции, интеграции с текущими сервисами, ожидаемые сроки и бюджет.",
-            "Четкий бриф помогает точно спланировать работу, ускоряет разработку и повышает вероятность успешной сдачи проекта.",
-          ],
-        },
-      ],
-
-      backlinksTitle: "Полезные ссылки",
-      backlinks: [
-        { label: "Веб-разработка", to: "/services/web-development" },
-        { label: "Все услуги", to: "/services" },
-        { label: "Контакты", to: "/contact" },
-      ],
-
-      seoTitle: "Кастомные веб-приложения | YELTU Agency",
-      seoDesc:
-        "Разработка кастомных веб-приложений от YELTU Agency: автоматизация процессов, централизованные данные и масштабируемые интерактивные системы для бизнеса.",
-    },
-  };
-
-  return dict[lang] || dict.en;
-}
+const FloatingElements = lazy(() => import("../../components/FloatingElements"));
 
 export default function CustomWebAppsPage() {
-  const { language } = useLanguage();
-  const location = useLocation();
+  const { t, language } = useLanguage();
+  const navigate = useNavigate();
 
-  const t = useMemo(() => getServiceContent(language), [language]);
+  const [selectedFeatureCard, setSelectedFeatureCard] = useState(null);
+  const [activeTab, setActiveTab] = useState("custom");
 
-  const canonicalPath =
-    language === "en"
-      ? "/services/web-development/custom-web-apps"
-      : `/${language}/services/web-development/custom-web-apps`;
+  const scrollContainerRef = useRef(null);
 
-  const pageUrl = `https://yeltu.com${canonicalPath}`;
-
-  const servicesUrl =
-    language === "en"
-      ? "https://yeltu.com/services"
-      : `https://yeltu.com/${language}/services`;
-
-  const parentUrl =
-    language === "en"
-      ? "https://yeltu.com/services/web-development"
-      : `https://yeltu.com/${language}/services/web-development`;
-
-  const breadcrumbs = [
-    {
-      name: language === "az" ? "Xidmətlər" : language === "ru" ? "Услуги" : "Services",
-      item: servicesUrl,
-    },
-    {
-      name: language === "az" ? "Veb Proqramlaşdırma" : language === "ru" ? "Веб-разработка" : "Web Development",
-      item: parentUrl,
-    },
-    { name: t.h1, item: pageUrl },
-  ];
-
-  const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      name: `${t.h1} – YELTU Agency`,
-      description: t.seoDesc,
-      url: pageUrl,
-      inLanguage: language,
-      provider: {
-        "@type": "Organization",
-        name: "YELTU Agency",
-        url: "https://yeltu.com",
-      },
-      areaServed: "AZ",
-      serviceType: "Custom Web Application Development",
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: breadcrumbs.map((b, idx) => ({
-        "@type": "ListItem",
-        position: idx + 1,
-        name: b.name,
-        item: b.item,
-      })),
-    },
-  ];
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const { current } = scrollContainerRef;
+      const cardWidth = current.firstElementChild?.clientWidth || 0;
+      const scrollAmount = cardWidth + 24;
+      current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
 
   const withLang = (to) => {
     if (to.startsWith("http")) return to;
@@ -293,107 +58,534 @@ export default function CustomWebAppsPage() {
     return `/${language}${to === "/" ? "" : to}`;
   };
 
+  const featureCards = [
+    {
+      id: "architecture",
+      icon: LayoutTemplate,
+      titleKey: "customwebapp.features.architecture.title",
+      descKey: "customwebapp.features.architecture.desc",
+    },
+    {
+      id: "integration",
+      icon: Network,
+      titleKey: "customwebapp.features.integration.title",
+      descKey: "customwebapp.features.integration.desc",
+    },
+    {
+      id: "uiux",
+      icon: PenTool,
+      titleKey: "customwebapp.features.uiux.title",
+      descKey: "customwebapp.features.uiux.desc",
+    },
+    {
+      id: "performance",
+      icon: Zap,
+      titleKey: "customwebapp.features.performance.title",
+      descKey: "customwebapp.features.performance.desc",
+    },
+    {
+      id: "security",
+      icon: ShieldCheck,
+      titleKey: "customwebapp.features.security.title",
+      descKey: "customwebapp.features.security.desc",
+    },
+    {
+      id: "scalable",
+      icon: Database,
+      titleKey: "customwebapp.features.scalable.title",
+      descKey: "customwebapp.features.scalable.desc",
+    },
+  ];
+
+  const processSteps = [
+    {
+      icon: Search,
+      titleKey: "customwebapp.process.step1.title",
+      descKey: "customwebapp.process.step1.desc",
+    },
+    {
+      icon: LayoutTemplate,
+      titleKey: "customwebapp.process.step2.title",
+      descKey: "customwebapp.process.step2.desc",
+    },
+    {
+      icon: PenTool,
+      titleKey: "customwebapp.process.step3.title",
+      descKey: "customwebapp.process.step3.desc",
+    },
+    {
+      icon: Code,
+      titleKey: "customwebapp.process.step4.title",
+      descKey: "customwebapp.process.step4.desc",
+    },
+    {
+      icon: CheckCircle,
+      titleKey: "customwebapp.process.step5.title",
+      descKey: "customwebapp.process.step5.desc",
+    },
+  ];
+
+  const solutions = {
+    custom: {
+      icon: MonitorSmartphone,
+      titleKey: "customwebapp.solutions.webdev.title",
+      descKey: "customwebapp.solutions.webdev.desc",
+      link: "/services/web-development",
+      image: webImg,
+    },
+    ecommerce: {
+      icon: ShoppingCart,
+      titleKey: "customwebapp.solutions.ecommerce.title",
+      descKey: "customwebapp.solutions.ecommerce.desc",
+      link: "/services/web-development/ecommerce",
+      image: ecommerceImg,
+    },
+    business: {
+      icon: Briefcase,
+      titleKey: "customwebapp.solutions.business.title",
+      descKey: "customwebapp.solutions.business.desc",
+      link: "/services/web-development/business-websites",
+      image: businessImg,
+    },
+  };
+
+  const closingCards = [
+    { titleKey: "webdev.closing.cards.tech.title", descKey: "webdev.closing.cards.tech.desc" },
+    { titleKey: "webdev.closing.cards.product.title", descKey: "webdev.closing.cards.product.desc" },
+    { titleKey: "webdev.closing.cards.perf.title", descKey: "webdev.closing.cards.perf.desc" },
+    { titleKey: "webdev.closing.cards.secure.title", descKey: "webdev.closing.cards.secure.desc" },
+  ];
+
   return (
-    <main className="min-h-screen bg-slate-900 smooth-fade" role="main" aria-label="Custom Web Apps Page">
+    <main className="min-h-screen bg-white relative overflow-hidden font-sans">
       <SEO
-        title={t.seoTitle}
-        description={t.seoDesc}
-        canonical={canonicalPath}
-        image={webImg}
-        lang={language}
-        jsonLd={jsonLd}
+        title={t("customwebapp.seo.title")}
+        description={t("customwebapp.seo.desc")}
       />
 
-      {/* HERO */}
-      <section className="py-16 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden">
-        <div className="relative max-w-7xl mx-auto px-4">
-          <Card className="group relative bg-white/95 rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
-            <div className="absolute inset-0 opacity-10 bg-gradient-to-r from-blue-500 to-blue-600" aria-hidden="true" />
-            <CardContent className="relative p-7 md:p-10 grid gap-8 md:grid-cols-2 md:items-center">
-              <div>
-                <h1 className="text-3xl md:text-4xl font-semibold text-slate-900">{t.h1}</h1>
-                <p className="mt-3 text-lg font-semibold text-slate-900">{t.heroTitle}</p>
+      {/* 1. HERO SECTION */}
+      <section
+        aria-labelledby="hero-title"
+        className="relative overflow-hidden text-white min-h-[90vh] flex items-center hero-bg"
+      >
+        <Suspense fallback={null}>
+          <FloatingElements aria-hidden="true" />
+        </Suspense>
 
-                <p className="mt-4 text-slate-600 leading-relaxed">{t.heroIntro}</p>
+        <div aria-hidden="true" className="absolute inset-0 hero-grid" />
 
-                <div className="mt-7">
-                  <p className="text-sm font-semibold text-slate-900 mb-3">{t.backlinksTitle}</p>
-                  <div className="flex flex-wrap gap-3">
-                    {t.backlinks.map((b) => (
-                      <Link
-                        key={b.to}
-                        to={withLang(b.to)}
-                        className="inline-flex items-center rounded-xl border border-slate-200 bg-white px-4 py-2 text-slate-900 hover:shadow-md transition"
-                      >
-                        {b.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+        <div className="absolute left-4 md:left-8 bottom-32 hidden lg:flex flex-col items-center gap-6 z-20 opacity-80 fade-in-5">
+          <span className="transform -rotate-90 tracking-[0.3em] text-[10px] text-blue-200 uppercase font-bold mb-4">
+            Scroll
+          </span>
+          <div className="w-[1px] h-12 bg-white/20" />
+          <ArrowDown className="transform rotate-90 w-4 h-4 text-blue-400 animate-bounce" />
+        </div>
+
+        <div className="bubble w-16 h-16 bg-blue-500/20 top-40 left-[-150px] animate-[bubble-move_12s_linear_infinite]" />
+        <div className="bubble w-10 h-10 bg-violet-400/25 top-72 left-[-180px] animate-[bubble-move_16s_linear_infinite]" />
+        <div className="bubble w-20 h-20 bg-purple-300/20 top-96 left-[-120px] animate-[bubble-move_20s_linear_infinite]" />
+
+        <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-purple-500/35 blur-[160px]" />
+        <div className="absolute top-40 left-0 w-[320px] h-[320px] bg-indigo-500/30 blur-[130px]" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-14 items-center w-full">
+          <div className="z-10 flex flex-col h-full justify-center lg:pl-8">
+            <h1
+              id="hero-title"
+              className="font-extrabold tracking-tight fade-in-2"
+              style={{
+                fontSize: "50px",
+                lineHeight: "1.05",
+                background:
+                  "linear-gradient(180deg, #a78bfa 0%, #8b5cf6 40%, #8c52ff 70%, #5ce1e6 100%)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            >
+              {t("customwebapp.hero.title")}
+            </h1>
+
+            <p className="mt-6 pb-6 text-lg text-blue-100 max-w-lg fade-in-3">
+              {t("customwebapp.hero.hook")}
+            </p>
+
+            {/* Hero text points instead of links */}
+            <div className="flex flex-col gap-4 fade-in-5">
+              <div className="flex items-center gap-3 text-base font-medium text-slate-300">
+                <ArrowRight className="w-5 h-5 text-blue-400" />
+                {t("customwebapp.hero.points.precision")}
               </div>
-
-              <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
-                <img src={webImg} alt={t.h1} className="h-full w-full object-cover" loading="lazy" />
+              <div className="flex items-center gap-3 text-base font-medium text-slate-300">
+                <ArrowRight className="w-5 h-5 text-blue-400" />
+                {t("customwebapp.hero.points.integration")}
               </div>
-            </CardContent>
-          </Card>
+              <div className="flex items-center gap-3 text-base font-medium text-slate-300">
+                <ArrowRight className="w-5 h-5 text-blue-400" />
+                {t("customwebapp.hero.points.scale")}
+              </div>
+            </div>
+
+            <div className="mt-14 fade-in-4">
+              <Button
+                aria-label="Start Project"
+                onClick={() => navigate(withLang("/contact"))}
+                size="lg"
+                className="px-8 py-5 text-base bg-gradient-to-r from-blue-500 to-violet-600 rounded-xl hover:scale-105 transition shadow-lg shadow-blue-500/20 mb-8"
+              >
+                {t("customwebapp.hero.cta")}
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </div>
+          </div>
+
+          <div className="relative hidden lg:flex justify-end items-center slide-in-right z-10">
+            <img
+              src={customWebAppsImg}
+              alt="Custom Web App Development"
+              className="w-full max-w-[800px] h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.5)] transform lg:scale-110 hover:-translate-y-2 transition-transform duration-700"
+            />
+          </div>
+        </div>
+
+        <div className="hero-wave absolute bottom-0 left-0 w-full h-24 pointer-events-none overflow-hidden">
+          <svg
+            viewBox="0 0 1440 120"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,0 C220,120 1220,-40 1440,80 L1440,120 L0,120 Z"
+              fill="#ffffff"
+            />
+          </svg>
         </div>
       </section>
 
-      {/* CONTENT */}
-      <section className="py-16 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden">
-        <div className="relative max-w-7xl mx-auto px-4 space-y-8">
-          {t.sections.map((s) => (
-            <Card
-              key={s.title}
-              className="group relative bg-white/95 rounded-3xl border border-slate-200 hover:shadow-2xl transition-all duration-500"
-            >
-              <div
-                className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-10 transition-all"
-                aria-hidden="true"
-              />
-              <CardContent className="relative p-7 md:p-9">
-                <p className="text-xs font-semibold tracking-wider text-slate-500 uppercase">{s.kicker}</p>
-                <h2 className="mt-2 text-2xl font-semibold text-slate-900">{s.title}</h2>
-
-                <div className="mt-4 space-y-4">
-                  {s.paragraphs.map((p, i) => (
-                    <p key={i} className="text-slate-600 leading-relaxed">
-                      {p}
-                    </p>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-
-          {/* FINAL BACKLINKS */}
-          <div className="flex flex-wrap gap-3 pt-2">
-            <Link
-              to={withLang("/services/web-development")}
-              className="rounded-xl bg-slate-900 px-4 py-2 text-white hover:opacity-95 transition"
-            >
-              {language === "az"
-                ? "Veb Proqramlaşdırmaya qayıt"
-                : language === "ru"
-                ? "Назад к веб-разработке"
-                : "Back to Web Development"}
-            </Link>
-
-            <Link
-              to={withLang("/contact")}
-              className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-slate-900 hover:shadow-md transition"
-            >
-              {language === "az" ? "Layihəni müzakirə edək" : language === "ru" ? "Обсудить проект" : "Discuss a project"}
-            </Link>
-
-            <Link
-              to={withLang("/services")}
-              className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-slate-900 hover:shadow-md transition"
-            >
-              {language === "az" ? "Bütün xidmətlər" : language === "ru" ? "Все услуги" : "All services"}
-            </Link>
+      {/* 2. INTRO */}
+      <section className="py-24 px-4 pt-4 pb-12 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="order-2 lg:order-1 space-y-6">
+            <p className="text-lg text-slate-600 leading-relaxed">
+              {t("customwebapp.intro.p1")}
+            </p>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              {t("customwebapp.intro.p2")}
+            </p>
           </div>
+
+          <div className="order-1 lg:order-2">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent leading-tight lg:pl-10">
+              {t("customwebapp.intro.title")}
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. FEATURE CARDS */}
+      <section className="py-24 pt-10 pb-12 bg-slate-50 overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 mb-12 flex justify-between items-end">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight max-w-2xl leading-tight">
+            {t("customwebapp.features.title")}
+          </h2>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+          <div
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 md:px-8 pb-8 scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          >
+            {featureCards.map((card) => {
+              const Icon = card.icon;
+              return (
+                <div
+                  key={card.id}
+                  onClick={() => setSelectedFeatureCard(card)}
+                  className="relative snap-center shrink-0 w-[85vw] md:w-[400px] min-h-[340px] bg-white rounded-[2.5rem] p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group flex flex-col"
+                >
+                  <Icon
+                    className="w-8 h-8 text-blue-600 mb-8 transition-transform group-hover:scale-110"
+                    strokeWidth={1.5}
+                  />
+
+                  <h3 className="text-2xl font-bold text-blue-900 mb-4 tracking-tight">
+                    {t(card.titleKey)}
+                  </h3>
+                  <p className="text-blue-800/70 text-lg leading-relaxed line-clamp-3 mb-10">
+                    {t(card.descKey)}
+                  </p>
+
+                  <div className="absolute bottom-8 right-8 w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center group-hover:bg-blue-700 transition-colors mt-auto shadow-md shadow-blue-600/20">
+                    <Plus className="w-6 h-6 text-white" />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="flex justify-end gap-4 px-4 md:px-8 mt-4">
+            <button
+              onClick={() => scroll("left")}
+              aria-label="Scroll left"
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-200/60 hover:bg-slate-300 text-slate-900 transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6" strokeWidth={2} />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              aria-label="Scroll right"
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-200/60 hover:bg-slate-300 text-slate-900 transition-colors"
+            >
+              <ChevronRight className="w-6 h-6" strokeWidth={2} />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURE MODAL */}
+      {selectedFeatureCard && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-md transition-opacity">
+          <div className="relative w-full max-w-lg bg-white/90 backdrop-blur-xl border border-white/50 rounded-[2rem] p-8 md:p-10 shadow-2xl transform animate-in fade-in zoom-in-95 duration-200">
+            <button
+              onClick={() => setSelectedFeatureCard(null)}
+              className="absolute top-6 right-6 p-2 bg-slate-100 rounded-full hover:bg-slate-200 text-slate-600 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <selectedFeatureCard.icon className="w-12 h-12 text-blue-600 mb-6" />
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">
+              {t(selectedFeatureCard.titleKey)}
+            </h3>
+            <p className="text-slate-600 leading-relaxed">
+              {t(selectedFeatureCard.descKey)}
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* 4. DEEP DIVE */}
+      <section className="py-24 px-4 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="order-1">
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent leading-tight lg:pr-10">
+                {t("customwebapp.deepdive.title")}
+              </h1>
+            </div>
+            <div className="order-2 text-xl text-slate-600 leading-relaxed font-light">
+              <p>{t("customwebapp.deepdive.p1")}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. PROCESS */}
+      <section className="py-24 pt-12 bg-slate-900 text-white px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {t("customwebapp.process.title")}
+            </h2>
+            <p className="text-slate-400 text-lg">
+              {t("customwebapp.process.subtitle")}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {processSteps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <div
+                  key={index}
+                  className="relative bg-slate-800/50 border border-slate-700 p-8 rounded-3xl hover:bg-slate-800 transition-colors"
+                >
+                  <div className="text-5xl font-black text-slate-700/50 absolute top-4 right-6 pointer-events-none">
+                    0{index + 1}
+                  </div>
+                  <Icon className="w-10 h-10 text-blue-400 mb-6" />
+                  <h3 className="text-xl font-bold mb-3">{t(step.titleKey)}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    {t(step.descKey)}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. SOLUTIONS TABS */}
+      <section className="py-24 pt-14 pb-16 bg-white px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+              {t("customwebapp.solutions.title")}
+            </h2>
+            <p className="text-slate-600 mt-4 text-lg">
+              {t("customwebapp.solutions.subtitle")}
+            </p>
+          </div>
+
+          <div className="flex justify-start lg:justify-center items-end border-b border-slate-200 mb-20 overflow-x-auto lg:overflow-visible w-full pt-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            {Object.keys(solutions).map((key) => {
+              const sol = solutions[key];
+              const Icon = sol.icon;
+              const isActive = activeTab === key;
+
+              return (
+                <button
+                  key={key}
+                  onClick={() => setActiveTab(key)}
+                  className={`
+                    relative flex flex-col items-center justify-center flex-1 min-w-[220px] pt-8 pb-8 px-6 transition-all duration-300
+                    ${
+                      isActive
+                        ? "bg-white shadow-[0_-15px_30px_-15px_rgba(0,0,0,0.1)] border-t-4 border-t-violet-600 z-10 translate-y-[1px]"
+                        : "bg-transparent hover:bg-slate-50 text-slate-500 border-t-4 border-t-transparent border-b-2 border-b-transparent"
+                    }
+                  `}
+                >
+                  <Icon
+                    className={`w-10 h-10 mb-4 transition-colors ${
+                      isActive ? "text-violet-600" : "text-slate-400"
+                    }`}
+                    strokeWidth={1.5}
+                  />
+                  <span
+                    className={`text-sm md:text-base font-bold tracking-widest uppercase text-center transition-colors ${
+                      isActive ? "text-violet-600" : "text-slate-500"
+                    }`}
+                  >
+                    {t(sol.titleKey)}
+                  </span>
+
+                  <div
+                    className={`absolute -bottom-6 transition-all duration-300 ${
+                      isActive ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                    }`}
+                  >
+                    <ChevronDown className="w-8 h-8 text-violet-600" strokeWidth={2.5} />
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+
+          <div key={activeTab} className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <div className="order-2 lg:order-1 space-y-6">
+              <h3 className="text-3xl md:text-4xl font-bold text-slate-900">
+                {t(solutions[activeTab].titleKey)}
+              </h3>
+              <p className="text-lg text-slate-600 leading-relaxed font-light">
+                {t(solutions[activeTab].descKey)}
+              </p>
+
+              <div className="pt-4">
+                <Link
+                  to={withLang(solutions[activeTab].link)}
+                  className="inline-flex items-center px-8 py-4 bg-slate-900 text-white font-semibold rounded-xl hover:bg-violet-600 transition-all shadow-lg hover:shadow-violet-600/30"
+                >
+                  {t("customwebapp.solutions.learnMore")}
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="order-1 lg:order-2 relative w-full flex justify-center">
+              <img
+                src={solutions[activeTab].image}
+                alt={t(solutions[activeTab].titleKey)}
+                className="w-full max-w-[600px] h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)] transform hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7 & 8. CLOSING SPLIT SECTION */}
+      <section className="relative py-24 pt-14 text-white overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-violet-950 px-4">
+        
+        {/* GRID BACKGROUND (ULTRA LIGHTWEIGHT) */}
+        <div
+          className="absolute inset-0 opacity-[0.08] pointer-events-none"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(34,211,238,0.25) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(139,92,246,0.25) 1px, transparent 1px)
+            `,
+            backgroundSize: "50px 50px",
+            opacity: 0.2,
+          }}
+        />
+
+        {/* FLOATING ORBS (GPU-ACCELERATED) */}
+        <div className="absolute -top-20 -left-20 w-56 h-56 rounded-full bg-cyan-400/20 blur-3xl animate-float" />
+        <div
+          className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float"
+          style={{ animationDelay: "1.5s" }}
+        />
+
+        {/* MOVING SCAN LINE */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent, rgba(34,211,238,0.25), transparent)",
+            maskImage:
+              "radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 90%)",
+            animation: "scan 4s linear infinite",
+          }}
+        />
+
+        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start z-10">
+          
+          {/* Left Column: Text & CTA */}
+          <div className="space-y-8 lg:sticky lg:top-24">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-br from-white to-slate-300 bg-clip-text text-transparent">
+              {t("webdev.closing.title")}
+            </h2>
+            <div className="space-y-6 text-blue-100/80 text-lg leading-relaxed">
+              <p>{t("webdev.closing.p1")}</p>
+              <p>{t("webdev.closing.p2")}</p>
+            </div>
+            
+            {/* DESKTOP BUTTON: Hidden on mobile */}
+            <div className="pt-4 hidden lg:block">
+              <Button
+                aria-label="Contact Yeltu Agency"
+                onClick={() => navigate(withLang("/contact"))}
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-blue-50 shadow-xl hover:scale-105 transition-all duration-300 px-8 py-6 text-base font-bold rounded-xl"
+              >
+                {t("webdev.closing.cta")}
+                <ArrowRight className="ml-2" size={20} />
+              </Button>
+            </div>
+          </div>
+
+          {/* Right Column: Cards (Icons removed, items-start keeps height aligned to text) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
+            {closingCards.map((card, idx) => (
+              <div key={idx} className="bg-slate-800/40 backdrop-blur-md border border-slate-700/50 p-8 rounded-3xl hover:bg-slate-800/60 transition-all group">
+                <h3 className="text-xl font-bold mb-4">{t(card.titleKey)}</h3>
+                <p className="text-blue-100/70 text-sm leading-relaxed">{t(card.descKey)}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* MOBILE BUTTON: Shows under the cards on mobile, hidden on desktop */}
+          <div className="pt-2 lg:hidden flex justify-start">
+            <Button
+              aria-label="Contact Yeltu Agency"
+              onClick={() => navigate(withLang("/contact"))}
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-blue-50 shadow-xl hover:scale-105 transition-all duration-300 px-8 py-6 text-base font-bold rounded-xl"
+            >
+              {t("webdev.closing.cta")}
+              <ArrowRight className="ml-2" size={20} />
+            </Button>
+          </div>
+
         </div>
       </section>
     </main>

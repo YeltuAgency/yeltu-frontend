@@ -21,6 +21,18 @@ const BlogPost = lazy(() => import("./components/BlogPost"));
 const NotFound = lazy(() => import("./components/NotFound"));
 const WebDevelopmentPage = lazy(() => import("./pages/services/WebDevelopmentPage"));
 const CustomWebAppsPage = lazy(() => import("./pages/services/CustomWebAppsPage"));
+const EcommercePage = lazy(() => import("./pages/services/EcommercePage"));
+const BusinessWebsitesPage = lazy(() => import("./pages/services/BusinessWebsitesPage"));
+const BrandStrategyPage = lazy(() => import("./pages/services/BrandStrategyPage"));
+const MobileAppDevelopmentPage = lazy(() => import("./pages/services/MobileAppDevelopmentPage"));
+const IosAndroidAppDevelopmentPage = lazy(() => import("./pages/services/IosAndroidAppDevelopmentPage"));
+const CrossPlatformAppDevelopmentPage = lazy(() => import("./pages/services/CrossPlatformAppDevelopmentPage"));
+const AppStoreOptimizationPage = lazy(() => import("./pages/services/AppStoreOptimizationPage"));
+const DigitalMarketingPage = lazy(() => import("./pages/services/DigitalMarketingPage"));
+const SeoPage = lazy(() => import("./pages/services/SeoPage"));
+const SemPage = lazy(() => import("./pages/services/SemPage"));
+const SmmPage = lazy(() => import("./pages/services/SmmPage"));
+const DesignPage = lazy(() => import("./pages/services/DesignPage"));
 
 // ---- LAZY LOADED ADMIN PAGES ---- //
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
@@ -74,6 +86,18 @@ export default function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/web-development" element={<WebDevelopmentPage />} />
             <Route path="/services/web-development/custom-web-apps" element={<CustomWebAppsPage />} />
+            <Route path="/services/web-development/ecommerce" element={<EcommercePage />} />
+            <Route path="/services/web-development/business-websites" element={<BusinessWebsitesPage />} />
+            <Route path="/services/mobile-app-development" element={<MobileAppDevelopmentPage />} />
+            <Route path="/services/mobile-app-development/ios-android-app-development" element={<IosAndroidAppDevelopmentPage />} />
+            <Route path="/services/mobile-app-development/cross-platform-app-development" element={<CrossPlatformAppDevelopmentPage />} />
+            <Route path="/services/mobile-app-development/app-store-optimization" element={<AppStoreOptimizationPage />} />
+            <Route path="/services/brand-strategy" element={<BrandStrategyPage />} />
+            <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
+            <Route path="/services/digital-marketing/seo" element={<SeoPage />} />
+            <Route path="/services/digital-marketing/sem" element={<SemPage />} />
+            <Route path="/services/digital-marketing/smm" element={<SmmPage />} />
+            <Route path="/services/digital-marketing/design" element={<DesignPage />} />
             <Route path="/projects" element={<PortfolioPage />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/post/:slug" element={<BlogPost />} />
@@ -92,6 +116,18 @@ export default function App() {
             <Route path="services" element={<ServicesPage />} />
             <Route path="services/web-development" element={<WebDevelopmentPage />} />
             <Route path="services/web-development/custom-web-apps" element={<CustomWebAppsPage />} />
+            <Route path="services/web-development/ecommerce" element={<EcommercePage />} />
+            <Route path="services/web-development/business-websites" element={<BusinessWebsitesPage />} />
+            <Route path="services/brand-strategy" element={<BrandStrategyPage />} />
+            <Route path="services/mobile-app-development" element={<MobileAppDevelopmentPage />} />
+            <Route path="services/mobile-app-development/ios-android-app-development" element={<IosAndroidAppDevelopmentPage />} />
+            <Route path="services/mobile-app-development/cross-platform-app-development" element={<CrossPlatformAppDevelopmentPage />} />
+            <Route path="services/mobile-app-development/app-store-optimization" element={<AppStoreOptimizationPage />} />
+            <Route path="services/digital-marketing" element={<DigitalMarketingPage />} />
+            <Route path="services/digital-marketing/seo" element={<SeoPage />} />
+            <Route path="services/digital-marketing/sem" element={<SemPage />} />
+            <Route path="services/digital-marketing/smm" element={<SmmPage />} />
+            <Route path="services/digital-marketing/design" element={<DesignPage />} />
             <Route path="projects" element={<PortfolioPage />} />
             <Route path="blog" element={<Blog />} />
             <Route path="blog/post/:slug" element={<BlogPost />} />

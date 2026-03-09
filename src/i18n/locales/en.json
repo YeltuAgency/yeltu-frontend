@@ -519,5 +519,1357 @@
         }
       }
     }
+  },
+  "customwebapp": {
+    "seo": {
+      "title": "Custom Web App Development Services | YELTU Agency",
+      "desc": "Custom web app development services designed to strengthen digital infrastructure, improve system performance, and support long-term business growth."
+      },
+      "hero": {
+        "title": "Custom Web Development Built Around Your Business",
+        "hook": "We design and engineer custom websites and web apps built to strengthen your digital infrastructure and accelerate sustainable growth.",
+        "points": {
+          "precision": "Built for Precision",
+          "integration": "Designed for Integration",
+          "scale": "Ready to Scale"
+        },
+        "cta": "Get Started"
+      },
+      "intro": {
+        "title": "How Custom Development Creates Real Business Impact",
+        "p1": "A website should do more than simply exist online — it should actively support your business strategy. Custom web development allows you to build a system that aligns perfectly with your internal processes and customer journey. Instead of adapting your business to a rigid platform, we design the platform around your business.",
+        "p2": "At YELTU Agency, we approach every project strategically. From the first planning session to final deployment, every decision is made with performance, flexibility, and long-term growth in mind."
+      },
+      "features": {
+        "title": "Core Elements of a High-Performance Custom Platform",
+        "architecture": {
+          "title": "Custom Architecture",
+          "desc": "Your platform starts with precision architecture. We engineer a custom-built system designed around how your business truly operates — not how templates expect it to."
+        },
+        "integration": {
+          "title": "API & System Integrations",
+          "desc": "We don’t just connect tools — we create a unified digital ecosystem. Every integration is strategically structured to ensure seamless communication between your systems, platforms, and data."
+        },
+        "uiux": {
+          "title": "Advanced UI/UX Engineering",
+          "desc": "Exceptional design goes beyond visuals. We craft intuitive, behavior-driven experiences that guide users naturally and turn interaction into measurable action."
+        },
+        "performance": {
+          "title": "Performance Optimization",
+          "desc": "Speed is not a feature — it’s a foundation. We engineer every layer of your platform for maximum efficiency, stability, and responsiveness under real-world conditions."
+        },
+        "security": {
+          "title": "Security & Data Protection",
+          "desc": "Trust is built on security. Our development approach integrates advanced protection standards to safeguard your infrastructure, data, and user interactions."
+        },
+        "scalable": {
+          "title": "Scalable Infrastructure",
+          "desc": "Growth should never require rebuilding from scratch. We design systems structured to expand effortlessly as your traffic, features, and ambitions evolve."
+        }
+      },
+      "deepdive": {
+        "title": "Why Custom Web Development Matters",
+        "p1": "A generic website may give you an online presence. A custom-built platform gives you a competitive advantage. When your system is designed around your real business needs, operations become more efficient, users experience fewer obstacles, and growth becomes easier to manage. Without proper architecture and performance planning, a website can quickly become a limitation. Strategic custom development ensures your platform becomes a long-term business asset — not just a digital placeholder."
+      },
+      "process": {
+        "title": "Our Custom Development Process",
+        "subtitle": "We follow a structured development process that aligns business goals, technical architecture, and user experience into one scalable digital system.",
+        "step1": {
+          "title": "Discovery & Strategy",
+          "desc": "We begin by understanding your business model, target audience, and growth objectives. This allows us to define a clear and strategic roadmap."
+        },
+        "step2": {
+          "title": "Architecture & Planning",
+          "desc": "We create the technical blueprint of your platform, defining structure, integrations, and scalability from the very beginning."
+        },
+        "step3": {
+          "title": "UI/UX Experience Design",
+          "desc": "Our design team builds user-focused interfaces that are intuitive, engaging, and conversion-oriented."
+        },
+        "step4": {
+          "title": "Full-Stack Development",
+          "desc": "Frontend and backend systems are developed simultaneously, ensuring performance, security, and seamless functionality."
+        },
+        "step5": {
+          "title": "Testing, Launch & Continuous Improvement",
+          "desc": "Before launch, we conduct thorough testing to guarantee stability. After deployment, we continue monitoring and optimizing performance to ensure ongoing success."
+        }
+      },
+      "solutions": {
+        "learnMore": "Learn more",
+        "title": "Related Web Solutions",
+        "subtitle": "Explore other web development services that support your digital growth",
+        "webdev": {
+          "title": "Web Development",
+          "desc": "Strategic web development services that combine performance, usability, and technical precision to help businesses build stronger digital foundations."
+        },
+        "ecommerce": {
+          "title": "E-Commerce Website Development",
+          "desc": "Conversion-focused e-commerce systems designed to streamline sales and improve online store performance."
+        },
+        "business": {
+          "title": "Business Website Development",
+          "desc": "Professional business websites that strengthen credibility, communicate value, and support lead generation."
+        }
+     }
+  },
+  "ecommerce": {
+    "seo": {
+      "title": "E-Commerce Development Services | YELTU Agency",
+      "desc": "E-commerce development services designed to increase conversions, improve store performance, and support scalable revenue growth."
+    },
+    "hero": {
+      "title": "E-Commerce Development Engineered for Scalable Revenue",
+      "hook": "Break free from one-size-fits-all solutions. Let’s engineer an e-commerce platform designed around your products, customers, and revenue strategy.",
+      "points": {
+        "precision": "E-Commerce Conversion Optimization",
+        "integration": "Scalable E-Commerce Architecture",
+        "scale": "E-Commerce Performance & Revenue Growth"
+      },
+      "cta": "Get Started"
+    },
+    "intro": {
+      "title": "How E-Commerce Creates Real Business Impact",
+      "p1": "An online store should do more than display products — it should strategically drive sales. E-commerce development is not just about listing items and adding a checkout button. It is about creating a seamless buying journey, optimizing user flow, and building trust at every interaction.",
+      "p2": "At YELTU Agency, we engineer e-commerce systems designed to increase conversion rates, improve operational efficiency, and scale alongside your business."
+    },
+    "features": {
+      "title": "Core Elements of a High-Performance E-Commerce Platform",
+      "architecture": {
+        "title": "Conversion-Focused Architecture",
+        "desc": "Your online store is structured around real purchasing behavior. We strategically design product categories, checkout stages, and user flows to ensure customers can complete their journey smoothly and intuitively — maximizing your store’s revenue potential."
+      },
+      "integration": {
+        "title": "Secure Payment Integration",
+        "desc": "We integrate trusted and secure payment systems that ensure seamless transactions at every stage. From checkout to confirmation, every interaction is designed to build confidence and protect both your business and your customers."
+      },
+      "uiux": {
+        "title": "Optimized Product Experience",
+        "desc": "We design intuitive product discovery experiences — from smart filtering to clear navigation — helping users find what they need quickly and move naturally toward purchase."
+      },
+      "performance": {
+        "title": "Performance & Speed Optimization",
+        "desc": "Your store is engineered for speed and stability. We optimize every layer of the platform to deliver fast loading times, responsive performance, and reliable functionality — even under high traffic conditions."
+      },
+      "security": {
+        "title": "Inventory & Order Management",
+        "desc": "Behind a successful e-commerce platform is a structured operational system. We implement streamlined inventory and order management solutions that simplify workflows and support day-to-day efficiency."
+      },
+      "scalable": {
+        "title": "Scalable Commerce Infrastructure",
+        "desc": "As your catalog expands and traffic grows, your platform remains stable and adaptable. We build e-commerce systems designed to evolve alongside your business without performance limitations."
+      }
+    },
+    "deepdive": {
+      "title": "Why Professional E-Commerce Development Matters",
+      "p1": "A basic online shop can process transactions. A strategically developed e-commerce platform drives growth. Without optimized structure, seamless checkout, and performance stability, your store risks losing customers before they convert. Professional e-commerce development ensures your platform becomes a revenue engine — not just a digital catalog."
+    },
+    "process": {
+      "title": "Our E-Commerce Development Process",
+      "subtitle": "We follow a structured development process that aligns revenue goals, technical architecture, and user experience into one scalable e-commerce system.",
+      "step1": {
+        "title": "Market & Strategy Analysis",
+        "desc": "We analyze your audience, competitors, and sales goals to define a clear e-commerce roadmap."
+      },
+      "step2": {
+        "title": "Store Architecture & Planning",
+        "desc": "We structure product categories, user flows, and checkout processes to maximize conversions."
+      },
+      "step3": {
+        "title": "UX & Interface Design",
+        "desc": "We design clean, intuitive shopping experiences built to guide users smoothly toward purchase."
+      },
+      "step4": {
+        "title": "Development & Integration",
+        "desc": "Frontend, backend, payment systems, and third-party tools are implemented with performance and security in focus."
+      },
+      "step5": {
+        "title": "Testing, Launch & Growth Optimization",
+        "desc": "We test every transaction flow before launch and continuously optimize performance to improve sales and scalability."
+      }
+    },
+    "solutions": {
+      "learnMore": "Learn more",
+      "title": "Related Web Solutions",
+      "subtitle": "Explore other web development services that support your digital growth",
+      "webdev": {
+        "title": "Web Development",
+        "desc": "Strategic web development services that combine performance, usability, and technical precision to help businesses build stronger digital foundations."
+      },
+      "customwebapp": {
+        "title": "Custom Web Apps",
+        "desc": "Custom web applications built around your workflows, operational needs, and long-term growth strategy."
+      },
+      "business": {
+        "title": "Business Website Development",
+        "desc": "Professional business websites that strengthen credibility, communicate value, and support lead generation."
+      }
+    }
+  },
+  "business": {
+    "seo": {
+      "title": "Business Website Development Services | YELTU Agency",
+      "desc": "Business website development services designed to strengthen credibility, improve brand positioning, and generate qualified leads."
+    },
+    "hero": {
+      "title": "Business Website Development Designed for Credibility and Growth",
+      "hook": "We design and develop professional business websites that strengthen your brand presence, build trust, and turn visitors into qualified leads.",
+      "points": {
+        "precision": "Brand Authority & Digital Positioning",
+        "integration": "Structured Service Architecture",
+        "scale": "Lead Generation Website Strategy"
+      },
+      "cta": "Get Started"
+    },
+    "intro": {
+      "title": "How a Business Website Creates Real Impact",
+      "p1": "A business website is often the first interaction someone has with your brand. It should communicate professionalism, clarity, and confidence within seconds. More than just an online presence, it should position your company as reliable, established, and ready to deliver value.",
+      "p2": "At YELTU Agency, we create structured, strategically designed business websites that support credibility, showcase expertise, and generate meaningful inquiries."
+    },
+    "features": {
+      "title": "Core Elements of a High-Performance Business Website",
+      "architecture": {
+        "title": "Strategic Brand Positioning",
+        "desc": "We design websites that clearly communicate your value proposition, expertise, and competitive advantage from the first impression."
+      },
+      "integration": {
+        "title": "Clear Service Architecture",
+        "desc": "Your services are structured in a logical and user-friendly way, helping visitors understand what you offer without confusion."
+      },
+      "uiux": {
+        "title": "Lead-Driven User Experience",
+        "desc": "Every section is designed to guide users toward action — whether it’s contacting your team, requesting a quote, or scheduling a consultation."
+      },
+      "performance": {
+        "title": "Performance & Responsiveness",
+        "desc": "Your website loads quickly, adapts seamlessly to all devices, and delivers a smooth experience across desktop, tablet, and mobile."
+      },
+      "security": {
+        "title": "SEO-Optimized Structure",
+        "desc": "We build search-friendly page structures that help your business become discoverable in competitive digital environments."
+      },
+      "scalable": {
+        "title": "Scalable Content Framework",
+        "desc": "As your company grows, your website structure allows for easy expansion — new services, case studies, and content can be added without redesigning the entire platform."
+      }
+    },
+    "deepdive": {
+      "title": "Why Professional Business Website Development Matters",
+      "p1": "A basic website may show that your company exists. A strategically developed business website proves that you lead. Without clear positioning, structured service pages, and optimized performance, your digital presence can weaken your credibility. Professional development ensures your website becomes a long-term brand asset — supporting growth, authority, and customer acquisition."
+    },
+    "process": {
+      "title": "Our Business Website Development Process",
+      "subtitle": "We follow a structured development process that aligns brand positioning, content clarity, and technical performance into one strong digital presence.",
+      "step1": {
+        "title": "Business & Brand Analysis",
+        "desc": "We begin by understanding your company, market positioning, and growth objectives."
+      },
+      "step2": {
+        "title": "Structure & Content Strategy",
+        "desc": "We define page hierarchy, service structure, and messaging clarity."
+      },
+      "step3": {
+        "title": "UI/UX Design",
+        "desc": "We design clean, professional interfaces aligned with your brand identity."
+      },
+      "step4": {
+        "title": "Development & Optimization",
+        "desc": "Frontend and backend are built with performance, security, and SEO in focus."
+      },
+      "step5": {
+        "title": "Launch & Continuous Enhancement",
+        "desc": "After launch, we monitor performance and refine the experience to support ongoing growth."
+      }
+    },
+    "solutions": {
+      "learnMore": "Learn more",
+      "title": "Related Web Solutions",
+      "subtitle": "Explore other web development services that support your digital growth",
+      "webdev": {
+        "title": "Web Development",
+        "desc": "Strategic web development services that combine performance, usability, and technical precision to help businesses build stronger digital foundations."
+      },
+      "customwebapp": {
+        "title": "Custom Web Apps",
+        "desc": "Custom web applications built around your workflows, operational needs, and long-term growth strategy."
+      },
+      "ecommerce": {
+          "title": "E-Commerce Website Development",
+          "desc": "Conversion-focused e-commerce systems designed to streamline sales and improve online store performance."
+      }
+    }
+  },
+  "brandstrategy": {
+    "seo": {
+      "title": "Brand Strategy Services | YELTU Agency",
+      "desc": "Brand strategy services designed to strengthen positioning, improve brand consistency, and support long-term business growth."
+    },
+    "hero": {
+      "title": "Brand Strategy",
+      "hook": "Build a Brand That Stands Out and Drives Long-Term Growth. A strong brand is more than a logo or visual style. It defines how your business is perceived, how customers connect with your message, and how you position yourself in the market.",
+      "points": {
+        "identity": "Brand Identity Agency",
+        "branding": "Branding",
+        "rebranding": "Rebranding"
+      },
+      "cta": "Get Started"
+    },
+    "intro": {
+      "title": "Brand Strategy Benefits",
+      "p1": "A clear brand strategy helps your business build stronger customer relationships, increase recognition, maintain consistency across platforms, and communicate a differentiated value proposition in competitive markets.",
+      "p2": "At YELTU Agency, we develop strategic brand systems that improve trust, strengthen brand visibility, and create the clarity needed for more effective marketing and long-term growth."
+    },
+    "features": {
+      "title": "Brand Strategy Capabilities",
+      "research": {
+        "title": "Brand Strategy & Market Research",
+        "desc": "A successful brand begins with a deep understanding of the market, audience, and competitive landscape. We identify opportunities that help your business stand out and connect with the right customers."
+      },
+      "positioning": {
+        "title": "Brand Positioning & Messaging",
+        "desc": "We define how your brand should be perceived in the market by building a clear value proposition and messaging framework that communicates what makes your brand unique and relevant."
+      },
+      "identity": {
+        "title": "Brand Identity & Visual Direction",
+        "desc": "A strong visual identity makes your brand recognizable and memorable. We develop visual systems that reflect your brand personality and maintain consistency across all platforms."
+      },
+      "architecture": {
+        "title": "Brand Naming & Brand Architecture",
+        "desc": "Clear naming and structured brand architecture help customers understand your products and services while supporting scalability and stronger brand recognition."
+      },
+      "audit": {
+        "title": "Brand Audit & Performance Evaluation",
+        "desc": "A brand audit provides objective insight into current perception, communication effectiveness, and market positioning, helping identify opportunities for improvement."
+      },
+      "testing": {
+        "title": "Consumer Research & Brand Testing",
+        "desc": "Real audience feedback helps validate brand decisions. Through surveys and testing, we gather insights that refine branding, messaging, and communication strategy."
+      }
+    },
+    "deepdive": {
+      "h1": {
+        "title": "How Strategic Decisions Are Developed and Implemented",
+        "p1": "Before building a strong and recognizable brand, it is essential to understand how strategic decisions are developed and implemented. A successful brand is not created by design alone — it is built on research, clear positioning, and a well-defined strategic foundation.",
+        "p2": "At YELTU Agency, we combine market analysis, brand positioning, and creative direction to transform insights into a structured brand strategy. Our approach ensures that every brand element — from messaging and visual identity to communication style — works together to support your business goals.",
+        "p3": "The following process outlines the step-by-step methodology we use to develop clear, consistent, and competitive brands designed for long-term growth."
+      },
+      "h2": {
+        "title": "Brand Strategy Services for Growth, Clarity, and Market Positioning",
+        "p1": "Brand Identity gives your business more than a logo. It builds a consistent and recognizable visual and verbal system that strengthens trust across every platform. Branding defines how your company is perceived, how it communicates value, and how it stands out in the market through positioning, messaging, and visual alignment.",
+        "p2": "Rebranding helps businesses evolve with confidence. When your company changes, your brand should reflect that growth through updated clarity, modern relevance, and stronger market impact."
+      }
+    },
+    "process": {
+      "title": "Our Strategic Brand Development Process",
+      "subtitle": "At YELTU Agency, we follow a structured brand strategy process designed to transform research and insights into a clear and powerful brand identity.",
+      "step1": {
+        "title": "Business Discovery & Information Analysis",
+        "desc": "We begin by gathering essential information about your business, target audience, and industry environment to understand the current brand situation and define project goals."
+      },
+      "step2": {
+        "title": "Stakeholder Interviews & Strategic Insights",
+        "desc": "We conduct in-depth interviews with key stakeholders to uncover vision, values, internal expectations, brand opportunities, and strategic direction."
+      },
+      "step3": {
+        "title": "Brand Workshop & Strategic Alignment",
+        "desc": "Through collaborative workshops, we explore brand personality, positioning, and communication style to align stakeholders and shape clear brand elements."
+      },
+      "step4": {
+        "title": "Market & Competitive Analysis",
+        "desc": "We analyze competitors, industry trends, and customer expectations to identify differentiation opportunities and positioning strategies that strengthen your brand advantage."
+      },
+      "step5": {
+        "title": "Brand Positioning & Core Brand Idea",
+        "desc": "We develop positioning concepts and a central brand idea that becomes the foundation for storytelling, messaging, and user experience across platforms."
+      }
+    }
+  },
+  "mobileapp": {
+    "seo": {
+      "title": "Mobile App Development Services | YELTU Agency",
+      "desc": "Mobile app development services designed to create intuitive, scalable, and high-performance applications that drive user engagement and business growth."
+    },
+    "hero": {
+      "title": "Mobile App Development",
+      "hook": "Transform your idea into a powerful mobile application. At YELTU Agency, we build intuitive, scalable, and high-performance apps that help businesses engage users and grow in the mobile-first world.",
+      "link": {
+        "iosandroid": "iOS & Android App Development",
+        "crossplatform": "Cross-Platform App Development",
+        "aso": "App Store Optimization"
+      },
+      "cta": "Get Started"
+    },
+    "intro": {
+      "title": "How Strategic Mobile App Development Drives Business Growth",
+      "p1": "Mobile applications have become one of the most powerful tools for digital growth. A well-designed app does more than provide functionality — it creates direct engagement between your business and your users.",
+      "p2": "At YELTU Agency, we design and develop mobile applications that combine intuitive user experience, strong performance architecture, and scalable technology. Our goal is to build apps that users enjoy using while helping businesses increase retention, engagement, and revenue.",
+      "p3": "From startup ideas to enterprise-level platforms, we create mobile applications that transform your digital presence into a powerful growth engine."
+    },
+    "features": {
+      "title": "The Foundation of a Successful Mobile Application",
+      "uiux": {
+        "title": "UI/UX for Mobile Apps",
+        "desc": "Great mobile apps begin with exceptional user experience. We design intuitive interfaces that allow users to navigate effortlessly and complete actions naturally. Clear layouts, smart interaction patterns, and user-centered design ensure that your application feels simple, fast, and enjoyable to use."
+      },
+      "architecture": {
+        "title": "High-Performance Mobile Architecture",
+        "desc": "Performance is critical in mobile environments. We build applications optimized for speed, responsiveness, and reliability so users experience smooth interactions across all devices. Efficient architecture ensures the app remains stable even as usage grows."
+      },
+      "crossplatform": {
+        "title": "Cross-Platform Development",
+        "desc": "We develop mobile applications that work seamlessly across iOS and Android using modern frameworks. Cross-platform development reduces development time while maintaining consistent performance, enabling businesses to reach a wider audience faster."
+      },
+      "backend": {
+        "title": "API Integration & Backend Systems",
+        "desc": "Mobile applications often require powerful backend systems. We integrate secure APIs, databases, and third-party services that allow your app to connect with external platforms, manage data efficiently, and deliver dynamic functionality."
+      },
+      "security": {
+        "title": "Security & Data Protection",
+        "desc": "User trust depends on security. We implement strong authentication systems, secure data handling practices, and encrypted communication layers to protect both your users and your business."
+      },
+      "maintenance": {
+        "title": "Continuous Updates & App Maintenance",
+        "desc": "Launching an app is only the beginning. We provide ongoing updates, performance improvements, and feature expansions to ensure your application remains competitive and aligned with evolving user needs."
+      }
+    },
+    "deepdive": {
+      "title": "Why Businesses Invest in Mobile Applications Today",
+      "p1": "A mobile application can become one of the most valuable digital assets for a business. Unlike websites, mobile apps provide direct access to users through their devices, enabling deeper engagement and stronger brand loyalty. Professional mobile development ensures that your app performs reliably, offers seamless user experiences, and scales as your user base grows. Poorly built applications can lead to slow performance, security risks, and negative user feedback. At YELTU Agency, we focus on building mobile solutions that combine modern technology, user-centered design, and strategic thinking — transforming your application into a long-term growth platform."
+    },
+    "process": {
+      "title": "Our Mobile App Development Process",
+      "subtitle": "At YELTU Agency, we follow a structured and results-driven development process designed to deliver reliable and scalable mobile applications.",
+      "step1": {
+        "title": "Product Discovery & Strategy",
+        "desc": "We begin by understanding your business model, target audience, and product goals. This stage helps define the core functionality and development roadmap of your mobile application."
+      },
+      "step2": {
+        "title": "UX Architecture & Wireframing",
+        "desc": "Our team maps the complete user journey and creates structured wireframes that define navigation, interaction flows, and functional priorities."
+      },
+      "step3": {
+        "title": "UI Design & Mobile Experience",
+        "desc": "We design visually appealing and intuitive interfaces that create seamless interactions and guide users naturally through the app."
+      },
+      "step4": {
+        "title": "App Development & Integration",
+        "desc": "Our developers build high-performance applications for iOS, Android, or cross-platform environments while integrating necessary APIs and backend systems."
+      },
+      "step5": {
+        "title": "Testing, Launch & Optimization",
+        "desc": "Before release, we conduct comprehensive testing to ensure performance, security, and usability. After launch, we continue optimizing the application to improve stability and user engagement."
+      }
+    },
+    "solutions": {
+      "learnMore": "Learn more",
+      "title": "Mobile Development We Specialize In",
+      "subtitle": "YELTU Agency delivers mobile solutions tailored to different product and growth needs.",
+      "iosandroid": {
+        "title": "iOS & Android App Development",
+        "desc": "We build native mobile applications optimized specifically for iOS and Android environments. Native development ensures the highest performance, smooth interactions, and full access to device capabilities, providing users with a premium mobile experience."
+      },
+      "crossplatform": {
+        "title": "Cross-Platform App Development",
+        "desc": "Cross-platform development allows businesses to launch mobile applications faster while maintaining consistency across multiple devices. Using modern frameworks, we build apps that deliver high performance and a unified user experience across platforms."
+      },
+      "aso": {
+        "title": "App Store Optimization (ASO)",
+        "desc": "Creating an app is only part of the journey — visibility matters. App Store Optimization improves your application's ranking in the App Store and Google Play, helping users discover your product more easily and increasing organic downloads."
+      }
+    }
+  },
+  "iosandroid": {
+    "seo": {
+      "title": "iOS & Android App Development Services | YELTU Agency",
+      "desc": "Native iOS and Android app development services designed for performance, seamless user experience, and long-term mobile growth."
+    },
+    "hero": {
+      "title": "iOS & Android App Development",
+      "hook": "Native Mobile Apps Built for Performance and User Experience. Break free from limitations of generic mobile solutions. Let’s build a native mobile application engineered specifically for iOS and Android users.",
+      "points": {
+        "performance": "Native Performance Optimization",
+        "experience": "Seamless User Experience",
+        "architecture": "Scalable Mobile Architecture"
+      },
+      "cta": "Get Started"
+    },
+    "intro": {
+      "title": "How Native Mobile Apps Create Real Business Value",
+      "p1": "Native mobile applications provide the highest level of performance, security, and device integration. Unlike hybrid solutions, native apps are built specifically for each platform, allowing them to fully utilize device capabilities such as camera, GPS, and push notifications.",
+      "p2": "At YELTU Agency, we develop native iOS and Android applications that deliver smooth performance, intuitive interactions, and scalable architecture. Our goal is to create mobile products that users enjoy using while helping businesses increase engagement and retention."
+    },
+    "features": {
+      "title": "Core Elements of High-Performance Native Apps",
+      "performance": {
+        "title": "Platform-Optimized Development",
+        "desc": "Each platform has its own design guidelines and technical standards. We develop applications specifically optimized for iOS and Android environments to ensure consistent performance and reliability."
+      },
+      "integration": {
+        "title": "Seamless Device Integration",
+        "desc": "Native apps allow deeper integration with device hardware such as camera, location services, and sensors. This enables more advanced and interactive user experiences."
+      },
+      "uiux": {
+        "title": "Intuitive Mobile Interface",
+        "desc": "We design interfaces that follow platform-specific UX standards, making your app feel natural for users on both iOS and Android."
+      },
+      "backend": {
+        "title": "Scalable Backend Systems",
+        "desc": "Behind every successful mobile app is a powerful backend infrastructure. We implement secure APIs and scalable systems that support growing user demand."
+      },
+      "security": {
+        "title": "Security & Data Protection",
+        "desc": "Security is integrated into every stage of development to ensure user data and business systems remain protected."
+      },
+      "stability": {
+        "title": "Long-Term App Stability",
+        "desc": "Native applications provide strong performance stability, making them ideal for businesses planning long-term mobile growth."
+      }
+    },
+    "deepdive": {
+      "title": "Why Native App Development Matters",
+      "p1": "A well-built native application delivers faster performance, smoother interactions, and stronger reliability compared to many hybrid solutions. Businesses investing in native development benefit from improved user engagement, higher retention rates, and better scalability as their platform grows. At YELTU Agency, we engineer native applications designed to provide long-term value for both businesses and users."
+    },
+    "process": {
+      "title": "Our Native App Development Process",
+      "subtitle": "At YELTU Agency, we follow a structured and results-driven development process designed to deliver reliable and scalable native mobile applications.",
+      "step1": {
+        "title": "Product Discovery & Planning",
+        "desc": "Every successful mobile application begins with a clear strategy. At this stage, we analyze your business goals, target audience, and product requirements to define the core functionality of the application. This discovery phase helps create a structured development roadmap that aligns the mobile product with your long-term business objectives."
+      },
+      "step2": {
+        "title": "Platform-Specific UX Architecture",
+        "desc": "User experience plays a crucial role in mobile applications. We design the complete user journey, defining navigation flows, screen structures, and key interaction points. By focusing on intuitive usability, we ensure that users can interact with your application naturally and efficiently."
+      },
+      "step3": {
+        "title": "UI Design & Mobile Interface",
+        "desc": "Once the structure is defined, our designers craft a visually engaging mobile interface. We follow platform-specific design standards for both iOS and Android to create clean, intuitive layouts that enhance user engagement and deliver a smooth mobile experience."
+      },
+      "step4": {
+        "title": "Native Development & Integration",
+        "desc": "During development, our engineers build the application using technologies optimized for each platform. We implement frontend interfaces, backend systems, API integrations, and security layers to ensure the app performs reliably while supporting advanced functionality."
+      },
+      "step5": {
+        "title": "Testing, Launch & Continuous Optimization",
+        "desc": "Before release, we conduct comprehensive testing across multiple devices to ensure stability, performance, and security. After launch, we continue monitoring and optimizing the application to improve performance, introduce new features, and support long-term scalability."
+      }
+    },
+    "solutions": {
+      "learnMore": "Learn more",
+      "title": "Mobile Development We Specialize In",
+      "subtitle": "YELTU Agency delivers mobile solutions tailored to different product and growth needs.",
+      "mobileapp": {
+        "title": "Mobile App Development",
+        "desc": "We build intuitive, scalable, and high-performance mobile applications that help businesses engage users, strengthen retention, and grow in the mobile-first world."
+      },
+      "crossplatform": {
+        "title": "Cross-Platform App Development",
+        "desc": "Cross-platform development allows businesses to launch mobile applications faster while maintaining consistency across multiple devices. Using modern frameworks, we build apps that deliver high performance and a unified user experience across platforms."
+      },
+      "aso": {
+        "title": "App Store Optimization (ASO)",
+        "desc": "Creating an app is only part of the journey — visibility matters. App Store Optimization improves your application's ranking in the App Store and Google Play, helping users discover your product more easily and increasing organic downloads."
+      }
+    }
+  },
+  "crossplatform": {
+    "seo": {
+      "title": "Cross-Platform App Development Services | YELTU Agency",
+      "desc": "Cross-platform app development services designed for faster launches, unified user experience, and scalable long-term mobile growth."
+    },
+    "hero": {
+      "title": "Cross-Platform App Development",
+      "hook": "Build Once. Reach Users Everywhere. Cross-platform mobile development allows businesses to launch applications on multiple platforms faster and more efficiently.",
+      "points": {
+        "speed": "Faster Development Cycles",
+        "experience": "Unified User Experience",
+        "scaling": "Cost-Efficient App Scaling"
+      },
+      "cta": "Get Started"
+    },
+    "intro": {
+      "title": "How Cross-Platform Apps Support Business Growth",
+      "p1": "Cross-platform development allows businesses to reach both iOS and Android users with a single codebase. This approach reduces development time while maintaining high performance and consistent user experience across devices.",
+      "p2": "At YELTU Agency, we use modern frameworks to build cross-platform mobile applications that combine efficiency with strong performance."
+    },
+    "features": {
+      "title": "Core Elements of Scalable Cross-Platform App Development",
+      "codebase": {
+        "title": "Unified Codebase Architecture",
+        "desc": "Cross-platform development allows a single codebase to power applications on both iOS and Android. A well-structured architecture ensures that shared logic, components, and services work seamlessly across platforms while maintaining high performance. This approach significantly reduces development complexity and accelerates product delivery."
+      },
+      "ux": {
+        "title": "Consistent User Experience Across Platforms",
+        "desc": "Users expect mobile applications to feel natural regardless of the device they use. We design interfaces that maintain a unified visual identity while adapting to platform-specific interaction patterns. This ensures that both iOS and Android users experience intuitive navigation and smooth usability."
+      },
+      "speed": {
+        "title": "Faster Development & Time-to-Market",
+        "desc": "Cross-platform development allows businesses to launch applications faster compared to building separate native apps. By sharing core functionality across platforms, development cycles become shorter while maintaining strong product quality."
+      },
+      "backend": {
+        "title": "Flexible Backend & API Integration",
+        "desc": "Modern mobile applications rely on powerful backend systems. We integrate APIs, cloud services, authentication systems, and third-party platforms that allow your application to deliver dynamic functionality and real-time data interactions."
+      },
+      "scalable": {
+        "title": "Scalable Mobile Infrastructure",
+        "desc": "A successful mobile product must support growth. We build cross-platform applications with scalable architecture that allows the platform to handle increasing users, additional features, and future system expansions without performance issues."
+      },
+      "maintenance": {
+        "title": "Simplified Maintenance & Updates",
+        "desc": "Maintaining one shared codebase makes it easier to release updates, implement new features, and fix issues quickly. This reduces long-term development costs and allows businesses to continuously improve their application without complex maintenance processes."
+      }
+    },
+    "deepdive": {
+      "title": "Why Cross-Platform App Development Matters",
+      "p1": "Cross-platform development allows businesses to build a single mobile application that works across both iOS and Android platforms. This approach reduces development time, lowers costs, and simplifies long-term maintenance. By using modern cross-platform frameworks, companies can launch their apps faster while still delivering a consistent user experience across devices. At YELTU Agency, we develop cross-platform mobile applications designed for performance, scalability, and efficient long-term growth."
+    },
+    "process": {
+      "title": "Cross-Platform App Development Process",
+      "subtitle": "At YELTU Agency, we follow a structured and results-driven development process designed to deliver efficient and scalable cross-platform mobile applications.",
+      "step1": {
+        "title": "Product Strategy & Platform Planning",
+        "desc": "Every cross-platform mobile project begins with a clear product strategy. At this stage, we analyze your business goals, target audience, and functional requirements to determine the most efficient cross-platform approach. This planning phase helps define the technology stack, core features, and development roadmap needed to deliver a scalable mobile product."
+      },
+      "step2": {
+        "title": "UX Architecture & User Flow Design",
+        "desc": "User experience is critical in mobile applications regardless of the platform. We carefully design the user journey, navigation structure, and interaction flow to ensure the application feels intuitive and easy to use. The goal is to create a seamless experience that works naturally for both iOS and Android users."
+      },
+      "step3": {
+        "title": "Cross-Platform Interface Design",
+        "desc": "Once the structure is defined, our design team creates clean and modern interfaces that maintain consistency across devices. The design process ensures that the app feels visually cohesive while still respecting platform-specific usability standards and user expectations."
+      },
+      "step4": {
+        "title": "Development & System Integration",
+        "desc": "Our developers build the mobile application using modern cross-platform frameworks that allow a single codebase to run efficiently on multiple platforms. We integrate backend systems, APIs, and external services to ensure the application delivers dynamic functionality and reliable performance."
+      },
+      "step5": {
+        "title": "Testing, Deployment & Optimization",
+        "desc": "Before release, the application undergoes extensive testing across different devices and operating systems. This ensures the app performs consistently across platforms. After launch, we continue optimizing performance, improving stability, and supporting future updates as the product evolves."
+      }
+    },
+    "solutions": {
+      "learnMore": "Learn more",
+      "title": "Mobile Development We Specialize In",
+      "subtitle": "YELTU Agency delivers mobile solutions tailored to different product and growth needs.",
+      "mobileapp": {
+        "title": "Mobile App Development",
+        "desc": "We build intuitive, scalable, and high-performance mobile applications that help businesses engage users, strengthen retention, and grow in the mobile-first world."
+      },
+      "iosandroid": {
+        "title": "iOS & Android App Development",
+        "desc": "We build native mobile applications optimized specifically for iOS and Android environments. Native development ensures the highest performance, smooth interactions, and full access to device capabilities, providing users with a premium mobile experience."
+      },
+      "aso": {
+        "title": "App Store Optimization (ASO)",
+        "desc": "Creating an app is only part of the journey — visibility matters. App Store Optimization improves your application's ranking in the App Store and Google Play, helping users discover your product more easily and increasing organic downloads."
+      }
+    }
+  },
+  "aso": {
+    "seo": {
+      "title": "App Store Optimization Services | YELTU Agency",
+      "desc": "App Store Optimization services designed to improve app visibility, increase organic downloads, and strengthen long-term marketplace growth."
+    },
+    "hero": {
+      "title": "App Store & Marketplace Optimization (ASO)",
+      "hook": "Improve Your App Visibility and Increase Organic Downloads. Publishing a mobile app is only the first step. Without proper optimization, even high-quality applications can remain hidden in crowded app marketplaces. Our optimization strategies help applications rank higher in search results, attract the right users, and increase organic downloads.",
+      "points": {
+        "visibility": "App Marketplace Visibility",
+        "downloads": "Organic Download Growth",
+        "conversion": "App Listing Conversion Optimization"
+      },
+      "cta": "Get Started"
+    },
+    "intro": {
+      "title": "How App Store Optimization Drives App Growth",
+      "p1": "Millions of mobile applications compete for attention across app marketplaces. Without a clear optimization strategy, even well-developed apps may struggle to reach potential users.",
+      "p2": "App Store Optimization improves how your application appears in marketplace search results and how effectively it converts visitors into downloads. By optimizing keywords, metadata, visuals, and ranking signals, businesses can significantly increase their organic reach. At YELTU Agency, we combine data-driven analysis with proven optimization strategies to help mobile apps stand out and attract more users."
+    },
+    "features": {
+      "title": "Core Elements of Effective App Store Optimization",
+      "keywords": {
+        "title": "Keyword & Search Optimization",
+        "desc": "Users discover most mobile applications through search. We research relevant keywords and strategically integrate them into your app title, description, and metadata to improve ranking in app store search results."
+      },
+      "listing": {
+        "title": "App Listing Optimization",
+        "desc": "A well-structured app listing improves both visibility and user trust. We optimize titles, descriptions, categories, and feature highlights to clearly communicate the value of your application."
+      },
+      "visuals": {
+        "title": "Visual Asset Optimization",
+        "desc": "Icons, screenshots, and preview videos strongly influence download decisions. We design and optimize visual assets that clearly demonstrate your app’s functionality and user benefits."
+      },
+      "reviews": {
+        "title": "Ratings & Reviews Strategy",
+        "desc": "Positive ratings and reviews play a major role in app marketplace ranking algorithms. We help implement strategies that encourage satisfied users to leave feedback and improve your app’s credibility."
+      },
+      "engagement": {
+        "title": "User Engagement Signals",
+        "desc": "App marketplaces analyze engagement metrics such as retention rate, uninstall rate, and session duration. We evaluate these signals to identify improvements that support stronger rankings."
+      },
+      "optimization": {
+        "title": "Continuous Optimization",
+        "desc": "ASO is an ongoing process. We continuously monitor keyword rankings, downloads, and user behavior to refine the optimization strategy and maintain long-term growth."
+      }
+    },
+    "deepdive": {
+      "title": "Why App Store Optimization Matters",
+      "p1": "Without proper optimization, even high-quality applications may remain invisible among millions of competing apps. App Store Optimization improves discoverability, increases organic downloads, and helps your application reach the right audience across multiple app marketplaces. At YELTU Agency, we implement strategic ASO practices designed to help mobile applications grow sustainably and compete effectively in global app ecosystems."
+    },
+    "process": {
+      "title": "Our App Store Optimization Process",
+      "subtitle": "At YELTU Agency, we follow a structured and data-driven optimization process designed to improve visibility, downloads, and long-term app marketplace performance.",
+      "step1": {
+        "title": "Market & Competitor Research",
+        "desc": "We analyze your app category, competitors, and marketplace trends to identify opportunities for improving visibility and rankings."
+      },
+      "step2": {
+        "title": "Keyword & Metadata Strategy",
+        "desc": "Relevant search keywords are integrated into your app title, description, and metadata to improve discoverability within app marketplace search results."
+      },
+      "step3": {
+        "title": "App Listing & Visual Optimization",
+        "desc": "We optimize icons, screenshots, and preview materials to create a compelling listing that attracts users and increases downloads."
+      },
+      "step4": {
+        "title": "Performance Monitoring",
+        "desc": "We continuously monitor rankings, downloads, and user engagement metrics to evaluate the effectiveness of the optimization strategy."
+      },
+      "step5": {
+        "title": "Continuous Growth Optimization",
+        "desc": "Based on performance data, we refine keywords, update visual assets, and improve listing elements to maintain strong marketplace visibility over time."
+      }
+    },
+    "solutions": {
+      "learnMore": "Learn more",
+      "title": "Mobile Development We Specialize In",
+      "subtitle": "YELTU Agency delivers mobile solutions tailored to different product and growth needs.",
+      "mobileapp": {
+        "title": "Mobile App Development",
+        "desc": "We build intuitive, scalable, and high-performance mobile applications that help businesses engage users, strengthen retention, and grow in the mobile-first world."
+      },
+      "iosandroid": {
+        "title": "iOS & Android App Development",
+        "desc": "We build native mobile applications optimized specifically for iOS and Android environments. Native development ensures the highest performance, smooth interactions, and full access to device capabilities, providing users with a premium mobile experience."
+      },
+      "crossplatform": {
+        "title": "Cross-Platform App Development",
+        "desc": "Cross-platform development allows businesses to launch mobile applications faster while maintaining consistency across multiple devices. Using modern frameworks, we build apps that deliver high performance and a unified user experience across platforms."
+      }
+    }
+  },
+  "digitalmarketing": {
+    "seo": {
+      "title": "Digital Marketing Services | YELTU Agency",
+      "desc": "Digital marketing services designed to increase visibility, attract qualified leads, and turn attention into measurable business growth."
+    },
+    "hero": {
+      "title": "Digital Marketing Services That Turn Attention Into Real Business Growth",
+      "hook": "Build a stronger online presence with digital marketing strategies designed to increase visibility, attract qualified leads, and convert interest into measurable results.",
+      "link": {
+        "seo": "SEO Services",
+        "sem": "SEM Services",
+        "smm": "SMM Services",
+        "design": "Design"
+      },
+      "cta": "Get Started"
+    },
+    "intro": {
+      "title": "Why Businesses Need Digital Marketing and How YELTU Helps",
+      "p1": "In today’s competitive digital space, having a great product or service is no longer enough. Your audience needs to find you, trust you, and clearly understand why your brand is the right choice. That is where digital marketing becomes essential. At YELTU Agency, we help businesses build visibility, attract the right audience, and create meaningful customer journeys through strategic SEO, targeted advertising, and social media marketing. Our approach is built around performance, clarity, and sustainable growth, helping brands strengthen their digital presence and turn traffic into real business opportunities."
+    },
+    "features": {
+      "title": "The Digital Marketing Systems Behind Sustainable Growth",
+      "seo": {
+        "title": "Search Engine Optimization",
+        "desc": "SEO helps your business appear in front of people who are already searching for your products or services. A strong SEO strategy improves your rankings, increases organic traffic, and builds long-term credibility. At YELTU, we focus on technical structure, keyword relevance, content quality, and on-page optimization to help your website earn sustainable visibility in search engines."
+      },
+      "sem": {
+        "title": "Search Engine Marketing",
+        "desc": "SEM allows your business to gain immediate visibility through paid search campaigns. It is one of the fastest ways to reach high-intent users who are actively looking for solutions. We build data-driven campaigns that focus on strategic targeting, compelling ad copy, and landing page alignment so your budget is used efficiently and your ads generate qualified leads."
+      },
+      "smm": {
+        "title": "Social Media Marketing",
+        "desc": "Social media marketing helps brands stay visible, relevant, and connected to their audience across platforms. It is not only about posting content, but about creating consistent brand communication that drives engagement and trust. YELTU develops content strategies and platform-specific campaigns that help businesses strengthen community presence and support broader marketing goals."
+      },
+      "content": {
+        "title": "Content Strategy",
+        "desc": "Effective digital marketing depends on content that informs, persuades, and supports every stage of the customer journey. A clear content strategy helps your business communicate value, answer search intent, and build authority in your niche. We create structured content plans that align with SEO goals, audience needs, and conversion opportunities across your website and digital channels."
+      },
+      "conversion": {
+        "title": "Conversion Optimization",
+        "desc": "Driving traffic is only part of the process. Your website and campaigns must also convert visitors into inquiries, leads, or customers. Conversion optimization focuses on improving page structure, messaging, calls to action, and user flow. At YELTU, we analyze how users interact with your digital assets and make strategic improvements that support better performance and higher conversion rates."
+      },
+      "audience": {
+        "title": "Audience Targeting",
+        "desc": "One of the most important parts of digital marketing is reaching the right people with the right message at the right time. Audience targeting helps reduce wasted budget and improve campaign effectiveness by focusing on users who are more likely to convert. We define audience segments based on intent, behavior, and business objectives to create more precise marketing campaigns."
+      },
+      "analytics": {
+        "title": "Performance Analytics",
+        "desc": "Digital marketing should always be measurable. Performance analytics allows businesses to understand what is working, what needs improvement, and where the best opportunities for growth exist. We track key metrics across campaigns, content, and website behavior to generate actionable insights. This helps ensure every decision is informed by real performance rather than guesswork."
+      },
+      "positioning": {
+        "title": "Brand Positioning",
+        "desc": "Strong digital marketing starts with clear brand positioning. If your business does not communicate a distinct value, it becomes harder to stand out in crowded markets. Brand positioning shapes how your audience perceives your services, messaging, and credibility. YELTU helps businesses clarify their market presence and build digital communication that feels consistent, professional, and memorable."
+      }
+    },
+    "deepdive": {
+      "h1": {
+        "title": "What Is Digital Marketing and Why Does It Matter for Modern Businesses?",
+        "p1": "Digital marketing is the strategic use of online channels to promote a business, attract customers, and increase revenue. It includes SEO, paid advertising, social media, content, and other performance-driven methods that help brands grow online. For modern businesses, digital marketing matters because customer attention has moved to digital platforms. A strong strategy helps brands stay visible, competitive, and relevant where purchasing decisions increasingly begin."
+      },
+      "h2": {
+        "title": "SEO vs SEM: What Is the Difference and Which One Does Your Business Need?",
+        "p1": "SEO focuses on improving your website’s organic visibility in search engines over time, while SEM uses paid advertising to place your business in front of users immediately. Both are valuable, but they serve different purposes. SEO is ideal for long-term authority and sustainable traffic, whereas SEM is effective for fast visibility, lead generation, and campaign-based promotion. The right choice often depends on your timeline, goals, and budget."
+      }
+    },
+    "process": {
+      "title": "Our Digital Marketing Process",
+      "subtitle": "At YELTU Agency, we follow a structured and results-driven digital marketing framework designed to improve visibility, attract qualified traffic, and support long-term business growth.",
+      "step1": {
+        "title": "Discovery and Business Analysis",
+        "desc": "We begin by understanding your business model, services, industry position, and growth objectives. This helps us define realistic goals and identify the right digital channels for your brand."
+      },
+      "step2": {
+        "title": "Audience and Competitor Research",
+        "desc": "We research your target audience, search behavior, and market competition to understand where opportunities exist and how your brand can communicate more effectively."
+      },
+      "step3": {
+        "title": "Strategy Development",
+        "desc": "Based on data and business priorities, we build a clear digital marketing strategy that may include SEO, SEM, SMM, content direction, and conversion-focused improvements."
+      },
+      "step4": {
+        "title": "Campaign Setup and Optimization",
+        "desc": "We implement the required systems, optimize assets, prepare messaging, and launch campaigns with a focus on performance, targeting precision, and consistency."
+      },
+      "step5": {
+        "title": "Monitoring and Performance Tracking",
+        "desc": "Once campaigns are active, we monitor traffic, engagement, conversions, and user behavior to identify strengths, weaknesses, and optimization opportunities."
+      },
+      "step6": {
+        "title": "Growth, Reporting, and Improvement",
+        "desc": "Digital marketing is an ongoing process. We refine strategy over time, improve results through data-backed decisions, and provide clear reporting that supports long-term business growth."
+      }
+    },
+    "solutions": {
+      "title": "Explore Our Core Digital Marketing Services",
+      "subtitle": "YELTU Agency delivers focused digital marketing solutions designed to improve visibility, generate qualified traffic, and support business growth.",
+      "seo": {
+        "title": "SEO",
+        "desc": "Improve your visibility in search engines and attract long-term organic traffic through technical SEO, keyword strategy, optimized content, and stronger website structure.",
+        "cta": "Explore Our SEO Services"
+      },
+      "sem": {
+        "title": "SEM",
+        "desc": "Reach high-intent audiences faster with strategic paid search campaigns designed to generate qualified traffic, leads, and measurable return on ad spend.",
+        "cta": "Discover Our SEM Services"
+      },
+      "smm": {
+        "title": "SMM",
+        "desc": "Build stronger audience connections and brand awareness through social media strategies that combine creative communication, consistency, and platform-specific execution.",
+        "cta": "See Our SMM Services"
+      },
+      "design": {
+        "title": "Design",
+        "desc": "Strengthen your digital marketing with design systems and visual content that improve communication clarity, support campaign performance, and make your brand more memorable across platforms.",
+        "cta": "Explore Our Design Services"
+      }
+    },
+    "closing": {
+      "title": "Strategic Digital Marketing Services That Directly Influence Your Target Market",
+      "p1": "Digital marketing has transformed how businesses connect with their audiences. Traditional advertising once relied on broad messaging and mass promotion, often reaching people who had little interest in the product or service being offered. Today, successful marketing is built on relevance, data, and understanding customer intent.",
+      "p2": "At YELTU Agency, we focus on creating digital marketing strategies that connect your brand with the right audience at the right moment. Instead of pushing promotions blindly, we build systems that attract users already searching for solutions. Through SEO, search advertising, and social media marketing, we help businesses grow visibility, generate qualified leads, and build long-term brand authority.",
+      "p3": "Our goal is simple: create marketing that not only increases traffic but also turns attention into meaningful business opportunities.",
+      "cta": "Start Your Digital Marketing Strategy",
+      "cards": {
+        "research": {
+          "title": "Research And Understand Your Market",
+          "desc": "Successful digital marketing begins with understanding your audience. We analyze market behavior, customer intent, and competitor strategies to build campaigns that connect your brand with the people most likely to engage with your services."
+        },
+        "analytics": {
+          "title": "Analyze Marketing Performance",
+          "desc": "Digital marketing should always be measurable. We constantly evaluate campaign performance, user engagement, and traffic behavior to identify opportunities for improvement and ensure that every strategy delivers meaningful results."
+        },
+        "leads": {
+          "title": "Generate Qualified Leads",
+          "desc": "Digital marketing should focus on attracting the right customers rather than simply increasing traffic. Our strategies are designed to connect your business with users who are actively searching for your services."
+        },
+        "visibility": {
+          "title": "Maintain Consistent Brand Visibility",
+          "desc": "Your audience should be able to discover your brand whenever they search for relevant solutions. Through SEO, social media marketing, and targeted campaigns, we help your business remain visible and competitive in an increasingly digital marketplace."
+        }
+      }
+    }
+  },
+  "seo": {
+    "seo": {
+      "title": "SEO Services | YELTU Agency",
+      "desc": "Strategic SEO services designed to increase visibility, attract qualified organic traffic, and support long-term business growth."
+    },
+    "hero": {
+      "title": "SEO Services That Increase Visibility, Traffic, and Long-Term Business Growth",
+      "hook": "Search Engine Optimization helps your business appear in front of people who are actively searching for your products or services. At YELTU Agency, we build strategic SEO systems that improve rankings, drive qualified organic traffic, and transform your website into a long-term growth engine.",
+      "points": {
+        "technical": "Technical SEO",
+        "onpage": "On-Page SEO",
+        "content": "SEO Content Strategy"
+      },
+      "cta": "Start Your SEO Strategy"
+    },
+    "intro": {
+      "title": "Why SEO Is One of the Most Powerful Digital Marketing Channels",
+      "p1": "Search engines have become the primary way people discover products, services, and businesses online. If your website does not appear in relevant search results, potential customers will most likely find your competitors instead. SEO helps your business gain long-term visibility by improving how search engines understand and rank your website. At YELTU Agency, we focus on building sustainable SEO strategies that combine technical optimization, high-quality content, and strong site architecture. This allows your website to attract qualified traffic, increase brand credibility, and generate consistent opportunities for growth without relying entirely on paid advertising."
+    },
+    "features": {
+      "title": "The Core Elements of Effective SEO",
+      "technical": {
+        "title": "Technical SEO",
+        "desc": "Technical SEO ensures that search engines can properly crawl, understand, and index your website. This includes optimizing website structure, page speed, mobile performance, and technical signals that influence rankings. A technically optimized website creates the foundation for long-term search visibility."
+      },
+      "keywords": {
+        "title": "Keyword Strategy",
+        "desc": "Successful SEO begins with understanding what your potential customers are searching for. Keyword research helps identify search intent, opportunities for growth, and topics that align with your services. A well-structured keyword strategy ensures your website targets the right audience."
+      },
+      "onpage": {
+        "title": "On-Page Optimization",
+        "desc": "On-page SEO focuses on improving individual pages so they rank better in search engines. This includes optimizing headings, metadata, internal linking, content structure, and keyword relevance. Proper on-page optimization helps search engines clearly understand your content."
+      },
+      "content": {
+        "title": "Content Development",
+        "desc": "Search engines prioritize content that provides real value to users. High-quality, informative, and well-structured content increases your chances of ranking for relevant search queries. Content also helps build authority within your industry."
+      },
+      "links": {
+        "title": "Link Building",
+        "desc": "Backlinks from trusted websites signal authority and credibility to search engines. A strategic link building approach helps improve domain strength, visibility, and rankings. This process should always focus on quality rather than quantity."
+      },
+      "monitoring": {
+        "title": "Performance Monitoring",
+        "desc": "SEO is an ongoing process that requires constant monitoring and improvement. Tracking rankings, traffic behavior, and conversion data helps identify opportunities for optimization and long-term growth."
+      }
+    },
+    "deepdive": {
+      "title": "How SEO Helps Businesses Grow Online",
+      "p1": "SEO helps businesses build long-term digital visibility by connecting their services with people actively searching for solutions. Unlike short-term advertising campaigns, SEO continues generating traffic and leads over time. A well-optimized website builds trust with both users and search engines, improving credibility and authority in your industry. With the right strategy, SEO can become one of the most cost-effective marketing channels for sustainable online growth."
+    },
+    "article": {
+      "title": "How Long Does SEO Take to Show Results?",
+      "p1": "SEO is a long-term strategy rather than an instant marketing solution. Most websites begin to see meaningful improvements within three to six months depending on competition, industry, and website condition. However, once SEO momentum builds, the results tend to compound over time. This is why businesses that invest in SEO often benefit from continuous organic traffic and stronger online visibility."
+    },
+    "process": {
+      "title": "Our SEO Process",
+      "subtitle": "At YELTU Agency, we follow a structured SEO process designed to improve search visibility, strengthen website authority, and create sustainable long-term growth.",
+      "step1": {
+        "title": "Website Audit",
+        "desc": "We begin by analyzing your website’s technical structure, content quality, and existing search performance to identify opportunities for improvement."
+      },
+      "step2": {
+        "title": "Keyword Research",
+        "desc": "We identify the search terms your target audience uses and build a keyword strategy aligned with your business goals."
+      },
+      "step3": {
+        "title": "Technical Optimization",
+        "desc": "We improve site structure, speed, indexing, and mobile performance to ensure search engines can properly understand your website."
+      },
+      "step4": {
+        "title": "Content Optimization",
+        "desc": "We enhance existing content and develop new pages that target relevant keywords and provide real value to users."
+      },
+      "step5": {
+        "title": "Authority Building",
+        "desc": "We strengthen your website’s credibility through strategic link building and brand visibility across relevant platforms."
+      },
+      "step6": {
+        "title": "Continuous Improvement",
+        "desc": "SEO performance is monitored regularly so strategies can be adjusted and improved based on data and results."
+      }
+    },
+    "solutions": {
+      "title": "Explore Our Digital Marketing Services",
+      "subtitle": "Discover related digital marketing solutions designed to strengthen visibility, improve traffic quality, and support long-term business growth.",
+      "digitalmarketing": {
+        "title": "Digital Marketing",
+        "desc": "Build a stronger online presence through integrated digital marketing strategies that combine SEO, paid campaigns, social media, and conversion-focused planning.",
+        "cta": "Explore Digital Marketing Services"
+      },
+      "sem": {
+        "title": "SEM",
+        "desc": "Reach high-intent audiences faster through paid search campaigns designed to generate qualified traffic, leads, and measurable performance.",
+        "cta": "Discover SEM Services"
+      },
+      "smm": {
+        "title": "SMM",
+        "desc": "Strengthen your brand presence and audience connection through social media strategies built around consistency, relevance, and platform-specific execution.",
+        "cta": "See SMM Services"
+      },
+      "design": {
+        "title": "Design",
+        "desc": "Support your SEO and digital visibility with strategic design systems, visual consistency, and creative assets that strengthen communication across your digital channels.",
+        "cta": "Explore Design Services"
+      }
+    },
+    "subservices": {
+      "title": "SEO Subservices",
+      "technical": {
+        "title": "Technical SEO",
+        "desc": "Technical SEO focuses on optimizing the structure and performance of your website so search engines can properly crawl, understand, and index your pages. This includes improving page speed, mobile usability, site architecture, and technical signals that influence search rankings."
+      },
+      "onpage": {
+        "title": "On-Page SEO",
+        "desc": "On-page SEO improves individual website pages so they rank better in search engines and provide a better user experience. This includes optimizing headings, metadata, internal linking, content structure, and keyword relevance to help search engines understand your content more clearly."
+      },
+      "content": {
+        "title": "SEO Content Strategy",
+        "desc": "Content plays a central role in successful SEO. A structured content strategy ensures your website targets relevant search queries and answers user intent. By creating valuable, optimized content, businesses can increase visibility, attract organic traffic, and build authority within their industry."
+      }
+    }
+  },
+  "sem": {
+    "seo": {
+      "title": "SEM Services | YELTU Agency",
+      "desc": "Launch performance-driven SEM campaigns that generate immediate visibility, qualified traffic, and measurable business growth."
+    },
+    "hero": {
+      "title": "SEM Services That Generate Immediate Visibility, Traffic, and Qualified Leads",
+      "hook": "Search Engine Marketing helps your business appear instantly in front of potential customers who are actively searching for your products or services. At YELTU Agency, we build performance-driven advertising campaigns designed to attract high-intent traffic, maximize return on ad spend, and turn search demand into measurable business growth.",
+      "points": {
+        "googleads": "Google Ads Campaigns",
+        "ppc": "PPC Strategy",
+        "tracking": "Conversion Tracking"
+      },
+      "cta": "Launch Your SEM Campaign"
+    },
+    "intro": {
+      "title": "Why SEM Is Essential for Immediate Online Visibility",
+      "p1": "While SEO builds long-term organic visibility, Search Engine Marketing allows businesses to reach potential customers instantly. Paid search campaigns place your brand at the top of search engine results for highly relevant keywords, making it easier for users to discover your services exactly when they need them. At YELTU Agency, we develop strategic SEM campaigns that combine precise targeting, optimized ad copy, and data-driven budget management. This approach helps businesses generate qualified leads, increase brand visibility, and drive measurable results while maintaining efficient use of advertising budgets."
+    },
+    "features": {
+      "title": "The Core Elements of Effective SEM",
+      "keywords": {
+        "title": "Keyword Targeting",
+        "desc": "Successful SEM campaigns begin with identifying the right keywords. Keyword targeting focuses on search terms that indicate strong purchase intent, ensuring your ads reach users who are actively looking for solutions related to your business."
+      },
+      "campaign": {
+        "title": "Ad Campaign Strategy",
+        "desc": "A structured campaign strategy ensures that every advertisement supports your business objectives. By organizing campaigns based on audience segments, search intent, and product categories, businesses can maximize visibility and campaign effectiveness."
+      },
+      "copy": {
+        "title": "Ad Copy Optimization",
+        "desc": "Effective advertising requires compelling and relevant messaging. Well-written ad copy communicates value clearly, increases click-through rates, and encourages potential customers to engage with your services."
+      },
+      "landing": {
+        "title": "Landing Page Optimization",
+        "desc": "Driving traffic is only part of the process. Landing pages must be optimized to convert visitors into leads or customers. A strong landing page improves user experience, communicates value, and supports higher conversion rates."
+      },
+      "budget": {
+        "title": "Budget Management",
+        "desc": "Effective budget management ensures that advertising spend delivers the highest possible return. Campaign budgets are monitored and optimized continuously to focus on keywords and audiences that generate the best results."
+      },
+      "tracking": {
+        "title": "Performance Tracking",
+        "desc": "SEM campaigns rely heavily on performance data. Tracking impressions, clicks, conversions, and cost metrics allows continuous improvement and ensures that marketing investments generate measurable outcomes."
+      }
+    },
+    "deepdive": {
+      "title": "How SEM Helps Businesses Generate Leads Faster",
+      "p1": "SEM provides businesses with immediate access to potential customers who are actively searching for solutions online. Unlike long-term strategies that require time to build momentum, paid search advertising delivers instant visibility in search results. With proper targeting, optimized messaging, and strategic campaign management, SEM allows businesses to attract highly relevant traffic and generate qualified leads quickly. This makes it an effective marketing channel for companies that want to accelerate growth and capture demand in competitive markets."
+    },
+    "article": {
+      "title": "Is SEM the Right Strategy for Your Business?",
+      "p1": "SEM is particularly valuable for businesses that want to reach potential customers quickly and increase visibility in competitive industries. It allows brands to appear in front of high-intent users who are actively searching for products or services. Companies launching new services, entering new markets, or seeking faster lead generation often benefit from SEM strategies. When combined with SEO and other digital marketing efforts, SEM becomes a powerful tool for achieving both short-term results and long-term growth."
+    },
+    "process": {
+      "title": "Our SEM Process",
+      "subtitle": "We follow a structured SEM process designed to increase visibility, improve campaign efficiency, and generate measurable results.",
+      "step1": {
+        "title": "Campaign Research",
+        "desc": "We analyze your industry, target audience, and competitors to identify the most effective opportunities for search advertising."
+      },
+      "step2": {
+        "title": "Keyword Planning",
+        "desc": "We identify high-intent keywords that match your services and create a structured campaign targeting strategy."
+      },
+      "step3": {
+        "title": "Campaign Setup",
+        "desc": "We develop and launch advertising campaigns with optimized ad groups, messaging, and bidding strategies."
+      },
+      "step4": {
+        "title": "Landing Page Alignment",
+        "desc": "Landing pages are optimized to match ad messaging and improve user experience, ensuring better conversion performance."
+      },
+      "step5": {
+        "title": "Performance Optimization",
+        "desc": "Campaign data is continuously monitored and optimized to improve click-through rates, conversions, and overall return on ad spend."
+      },
+      "step6": {
+        "title": "Reporting and Scaling",
+        "desc": "Detailed performance insights help refine strategy and scale campaigns that generate the strongest results."
+      }
+    },
+    "solutions": {
+      "title": "Explore Our Digital Marketing Services",
+      "subtitle": "Discover the core digital marketing solutions we use to strengthen visibility, attract qualified traffic, and support sustainable business growth.",
+      "digitalmarketing": {
+        "title": "Digital Marketing",
+        "desc": "Build a stronger online presence with integrated digital marketing strategies designed to increase visibility, attract qualified leads, and convert attention into measurable business growth.",
+        "cta": "Explore Our Digital Marketing Services"
+      },
+      "seo": {
+        "title": "SEO",
+        "desc": "Improve your visibility in search engines and attract long-term organic traffic through technical optimization, keyword strategy, stronger content, and a well-structured website.",
+        "cta": "Explore Our SEO Services"
+      },
+      "smm": {
+        "title": "SMM",
+        "desc": "Build stronger audience connections and increase brand awareness through social media strategies that combine creative communication, consistency, and platform-specific execution.",
+        "cta": "See Our SMM Services"
+      },
+      "design": {
+        "title": "Design",
+        "desc": "Strengthen your marketing performance with creative design solutions that improve communication, support brand consistency, and make your campaigns more visually effective.",
+        "cta": "Explore Our Design Services"
+      }
+    }
+  },
+  "smm": {
+    "seo": {
+      "title": "SMM Services | YELTU Agency",
+      "desc": "Social media marketing services that build brand awareness, audience engagement, and long-term business growth."
+    },
+    "hero": {
+      "title": "Social Media Marketing That Builds Brand Awareness and Customer Engagement",
+      "hook": "Social Media Marketing helps businesses connect with their audiences, strengthen brand visibility, and create meaningful relationships online. At YELTU Agency, we develop strategic social media campaigns designed to increase engagement, build brand credibility, and support long-term business growth.",
+      "points": {
+        "strategy": "Social Media Strategy",
+        "content": "Content Creation",
+        "paid": "Paid Social Advertising"
+      },
+      "cta": "Start Your Social Media Strategy"
+    },
+    "intro": {
+      "title": "Why Social Media Marketing Matters for Modern Brands",
+      "p1": "Social media platforms have become one of the most powerful channels for communication between businesses and their audiences. Customers discover brands, evaluate services, and interact with companies through social platforms every day. A well-structured social media strategy allows businesses to build trust, strengthen brand recognition, and maintain consistent communication with their audience. At YELTU Agency, we help businesses develop content strategies, manage social platforms, and run targeted campaigns that increase engagement and support broader marketing objectives. By combining creativity with performance insights, social media marketing becomes a powerful tool for building long-term brand loyalty."
+    },
+    "features": {
+      "title": "The Core Elements of Effective Social Media Marketing",
+      "strategy": {
+        "title": "Social Media Strategy",
+        "desc": "A successful social media presence begins with a clear strategy. Defining goals, identifying audiences, and selecting the right platforms ensures that every post and campaign supports broader business objectives."
+      },
+      "planning": {
+        "title": "Content Planning",
+        "desc": "Consistent and valuable content is essential for building audience engagement. Content planning ensures that social media posts align with brand messaging and provide value to followers."
+      },
+      "engagement": {
+        "title": "Audience Engagement",
+        "desc": "Social media is built on interaction. Engaging with audiences through comments, messages, and discussions strengthens relationships and improves brand credibility."
+      },
+      "paid": {
+        "title": "Paid Social Campaigns",
+        "desc": "Paid social advertising helps brands reach broader audiences and promote services more effectively. Targeted campaigns ensure that promotional messages reach the most relevant users."
+      },
+      "communication": {
+        "title": "Brand Communication",
+        "desc": "Social media allows brands to express their identity and values. Consistent communication strengthens brand recognition and creates a more human connection with audiences."
+      },
+      "insights": {
+        "title": "Performance Insights",
+        "desc": "Tracking engagement metrics, audience growth, and campaign performance helps refine social strategies and identify opportunities for improvement."
+      }
+    },
+    "deepdive": {
+      "h1": {
+        "title": "How Social Media Helps Brands Build Stronger Customer Relationships",
+        "p1": "Social media platforms allow businesses to communicate directly with their audiences and build stronger relationships over time. By sharing valuable content, responding to interactions, and maintaining consistent communication, brands can create a sense of trust and familiarity. This connection encourages customer loyalty and increases the likelihood of repeat engagement. A strategic social media presence not only supports brand awareness but also strengthens long-term customer relationships."
+      },
+      "h2": {
+        "title": "Which Social Media Platforms Are Best for Your Business?",
+        "p1": "Different social media platforms serve different audiences and business goals. Some platforms focus on professional networking, while others emphasize visual storytelling or community interaction. Choosing the right platform depends on your industry, target audience, and communication style. Businesses that align their content strategy with the right social platforms can increase engagement, reach new audiences, and strengthen their digital presence more effectively."
+      }
+    },
+    "process": {
+      "title": "Our Social Media Marketing Process",
+      "subtitle": "A structured process designed to build stronger brand presence, audience engagement, and long-term social media growth.",
+      "step1": {
+        "title": "Audience Research",
+        "desc": "We identify your target audience and understand how they interact with social media platforms."
+      },
+      "step2": {
+        "title": "Strategy Development",
+        "desc": "A structured content and campaign strategy is created to align social media efforts with business goals."
+      },
+      "step3": {
+        "title": "Content Creation",
+        "desc": "We develop engaging content that communicates your brand message and encourages audience interaction."
+      },
+      "step4": {
+        "title": "Campaign Execution",
+        "desc": "Social media campaigns are launched to increase brand awareness, engagement, and traffic."
+      },
+      "step5": {
+        "title": "Performance Monitoring",
+        "desc": "Engagement metrics, reach, and audience behavior are analyzed to evaluate campaign performance."
+      },
+      "step6": {
+        "title": "Continuous Optimization",
+        "desc": "Strategies are refined over time to improve results and strengthen long-term brand presence."
+      }
+    },
+    "solutions": {
+      "title": "Explore Our Core Digital Marketing Services",
+      "subtitle": "Discover related digital marketing services that help strengthen your visibility, traffic, and brand growth.",
+      "digitalmarketing": {
+        "title": "Digital Marketing",
+        "desc": "Build a stronger online presence with digital marketing strategies designed to increase visibility, attract qualified leads, and convert attention into measurable business growth.",
+        "cta": "Explore Digital Marketing Services"
+      },
+      "seo": {
+        "title": "SEO Services",
+        "desc": "Improve your visibility in search engines and attract long-term organic traffic through technical SEO, keyword strategy, optimized content, and stronger website structure.",
+        "cta": "Explore Our SEO Services"
+      },
+      "sem": {
+        "title": "SEM Services",
+        "desc": "Reach high-intent audiences faster with strategic paid search campaigns designed to generate qualified traffic, leads, and measurable return on ad spend.",
+        "cta": "Discover Our SEM Services"
+      },
+      "design": {
+        "title": "Design",
+        "desc": "Strengthen your brand communication with creative design solutions that improve visual consistency, audience perception, and digital campaign performance.",
+        "cta": "Explore Design Services"
+      }
+    }
+  },
+  "design": {
+    "seo": {
+      "title": "Creative Design Services | YELTU Agency",
+      "desc": "Creative design services that strengthen your brand, improve visual communication, and support digital marketing performance."
+    },
+    "hero": {
+      "title": "Creative Design Services That Elevate Your Brand and Strengthen Your Marketing",
+      "hook": "Effective digital marketing relies on strong visual communication. Our creative design services help businesses present their brand in a clear, professional, and memorable way while creating engaging visual content that supports marketing campaigns across digital platforms.",
+      "points": {
+        "identity": "Brand & Identity Design",
+        "marketing": "Marketing Content Design",
+        "motion": "Motion Graphics & Video Production"
+      },
+      "cta": "Start Your Creative Design Project"
+    },
+    "intro": {
+      "title": "Why Creative Design Is Essential for Digital Marketing",
+      "p1": "Visual communication plays a critical role in modern digital marketing. From social media posts and advertising creatives to website interfaces and promotional videos, design directly influences how audiences perceive and interact with your brand. Strong visual assets help businesses capture attention quickly, communicate their message clearly, and maintain a consistent brand identity across multiple channels.",
+      "p2": "At YELTU Agency, we combine creative thinking with marketing strategy to produce visual assets that support campaigns, strengthen brand recognition, and improve audience engagement across digital platforms."
+    },
+    "features": {
+      "title": "The Creative Systems Behind Strong Digital Branding",
+      "identity": {
+        "title": "Brand Identity Design",
+        "desc": "A strong brand identity helps businesses build recognition and trust. Our branding design services include logo design, typography systems, color palettes, and brand guidelines that ensure your brand remains consistent and professional across all digital and physical platforms."
+      },
+      "marketing": {
+        "title": "Marketing Visual Design",
+        "desc": "Marketing campaigns rely heavily on strong visuals to attract attention and communicate ideas quickly. Our creative design services include social media graphics, advertising creatives, website visuals, promotional banners, and marketing assets designed to support digital marketing strategies and improve engagement."
+      },
+      "uiux": {
+        "title": "UI / UX Design",
+        "desc": "User interface and user experience design play a crucial role in how visitors interact with your website or digital product. Our UI/UX design process focuses on usability, visual clarity, and intuitive navigation to improve engagement, enhance user experience, and support higher conversion rates."
+      },
+      "photography": {
+        "title": "Product Photography & Visual Content",
+        "desc": "High-quality visual content is essential for modern marketing. Professional product photography and visual assets help businesses present their products clearly and attractively across websites, social media platforms, and advertising campaigns."
+      },
+      "motion": {
+        "title": "Motion Graphics & Animation",
+        "desc": "Motion graphics and animation allow brands to communicate ideas in a dynamic and engaging way. Animated visuals simplify complex messages and create memorable brand experiences across websites, presentations, and marketing campaigns."
+      },
+      "video3d": {
+        "title": "3D Motion & Promotional Video Production",
+        "desc": "Video content has become one of the most powerful tools in digital marketing. Our creative team produces promotional videos, marketing videos, animated content, and 3D motion visuals designed to capture attention and increase audience engagement across digital platforms."
+      }
+    },
+    "deepdive": {
+      "h1": {
+        "title": "How Creative Design Strengthens Digital Marketing Campaigns",
+        "p1": "Creative design plays a key role in making marketing campaigns more effective. Well-designed visuals capture attention quickly and communicate information clearly, helping audiences understand the value of your products or services. Businesses that invest in professional creative design often achieve stronger engagement, improved brand recognition, and more effective marketing communication across digital channels."
+      },
+      "h2": {
+        "title": "Why Visual Content Is Important for Brand Growth",
+        "p1": "In today’s digital environment, audiences process visual information significantly faster than text. Strong visual content helps businesses stand out, communicate ideas more effectively, and create memorable brand experiences. High-quality design ensures your brand appears professional and trustworthy across websites, social media platforms, and marketing campaigns."
+      }
+    },
+    "process": {
+      "title": "Our Creative Design Process",
+      "subtitle": "A structured design workflow that transforms brand direction into powerful visual assets for digital marketing.",
+      "step1": {
+        "title": "Brand Discovery",
+        "desc": "We begin by understanding your brand identity, target audience, and marketing goals."
+      },
+      "step2": {
+        "title": "Concept Development",
+        "desc": "Creative concepts and visual directions are developed based on your brand strategy."
+      },
+      "step3": {
+        "title": "Design Production",
+        "desc": "Our design team creates visual assets including graphics, layouts, and multimedia elements."
+      },
+      "step4": {
+        "title": "Content Integration",
+        "desc": "Design assets are optimized for websites, social media platforms, and digital marketing campaigns."
+      },
+      "step5": {
+        "title": "Review & Refinement",
+        "desc": "Design concepts are refined through feedback and performance considerations."
+      },
+      "step6": {
+        "title": "Final Delivery",
+        "desc": "Final design assets are prepared and delivered for use across digital platforms and marketing channels."
+      }
+    },
+    "solutions": {
+      "title": "Explore Related Digital Marketing Services",
+      "subtitle": "Connect creative design with broader digital strategies that strengthen visibility, traffic, and engagement.",
+      "digitalmarketing": {
+        "title": "Digital Marketing",
+        "desc": "Discover how SEO, SEM, SMM, and creative strategy work together to turn visibility into measurable business growth.",
+        "cta": "Explore Digital Marketing"
+      },
+      "seo": {
+        "title": "SEO Services",
+        "desc": "Improve search visibility and support your content strategy with SEO systems designed for long-term organic growth.",
+        "cta": "Explore SEO Services"
+      },
+      "sem": {
+        "title": "SEM Services",
+        "desc": "Support your campaigns with paid search strategies that generate immediate visibility, qualified traffic, and measurable returns.",
+        "cta": "Explore SEM Services"
+      },
+      "smm": {
+        "title": "SMM Services",
+        "desc": "Strengthen audience engagement and brand visibility through social media strategies supported by strong creative communication.",
+        "cta": "Explore SMM Services"
+      }
+    },
+    "closing": {
+      "title": "Creative Design That Enhances Your Digital Marketing",
+      "p1": "Strong design is essential for effective marketing communication. Businesses that invest in professional creative assets capture audience attention faster, communicate their message clearly, and build stronger brand recognition.",
+      "p2": "At YELTU Agency, we create visual content that supports marketing campaigns, strengthens brand identity, and enhances digital experiences across websites, social media platforms, and advertising channels.",
+      "cta": "Start Your Creative Design Project",
+      "cards": {
+        "vision": {
+          "title": "Understand Your Brand Vision",
+          "desc": "We analyze your brand identity and marketing goals to create designs that reflect your values and communication style."
+        },
+        "visuals": {
+          "title": "Create Engaging Visual Content",
+          "desc": "Our design team produces visual assets that capture attention and communicate ideas effectively."
+        },
+        "campaigns": {
+          "title": "Support Marketing Campaigns",
+          "desc": "Creative visuals help strengthen digital marketing strategies and improve campaign performance."
+        },
+        "consistency": {
+          "title": "Maintain Consistent Brand Identity",
+          "desc": "Consistent design across digital platforms ensures your brand remains recognizable and professional."
+        }
+      }
+    }
   }
 }

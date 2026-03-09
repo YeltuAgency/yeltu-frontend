@@ -391,6 +391,1476 @@
     "rejectAll": "Hamısını rədd et",
     "customize": "Fərdiləşdir",
     "acceptAll": "Hamısına icazə ver"
+  },
+  "webdev":{
+    "hero":{
+      "title": "Veb İnkişafı Xidmətləri",
+      "hook": "Yüksək performanslı, inkişaf və konversiya üçün optimallaşdırılmış veb sayt yaratmaq üçün qabaqcıl fərdi veb inkişaf agentliyi ilə əməkdaşlıq edin.",
+      "link": {
+        "custom": "Fərdi veb tətbiqlər",
+        "ecommerce": "E-ticarət veb saytları",
+        "business": "Biznes veb saytları"
+      },
+      "cta":"Başlayaq"
+    },
+    "intro": {
+      "title": "Strateji Veb İnkişafı Konversiyaları və Biznes Böyüməsini Necə Artırır",
+      "p1": "Veb saytınız ilk təəssüratların real biznes imkanlarına çevrildiyi əsas nöqtədir. YELTU Agency-də biz istifadəçiləri maraqdan real hərəkətə doğru təbii şəkildə yönləndirən konversiya yönümlü rəqəmsal təcrübələr yaradırıq. Strukturdan sürətə qədər hər element etibar yaratmaq və istifadəçi aktivliyini artırmaq üçün optimallaşdırılır.",
+      "p2":"Vizual görünüşdən əlavə olaraq, biz istifadəçi psixologiyasına, rahat naviqasiyaya və performans optimizasiyasına üstünlük veririk. Nəticədə sürətli, responsiv və təhlükəsiz platforma yaradılır ki, bu da müştəri məmnuniyyətini artırır və ölçülə bilən nəticələr gətirir. YELTU ilə veb saytınız davamlı inkişaf üçün qurulmuş gəlir gətirən rəqəmsal aktivə çevrilir."
+    },
+    "features":{
+      "title":"Yüksək performanslı veb saytın əsas təməli.",
+      "readMore":"Daha çox oxu",
+      "uiux":{
+        "title": "UI/UX Dizaynı",
+        "desc":"Yaxşı dizayn yalnız vizual görünüşdən ibarət deyil. UI/UX istifadəçilərin veb saytınızda rahat hərəkət etməsini, lazım olan məlumatı tez tapmasını və problemsiz təcrübə yaşamasını təmin edir. Biz ziyarətçiləri təbii şəkildə istiqamətləndirən sadə və intuitiv interfeyslər yaradırıq. Düzgün qurulmuş UI/UX həm istifadəçi məmnuniyyətini artırır, həm də konversiyalara müsbət təsir edir."
+      },
+      "perf":{
+        "title":"Performans Optimizasiyası",
+        "desc":"Sürətli və stabil veb sayt istifadəçilərin diqqətini saxlayır. Performans optimizasiyası səhifələrin daha sürətli yüklənməsini, funksionallığın stabil işləməsini və texniki problemlərin azalmasını təmin edir. Biz kod strukturu, media faylları və server konfiqurasiyasını optimallaşdıraraq istənilən trafik şəraitində stabil işləyən sistem qururuq."
+      },
+      "resp":{
+        "title":"Responsiv İnkişaf",
+        "desc": "İstifadəçilər veb saytınıza müxtəlif cihazlardan daxil olur. Responsiv inkişaf saytın mobil, planşet və desktop cihazlarda problemsiz işləməsini təmin edir. Biz dizaynı və funksionallığı ekran ölçülərinə uyğunlaşdıraraq hər platformada stabil və rahat istifadə təcrübəsi yaradırıq."
+      },
+      "maint": {
+        "title": "Texniki Dəstək və Baxım",
+        "desc": "Veb saytın işə salınması prosesin yalnız başlanğıcıdır. Davamlı texniki dəstək və sistem baxımı saytın təhlükəsiz və stabil işləməsi üçün vacibdir. Biz mütəmadi monitorinq, təhlükəsizlik yoxlamaları və sistem yeniləmələri həyata keçiririk."
+      },
+      "seo": {
+        "title": "SEO-ya Uyğun İnkişaf",
+        "desc": "SEO uyğun veb inkişaf saytınızın axtarış sistemlərində daha yüksək mövqelərə çıxmasına kömək edir. Təmiz kod strukturu, düzgün metadata quruluşu, sürət optimizasiyası və mobil uyğunluq əsas faktorlardır. Biz texniki SEO standartlarına uyğun saytlar hazırlayaraq uzunmüddətli görünürlük üçün güclü baza yaradırıq."
+      }
+    },
+    "deepdive":{
+      "h1":{
+        "title": "Real Biznes Böyüməsi Yaradan Veb İnkişaf Xidmətləri",
+        "p1": "Bugünkü rəqəmsal mühitdə uğur qazanmaq üçün sadəcə veb sayt sahibi olmaq kifayət deyil. Strateji qurulmuş, yüksək performanslı və miqyaslana bilən platforma tələb olunur. YELTU Agency-də biz sadəcə sayt dizayn etmirik — ölçülə bilən biznes nəticələri gətirən rəqəmsal sistemlər qururuq.",
+        "p2": "İstər biznes veb saytı, istər fərdi veb tətbiq, istərsə də tam optimallaşdırılmış e-ticarət platforması olsun, məqsədimiz hər layihəni gəlir gətirən rəqəmsal aktivə çevirməkdir."
+      },
+      "h2": {
+        "title": "Peşəkar Veb İnkişaf Niyə Vacibdir",
+        "p1": "Peşəkar şəkildə hazırlanmış veb sayt etibarlılığı artırır, istifadəçi təcrübəsini yaxşılaşdırır və konversiya səviyyəsini yüksəldir. Sürət, təhlükəsizlik və mobil uyğunluq artıq seçim deyil — bu, standartdır.",
+        "p2": "Əgər platformanız SEO optimizasiyası, performans arxitekturası və konversiya yönümlü UX dizaynı ilə dəstəklənmirsə, rəqiblərinizdən geri qalmaq riskiniz var."
+      }
+    },
+    "process": {
+      "title": "Strateji Veb İnkişaf Prosesimiz",
+      "subtitle": "YELTU Agency-də strukturlaşdırılmış və nəticə yönümlü inkişaf modelindən istifadə edirik.",
+      "step1": {
+        "title": "Analiz və Rəqəmsal Strategiya",
+        "desc": "Biz ilk olaraq biznes modelinizi, hədəf auditoriyanızı və bazardakı rəqabəti analiz edirik."
+      },
+      "step2": {
+        "title": "UX Arxitekturası və Wireframe",
+        "desc": "İstifadəçi yolunu xəritələşdirərək saytın strukturunu və funksional prioritetlərini müəyyən edirik."
+      },
+      "step3": {
+        "title": "UI Dizayn və Təcrübə Qatı",
+        "desc": "Dizayn yalnız vizual görünüş deyil — strateji kommunikasiya vasitəsidir."
+      },
+      "step4": {
+        "title": "Full-Stack İnkişaf",
+        "desc": "Frontend və backend komandalarımız təhlükəsiz, miqyaslana bilən və yüksək performanslı sistemlər qurur."
+      },
+      "step5": {
+        "title": "Test, Launch və Davamlı Optimallaşdırma",
+        "desc": "İşə salınmadan əvvəl geniş testlər həyata keçiririk və sonrasında davamlı optimallaşdırma təmin edirik."
+      }
+    },
+    "solutions": {
+      "learnMore": "Daha ətraflı",
+      "title": "İxtisaslaşdığımız Veb Həllər",
+      "subtitle": "YELTU Agency müxtəlif biznes ehtiyaclarına uyğun fərdi həllər təqdim edir",
+      "custom": {
+        "title": "Fərdi Veb İnkişaf",
+        "desc": "Biznesiniz unikaldır — veb saytınız da elə olmalıdır."
+      },
+      "ecommerce": {
+        "title": "E-Ticarət Veb Saytlarının Hazırlanması",
+        "desc": "Onlayn mağaza sadəcə məhsul kataloqu deyil — bu sizin satış mühərrikinizdir."
+      },
+      "business": {
+        "title": "Biznes Veb Saytlarının Hazırlanması",
+        "desc": "Veb sayt müştərilərin brendinizlə ilk qarşılaşdığı nöqtədir."
+      }
+    },
+    "closing": {
+      "title": "YELTU ilə Rəqəmsal Bazarda Güclü Mövqe Qazanın",
+      "p1": "Rəqəmsal mühitdə sadəcə görünür olmaq kifayət deyil — liderlik üçün strategiya və texnologiya lazımdır.",
+      "p2": "YELTU ilə veb saytınız sadəcə onlayn platforma deyil — biznesiniz üçün inkişaf mühərrikinə çevrilir.",
+      "cta": "Bizimlə əlaqə",
+      "cards": {
+        "tech": {
+          "title": "Ağıllı Texnologiya Həlləri Tətbiq Edin",
+          "desc": "Rəqəmsal məqsədiniz nə olursa olsun, biz uyğun texnoloji həlli təqdim edirik."
+        },
+        "product": {
+          "title": "Rəqəmsal Məhsulunuzu Etibarlı Şəkildə Yaradın",
+          "desc": "Planlaşdırmadan istifadəyə verilməyə qədər bütün prosesi dəqiq idarə edirik."
+        },
+        "perf":{
+          "title": "Davamlı Təkmilləşdirmələrlə Performansı Artırın",
+          "desc": "Müntəzəm optimallaşdırma məhsulunuzun stabil və aktual qalmasını təmin edir."
+        },
+        "secure": {
+          "title": "Təhlükəsiz İnfrastruktur və Etibarlı Dəstək",
+          "desc": "Platformanızı təhlükələrdən qorumaq üçün güclü təhlükəsizlik standartları tətbiq edirik."
+        }
+      }
+    }
+  },
+  "customwebapp": {
+    "seo": {
+      "title": "Fərdi Veb Tətbiq İnkişafı Xidmətləri | YELTU Agency",
+      "desc": "Rəqəmsal infrastrukturunuzu gücləndirmək, sistem performansını artırmaq və uzunmüddətli biznes inkişafını dəstəkləmək üçün fərdi veb tətbiq inkişafı xidmətləri."
+    },
+    "hero": {
+      "title": "Biznesiniz üçün hazırlanmış fərdi veb inkişaf",
+      "hook": "Biz biznesinizin rəqəmsal infrastrukturunu gücləndirmək və davamlı inkişafını sürətləndirmək üçün fərdi veb saytlar və veb tətbiqlər hazırlayırıq.",
+      "points": {
+        "precision": "Dəqiqlik üçün hazırlanıb",
+        "integration": "İnteqrasiya üçün dizayn edilib",
+        "scale": "Genişlənməyə hazırdır"
+      },
+      "cta": "Başlayaq"
+    },
+    "intro": {
+      "title": "Fərdi inkişaf biznesə necə real təsir göstərir",
+      "p1": "Bir veb sayt sadəcə internetdə mövcud olmaq üçün deyil — biznes strategiyanızı aktiv şəkildə dəstəkləmək üçün yaradılmalıdır. Fərdi veb inkişaf sizə daxili biznes proseslərinizə və müştəri yol xəritənizə tam uyğun bir sistem qurmağa imkan verir. Biznesinizi məhdud platformalara uyğunlaşdırmaq əvəzinə, platformanı biznesinizə uyğun şəkildə dizayn edirik.",
+      "p2": "YELTU Agency olaraq biz hər layihəyə strateji yanaşırıq. İlk planlaşdırma mərhələsindən son yerləşdirməyə qədər bütün qərarlar performans, çeviklik və uzunmüddətli inkişaf nəzərə alınaraq qəbul edilir."
+    },
+    "features": {
+      "title": "Yüksək performanslı fərdi platformanın əsas elementləri",
+      "architecture": {
+        "title": "Fərdi Memarlıq",
+        "desc": "Platformanız dəqiq texniki memarlıqla başlayır. Biz sistemləri biznesinizin real işləmə prinsiplərinə uyğun qururuq — şablonların diktə etdiyi şəkildə deyil."
+      },
+      "integration": {
+        "title": "API və Sistem İnteqrasiyaları",
+        "desc": "Biz sadəcə alətləri birləşdirmirik — vahid rəqəmsal ekosistem yaradırıq. Hər inteqrasiya sistemləriniz, platformalarınız və məlumatlarınız arasında problemsiz əlaqə təmin etmək üçün strateji şəkildə qurulur."
+      },
+      "uiux": {
+        "title": "Qabaqcıl UI/UX Mühəndisliyi",
+        "desc": "Yüksək səviyyəli dizayn yalnız vizual görünüşdən ibarət deyil. Biz istifadəçiləri intuitiv şəkildə yönləndirən və qarşılıqlı əlaqəni real nəticələrə çevirən istifadəçi təcrübələri yaradırıq."
+      },
+      "performance": {
+        "title": "Performans Optimizasiyası",
+        "desc": "Sürət sadəcə xüsusiyyət deyil — platformanın əsas təməlidir. Biz sistemin hər qatını maksimum effektivlik, sabitlik və real istifadə şəraitində yüksək reaksiya sürəti üçün optimallaşdırırıq."
+      },
+      "security": {
+        "title": "Təhlükəsizlik və Məlumatların Qorunması",
+        "desc": "Etibar təhlükəsizlik üzərində qurulur. İnkişaf yanaşmamız infrastrukturunuzu, məlumatlarınızı və istifadəçi qarşılıqlı əlaqələrini qorumaq üçün qabaqcıl təhlükəsizlik standartlarını inteqrasiya edir."
+      },
+      "scalable": {
+        "title": "Miqyaslana Bilən İnfrastruktur",
+        "desc": "İnkişaf yenidən qurulma tələb etməməlidir. Biz sistemləri trafik, funksiyalar və biznes ambisiyalarınız artdıqca asanlıqla genişlənə biləcək şəkildə qururuq."
+      }
+    },
+    "deepdive": {
+      "title": "Niyə fərdi veb inkişaf vacibdir",
+      "p1": "Standart veb sayt sizə sadəcə onlayn mövcudluq qazandıra bilər. Fərdi hazırlanmış platforma isə sizə rəqabət üstünlüyü verir. Sistem biznesinizin real ehtiyaclarına uyğun qurulduqda proseslər daha effektiv olur, istifadəçilər daha az maneə ilə qarşılaşır və inkişaf daha rahat idarə olunur. Düzgün memarlıq və performans planlaşdırılması olmadan veb sayt tez bir zamanda məhdudiyyətə çevrilə bilər. Strateji fərdi inkişaf isə platformanızı uzunmüddətli biznes aktivinə çevirir — sadəcə rəqəmsal vizit kartına deyil."
+    },
+    "process": {
+      "title": "Fərdi inkişaf prosesimiz",
+      "subtitle": "Biznes məqsədlərini, texniki memarlığı və istifadəçi təcrübəsini vahid, miqyaslana bilən rəqəmsal sistemdə birləşdirən strukturlaşdırılmış inkişaf prosesi izləyirik.",
+      "step1": {
+        "title": "Analiz və Strategiya",
+        "desc": "İlk olaraq biznes modelinizi, hədəf auditoriyanızı və inkişaf məqsədlərinizi öyrənirik. Bu bizə aydın və strateji yol xəritəsi yaratmağa imkan verir."
+      },
+      "step2": {
+        "title": "Memarlıq və Planlaşdırma",
+        "desc": "Platformanın texniki planını hazırlayırıq və başlanğıcdan strukturunu, inteqrasiyalarını və miqyaslanmasını müəyyən edirik."
+      },
+      "step3": {
+        "title": "UI/UX Təcrübə Dizaynı",
+        "desc": "Dizayn komandamız intuitiv, cəlbedici və konversiya yönümlü istifadəçi interfeysləri hazırlayır."
+      },
+      "step4": {
+        "title": "Full-Stack İnkişaf",
+        "desc": "Frontend və backend sistemləri paralel şəkildə inkişaf etdirilir və bu, yüksək performans, təhlükəsizlik və stabil işləmə təmin edir."
+      },
+      "step5": {
+        "title": "Test, Launch və Davamlı Təkmilləşdirmə",
+        "desc": "İşə salınmadan əvvəl platforma geniş şəkildə test edilir. Launchdan sonra isə performansı davamlı olaraq izləyir və optimallaşdırırıq."
+      }
+    },
+    "solutions": {
+      "learnMore": "Daha ətraflı",
+      "title": "Əlaqəli Veb Həllər",
+      "subtitle": "Rəqəmsal inkişafınızı dəstəkləyən digər veb inkişaf xidmətlərimizi kəşf edin",
+      "webdev": {
+        "title": "Veb İnkişafı",
+        "desc": "Performans, istifadənin rahatlığı və texniki dəqiqliyi birləşdirən strateji veb inkişaf xidmətləri ilə biznesiniz üçün daha güclü rəqəmsal təməl qurun."
+      },
+      "ecommerce": {
+        "title": "E-Ticarət Veb Saytı İnkişafı",
+        "desc": "Satış prosesini optimallaşdırmaq və onlayn mağaza performansını artırmaq üçün hazırlanmış konversiya yönümlü e-ticarət sistemləri."
+      },
+      "business": {
+        "title": "Biznes Veb Saytı İnkişafı",
+        "desc": "Etibarlılığı artıran, dəyəri aydın göstərən və müraciət axınını dəstəkləyən peşəkar biznes saytları."
+      }
+    }
+  },
+  "ecommerce": {
+    "seo": {
+      "title": "E-Ticarət İnkişafı Xidmətləri | YELTU Agency",
+      "desc": "Konversiyanı artırmaq, mağaza performansını gücləndirmək və miqyaslana bilən gəlir artımını dəstəkləmək üçün e-ticarət inkişafı xidmətləri."
+    },
+    "hero": {
+      "title": "Miqyaslana bilən gəlir üçün hazırlanmış e-ticarət inkişafı",
+      "hook": "Hamıya uyğun standart həllərdən uzaqlaşın. Məhsullarınıza, müştərilərinizə və gəlir strategiyanıza uyğun hazırlanmış e-ticarət platforması quraq.",
+      "points": {
+        "precision": "E-Ticarət Konversiya Optimizasiyası",
+        "integration": "Miqyaslana Bilən E-Ticarət Memarlığı",
+        "scale": "E-Ticarət Performansı və Gəlir Artımı"
+      },
+      "cta": "Başlayaq"
+    },
+    "intro": {
+      "title": "E-ticarət biznesə necə real təsir göstərir",
+      "p1": "Onlayn mağaza sadəcə məhsulları göstərməklə kifayətlənməməlidir — satışları strateji şəkildə artırmalıdır. E-ticarət inkişafı yalnız məhsulları yerləşdirmək və ödəniş düyməsi əlavə etmək deyil. Bu, problemsiz alış təcrübəsi yaratmaq, istifadəçi axınını optimallaşdırmaq və hər qarşılıqlı əlaqədə etibar formalaşdırmaq deməkdir.",
+      "p2": "YELTU Agency olaraq biz konversiya göstəricilərini artırmaq, əməliyyat səmərəliliyini yaxşılaşdırmaq və biznesinizlə birlikdə böyüyən e-ticarət sistemləri hazırlayırıq."
+    },
+    "features": {
+      "title": "Yüksək performanslı e-ticarət platformasının əsas elementləri",
+      "architecture": {
+        "title": "Konversiya Yönümlü Memarlıq",
+        "desc": "Onlayn mağazanız real alış davranışına əsasən qurulur. Müştərilərin alış prosesini rahat və intuitiv şəkildə tamamlaması üçün məhsul kateqoriyalarını, checkout mərhələlərini və istifadəçi axınlarını strateji şəkildə dizayn edirik — beləliklə mağazanızın gəlir potensialı maksimuma çatır."
+      },
+      "integration": {
+        "title": "Təhlükəsiz Ödəniş İnteqrasiyası",
+        "desc": "Hər mərhələdə problemsiz əməliyyatları təmin edən etibarlı və təhlükəsiz ödəniş sistemlərini inteqrasiya edirik. Checkout-dan təsdiq mərhələsinə qədər hər qarşılıqlı əlaqə etibar yaratmaq və həm biznesinizi, həm də müştərilərinizi qorumaq üçün hazırlanır."
+      },
+      "uiux": {
+        "title": "Optimallaşdırılmış Məhsul Təcrübəsi",
+        "desc": "Ağıllı filtrasiya və aydın naviqasiyadan başlayaraq intuitiv məhsul axtarış təcrübəsi yaradırıq ki, istifadəçilər lazım olanı tez tapsın və təbii şəkildə alışa yönəlsin."
+      },
+      "performance": {
+        "title": "Performans və Sürət Optimizasiyası",
+        "desc": "Mağazanız sürət və sabitlik üçün hazırlanır. Platformanın hər qatını optimallaşdıraraq sürətli yüklənmə, çevik performans və etibarlı funksionallıq təmin edirik — hətta yüksək trafik şəraitində belə."
+      },
+      "security": {
+        "title": "Stok və Sifariş İdarəetməsi",
+        "desc": "Uğurlu e-ticarət platformasının arxasında düzgün qurulmuş əməliyyat sistemi dayanır. Biz iş axınlarını sadələşdirən və gündəlik səmərəliliyi dəstəkləyən stok və sifariş idarəetmə həlləri tətbiq edirik."
+      },
+      "scalable": {
+        "title": "Miqyaslana Bilən Ticarət İnfrastrukturu",
+        "desc": "Məhsul kataloqunuz genişləndikcə və trafik artdıqca platformanız stabil və çevik qalır. Biz performans məhdudiyyəti olmadan biznesinizlə birlikdə inkişaf edən e-ticarət sistemləri qururuq."
+      }
+    },
+    "deepdive": {
+      "title": "Niyə peşəkar e-ticarət inkişafı vacibdir",
+      "p1": "Sadə bir onlayn mağaza əməliyyatları həyata keçirə bilər. Strateji şəkildə hazırlanmış e-ticarət platforması isə inkişaf yaradır. Optimallaşdırılmış struktur, problemsiz checkout və stabil performans olmadıqda mağazanız müştəriləri konversiyaya çatmadan itirə bilər. Peşəkar e-ticarət inkişafı platformanızı sadəcə rəqəmsal kataloqa deyil, gəlir gətirən güclü satış sisteminə çevirir."
+    },
+    "process": {
+      "title": "E-ticarət inkişaf prosesimiz",
+      "subtitle": "Gəlir məqsədlərini, texniki memarlığı və istifadəçi təcrübəsini vahid, miqyaslana bilən e-ticarət sistemində birləşdirən strukturlaşdırılmış inkişaf prosesi izləyirik.",
+      "step1": {
+        "title": "Bazar və Strategiya Analizi",
+        "desc": "Aydın e-ticarət yol xəritəsi yaratmaq üçün auditoriyanızı, rəqiblərinizi və satış məqsədlərinizi analiz edirik."
+      },
+      "step2": {
+        "title": "Mağaza Memarlığı və Planlaşdırma",
+        "desc": "Konversiyanı maksimuma çatdırmaq üçün məhsul kateqoriyalarını, istifadəçi axınlarını və checkout proseslərini strukturlaşdırırıq."
+      },
+      "step3": {
+        "title": "UX və İnterfeys Dizaynı",
+        "desc": "İstifadəçiləri problemsiz şəkildə alışa yönəldən sadə, intuitiv və rahat alış təcrübələri dizayn edirik."
+      },
+      "step4": {
+        "title": "İnkişaf və İnteqrasiya",
+        "desc": "Frontend, backend, ödəniş sistemləri və üçüncü tərəf alətləri performans və təhlükəsizlik mərkəzli şəkildə tətbiq olunur."
+      },
+      "step5": {
+        "title": "Test, Launch və Böyümə Optimizasiyası",
+        "desc": "Launchdan əvvəl hər tranzaksiya axınını test edir, sonra isə satışları və miqyaslanmanı yaxşılaşdırmaq üçün performansı davamlı optimallaşdırırıq."
+      }
+    },
+    "solutions": {
+      "learnMore": "Daha ətraflı",
+      "title": "Əlaqəli Veb Həllər",
+      "subtitle": "Rəqəmsal inkişafınızı dəstəkləyən digər veb inkişaf xidmətlərimizi kəşf edin",
+      "webdev": {
+        "title": "Veb İnkişafı",
+        "desc": "Performans, istifadənin rahatlığı və texniki dəqiqliyi birləşdirən strateji veb inkişaf xidmətləri ilə biznesiniz üçün daha güclü rəqəmsal təməl qurun."
+      },
+      "customwebapp": {
+        "title": "Fərdi Veb Tətbiqlər",
+        "desc": "İş axınlarınıza, əməliyyat ehtiyaclarınıza və uzunmüddətli inkişaf strategiyanıza uyğun hazırlanmış fərdi veb tətbiqlər."
+      },
+      "business": {
+        "title": "Biznes Veb Saytı İnkişafı",
+        "desc": "Etibarlılığı artıran, dəyəri aydın göstərən və müraciət axınını dəstəkləyən peşəkar biznes saytları."
+      }
+    }
+  },
+  "business": {
+    "seo": {
+      "title": "Biznes Veb Saytı İnkişafı Xidmətləri | YELTU Agency",
+      "desc": "Etibarlılığı gücləndirmək, brend mövqelənməsini yaxşılaşdırmaq və keyfiyyətli müraciətlər yaratmaq üçün biznes veb saytı inkişafı xidmətləri."
+    },
+    "hero": {
+      "title": "Etibarlılıq və inkişaf üçün hazırlanmış biznes veb saytı inkişafı",
+      "hook": "Biz brend görünürlüğünüzü gücləndirən, etibar yaradan və ziyarətçiləri keyfiyyətli müraciətlərə çevirən peşəkar biznes saytları hazırlayırıq.",
+      "points": {
+        "precision": "Brend Etibarı və Rəqəmsal Mövqelənmə",
+        "integration": "Strukturlaşdırılmış Xidmət Memarlığı",
+        "scale": "Lead Yaradıcı Veb Sayt Strategiyası"
+      },
+      "cta": "Başlayaq"
+    },
+    "intro": {
+      "title": "Biznes veb saytı necə real təsir yaradır",
+      "p1": "Biznes veb saytı çox vaxt insanların brendinizlə ilk təması olur. O, bir neçə saniyə ərzində peşəkarlıq, aydınlıq və etibarlılıq hissi yaratmalıdır. Sadəcə onlayn mövcudluqdan daha artıq olaraq, şirkətinizi güvənilən, formalaşmış və dəyər təqdim etməyə hazır şəkildə mövqeləndirməlidir.",
+      "p2": "YELTU Agency olaraq biz etibarlılığı dəstəkləyən, peşəkarlığı nümayiş etdirən və mənalı müraciətlər yaradan strukturlaşdırılmış, strateji biznes saytları hazırlayırıq."
+    },
+    "features": {
+      "title": "Yüksək performanslı biznes veb saytının əsas elementləri",
+      "architecture": {
+        "title": "Strateji Brend Mövqelənməsi",
+        "desc": "İlk təəssüratdan etibarən dəyər təklifinizi, təcrübənizi və rəqabət üstünlüyünüzü aydın şəkildə göstərən saytlar hazırlayırıq."
+      },
+      "integration": {
+        "title": "Aydın Xidmət Strukturu",
+        "desc": "Xidmətləriniz məntiqli və istifadəçi yönümlü şəkildə qurulur ki, ziyarətçilər nə təklif etdiyinizi qarışıqlıq yaşamadan anlaya bilsinlər."
+      },
+      "uiux": {
+        "title": "Lead Yönümlü İstifadəçi Təcrübəsi",
+        "desc": "Hər bölmə istifadəçiləri hərəkətə yönləndirmək üçün hazırlanır — istər komandanızla əlaqə saxlamaq, istər təklif almaq, istərsə də konsultasiya planlaşdırmaq olsun."
+      },
+      "performance": {
+        "title": "Performans və Responsivlik",
+        "desc": "Veb saytınız sürətlə yüklənir, bütün cihazlara problemsiz uyğunlaşır və desktop, planşet və mobil cihazlarda rahat istifadə təcrübəsi təqdim edir."
+      },
+      "security": {
+        "title": "SEO-Optimallaşdırılmış Struktur",
+        "desc": "Biz biznesinizin rəqabətli rəqəmsal mühitdə daha rahat tapılması üçün axtarış sistemlərinə uyğun səhifə strukturları qururuq."
+      },
+      "scalable": {
+        "title": "Miqyaslana Bilən Kontent Çərçivəsi",
+        "desc": "Şirkətiniz böyüdükcə sayt strukturunuz rahat şəkildə genişlənə bilir — yeni xidmətlər, кейс tədqiqatları və məzmun platformanı tam yenidən dizayn etmədən əlavə oluna bilər."
+      }
+    },
+    "deepdive": {
+      "title": "Niyə peşəkar biznes veb saytı inkişafı vacibdir",
+      "p1": "Sadə bir veb sayt şirkətinizin mövcud olduğunu göstərə bilər. Strateji şəkildə hazırlanmış biznes veb saytı isə lider olduğunuzu sübut edir. Aydın mövqelənmə, strukturlaşdırılmış xidmət səhifələri və optimallaşdırılmış performans olmadıqda rəqəmsal mövcudluğunuz etibarlılığınızı zəiflədə bilər. Peşəkar inkişaf saytınızı uzunmüddətli brend aktivinə çevirir — böyüməni, nüfuzu və müştəri əldə etməni dəstəkləyir."
+    },
+    "process": {
+      "title": "Biznes veb saytı inkişaf prosesimiz",
+      "subtitle": "Brend mövqelənməsini, məzmun aydınlığını və texniki performansı güclü vahid rəqəmsal görünüşdə birləşdirən strukturlaşdırılmış inkişaf prosesi izləyirik.",
+      "step1": {
+        "title": "Biznes və Brend Analizi",
+        "desc": "İlk olaraq şirkətinizi, bazardakı mövqeyinizi və inkişaf məqsədlərinizi öyrənirik."
+      },
+      "step2": {
+        "title": "Struktur və Kontent Strategiyası",
+        "desc": "Səhifə iyerarxiyasını, xidmət strukturunu və mesaj aydınlığını müəyyən edirik."
+      },
+      "step3": {
+        "title": "UI/UX Dizaynı",
+        "desc": "Brend kimliyinizə uyğun təmiz və peşəkar interfeyslər hazırlayırıq."
+      },
+      "step4": {
+        "title": "İnkişaf və Optimallaşdırma",
+        "desc": "Frontend və backend performans, təhlükəsizlik və SEO nəzərə alınaraq qurulur."
+      },
+      "step5": {
+        "title": "Launch və Davamlı Təkmilləşdirmə",
+        "desc": "Launchdan sonra performansı izləyir və təcrübəni davamlı inkişafı dəstəkləmək üçün təkmilləşdiririk."
+      }
+    },
+    "solutions": {
+      "learnMore": "Daha ətraflı",
+      "title": "Əlaqəli Veb Həllər",
+      "subtitle": "Rəqəmsal inkişafınızı dəstəkləyən digər veb inkişaf xidmətlərimizi kəşf edin",
+      "webdev": {
+        "title": "Veb İnkişafı",
+        "desc": "Performans, istifadənin rahatlığı və texniki dəqiqliyi birləşdirən strateji veb inkişaf xidmətləri ilə biznesiniz üçün daha güclü rəqəmsal təməl qurun."
+      },
+      "customwebapp": {
+        "title": "Fərdi Veb Tətbiqlər",
+        "desc": "İş axınlarınıza, əməliyyat ehtiyaclarınıza və uzunmüddətli inkişaf strategiyanıza uyğun hazırlanmış fərdi veb tətbiqlər."
+      },
+      "ecommerce": {
+        "title": "E-Ticarət Veb Saytı İnkişafı",
+        "desc": "Müştəri təcrübəsini yaxşılaşdırmaq, onlayn satışları dəstəkləmək və miqyaslana bilən rəqəmsal gəlir kanalları yaratmaq üçün hazırlanmış e-ticarət sistemləri."
+      }
+    }
+  },
+  "brandstrategy": {
+    "seo": {
+      "title": "Brend Strategiyası Xidmətləri | YELTU Agency",
+      "desc": "Mövqelənməni gücləndirmək, brend ardıcıllığını yaxşılaşdırmaq və uzunmüddətli inkişafı dəstəkləmək üçün brend strategiyası xidmətləri."
+    },
+    "hero": {
+      "title": "Brend Strategiyası",
+      "hook": "Fərqlənən və uzunmüddətli inkişaf yaradan bir brend qurun. Güclü brend sadəcə logo və ya vizual üslub deyil. O, biznesinizin necə qəbul olunduğunu, müştərilərin mesajınızla necə əlaqə qurduğunu və bazarda necə mövqeləndiyinizi müəyyən edir.",
+      "points": {
+        "identity": "Brend Kimliyi Agentliyi",
+        "branding": "Brendinq",
+        "rebranding": "Rebrendinq"
+      },
+      "cta": "Başlayaq"
+    },
+    "intro": {
+      "title": "Brend Strategiyasının Faydaları",
+      "p1": "Aydın brend strategiyası biznesinizin müştərilərlə daha güclü əlaqə qurmasına, tanınmasını artırmasına, bütün platformalarda ardıcıllığı qorumasına və rəqabətli bazarda fərqli dəyər təklifi təqdim etməsinə kömək edir.",
+      "p2": "YELTU Agency olaraq biz etibarı gücləndirən, görünürlüğü artıran və daha effektiv marketinq və uzunmüddətli inkişaf üçün lazımi aydınlığı yaradan strateji brend sistemləri hazırlayırıq."
+    },
+    "features": {
+      "title": "Brend Strategiyası İmkanları",
+      "research": {
+        "title": "Brend Strategiyası və Bazar Araşdırması",
+        "desc": "Uğurlu brend bazarın, auditoriyanın və rəqabət mühitinin dərin anlaşılması ilə başlayır. Biz biznesinizin fərqlənməsinə və doğru müştərilərlə əlaqə qurmasına imkan verən fürsətləri müəyyənləşdiririk."
+      },
+      "positioning": {
+        "title": "Brend Mövqelənməsi və Mesajlaşma",
+        "desc": "Brendinizin bazarda necə qəbul olunmalı olduğunu müəyyənləşdirir, onu unikal və uyğun edən dəyər təklifini və mesaj çərçivəsini formalaşdırırıq."
+      },
+      "identity": {
+        "title": "Brend Kimliyi və Vizual İstiqamət",
+        "desc": "Güclü vizual kimlik brendinizi tanınan və yadda qalan edir. Biz brend xarakterinizi əks etdirən və bütün platformalarda ardıcıllıq yaradan vizual sistemlər hazırlayırıq."
+      },
+      "architecture": {
+        "title": "Brend Adlandırması və Brend Arxitekturası",
+        "desc": "Aydın adlandırma və strukturlaşdırılmış brend arxitekturası müştərilərin məhsul və xidmətlərinizi daha rahat anlamasına, eyni zamanda miqyaslanmaya və tanınmaya dəstək olur."
+      },
+      "audit": {
+        "title": "Brend Auditi və Performansın Qiymətləndirilməsi",
+        "desc": "Brend auditi mövcud qəbul, kommunikasiya effektivliyi və bazar mövqeyi haqqında obyektiv məlumat verərək inkişaf imkanlarını üzə çıxarır."
+      },
+      "testing": {
+        "title": "İstehlakçı Araşdırması və Brend Testi",
+        "desc": "Real auditoriya rəyi brend qərarlarını təsdiqləməyə kömək edir. Sorğular və testlər vasitəsilə brendinqi, mesajlaşmanı və kommunikasiya strategiyasını təkmilləşdirən məlumatlar toplayırıq."
+      }
+    },
+    "deepdive": {
+      "h1": {
+        "title": "Strateji Qərarlar Necə Hazırlanır və Tətbiq Olunur",
+        "p1": "Güclü və tanınan brend yaratmazdan əvvəl strateji qərarların necə formalaşdığını və tətbiq olunduğunu anlamaq vacibdir. Uğurlu brend yalnız dizaynla yaranmır — o, araşdırma, aydın mövqelənmə və düzgün müəyyən edilmiş strateji təməl üzərində qurulur.",
+        "p2": "YELTU Agency olaraq biz bazar analizi, brend mövqelənməsi və kreativ istiqaməti birləşdirərək məlumatları strukturlaşdırılmış brend strategiyasına çeviririk. Yanaşmamız mesajlaşmadan və vizual kimlikdən kommunikasiya tərzinə qədər bütün elementlərin biznes məqsədlərinizə xidmət etməsini təmin edir.",
+        "p3": "Aşağıdakı proses uzunmüddətli inkişaf üçün nəzərdə tutulmuş aydın, ardıcıl və rəqabətqabiliyyətli brendlər yaratmaqda istifadə etdiyimiz addım-addım metodologiyanı göstərir."
+      },
+      "h2": {
+        "title": "İnkişaf, Aydınlıq və Bazar Mövqelənməsi üçün Brend Strategiyası",
+        "p1": "Brend Kimliyi biznesinizə sadəcə logo vermir. O, bütün platformalarda etibarı gücləndirən, vahid və tanınan vizual və verbal sistem yaradır. Brendinq isə şirkətinizin necə qəbul olunduğunu, bazarda dəyərini necə çatdırdığını və mövqelənmə, mesajlaşma və vizual uyğunluq vasitəsilə necə fərqləndiyini müəyyən edir.",
+        "p2": "Rebrendinq bizneslərin inamla yenilənməsinə kömək edir. Şirkətiniz inkişaf etdikcə brendiniz də bu dəyişikliyi daha aydın, daha aktual və daha güclü bazar təsiri ilə əks etdirməlidir."
+      }
+    },
+    "process": {
+      "title": "Strateji Brend İnkişaf Prosesimiz",
+      "subtitle": "YELTU Agency olaraq araşdırma və məlumatları aydın və güclü brend kimliyinə çevirmək üçün strukturlaşdırılmış brend strategiyası prosesi izləyirik.",
+      "step1": {
+        "title": "Biznesin Kəşfi və Məlumat Analizi",
+        "desc": "Biznesiniz, hədəf auditoriyanız və sahə mühitiniz haqqında əsas məlumatları toplayaraq mövcud brend vəziyyətini anlayır və layihə məqsədlərini müəyyənləşdiririk."
+      },
+      "step2": {
+        "title": "Stakeholder Müsahibələri və Strateji Insight-lar",
+        "desc": "Əsas tərəflərlə dərin müsahibələr apararaq vizyonu, dəyərləri, daxili gözləntiləri, brend imkanlarını və strateji istiqaməti üzə çıxarırıq."
+      },
+      "step3": {
+        "title": "Brend Workshop-u və Strateji Uyğunlaşma",
+        "desc": "Birgə workshop-lar vasitəsilə brend xarakterini, mövqelənməni və kommunikasiya tərzini araşdırır, tərəfləri uyğunlaşdırır və aydın brend elementləri formalaşdırırıq."
+      },
+      "step4": {
+        "title": "Bazar və Rəqabət Analizi",
+        "desc": "Rəqibləri, sahə trendlərini və müştəri gözləntilərini təhlil edərək fərqlənmə imkanlarını və brend üstünlüyünü gücləndirən mövqelənmə strategiyalarını müəyyənləşdiririk."
+      },
+      "step5": {
+        "title": "Brend Mövqelənməsi və Əsas Brend İdeyası",
+        "desc": "Platformalar üzrə storytelling, mesajlaşma və istifadəçi təcrübəsinin təməlini təşkil edən mövqelənmə konseptləri və əsas brend ideyasını hazırlayırıq."
+      }
+    }
+  },
+  "mobileapp": {
+    "seo": {
+      "title": "Mobil Tətbiq İnkişafı Xidmətləri | YELTU Agency",
+      "desc": "İstifadəçi cəlbini və biznes inkişafını artıran intuitiv, miqyaslana bilən və yüksək performanslı tətbiqlər yaratmaq üçün mobil tətbiq inkişafı xidmətləri."
+    },
+    "hero": {
+      "title": "Mobil Tətbiq İnkişafı",
+      "hook": "İdeyanızı güclü mobil tətbiqə çevirin. YELTU Agency olaraq biz bizneslərin mobil dünyada istifadəçilərlə əlaqə qurmasına və böyüməsinə kömək edən intuitiv, miqyaslana bilən və yüksək performanslı tətbiqlər hazırlayırıq.",
+      "link": {
+        "iosandroid": "iOS və Android Tətbiq İnkişafı",
+        "crossplatform": "Cross-Platform Tətbiq İnkişafı",
+        "aso": "App Store Optimizasiyası"
+      },
+      "cta": "Başlayaq"
+    },
+    "intro": {
+      "title": "Strateji Mobil Tətbiq İnkişafı Biznes İnkişafını Necə Sürətləndirir",
+      "p1": "Mobil tətbiqlər rəqəmsal inkişaf üçün ən güclü vasitələrdən birinə çevrilib. Yaxşı hazırlanmış tətbiq sadəcə funksionallıq təqdim etmir — o, biznesinizlə istifadəçiləriniz arasında birbaşa əlaqə yaradır.",
+      "p2": "YELTU Agency olaraq biz intuitiv istifadəçi təcrübəsini, güclü performans memarlığını və miqyaslana bilən texnologiyanı birləşdirən mobil tətbiqlər dizayn edir və hazırlayırıq. Məqsədimiz istifadəçilərin rahatlıqla istifadə etdiyi, bizneslərin isə retention, engagement və gəlirini artıran tətbiqlər qurmaqdır.",
+      "p3": "Startup ideyalarından enterprise səviyyəli platformalara qədər biz rəqəmsal mövcudluğunuzu güclü inkişaf mühərrikinə çevirən mobil tətbiqlər hazırlayırıq."
+    },
+    "features": {
+      "title": "Uğurlu Mobil Tətbiqin Təməli",
+      "uiux": {
+        "title": "Mobil Tətbiqlər üçün UI/UX",
+        "desc": "Mükəmməl mobil tətbiqlər güclü istifadəçi təcrübəsi ilə başlayır. Biz istifadəçilərin rahat naviqasiya etməsinə və hərəkətləri təbii şəkildə tamamlamasına imkan verən intuitiv interfeyslər hazırlayırıq. Aydın layout, düzgün interaction pattern-lər və istifadəçi yönümlü dizayn tətbiqinizi sadə, sürətli və istifadəsi zövqlü edir."
+      },
+      "architecture": {
+        "title": "Yüksək Performanslı Mobil Memarlıq",
+        "desc": "Mobil mühitdə performans həlledici rol oynayır. Biz sürət, cavabvermə və etibarlılıq üçün optimallaşdırılmış tətbiqlər qururuq ki, istifadəçilər bütün cihazlarda rahat və axıcı təcrübə yaşasınlar. Səmərəli memarlıq istifadə artdıqca tətbiqin stabil qalmasını təmin edir."
+      },
+      "crossplatform": {
+        "title": "Cross-Platform İnkişaf",
+        "desc": "Biz müasir framework-lərdən istifadə edərək iOS və Android-də problemsiz işləyən mobil tətbiqlər hazırlayırıq. Cross-platform inkişaf inkişaf müddətini azaldır, performansı sabit saxlayır və bizneslərə daha geniş auditoriyaya daha sürətli çatmağa imkan verir."
+      },
+      "backend": {
+        "title": "API İnteqrasiyası və Backend Sistemləri",
+        "desc": "Mobil tətbiqlər çox vaxt güclü backend sistemlərinə ehtiyac duyur. Biz təhlükəsiz API-lər, verilənlər bazaları və üçüncü tərəf xidmətlərini inteqrasiya edirik ki, tətbiqiniz xarici platformalarla bağlantı qura, məlumatları səmərəli idarə edə və dinamik funksionallıq təqdim etsin."
+      },
+      "security": {
+        "title": "Təhlükəsizlik və Məlumatların Qorunması",
+        "desc": "İstifadəçi etibarı təhlükəsizlikdən başlayır. Biz həm istifadəçilərinizi, həm də biznesinizi qorumaq üçün güclü autentifikasiya sistemləri, təhlükəsiz məlumat emalı üsulları və şifrələnmiş kommunikasiya qatları tətbiq edirik."
+      },
+      "maintenance": {
+        "title": "Davamlı Yeniləmələr və Tətbiq Dəstəyi",
+        "desc": "Tətbiqin istifadəyə verilməsi yalnız başlanğıcdır. Biz tətbiqinizin rəqabətqabiliyyətli qalması və dəyişən istifadəçi ehtiyaclarına uyğunlaşması üçün davamlı yeniləmələr, performans təkmilləşdirmələri və yeni funksional genişlənmələr təqdim edirik."
+      }
+    },
+    "deepdive": {
+      "title": "Niyə Bizneslər Bu Gün Mobil Tətbiqlərə İnvestisiya Edir",
+      "p1": "Mobil tətbiq biznes üçün ən dəyərli rəqəmsal aktivlərdən birinə çevrilə bilər. Veb saytlardan fərqli olaraq mobil tətbiqlər istifadəçilərə onların cihazları vasitəsilə birbaşa çıxış imkanı verir, bu da daha güclü engagement və daha yüksək brend sadiqliyi yaradır. Peşəkar mobil inkişaf tətbiqinizin etibarlı işləməsini, rahat istifadəçi təcrübəsi təqdim etməsini və istifadəçi bazası artdıqca miqyaslanmasını təmin edir. Zəif hazırlanmış tətbiqlər isə yavaş performans, təhlükəsizlik riskləri və mənfi istifadəçi rəyləri ilə nəticələnə bilər. YELTU Agency olaraq biz müasir texnologiyanı, istifadəçi yönümlü dizaynı və strateji düşüncəni birləşdirən mobil həllər quraraq tətbiqinizi uzunmüddətli inkişaf platformasına çeviririk."
+    },
+    "process": {
+      "title": "Mobil Tətbiq İnkişaf Prosesimiz",
+      "subtitle": "YELTU Agency olaraq biz etibarlı və miqyaslana bilən mobil tətbiqlər təqdim etmək üçün strukturlaşdırılmış və nəticəyə yönəlmiş inkişaf prosesi izləyirik.",
+      "step1": {
+        "title": "Məhsulun Kəşfi və Strategiya",
+        "desc": "Biz ilk olaraq biznes modelinizi, hədəf auditoriyanızı və məhsul məqsədlərinizi anlayırıq. Bu mərhələ mobil tətbiqinizin əsas funksionallığını və inkişaf yol xəritəsini müəyyən etməyə kömək edir."
+      },
+      "step2": {
+        "title": "UX Memarlığı və Wireframing",
+        "desc": "Komandamız tam istifadəçi yolunu xəritələndirir və naviqasiyanı, interaction flow-ları və funksional prioritetləri müəyyən edən strukturlaşdırılmış wireframe-lər yaradır."
+      },
+      "step3": {
+        "title": "UI Dizaynı və Mobil Təcrübə",
+        "desc": "Biz vizual cəhətdən cəlbedici və intuitiv interfeyslər hazırlayırıq ki, istifadəçilər tətbiq boyunca təbii və rahat şəkildə yönləndirilsin."
+      },
+      "step4": {
+        "title": "Tətbiqin Hazırlanması və İnteqrasiya",
+        "desc": "Developer-lərimiz iOS, Android və ya cross-platform mühitlər üçün yüksək performanslı tətbiqlər qurur, eyni zamanda lazım olan API-ləri və backend sistemlərini inteqrasiya edir."
+      },
+      "step5": {
+        "title": "Test, Launch və Optimizasiya",
+        "desc": "Yayımlanmadan əvvəl performans, təhlükəsizlik və usability-ni təmin etmək üçün geniş testlər aparırıq. Launchdan sonra isə stabilik və istifadəçi engagement-ini artırmaq üçün tətbiqi optimallaşdırmağa davam edirik."
+      }
+    },
+    "solutions": {
+      "learnMore": "Daha ətraflı",
+      "title": "İxtisaslaşdığımız Mobil İnkişaf Həlləri",
+      "subtitle": "YELTU Agency fərqli məhsul və inkişaf ehtiyaclarına uyğun mobil həllər təqdim edir.",
+      "iosandroid": {
+        "title": "iOS və Android Tətbiq İnkişafı",
+        "desc": "Biz iOS və Android mühitləri üçün xüsusi optimallaşdırılmış native mobil tətbiqlər hazırlayırıq. Native development ən yüksək performansı, axıcı interaction-ları və cihaz imkanlarına tam çıxışı təmin edərək istifadəçilərə premium mobil təcrübə təqdim edir."
+      },
+      "crossplatform": {
+        "title": "Cross-Platform Tətbiq İnkişafı",
+        "desc": "Cross-platform inkişaf bizneslərə daha sürətli mobil tətbiq yayımlamağa və müxtəlif cihazlarda ardıcıl təcrübə qorumağa imkan verir. Müasir framework-lər vasitəsilə biz bütün platformalarda yüksək performans və vahid istifadəçi təcrübəsi təqdim edən tətbiqlər qururuq."
+      },
+      "aso": {
+        "title": "App Store Optimizasiyası (ASO)",
+        "desc": "Tətbiq yaratmaq yolun yalnız bir hissəsidir — görünürlük də vacibdir. App Store Optimizasiyası tətbiqinizin App Store və Google Play-də reytinqini yaxşılaşdırır, istifadəçilərin məhsulunuzu daha rahat tapmasına və orqanik yükləmələrin artmasına kömək edir."
+      }
+    }
+  },
+  "iosandroid": {
+    "seo": {
+      "title": "iOS və Android Tətbiq İnkişafı Xidmətləri | YELTU Agency",
+      "desc": "Performans, rahat istifadəçi təcrübəsi və uzunmüddətli mobil inkişaf üçün native iOS və Android tətbiq inkişafı xidmətləri."
+    },
+    "hero": {
+      "title": "iOS və Android Tətbiq İnkişafı",
+      "hook": "Performans və istifadəçi təcrübəsi üçün hazırlanmış native mobil tətbiqlər. Standart mobil həllərin məhdudiyyətlərindən uzaqlaşın. Gəlin iOS və Android istifadəçiləri üçün xüsusi hazırlanmış native mobil tətbiq yaradaq.",
+      "points": {
+        "performance": "Native Performans Optimizasiyası",
+        "experience": "Problemsiz İstifadəçi Təcrübəsi",
+        "architecture": "Miqyaslana Bilən Mobil Memarlıq"
+      },
+      "cta": "Başlayaq"
+    },
+    "intro": {
+      "title": "Native Mobil Tətbiqlər Biznesə Necə Real Dəyər Qazandırır",
+      "p1": "Native mobil tətbiqlər ən yüksək performans, təhlükəsizlik və cihaz inteqrasiyasını təmin edir. Hybrid həllərdən fərqli olaraq native tətbiqlər hər platforma üçün ayrıca hazırlanır və kamera, GPS və push notification kimi cihaz imkanlarından tam istifadə etməyə imkan verir.",
+      "p2": "YELTU Agency olaraq biz axıcı performans, intuitiv interaction və miqyaslana bilən memarlıq təqdim edən native iOS və Android tətbiqləri hazırlayırıq. Məqsədimiz istifadəçilərin rahatlıqla istifadə etdiyi və bizneslərin engagement və retention göstəricilərini artıran mobil məhsullar yaratmaqdır."
+    },
+    "features": {
+      "title": "Yüksək Performanslı Native Tətbiqlərin Əsas Elementləri",
+      "performance": {
+        "title": "Platforma üçün Optimallaşdırılmış İnkişaf",
+        "desc": "Hər platformanın öz dizayn qaydaları və texniki standartları var. Biz iOS və Android mühitləri üçün xüsusi optimallaşdırılmış tətbiqlər hazırlayırıq ki, sabit performans və etibarlılıq təmin olunsun."
+      },
+      "integration": {
+        "title": "Problemsiz Cihaz İnteqrasiyası",
+        "desc": "Native tətbiqlər kamera, location services və sensorlar kimi cihaz avadanlıqları ilə daha dərin inteqrasiya imkanı verir. Bu isə daha inkişaf etmiş və interaktiv istifadəçi təcrübəsi yaradır."
+      },
+      "uiux": {
+        "title": "İntuitiv Mobil İnterfeys",
+        "desc": "Biz iOS və Android-də istifadəçilər üçün təbii və rahat görünən interfeyslər hazırlayırıq və platformaya uyğun UX standartlarına əməl edirik."
+      },
+      "backend": {
+        "title": "Miqyaslana Bilən Backend Sistemləri",
+        "desc": "Hər uğurlu mobil tətbiqin arxasında güclü backend infrastrukturu dayanır. Biz artan istifadəçi tələbatını dəstəkləyən təhlükəsiz API-lər və miqyaslana bilən sistemlər qururuq."
+      },
+      "security": {
+        "title": "Təhlükəsizlik və Məlumatların Qorunması",
+        "desc": "İstifadəçi məlumatlarının və biznes sistemlərinin qorunmasını təmin etmək üçün təhlükəsizlik inkişaf prosesinin hər mərhələsinə inteqrasiya olunur."
+      },
+      "stability": {
+        "title": "Uzunmüddətli Tətbiq Sabitliyi",
+        "desc": "Native tətbiqlər yüksək performans sabitliyi təqdim edir və uzunmüddətli mobil inkişaf planlayan bizneslər üçün ideal seçimdir."
+      }
+    },
+    "deepdive": {
+      "title": "Niyə Native Tətbiq İnkişafı Vacibdir",
+      "p1": "Yaxşı hazırlanmış native tətbiq bir çox hybrid həllərlə müqayisədə daha sürətli performans, daha axıcı interaction və daha yüksək etibarlılıq təqdim edir. Native inkişafına investisiya edən bizneslər platformaları böyüdükcə daha yüksək engagement, daha güclü retention və daha yaxşı miqyaslanma üstünlüyü əldə edir. YELTU Agency olaraq biz həm bizneslər, həm də istifadəçilər üçün uzunmüddətli dəyər yaradan native tətbiqlər hazırlayırıq."
+    },
+    "process": {
+      "title": "Native Tətbiq İnkişaf Prosesimiz",
+      "subtitle": "YELTU Agency olaraq biz etibarlı və miqyaslana bilən native mobil tətbiqlər təqdim etmək üçün strukturlaşdırılmış və nəticəyə yönəlmiş inkişaf prosesi izləyirik.",
+      "step1": {
+        "title": "Məhsulun Kəşfi və Planlaşdırma",
+        "desc": "Hər uğurlu mobil tətbiq aydın strategiya ilə başlayır. Bu mərhələdə biz biznes məqsədlərinizi, hədəf auditoriyanızı və məhsul tələblərinizi təhlil edərək tətbiqin əsas funksionallığını müəyyənləşdiririk. Bu discovery mərhələsi mobil məhsulu uzunmüddətli biznes məqsədlərinizlə uyğunlaşdıran strukturlaşdırılmış inkişaf yol xəritəsi yaradır."
+      },
+      "step2": {
+        "title": "Platformaya Xüsusi UX Memarlığı",
+        "desc": "İstifadəçi təcrübəsi mobil tətbiqlərdə əsas rol oynayır. Biz tam istifadəçi yolunu, naviqasiya axınlarını, ekran strukturlarını və əsas interaction nöqtələrini dizayn edirik. İntuitiv usability-yə fokuslanaraq istifadəçilərin tətbiqlə təbii və səmərəli əlaqə qurmasını təmin edirik."
+      },
+      "step3": {
+        "title": "UI Dizaynı və Mobil İnterfeys",
+        "desc": "Struktur müəyyən edildikdən sonra dizaynerlərimiz vizual cəhətdən cəlbedici mobil interfeys hazırlayır. iOS və Android üçün platformaya uyğun dizayn standartlarına əməl edərək istifadəçi engagement-ini artıran və rahat mobil təcrübə təqdim edən təmiz, intuitiv layout-lar yaradırıq."
+      },
+      "step4": {
+        "title": "Native İnkişaf və İnteqrasiya",
+        "desc": "İnkişaf mərhələsində mühəndislərimiz hər platforma üçün optimallaşdırılmış texnologiyalarla tətbiqi qururlar. Biz frontend interfeysləri, backend sistemləri, API inteqrasiyaları və təhlükəsizlik qatlarını tətbiq edərək tətbiqin etibarlı işləməsini və inkişaf etmiş funksionallığı dəstəkləməsini təmin edirik."
+      },
+      "step5": {
+        "title": "Test, Launch və Davamlı Optimizasiya",
+        "desc": "Yayımdan əvvəl sabitlik, performans və təhlükəsizliyi təmin etmək üçün çoxsaylı cihazlarda geniş testlər aparırıq. Launchdan sonra isə performansı yaxşılaşdırmaq, yeni funksiyalar əlavə etmək və uzunmüddətli miqyaslanmanı dəstəkləmək üçün tətbiqi davamlı izləyir və optimallaşdırırıq."
+      }
+    },
+    "solutions": {
+      "learnMore": "Daha ətraflı",
+      "title": "İxtisaslaşdığımız Mobil İnkişaf Həlləri",
+      "subtitle": "YELTU Agency fərqli məhsul və inkişaf ehtiyaclarına uyğun mobil həllər təqdim edir.",
+      "mobileapp": {
+        "title": "Mobil Tətbiq İnkişafı",
+        "desc": "Biz istifadəçilərlə əlaqəni gücləndirən, retention-u artıran və mobil-first dünyada bizneslərin böyüməsinə kömək edən intuitiv, miqyaslana bilən və yüksək performanslı mobil tətbiqlər hazırlayırıq."
+      },
+      "crossplatform": {
+        "title": "Cross-Platform Tətbiq İnkişafı",
+        "desc": "Cross-platform inkişaf bizneslərə daha sürətli mobil tətbiq yayımlamağa və fərqli cihazlarda ardıcıl təcrübə qorumağa imkan verir. Müasir framework-lər vasitəsilə biz bütün platformalarda yüksək performans və vahid istifadəçi təcrübəsi təqdim edən tətbiqlər qururuq."
+      },
+      "aso": {
+        "title": "App Store Optimizasiyası (ASO)",
+        "desc": "Tətbiq yaratmaq yolun yalnız bir hissəsidir — görünürlük də vacibdir. App Store Optimizasiyası tətbiqinizin App Store və Google Play-də reytinqini yaxşılaşdırır, istifadəçilərin məhsulunuzu daha rahat tapmasına və orqanik yükləmələrin artmasına kömək edir."
+      }
+    }
+  },
+  "crossplatform": {
+    "seo": {
+      "title": "Cross-Platform Tətbiq İnkişafı Xidmətləri | YELTU Agency",
+      "desc": "Daha sürətli launch, vahid istifadəçi təcrübəsi və uzunmüddətli miqyaslana bilən mobil inkişaf üçün cross-platform tətbiq inkişafı xidmətləri."
+    },
+    "hero": {
+      "title": "Cross-Platform Tətbiq İnkişafı",
+      "hook": "Bir dəfə yaradın. Hər yerdə istifadəçiyə çatın. Cross-platform mobil inkişaf bizneslərə tətbiqləri bir neçə platformada daha sürətli və daha səmərəli yayımlamağa imkan verir.",
+      "points": {
+        "speed": "Daha Sürətli İnkişaf Dövrləri",
+        "experience": "Vahid İstifadəçi Təcrübəsi",
+        "scaling": "Sərfəli Tətbiq Miqyaslanması"
+      },
+      "cta": "Başlayaq"
+    },
+    "intro": {
+      "title": "Cross-Platform Tətbiqlər Biznes İnkişafını Necə Dəstəkləyir",
+      "p1": "Cross-platform inkişaf bizneslərə tək bir codebase ilə həm iOS, həm də Android istifadəçilərinə çatmağa imkan verir. Bu yanaşma inkişaf müddətini azaldır, eyni zamanda cihazlar arasında yüksək performans və vahid istifadəçi təcrübəsini qoruyur.",
+      "p2": "YELTU Agency olaraq biz səmərəliliyi yüksək performansla birləşdirən cross-platform mobil tətbiqlər hazırlamaq üçün müasir framework-lərdən istifadə edirik."
+    },
+    "features": {
+      "title": "Miqyaslana Bilən Cross-Platform İnkişafın Əsas Elementləri",
+      "codebase": {
+        "title": "Vahid Codebase Memarlığı",
+        "desc": "Cross-platform inkişaf həm iOS, həm də Android üçün tək bir codebase-dən istifadə etməyə imkan verir. Düzgün qurulmuş memarlıq shared logic, komponentlər və xidmətlərin platformalar arasında problemsiz işləməsini və eyni zamanda yüksək performansı təmin edir. Bu yanaşma inkişaf mürəkkəbliyini əhəmiyyətli dərəcədə azaldır və məhsulun bazara çıxarılmasını sürətləndirir."
+      },
+      "ux": {
+        "title": "Platformalar üzrə Ardıcıl İstifadəçi Təcrübəsi",
+        "desc": "İstifadəçilər hansı cihazdan istifadə etməsindən asılı olmayaraq mobil tətbiqin təbii hiss olunmasını gözləyirlər. Biz vahid vizual kimliyi qoruyan, eyni zamanda platformaya uyğun interaction pattern-lərə uyğunlaşan interfeyslər dizayn edirik. Bu, həm iOS, həm də Android istifadəçiləri üçün intuitiv naviqasiya və rahat usability təmin edir."
+      },
+      "speed": {
+        "title": "Daha Sürətli İnkişaf və Bazara Çıxış",
+        "desc": "Cross-platform inkişaf ayrı-ayrı native tətbiqlərin hazırlanması ilə müqayisədə bizneslərə tətbiqləri daha sürətli istifadəyə verməyə imkan yaradır. Əsas funksionallığın platformalar arasında paylaşılması inkişaf dövrlərini qısaldır və məhsul keyfiyyətini yüksək səviyyədə saxlayır."
+      },
+      "backend": {
+        "title": "Çevik Backend və API İnteqrasiyası",
+        "desc": "Müasir mobil tətbiqlər güclü backend sistemlərinə əsaslanır. Biz API-lər, cloud xidmətləri, authentication sistemləri və üçüncü tərəf platformalarını inteqrasiya edirik ki, tətbiqiniz dinamik funksionallıq və real-time məlumat qarşılıqlı əlaqəsi təqdim etsin."
+      },
+      "scalable": {
+        "title": "Miqyaslana Bilən Mobil İnfrastruktur",
+        "desc": "Uğurlu mobil məhsul inkişafı dəstəkləməlidir. Biz artan istifadəçi sayını, əlavə funksiyaları və gələcək sistem genişlənmələrini performans problemi olmadan qarşılayan miqyaslana bilən memarlıqla cross-platform tətbiqlər qururuq."
+      },
+      "maintenance": {
+        "title": "Sadələşdirilmiş Dəstək və Yeniləmələr",
+        "desc": "Bir shared codebase-i saxlamaq yeniləmələri buraxmağı, yeni funksiyalar əlavə etməyi və problemləri daha sürətli həll etməyi asanlaşdırır. Bu yanaşma uzunmüddətli inkişaf xərclərini azaldır və bizneslərə mürəkkəb maintenance prosesləri olmadan tətbiqlərini davamlı təkmilləşdirməyə imkan verir."
+      }
+    },
+    "deepdive": {
+      "title": "Niyə Cross-Platform Tətbiq İnkişafı Vacibdir",
+      "p1": "Cross-platform inkişaf bizneslərə həm iOS, həm də Android platformalarında işləyən tək mobil tətbiq qurmağa imkan verir. Bu yanaşma inkişaf vaxtını azaldır, xərcləri aşağı salır və uzunmüddətli dəstəyi sadələşdirir. Müasir cross-platform framework-lərdən istifadə etməklə şirkətlər tətbiqlərini daha sürətli istifadəyə verə və eyni zamanda cihazlar arasında vahid istifadəçi təcrübəsi təqdim edə bilirlər. YELTU Agency olaraq biz performans, miqyaslanma və səmərəli uzunmüddətli inkişaf üçün nəzərdə tutulmuş cross-platform mobil tətbiqlər hazırlayırıq."
+    },
+    "process": {
+      "title": "Cross-Platform Tətbiq İnkişaf Prosesi",
+      "subtitle": "YELTU Agency olaraq biz səmərəli və miqyaslana bilən cross-platform mobil tətbiqlər təqdim etmək üçün strukturlaşdırılmış və nəticəyə yönəlmiş inkişaf prosesi izləyirik.",
+      "step1": {
+        "title": "Məhsul Strategiyası və Platforma Planlaması",
+        "desc": "Hər cross-platform mobil layihə aydın məhsul strategiyası ilə başlayır. Bu mərhələdə biz biznes məqsədlərinizi, hədəf auditoriyanızı və funksional tələblərinizi təhlil edərək ən səmərəli cross-platform yanaşmanı müəyyən edirik. Bu planlaşdırma mərhələsi texnologiya stack-ini, əsas funksiyaları və miqyaslana bilən mobil məhsulu hazırlamaq üçün lazım olan inkişaf yol xəritəsini formalaşdırır."
+      },
+      "step2": {
+        "title": "UX Memarlığı və İstifadəçi Axını Dizaynı",
+        "desc": "Platformadan asılı olmayaraq mobil tətbiqlərdə istifadəçi təcrübəsi vacibdir. Biz istifadəçi yolunu, naviqasiya strukturunu və interaction flow-ları diqqətlə dizayn edirik ki, tətbiq intuitiv və istifadəsi rahat hiss olunsun. Məqsəd həm iOS, həm də Android istifadəçiləri üçün təbii işləyən problemsiz təcrübə yaratmaqdır."
+      },
+      "step3": {
+        "title": "Cross-Platform İnterfeys Dizaynı",
+        "desc": "Struktur müəyyənləşdirildikdən sonra dizayn komandamız cihazlar arasında ardıcıllığı qoruyan təmiz və müasir interfeyslər hazırlayır. Dizayn prosesi tətbiqin vizual olaraq vahid görünməsini təmin edir və eyni zamanda platformaya uyğun usability standartlarına və istifadəçi gözləntilərinə hörmət edir."
+      },
+      "step4": {
+        "title": "İnkişaf və Sistem İnteqrasiyası",
+        "desc": "Developer-lərimiz tətbiqi tək bir codebase ilə bir neçə platformada səmərəli işləməyə imkan verən müasir cross-platform framework-lərlə qururlar. Biz backend sistemlərini, API-ləri və xarici xidmətləri inteqrasiya edirik ki, tətbiq dinamik funksionallıq və etibarlı performans təqdim etsin."
+      },
+      "step5": {
+        "title": "Test, Deployment və Optimizasiya",
+        "desc": "Yayımdan əvvəl tətbiq fərqli cihazlarda və əməliyyat sistemlərində geniş test mərhələsindən keçir. Bu, tətbiqin bütün platformalarda sabit işləməsini təmin edir. Launchdan sonra isə performansı artırmaq, sabitliyi gücləndirmək və məhsul inkişaf etdikcə gələcək yeniləmələri dəstəkləmək üçün optimizasiyanı davam etdiririk."
+      }
+    },
+    "solutions": {
+      "learnMore": "Daha ətraflı",
+      "title": "İxtisaslaşdığımız Mobil İnkişaf Həlləri",
+      "subtitle": "YELTU Agency fərqli məhsul və inkişaf ehtiyaclarına uyğun mobil həllər təqdim edir.",
+      "mobileapp": {
+        "title": "Mobil Tətbiq İnkişafı",
+        "desc": "Biz istifadəçilərlə əlaqəni gücləndirən, retention-u artıran və mobil-first dünyada bizneslərin böyüməsinə kömək edən intuitiv, miqyaslana bilən və yüksək performanslı mobil tətbiqlər hazırlayırıq."
+      },
+      "iosandroid": {
+        "title": "iOS və Android Tətbiq İnkişafı",
+        "desc": "Biz iOS və Android mühitləri üçün xüsusi optimallaşdırılmış native mobil tətbiqlər hazırlayırıq. Native development ən yüksək performansı, axıcı interaction-ları və cihaz imkanlarına tam çıxışı təmin edərək istifadəçilərə premium mobil təcrübə təqdim edir."
+      },
+      "aso": {
+        "title": "App Store Optimizasiyası (ASO)",
+        "desc": "Tətbiq yaratmaq yolun yalnız bir hissəsidir — görünürlük də vacibdir. App Store Optimizasiyası tətbiqinizin App Store və Google Play-də reytinqini yaxşılaşdırır, istifadəçilərin məhsulunuzu daha rahat tapmasına və orqanik yükləmələrin artmasına kömək edir."
+      }
+    }
+  },
+  "aso": {
+    "seo": {
+      "title": "App Store Optimizasiyası Xidmətləri | YELTU Agency",
+      "desc": "Tətbiq görünürlüğünü artırmaq, orqanik yükləmələri çoxaltmaq və uzunmüddətli marketplace inkişafını gücləndirmək üçün App Store Optimizasiyası xidmətləri."
+    },
+    "hero": {
+      "title": "App Store və Marketplace Optimizasiyası (ASO)",
+      "hook": "Tətbiqinizin görünürlüğünü artırın və orqanik yükləmələri çoxaldın. Mobil tətbiqi yayımlamaq yalnız ilk addımdır. Düzgün optimizasiya olmadan, hətta yüksək keyfiyyətli tətbiqlər belə sıx rəqabətli app marketplace-lərdə görünməz qala bilər. Bizim optimizasiya strategiyalarımız tətbiqlərin axtarış nəticələrində daha yüksək mövqe tutmasına, düzgün istifadəçiləri cəlb etməsinə və orqanik yükləmələri artırmasına kömək edir.",
+      "points": {
+        "visibility": "App Marketplace Görünürlüğü",
+        "downloads": "Orqanik Yükləmə Artımı",
+        "conversion": "App Listing Konversiya Optimizasiyası"
+      },
+      "cta": "Başlayaq"
+    },
+    "intro": {
+      "title": "App Store Optimizasiyası Tətbiq İnkişafını Necə Sürətləndirir",
+      "p1": "Milyonlarla mobil tətbiq app marketplace-lərdə diqqət uğrunda rəqabət aparır. Aydın optimizasiya strategiyası olmadan, hətta yaxşı hazırlanmış tətbiqlər belə potensial istifadəçilərə çatmaqda çətinlik çəkə bilər.",
+      "p2": "App Store Optimizasiyası tətbiqinizin marketplace axtarış nəticələrində necə göründüyünü və ziyarətçiləri yükləməyə nə qədər effektiv çevirdiyini yaxşılaşdırır. Açar sözləri, metadata-nı, vizual materialları və ranking siqnallarını optimallaşdırmaqla bizneslər orqanik reach göstəricilərini əhəmiyyətli dərəcədə artıra bilər. YELTU Agency olaraq biz data əsaslı analizlə sınanmış optimizasiya strategiyalarını birləşdirərək mobil tətbiqlərin fərqlənməsinə və daha çox istifadəçi cəlb etməsinə kömək edirik."
+    },
+    "features": {
+      "title": "Effektiv App Store Optimizasiyasının Əsas Elementləri",
+      "keywords": {
+        "title": "Açar Söz və Axtarış Optimizasiyası",
+        "desc": "İstifadəçilər mobil tətbiqlərin əksəriyyətini axtarış vasitəsilə tapırlar. Biz uyğun açar sözləri araşdırır və onları tətbiqinizin title, description və metadata hissələrinə strateji şəkildə yerləşdirərək app store axtarış nəticələrində mövqeyi yaxşılaşdırırıq."
+      },
+      "listing": {
+        "title": "App Listing Optimizasiyası",
+        "desc": "Düzgün strukturlaşdırılmış app listing həm görünürlüğü, həm də istifadəçi etibarını artırır. Biz tətbiqinizin dəyərini aydın şəkildə çatdırmaq üçün title-ları, description-ları, kateqoriyaları və əsas üstünlükləri optimallaşdırırıq."
+      },
+      "visuals": {
+        "title": "Vizual Materialların Optimizasiyası",
+        "desc": "İkonlar, screenshot-lar və preview videolar yükləmə qərarlarına ciddi təsir edir. Biz tətbiqinizin funksionallığını və istifadəçi üstünlüklərini aydın göstərən vizual materiallar hazırlayır və optimallaşdırırıq."
+      },
+      "reviews": {
+        "title": "Reytinq və Rəylər Strategiyası",
+        "desc": "Müsbət reytinqlər və rəylər app marketplace ranking alqoritmlərində böyük rol oynayır. Biz məmnun istifadəçiləri rəy bildirməyə təşviq edən strategiyalar qurmağa kömək edirik və bununla tətbiqinizin etibarlılığını artırırıq."
+      },
+      "engagement": {
+        "title": "İstifadəçi Engagement Siqnalları",
+        "desc": "App marketplace-lər retention rate, uninstall rate və session duration kimi engagement göstəricilərini təhlil edir. Biz daha güclü ranking nəticələrini dəstəkləyən təkmilləşdirmələri müəyyən etmək üçün bu siqnalları qiymətləndiririk."
+      },
+      "optimization": {
+        "title": "Davamlı Optimizasiya",
+        "desc": "ASO davamlı prosesdir. Biz açar söz ranking-lərini, yükləmələri və istifadəçi davranışını davamlı izləyərək optimizasiya strategiyasını təkmilləşdirir və uzunmüddətli inkişafı qoruyuruq."
+      }
+    },
+    "deepdive": {
+      "title": "Niyə App Store Optimizasiyası Vacibdir",
+      "p1": "Düzgün optimizasiya olmadan, hətta yüksək keyfiyyətli tətbiqlər belə milyonlarla rəqib tətbiq arasında görünməz qala bilər. App Store Optimizasiyası discoverability-ni artırır, orqanik yükləmələri çoxaldır və tətbiqinizin müxtəlif app marketplace-lərdə düzgün auditoriyaya çatmasına kömək edir. YELTU Agency olaraq biz mobil tətbiqlərin dayanıqlı inkişaf etməsi və qlobal app ekosistemlərində effektiv rəqabət aparması üçün strateji ASO yanaşmaları tətbiq edirik."
+    },
+    "process": {
+      "title": "App Store Optimizasiya Prosesimiz",
+      "subtitle": "YELTU Agency olaraq biz görünürlük, yükləmələr və uzunmüddətli app marketplace performansını artırmaq üçün strukturlaşdırılmış və data əsaslı optimizasiya prosesi izləyirik.",
+      "step1": {
+        "title": "Bazar və Rəqib Araşdırması",
+        "desc": "Biz tətbiq kateqoriyanızı, rəqiblərinizi və marketplace trend-lərini təhlil edərək görünürlüyü və ranking-i artırmaq üçün imkanları müəyyən edirik."
+      },
+      "step2": {
+        "title": "Açar Söz və Metadata Strategiyası",
+        "desc": "Uyğun axtarış açar sözləri tətbiqinizin title, description və metadata hissələrinə inteqrasiya edilir ki, app marketplace axtarış nəticələrində discoverability artsın."
+      },
+      "step3": {
+        "title": "App Listing və Vizual Optimizasiya",
+        "desc": "Biz ikonları, screenshot-ları və preview materiallarını optimallaşdıraraq istifadəçiləri cəlb edən və yükləmələri artıran güclü listing yaradırıq."
+      },
+      "step4": {
+        "title": "Performans Monitorinqi",
+        "desc": "Biz ranking-ləri, yükləmələri və istifadəçi engagement göstəricilərini davamlı izləyərək optimizasiya strategiyasının effektivliyini qiymətləndiririk."
+      },
+      "step5": {
+        "title": "Davamlı İnkişaf Optimizasiyası",
+        "desc": "Performans məlumatlarına əsaslanaraq açar sözləri yeniləyir, vizual materialları təkmilləşdirir və listing elementlərini gücləndirərək zamanla güclü marketplace görünürlüğünü qoruyuruq."
+      }
+    },
+    "solutions": {
+      "learnMore": "Daha ətraflı",
+      "title": "İxtisaslaşdığımız Mobil İnkişaf Həlləri",
+      "subtitle": "YELTU Agency fərqli məhsul və inkişaf ehtiyaclarına uyğun mobil həllər təqdim edir.",
+      "mobileapp": {
+        "title": "Mobil Tətbiq İnkişafı",
+        "desc": "Biz istifadəçilərlə əlaqəni gücləndirən, retention-u artıran və mobil-first dünyada bizneslərin böyüməsinə kömək edən intuitiv, miqyaslana bilən və yüksək performanslı mobil tətbiqlər hazırlayırıq."
+      },
+      "iosandroid": {
+        "title": "iOS və Android Tətbiq İnkişafı",
+        "desc": "Biz iOS və Android mühitləri üçün xüsusi optimallaşdırılmış native mobil tətbiqlər hazırlayırıq. Native development ən yüksək performansı, axıcı interaction-ları və cihaz imkanlarına tam çıxışı təmin edərək istifadəçilərə premium mobil təcrübə təqdim edir."
+      },
+      "crossplatform": {
+        "title": "Cross-Platform Tətbiq İnkişafı",
+        "desc": "Cross-platform inkişaf bizneslərə daha sürətli mobil tətbiq yayımlamağa və fərqli cihazlarda ardıcıl təcrübə qorumağa imkan verir. Müasir framework-lər vasitəsilə biz bütün platformalarda yüksək performans və vahid istifadəçi təcrübəsi təqdim edən tətbiqlər qururuq."
+      }
+    }
+  },
+  "digitalmarketing": {
+    "seo": {
+      "title": "Rəqəmsal Marketinq Xidmətləri | YELTU Agency",
+      "desc": "Görünürlüğü artırmaq, uyğun lead-lər cəlb etmək və diqqəti ölçülə bilən biznes artımına çevirmək üçün hazırlanmış rəqəmsal marketinq xidmətləri."
+    },
+    "hero": {
+      "title": "Diqqəti Real Biznes Artımına Çevirən Rəqəmsal Marketinq Xidmətləri",
+      "hook": "Görünürlüğü artırmaq, uyğun lead-lər cəlb etmək və marağı ölçülə bilən nəticələrə çevirmək üçün hazırlanmış rəqəmsal marketinq strategiyaları ilə onlayn mövcudluğunuzu gücləndirin.",
+      "link": {
+        "seo": "SEO Xidmətləri",
+        "sem": "SEM Xidmətləri",
+        "smm": "SMM Xidmətləri",
+        "design": "Dizayn"
+      },
+      "cta": "Başlayaq"
+    },
+    "intro": {
+      "title": "Bizneslərin Niyə Rəqəmsal Marketinqə Ehtiyacı Var və YELTU Necə Kömək Edir",
+      "p1": "Bugünkü rəqabətli rəqəmsal mühitdə yalnız yaxşı məhsul və ya xidmətə sahib olmaq artıq kifayət etmir. Auditoriyanız sizi tapmalı, sizə güvənməli və niyə məhz sizin brendinizin doğru seçim olduğunu aydın şəkildə anlamalıdır. Rəqəmsal marketinq məhz burada vacib rol oynayır. YELTU Agency olaraq biz bizneslərə görünürlük qazandırır, düzgün auditoriyanı cəlb edir və strateji SEO, hədəfli reklam və sosial media marketinqi vasitəsilə mənalı müştəri səyahətləri qururuq. Yanaşmamız performans, aydınlıq və dayanıqlı artım üzərində qurulub. Bu da brendlərə rəqəmsal mövcudluğunu gücləndirməyə və trafiki real biznes imkanlarına çevirməyə kömək edir."
+    },
+    "features": {
+      "title": "Dayanıqlı Artımın Arxasında Duran Rəqəmsal Marketinq Sistemləri",
+      "seo": {
+        "title": "Axtarış Sistemi Optimizasiyası",
+        "desc": "SEO biznesinizin məhsul və ya xidmətlərinizi artıq axtaran insanların qarşısına çıxmasına kömək edir. Güclü SEO strategiyası reytinqlərinizi yaxşılaşdırır, orqanik trafiki artırır və uzunmüddətli etibarlılıq yaradır. YELTU olaraq biz texniki struktur, açar söz uyğunluğu, kontent keyfiyyəti və on-page optimizasiyaya fokuslanaraq saytınızın axtarış sistemlərində dayanıqlı görünürlük qazanmasına kömək edirik."
+      },
+      "sem": {
+        "title": "Axtarış Sistemi Marketinqi",
+        "desc": "SEM ödənişli axtarış kampaniyaları vasitəsilə biznesinizə dərhal görünürlük qazandırır. Bu, aktiv şəkildə həll axtaran yüksək intent-li istifadəçilərə çatmağın ən sürətli yollarından biridir. Biz strateji targetinq, güclü reklam mətnləri və landing page uyğunluğu üzərində qurulan data əsaslı kampaniyalar hazırlayırıq ki, büdcəniz səmərəli istifadə olunsun və reklamlarınız uyğun lead-lər gətirsin."
+      },
+      "smm": {
+        "title": "Sosial Media Marketinqi",
+        "desc": "Sosial media marketinqi brendlərin müxtəlif platformalarda görünən, aktual və auditoriyası ilə əlaqədə qalmasına kömək edir. Bu, sadəcə kontent paylaşmaq deyil, engagement və etibar yaradan ardıcıl brend kommunikasiya qurmaqdır. YELTU bizneslərin icma mövcudluğunu gücləndirməsi və daha geniş marketinq hədəflərini dəstəkləməsi üçün kontent strategiyaları və platformaya uyğun kampaniyalar hazırlayır."
+      },
+      "content": {
+        "title": "Kontent Strategiyası",
+        "desc": "Effektiv rəqəmsal marketinq müştəri səyahətinin hər mərhələsini məlumatlandıran, inandıran və dəstəkləyən kontentə əsaslanır. Aydın kontent strategiyası biznesinizin dəyərini çatdırmasına, search intent-i cavablandırmasına və öz sahəsində authority qurmasına kömək edir. Biz SEO hədəflərinə, auditoriya ehtiyaclarına və veb saytınız və rəqəmsal kanallar üzrə konversiya imkanlarına uyğun strukturlaşdırılmış kontent planları hazırlayırıq."
+      },
+      "conversion": {
+        "title": "Konversiya Optimizasiyası",
+        "desc": "Trafik cəlb etmək prosesin yalnız bir hissəsidir. Veb saytınız və kampaniyalarınız ziyarətçiləri sorğuya, lead-ə və ya müştəriyə də çevirməlidir. Konversiya optimizasiyası səhifə strukturunu, mesajları, call to action-ları və istifadəçi axınını yaxşılaşdırmağa fokuslanır. YELTU olaraq istifadəçilərin rəqəmsal aktivlərinizlə necə qarşılıqlı əlaqə qurduğunu təhlil edir və daha yaxşı performans və yüksək konversiya nisbətləri üçün strateji təkmilləşdirmələr edirik."
+      },
+      "audience": {
+        "title": "Auditoriya Hədəflənməsi",
+        "desc": "Rəqəmsal marketinqin ən vacib hissələrindən biri düzgün insanlara, düzgün mesajı, düzgün zamanda çatdırmaqdır. Auditoriya hədəflənməsi daha yüksək konversiya ehtimalı olan istifadəçilərə fokuslanaraq israf olunan büdcəni azaltmağa və kampaniya effektivliyini artırmağa kömək edir. Biz intent, davranış və biznes məqsədləri əsasında auditoriya seqmentləri müəyyənləşdirərək daha dəqiq marketinq kampaniyaları yaradırıq."
+      },
+      "analytics": {
+        "title": "Performans Analitikası",
+        "desc": "Rəqəmsal marketinq həmişə ölçülə bilən olmalıdır. Performans analitikası bizneslərə nəyin işlədiyini, nəyin təkmilləşdirilməli olduğunu və artım üçün ən yaxşı imkanların harada olduğunu anlamağa imkan verir. Biz kampaniyalar, kontent və veb sayt davranışı üzrə əsas metrikləri izləyərək tətbiq edilə bilən insight-lar yaradırıq. Bu da hər qərarın təxminə deyil, real performansa əsaslanmasını təmin edir."
+      },
+      "positioning": {
+        "title": "Brend Mövqeləndirməsi",
+        "desc": "Güclü rəqəmsal marketinq aydın brend mövqeləndirməsi ilə başlayır. Əgər biznesiniz fərqli dəyərini düzgün çatdırmırsa, sıx rəqabətli bazarlarda seçilmək daha çətin olur. Brend mövqeləndirməsi auditoriyanızın xidmətlərinizi, mesajlarınızı və etibarlılığınızı necə qəbul etdiyini formalaşdırır. YELTU bizneslərə bazardakı mövcudluğunu aydınlaşdırmağa və ardıcıl, peşəkar və yadda qalan rəqəmsal kommunikasiya qurmağa kömək edir."
+      }
+    },
+    "deepdive": {
+      "h1": {
+        "title": "Rəqəmsal Marketinq Nədir və Müasir Bizneslər üçün Niyə Vacibdir?",
+        "p1": "Rəqəmsal marketinq biznesi tanıtmaq, müştəri cəlb etmək və gəliri artırmaq üçün onlayn kanallardan strateji istifadədir. Buraya SEO, ödənişli reklam, sosial media, kontent və brendlərin onlayn böyüməsinə kömək edən digər performans yönümlü metodlar daxildir. Müasir bizneslər üçün rəqəmsal marketinq ona görə vacibdir ki, müştəri diqqəti artıq rəqəmsal platformalara keçib. Güclü strategiya brendlərin alış qərarlarının getdikcə daha çox başladığı mühitdə görünən, rəqabətli və aktual qalmasına kömək edir."
+      },
+      "h2": {
+        "title": "SEO və SEM: Fərq Nədir və Biznesinizə Hansı Daha Uyğundur?",
+        "p1": "SEO zamanla saytınızın axtarış sistemlərində orqanik görünürlüğünü artırmağa fokuslanır, SEM isə biznesinizi dərhal istifadəçilərin qarşısına çıxarmaq üçün ödənişli reklamlardan istifadə edir. Hər ikisi dəyərlidir, lakin fərqli məqsədlərə xidmət edir. SEO uzunmüddətli authority və dayanıqlı trafik üçün idealdır, SEM isə sürətli görünürlük, lead generation və kampaniya əsaslı tanıtım üçün daha effektivdir. Doğru seçim çox vaxt sizin zaman çərçivənizdən, hədəflərinizdən və büdcənizdən asılı olur."
+      }
+    },
+    "process": {
+      "title": "Rəqəmsal Marketinq Prosesimiz",
+      "subtitle": "YELTU Agency olaraq görünürlüyü artırmaq, uyğun trafik cəlb etmək və uzunmüddətli biznes artımını dəstəkləmək üçün strukturlaşdırılmış və nəticəyə yönəlmiş rəqəmsal marketinq çərçivəsi ilə işləyirik.",
+      "step1": {
+        "title": "Kəşf və Biznes Analizi",
+        "desc": "İşə biznes modelinizi, xidmətlərinizi, sahədəki mövqeyinizi və artım məqsədlərinizi anlamaqla başlayırıq. Bu, real hədəflər müəyyənləşdirməyə və brendiniz üçün doğru rəqəmsal kanalları seçməyə kömək edir."
+      },
+      "step2": {
+        "title": "Auditoriya və Rəqib Araşdırması",
+        "desc": "Hədəf auditoriyanızı, axtarış davranışını və bazar rəqabətini araşdırırıq ki, imkanların harada olduğunu və brendinizin daha effektiv necə kommunikasiya qura biləcəyini anlayaq."
+      },
+      "step3": {
+        "title": "Strategiyanın Qurulması",
+        "desc": "Data və biznes prioritetləri əsasında SEO, SEM, SMM, kontent istiqaməti və konversiya yönümlü təkmilləşdirmələri əhatə edə bilən aydın rəqəmsal marketinq strategiyası qururuq."
+      },
+      "step4": {
+        "title": "Kampaniyanın Qurulması və Optimizasiya",
+        "desc": "Lazımi sistemləri tətbiq edir, aktivləri optimallaşdırır, mesajları hazırlayır və kampaniyaları performans, dəqiq targetinq və ardıcıllıq fokusunda başladırıq."
+      },
+      "step5": {
+        "title": "Monitorinq və Performansın İzlənməsi",
+        "desc": "Kampaniyalar aktiv olduqdan sonra trafiki, engagement-i, konversiyaları və istifadəçi davranışını izləyərək güclü və zəif tərəfləri, həmçinin optimizasiya imkanlarını müəyyənləşdiririk."
+      },
+      "step6": {
+        "title": "Artım, Hesabat və Təkmilləşdirmə",
+        "desc": "Rəqəmsal marketinq davamlı prosesdir. Zamanla strategiyanı təkmilləşdirir, data əsaslı qərarlarla nəticələri yaxşılaşdırır və uzunmüddətli biznes artımını dəstəkləyən aydın hesabatlar təqdim edirik."
+      }
+    },
+    "solutions": {
+      "title": "Əsas Rəqəmsal Marketinq Xidmətlərimizi Kəşf Edin",
+      "subtitle": "YELTU Agency görünürlüyü artırmaq, uyğun trafik yaratmaq və biznes artımını dəstəkləmək üçün fokuslanmış rəqəmsal marketinq həlləri təqdim edir.",
+      "seo": {
+        "title": "SEO",
+        "desc": "Texniki SEO, açar söz strategiyası, optimallaşdırılmış kontent və daha güclü sayt strukturu vasitəsilə axtarış sistemlərində görünürlüğünüzü artırın və uzunmüddətli orqanik trafik əldə edin.",
+        "cta": "SEO Xidmətlərimizi Kəşf Edin"
+      },
+      "sem": {
+        "title": "SEM",
+        "desc": "Uyğun trafik, lead-lər və ölçülə bilən reklam gəliri yaratmaq üçün hazırlanmış strateji ödənişli axtarış kampaniyaları ilə yüksək intent-li auditoriyaya daha sürətli çatın.",
+        "cta": "SEM Xidmətlərimizi Kəşf Edin"
+      },
+      "smm": {
+        "title": "SMM",
+        "desc": "Yaradıcı kommunikasiya, ardıcıllıq və platformaya uyğun icra üsullarını birləşdirən sosial media strategiyaları ilə auditoriya əlaqələrini və brend tanınmasını gücləndirin.",
+        "cta": "SMM Xidmətlərimizə Baxın"
+      },
+      "design": {
+        "title": "Dizayn",
+        "desc": "Kommunikasiya aydınlığını artıran, kampaniya performansını dəstəkləyən və brendinizi müxtəlif platformalarda daha yadda qalan edən dizayn sistemləri və vizual kontentlə rəqəmsal marketinqinizi gücləndirin.",
+        "cta": "Dizayn Xidmətlərimizi Kəşf Edin"
+      }
+    },
+    "closing": {
+      "title": "Hədəf Bazarınıza Birbaşa Təsir Göstərən Strateji Rəqəmsal Marketinq Xidmətləri",
+      "p1": "Rəqəmsal marketinq bizneslərin auditoriyaları ilə əlaqə qurma formasını tamamilə dəyişib. Ənənəvi reklam əvvəlcə geniş mesajlaşma və kütləvi tanıtıma əsaslanırdı, bu da çox vaxt təklif olunan məhsul və ya xidmətlə maraqlanmayan insanlara çatırdı. Bu gün isə uğurlu marketinq relevans, data və müştəri intent-ni anlamaq üzərində qurulur.",
+      "p2": "YELTU Agency olaraq biz brendinizi doğru auditoriya ilə doğru anda əlaqələndirən rəqəmsal marketinq strategiyaları hazırlayırıq. Promosyonları kor-koranə irəli sürmək əvəzinə, artıq həll axtaran istifadəçiləri cəlb edən sistemlər qururuq. SEO, search advertising və sosial media marketinqi vasitəsilə bizneslərə görünürlük qazandırır, uyğun lead-lər yaradır və uzunmüddətli brend authority-si formalaşdırırıq.",
+      "p3": "Məqsədimiz sadədir: yalnız trafiki artıran deyil, diqqəti real biznes imkanlarına çevirən marketinq yaratmaq.",
+      "cta": "Rəqəmsal Marketinq Strategiyanıza Başlayın",
+      "cards": {
+        "research": {
+          "title": "Bazarınızı Araşdırın və Anlayın",
+          "desc": "Uğurlu rəqəmsal marketinq auditoriyanızı anlamaqla başlayır. Biz bazar davranışını, müştəri intent-ni və rəqib strategiyalarını təhlil edərək brendinizi xidmətlərinizlə maraqlanma ehtimalı ən yüksək olan insanlarla əlaqələndirən kampaniyalar qururuq."
+        },
+        "analytics": {
+          "title": "Marketinq Performansını Təhlil Edin",
+          "desc": "Rəqəmsal marketinq həmişə ölçülə bilən olmalıdır. Biz hər strategiyanın real nəticə verməsini təmin etmək üçün kampaniya performansını, istifadəçi engagement-ni və trafik davranışını davamlı olaraq qiymətləndiririk və təkmilləşdirmə imkanlarını müəyyənləşdiririk."
+        },
+        "leads": {
+          "title": "Uyğun Lead-lər Yaradın",
+          "desc": "Rəqəmsal marketinq sadəcə trafiki artırmağa deyil, düzgün müştəriləri cəlb etməyə fokuslanmalıdır. Strategiyalarımız biznesinizi xidmətlərinizi aktiv şəkildə axtaran istifadəçilərlə əlaqələndirmək üçün qurulur."
+        },
+        "visibility": {
+          "title": "Ardıcıl Brend Görünürlüğünü Qoruyun",
+          "desc": "Auditoriyanız uyğun həlləri axtardıqda brendinizi asanlıqla tapa bilməlidir. SEO, sosial media marketinqi və hədəfli kampaniyalar vasitəsilə biznesinizin getdikcə daha rəqəmsallaşan bazarda görünən və rəqabətli qalmasına kömək edirik."
+        }
+      }
+    }
+  },
+  "seo": {
+    "seo": {
+      "title": "SEO Xidmətləri | YELTU Agency",
+      "desc": "Görünürlüğü artırmaq, uyğun orqanik trafik cəlb etmək və uzunmüddətli biznes artımını dəstəkləmək üçün hazırlanmış strateji SEO xidmətləri."
+    },
+    "hero": {
+      "title": "Görünürlüğü, Trafiki və Uzunmüddətli Biznes Artımını Artıran SEO Xidmətləri",
+      "hook": "Search Engine Optimization biznesinizin məhsul və ya xidmətlərinizi aktiv şəkildə axtaran insanların qarşısına çıxmasına kömək edir. YELTU Agency olaraq biz reytinqləri yaxşılaşdıran, uyğun orqanik trafik gətirən və veb saytınızı uzunmüddətli artım mühərrikinə çevirən strateji SEO sistemləri qururuq.",
+      "points": {
+        "technical": "Texniki SEO",
+        "onpage": "On-Page SEO",
+        "content": "SEO Kontent Strategiyası"
+      },
+      "cta": "SEO Strategiyanıza Başlayın"
+    },
+    "intro": {
+      "title": "Niyə SEO Ən Güclü Rəqəmsal Marketinq Kanallarından Biri Sayılır",
+      "p1": "Axtarış sistemləri insanların məhsulları, xidmətləri və biznesləri onlayn kəşf etməsinin əsas yollarından birinə çevrilib. Əgər veb saytınız uyğun axtarış nəticələrində görünmürsə, potensial müştərilər böyük ehtimalla rəqiblərinizi tapacaqlar. SEO axtarış sistemlərinin saytınızı necə başa düşdüyünü və sıraladığını yaxşılaşdıraraq biznesinizə uzunmüddətli görünürlük qazandırır. YELTU Agency olaraq biz texniki optimizasiya, yüksək keyfiyyətli kontent və güclü sayt arxitekturasını birləşdirən dayanıqlı SEO strategiyaları qurmağa fokuslanırıq. Bu da saytınızın uyğun trafik cəlb etməsinə, brend etibarlılığını artırmasına və tamamilə ödənişli reklamlardan asılı olmadan davamlı artım imkanları yaratmasına kömək edir."
+    },
+    "features": {
+      "title": "Effektiv SEO-nun Əsas Elementləri",
+      "technical": {
+        "title": "Texniki SEO",
+        "desc": "Texniki SEO axtarış sistemlərinin saytınızı düzgün crawl etməsini, başa düşməsini və indeksləməsini təmin edir. Buraya sayt strukturunun, səhifə sürətinin, mobil performansın və reytinqlərə təsir edən texniki siqnalların optimizasiyası daxildir. Texniki cəhətdən optimallaşdırılmış sayt uzunmüddətli axtarış görünürlüğünün əsasını yaradır."
+      },
+      "keywords": {
+        "title": "Açar Söz Strategiyası",
+        "desc": "Uğurlu SEO potensial müştərilərinizin nə axtardığını anlamaqla başlayır. Açar söz araşdırması search intent-i, artım imkanlarını və xidmətlərinizlə uyğun mövzuları müəyyənləşdirməyə kömək edir. Yaxşı qurulmuş açar söz strategiyası saytınızın doğru auditoriyanı hədəfləməsini təmin edir."
+      },
+      "onpage": {
+        "title": "On-Page Optimizasiya",
+        "desc": "On-page SEO ayrı-ayrı səhifələrin axtarış sistemlərində daha yaxşı sıralanmasına fokuslanır. Buraya başlıqların, metadata-nın, daxili linklərin, kontent strukturunun və açar söz uyğunluğunun optimizasiyası daxildir. Düzgün on-page optimizasiya axtarış sistemlərinin kontentinizi daha aydın başa düşməsinə kömək edir."
+      },
+      "content": {
+        "title": "Kontent İnkişafı",
+        "desc": "Axtarış sistemləri istifadəçilərə real dəyər verən kontenti prioritetləşdirir. Yüksək keyfiyyətli, informativ və yaxşı strukturlaşdırılmış kontent uyğun axtarış sorğuları üzrə sıralanmaq şansınızı artırır. Kontent eyni zamanda sahənizdə authority qurmağa kömək edir."
+      },
+      "links": {
+        "title": "Link Building",
+        "desc": "Etibarlı saytlardan gələn backlink-lər axtarış sistemlərinə authority və etibarlılıq siqnalı verir. Strateji link building yanaşması domain gücünü, görünürlüğü və reytinqləri yaxşılaşdırmağa kömək edir. Bu proses hər zaman kəmiyyətdən çox keyfiyyətə fokuslanmalıdır."
+      },
+      "monitoring": {
+        "title": "Performans Monitorinqi",
+        "desc": "SEO davamlı izləmə və təkmilləşdirmə tələb edən uzunmüddətli prosesdir. Reytinqlərin, trafik davranışının və konversiya məlumatlarının izlənməsi optimizasiya və uzunmüddətli artım imkanlarını müəyyənləşdirməyə kömək edir."
+      }
+    },
+    "deepdive": {
+      "title": "SEO Bizneslərin Onlayn Böyüməsinə Necə Kömək Edir",
+      "p1": "SEO bizneslərin xidmətlərini həll axtaran insanlarla əlaqələndirərək uzunmüddətli rəqəmsal görünürlük qurmasına kömək edir. Qısamüddətli reklam kampaniyalarından fərqli olaraq, SEO zaman keçdikcə trafik və lead yaratmağa davam edir. Düzgün optimallaşdırılmış sayt həm istifadəçilər, həm də axtarış sistemləri üçün etibar yaradır, bu da sahənizdə etibarlılığı və authority-ni gücləndirir. Doğru strategiya ilə SEO dayanıqlı onlayn artım üçün ən sərfəli marketinq kanallarından birinə çevrilə bilər."
+    },
+    "article": {
+      "title": "SEO Nəticə Göstərməyə Nə Qədər Vaxtda Başlayır?",
+      "p1": "SEO ani nəticə verən marketinq həlli deyil, uzunmüddətli strategiyadır. Əksər saytlar rəqabətə, sahəyə və saytın mövcud vəziyyətinə görə üç ilə altı ay ərzində mənalı irəliləyiş görməyə başlayır. Lakin SEO momentum qazandıqdan sonra nəticələr zamanla daha da güclənir. Buna görə SEO-ya investisiya edən bizneslər çox vaxt davamlı orqanik trafik və daha güclü onlayn görünürlük əldə edirlər."
+    },
+    "process": {
+      "title": "SEO Prosesimiz",
+      "subtitle": "YELTU Agency olaraq axtarış görünürlüğünü yaxşılaşdırmaq, sayt authority-sini gücləndirmək və dayanıqlı uzunmüddətli artım yaratmaq üçün strukturlaşdırılmış SEO prosesi ilə işləyirik.",
+      "step1": {
+        "title": "Veb Sayt Auditi",
+        "desc": "İlk olaraq saytınızın texniki strukturunu, kontent keyfiyyətini və mövcud axtarış performansını təhlil edərək inkişaf imkanlarını müəyyənləşdiririk."
+      },
+      "step2": {
+        "title": "Açar Söz Araşdırması",
+        "desc": "Hədəf auditoriyanızın istifadə etdiyi axtarış terminlərini müəyyənləşdirir və biznes məqsədlərinizə uyğun açar söz strategiyası qururuq."
+      },
+      "step3": {
+        "title": "Texniki Optimizasiya",
+        "desc": "Axtarış sistemlərinin saytınızı düzgün başa düşməsi üçün sayt strukturunu, sürəti, indeksləməni və mobil performansı təkmilləşdiririk."
+      },
+      "step4": {
+        "title": "Kontentin Optimizasiyası",
+        "desc": "Mövcud kontenti gücləndirir və uyğun açar sözləri hədəfləyən, istifadəçilərə real dəyər verən yeni səhifələr hazırlayırıq."
+      },
+      "step5": {
+        "title": "Authority Qurulması",
+        "desc": "Strateji link building və uyğun platformalarda brend görünürlüğü vasitəsilə saytınızın etibarlılığını gücləndiririk."
+      },
+      "step6": {
+        "title": "Davamlı Təkmilləşdirmə",
+        "desc": "SEO performansı mütəmadi izlənir ki, strategiyalar data və nəticələr əsasında təkmilləşdirilə və uyğunlaşdırıla bilsin."
+      }
+    },
+    "solutions": {
+      "title": "Rəqəmsal Marketinq Xidmətlərimizi Kəşf Edin",
+      "subtitle": "Görünürlüğü gücləndirmək, trafik keyfiyyətini artırmaq və uzunmüddətli biznes artımını dəstəkləmək üçün əlaqəli rəqəmsal marketinq həllərini kəşf edin.",
+      "digitalmarketing": {
+        "title": "Rəqəmsal Marketinq",
+        "desc": "SEO, ödənişli kampaniyalar, sosial media və konversiya yönümlü planlaşdırmanı birləşdirən inteqrasiya olunmuş rəqəmsal marketinq strategiyaları ilə daha güclü onlayn mövcudluq qurun.",
+        "cta": "Rəqəmsal Marketinq Xidmətlərini Kəşf Edin"
+      },
+      "sem": {
+        "title": "SEM",
+        "desc": "Uyğun trafik, lead-lər və ölçülə bilən performans yaratmaq üçün hazırlanmış ödənişli axtarış kampaniyaları vasitəsilə yüksək intent-li auditoriyaya daha sürətli çatın.",
+        "cta": "SEM Xidmətlərini Kəşf Edin"
+      },
+      "smm": {
+        "title": "SMM",
+        "desc": "Ardıcıl, aktual və platformaya uyğun icra üzərində qurulan sosial media strategiyaları ilə brend mövcudluğunu və auditoriya əlaqələrini gücləndirin.",
+        "cta": "SMM Xidmətlərinə Baxın"
+      },
+      "design": {
+        "title": "Dizayn",
+        "desc": "SEO-nuzu və rəqəmsal görünürlüğünüzü, rəqəmsal kanallar üzrə kommunikasiyanı gücləndirən strateji dizayn sistemləri, vizual ardıcıllıq və kreativ materiallarla dəstəkləyin.",
+        "cta": "Dizayn Xidmətlərini Kəşf Edin"
+      }
+    },
+    "subservices": {
+      "title": "SEO Alt Xidmətləri",
+      "technical": {
+        "title": "Texniki SEO",
+        "desc": "Texniki SEO saytınızın strukturunu və performansını optimallaşdırmağa fokuslanır ki, axtarış sistemləri səhifələrinizi düzgün crawl etsin, başa düşsün və indeksləsin. Buraya səhifə sürətinin, mobil istifadə rahatlığının, sayt arxitekturasının və axtarış reytinqlərinə təsir edən texniki siqnalların yaxşılaşdırılması daxildir."
+      },
+      "onpage": {
+        "title": "On-Page SEO",
+        "desc": "On-page SEO ayrı-ayrı veb səhifələri daha yaxşı sıralanacaq və daha yaxşı istifadəçi təcrübəsi təqdim edəcək şəkildə optimallaşdırır. Buraya başlıqların, metadata-nın, daxili linklərin, kontent strukturunun və açar söz uyğunluğunun optimizasiyası daxildir ki, axtarış sistemləri kontentinizi daha aydın başa düşsün."
+      },
+      "content": {
+        "title": "SEO Kontent Strategiyası",
+        "desc": "Kontent uğurlu SEO-da əsas rol oynayır. Strukturlaşdırılmış kontent strategiyası saytınızın uyğun axtarış sorğularını hədəfləməsini və istifadəçi intent-ni cavablandırmasını təmin edir. Dəyərli və optimallaşdırılmış kontent yaradaraq bizneslər görünürlüğü artıra, orqanik trafik cəlb edə və öz sahələrində authority qura bilərlər."
+      }
+    }
+  },
+  "sem": {
+    "seo": {
+      "title": "SEM Xidmətləri | YELTU Agency",
+      "desc": "Dərhal görünürlük, keyfiyyətli trafik və ölçülə bilən biznes artımı yaradan nəticəyönümlü SEM kampaniyalarına başlayın."
+    },
+    "hero": {
+      "title": "Dərhal Görünürlük, Trafik və Keyfiyyətli Lead-lər Yaradan SEM Xidmətləri",
+      "hook": "Search Engine Marketing biznesinizin məhsul və ya xidmətlərinizi aktiv şəkildə axtaran potensial müştərilərin qarşısına dərhal çıxmasına kömək edir. YELTU Agency olaraq biz yüksək niyyətli trafiki cəlb edən, reklam xərclərindən maksimum geri dönüş təmin edən və axtarış tələbatını ölçülə bilən biznes artımına çevirən nəticəyönümlü reklam kampaniyaları qururuq.",
+      "points": {
+        "googleads": "Google Ads Kampaniyaları",
+        "ppc": "PPC Strategiyası",
+        "tracking": "Konversiya İzlənməsi"
+      },
+      "cta": "SEM Kampaniyanıza Başlayın"
+    },
+    "intro": {
+      "title": "Niyə SEM Dərhal Onlayn Görünürlük Üçün Vacibdir",
+      "p1": "SEO uzunmüddətli orqanik görünürlük yaratsa da, Search Engine Marketing bizneslərə potensial müştərilərə dərhal çatmaq imkanı verir. Ödənişli axtarış kampaniyaları brendinizi yüksək uyğun açar sözlər üzrə axtarış nəticələrinin yuxarı hissəsinə çıxarır və istifadəçilərin xidmətlərinizi məhz ehtiyac duyduqları anda daha rahat tapmasına kömək edir. YELTU Agency olaraq biz dəqiq hədəfləmə, optimallaşdırılmış reklam mətnləri və məlumat əsaslı büdcə idarəçiliyini birləşdirən strateji SEM kampaniyaları hazırlayırıq. Bu yanaşma bizneslərə reklam büdcəsindən səmərəli istifadə etməklə keyfiyyətli lead-lər qazanmağa, brend görünürlüğünü artırmağa və ölçülə bilən nəticələr əldə etməyə kömək edir."
+    },
+    "features": {
+      "title": "Effektiv SEM-in Əsas Elementləri",
+      "keywords": {
+        "title": "Açar Söz Hədəflənməsi",
+        "desc": "Uğurlu SEM kampaniyaları düzgün açar sözlərin müəyyənləşdirilməsi ilə başlayır. Açar söz hədəflənməsi güclü alış niyyətini göstərən axtarış sorğularına fokuslanır və reklamlarınızın biznesinizlə əlaqəli həllər axtaran istifadəçilərə çatmasını təmin edir."
+      },
+      "campaign": {
+        "title": "Reklam Kampaniyası Strategiyası",
+        "desc": "Strukturlaşdırılmış kampaniya strategiyası hər bir reklamın biznes məqsədlərinizə xidmət etməsini təmin edir. Kampaniyalar auditoriya seqmentləri, axtarış niyyəti və məhsul kateqoriyalarına əsasən qurulduqda bizneslər görünürlüğü və kampaniya effektivliyini maksimuma çatdıra bilir."
+      },
+      "copy": {
+        "title": "Reklam Mətninin Optimizasiyası",
+        "desc": "Effektiv reklam cəlbedici və uyğun mesajlaşma tələb edir. Yaxşı yazılmış reklam mətni dəyəri aydın şəkildə çatdırır, klikləmə nisbətini artırır və potensial müştəriləri xidmətlərinizlə əlaqəyə keçməyə təşviq edir."
+      },
+      "landing": {
+        "title": "Landing Page Optimizasiyası",
+        "desc": "Trafik cəlb etmək prosesin yalnız bir hissəsidir. Landing page-lər ziyarətçiləri lead-ə və ya müştəriyə çevirmək üçün optimallaşdırılmalıdır. Güclü landing page istifadəçi təcrübəsini yaxşılaşdırır, dəyəri aydın şəkildə göstərir və daha yüksək konversiya nisbətlərini dəstəkləyir."
+      },
+      "budget": {
+        "title": "Büdcə İdarəçiliyi",
+        "desc": "Effektiv büdcə idarəçiliyi reklam xərclərinin mümkün olan ən yüksək geri dönüşü verməsini təmin edir. Kampaniya büdcələri davamlı olaraq izlənir və ən yaxşı nəticə gətirən açar sözlərə və auditoriyalara yönəldilərək optimallaşdırılır."
+      },
+      "tracking": {
+        "title": "Performans İzlənməsi",
+        "desc": "SEM kampaniyaları performans məlumatlarına ciddi şəkildə əsaslanır. Göstərişlərin, kliklərin, konversiyaların və xərclə bağlı göstəricilərin izlənməsi davamlı təkmilləşdirməyə imkan verir və marketinq investisiyalarının ölçülə bilən nəticələr yaratmasını təmin edir."
+      }
+    },
+    "deepdive": {
+      "title": "SEM Bizneslərə Lead-ləri Daha Sürətli Necə Qazandırır",
+      "p1": "SEM bizneslərə onlayn olaraq həll axtaran potensial müştərilərə dərhal çıxış imkanı verir. Uzunmüddətli strategiyalardan fərqli olaraq, ödənişli axtarış reklamları axtarış nəticələrində anında görünürlük yaradır. Düzgün hədəfləmə, optimallaşdırılmış mesajlaşma və strateji kampaniya idarəçiliyi ilə SEM bizneslərə yüksək uyğun trafiki cəlb etməyə və keyfiyyətli lead-ləri sürətlə qazanmağa kömək edir. Bu da onu böyüməni sürətləndirmək və rəqabətli bazarlarda mövcud tələbi ələ keçirmək istəyən şirkətlər üçün effektiv marketinq kanalına çevirir."
+    },
+    "article": {
+      "title": "SEM Biznesiniz Üçün Doğru Strategiyadırmı?",
+      "p1": "SEM xüsusilə potensial müştərilərə sürətli çatmaq və rəqabətli sahələrdə görünürlüğünü artırmaq istəyən bizneslər üçün dəyərlidir. Bu yanaşma brendlərin məhsul və ya xidmət axtaran yüksək niyyətli istifadəçilərin qarşısına çıxmasına imkan yaradır. Yeni xidmət təqdim edən, yeni bazarlara daxil olan və ya daha sürətli lead əldə etmək istəyən şirkətlər çox vaxt SEM strategiyalarından faydalanırlar. SEO və digər rəqəmsal marketinq fəaliyyətləri ilə birlikdə istifadə olunduqda, SEM həm qısamüddətli nəticələr, həm də uzunmüddətli inkişaf üçün güclü alətə çevrilir."
+    },
+    "process": {
+      "title": "SEM Prosesimiz",
+      "subtitle": "Görünürlüğü artırmaq, kampaniya səmərəliliyini yaxşılaşdırmaq və ölçülə bilən nəticələr əldə etmək üçün strukturlaşdırılmış SEM prosesi tətbiq edirik.",
+      "step1": {
+        "title": "Kampaniya Araşdırması",
+        "desc": "Axtarış reklamı üçün ən effektiv imkanları müəyyən etmək məqsədilə sahənizi, hədəf auditoriyanızı və rəqiblərinizi təhlil edirik."
+      },
+      "step2": {
+        "title": "Açar Söz Planlaması",
+        "desc": "Xidmətlərinizə uyğun yüksək niyyətli açar sözləri müəyyənləşdirir və strukturlaşdırılmış kampaniya hədəfləmə strategiyası qururuq."
+      },
+      "step3": {
+        "title": "Kampaniyanın Qurulması",
+        "desc": "Optimallaşdırılmış reklam qrupları, mesajlaşma və təklif strategiyaları ilə reklam kampaniyaları hazırlayır və işə salırıq."
+      },
+      "step4": {
+        "title": "Landing Page Uyğunlaşdırılması",
+        "desc": "Landing page-lər reklam mesajları ilə uyğunlaşdırılır və istifadəçi təcrübəsini yaxşılaşdırmaq üçün optimallaşdırılır ki, bu da daha yaxşı konversiya nəticələri yaratsın."
+      },
+      "step5": {
+        "title": "Performansın Optimizasiyası",
+        "desc": "Klikləmə nisbətini, konversiyaları və ümumi reklam xərci geri dönüşünü yaxşılaşdırmaq üçün kampaniya məlumatları davamlı şəkildə izlənir və optimallaşdırılır."
+      },
+      "step6": {
+        "title": "Hesabat və Miqyaslandırma",
+        "desc": "Ətraflı performans məlumatları strategiyanı təkmilləşdirməyə və ən güclü nəticə yaradan kampaniyaları böyütməyə kömək edir."
+      }
+    },
+    "solutions": {
+      "title": "Rəqəmsal Marketinq Xidmətlərimizi Kəşf Edin",
+      "subtitle": "Görünürlüğü gücləndirmək, keyfiyyətli trafik cəlb etmək və davamlı biznes artımını dəstəkləmək üçün istifadə etdiyimiz əsas rəqəmsal marketinq həllərini kəşf edin.",
+      "digitalmarketing": {
+        "title": "Rəqəmsal Marketinq",
+        "desc": "Görünürlüğü artırmaq, keyfiyyətli lead-lər cəlb etmək və diqqəti ölçülə bilən biznes artımına çevirmək üçün hazırlanmış inteqrasiya olunmuş rəqəmsal marketinq strategiyaları ilə onlayn mövcudluğunuzu gücləndirin.",
+        "cta": "Rəqəmsal Marketinq Xidmətlərimizi Kəşf Edin"
+      },
+      "seo": {
+        "title": "SEO",
+        "desc": "Texniki optimizasiya, açar söz strategiyası, daha güclü məzmun və düzgün qurulmuş veb sayt vasitəsilə axtarış sistemlərində görünürlüğünüzü artırın və uzunmüddətli orqanik trafik qazanın.",
+        "cta": "SEO Xidmətlərimizi Kəşf Edin"
+      },
+      "smm": {
+        "title": "SMM",
+        "desc": "Yaradıcı kommunikasiya, davamlılıq və platformaya uyğun icranı birləşdirən sosial media strategiyaları ilə auditoriyanızla daha güclü əlaqə qurun və brend tanınırlığını artırın.",
+        "cta": "SMM Xidmətlərimizə Baxın"
+      },
+      "design": {
+        "title": "Dizayn",
+        "desc": "Kommunikasiyanı gücləndirən, brend ardıcıllığını dəstəkləyən və kampaniyalarınızı vizual baxımdan daha effektiv edən yaradıcı dizayn həlləri ilə marketinq performansınızı yüksəldin.",
+        "cta": "Dizayn Xidmətlərimizi Kəşf Edin"
+      }
+    }
+  },
+  "smm": {
+    "seo": {
+      "title": "SMM Xidmətləri | YELTU Agency",
+      "desc": "Brend tanınmasını, auditoriya əlaqəsini və uzunmüddətli biznes artımını gücləndirən sosial media marketinq xidmətləri."
+    },
+    "hero": {
+      "title": "Brend Tanınmasını və Müştəri Əlaqəsini Gücləndirən Sosial Media Marketinqi",
+      "hook": "Sosial Media Marketinqi bizneslərə auditoriyaları ilə əlaqə qurmağa, brend görünürlüğünü gücləndirməyə və onlayn mühitdə mənalı münasibətlər yaratmağa kömək edir. YELTU Agency olaraq biz əlaqəni artıran, brend etibarını gücləndirən və uzunmüddətli biznes inkişafını dəstəkləyən strateji sosial media kampaniyaları hazırlayırıq.",
+      "points": {
+        "strategy": "Sosial Media Strategiyası",
+        "content": "Kontent Yaradılması",
+        "paid": "Ödənişli Sosial Media Reklamları"
+      },
+      "cta": "Sosial Media Strategiyanıza Başlayın"
+    },
+    "intro": {
+      "title": "Niyə Sosial Media Marketinqi Müasir Brendlər Üçün Vacibdir",
+      "p1": "Sosial media platformaları bizneslərlə onların auditoriyaları arasında ünsiyyət üçün ən güclü kanallardan birinə çevrilib. Müştərilər hər gün sosial platformalar vasitəsilə brendləri kəşf edir, xidmətləri dəyərləndirir və şirkətlərlə əlaqə qururlar. Düzgün qurulmuş sosial media strategiyası bizneslərə etibar yaratmağa, brend tanınmasını gücləndirməyə və auditoriya ilə ardıcıl kommunikasiya saxlamağa imkan verir. YELTU Agency olaraq biz bizneslərə kontent strategiyaları hazırlamaqda, sosial platformaları idarə etməkdə və əlaqəni artıran, daha geniş marketinq məqsədlərini dəstəkləyən hədəfli kampaniyalar qurmaqda kömək edirik. Yaradıcılığı performans analitikası ilə birləşdirərək sosial media marketinqini uzunmüddətli brend sədaqəti yaradan güclü alətə çeviririk."
+    },
+    "features": {
+      "title": "Effektiv Sosial Media Marketinqinin Əsas Elementləri",
+      "strategy": {
+        "title": "Sosial Media Strategiyası",
+        "desc": "Uğurlu sosial media mövcudluğu aydın strategiyadan başlayır. Məqsədlərin müəyyən olunması, auditoriyanın seçilməsi və doğru platformaların təyin edilməsi hər paylaşımın və kampaniyanın ümumi biznes məqsədlərinə xidmət etməsini təmin edir."
+      },
+      "planning": {
+        "title": "Kontent Planlaması",
+        "desc": "Ardıcıl və dəyərli kontent auditoriya əlaqəsini qurmaq üçün vacibdir. Kontent planlaması sosial media paylaşımlarının brend mesajlaşmasına uyğun olmasını və izləyicilərə real dəyər verməsini təmin edir."
+      },
+      "engagement": {
+        "title": "Auditoriya ilə Əlaqə",
+        "desc": "Sosial media qarşılıqlı əlaqə üzərində qurulub. Şərhlər, mesajlar və müzakirələr vasitəsilə auditoriya ilə ünsiyyət münasibətləri gücləndirir və brend etibarını artırır."
+      },
+      "paid": {
+        "title": "Ödənişli Sosial Kampaniyalar",
+        "desc": "Ödənişli sosial media reklamları brendlərə daha geniş auditoriyalara çatmağa və xidmətlərini daha effektiv tanıtmağa kömək edir. Hədəfli kampaniyalar tanıtım mesajlarının ən uyğun istifadəçilərə çatmasını təmin edir."
+      },
+      "communication": {
+        "title": "Brend Kommunikasiyası",
+        "desc": "Sosial media brendlərə öz kimliyini və dəyərlərini ifadə etməyə imkan verir. Ardıcıl kommunikasiya brend tanınmasını gücləndirir və auditoriya ilə daha insani əlaqə yaradır."
+      },
+      "insights": {
+        "title": "Performans Analitikası",
+        "desc": "Əlaqə göstəricilərinin, auditoriya artımının və kampaniya performansının izlənməsi sosial media strategiyalarını təkmilləşdirməyə və inkişaf imkanlarını müəyyən etməyə kömək edir."
+      }
+    },
+    "deepdive": {
+      "h1": {
+        "title": "Sosial Medianın Brendlərə Daha Güclü Müştəri Münasibətləri Qurmağa Necə Kömək Etməsi",
+        "p1": "Sosial media platformaları bizneslərə auditoriyaları ilə birbaşa ünsiyyət qurmağa və zamanla daha güclü münasibətlər formalaşdırmağa imkan verir. Dəyərli kontent paylaşmaq, reaksiyalara cavab vermək və ardıcıl kommunikasiya saxlamaqla brendlər etibar və tanışlıq hissi yarada bilirlər. Bu əlaqə müştəri sədaqətini gücləndirir və təkrar əlaqə ehtimalını artırır. Strateji sosial media mövcudluğu yalnız brend tanınmasını deyil, həm də uzunmüddətli müştəri münasibətlərini də dəstəkləyir."
+      },
+      "h2": {
+        "title": "Biznesiniz Üçün Hansı Sosial Media Platformaları Daha Uyğundur?",
+        "p1": "Fərqli sosial media platformaları fərqli auditoriyalara və biznes məqsədlərinə xidmət edir. Bəzi platformalar peşəkar şəbəkələşməyə fokuslanır, digərləri isə vizual hekayəçiliyə və ya icma əlaqəsinə üstünlük verir. Doğru platformanı seçmək sizin sahənizdən, hədəf auditoriyanızdan və kommunikasiya üslubunuzdan asılıdır. Kontent strategiyasını düzgün sosial platformalarla uyğunlaşdıran bizneslər əlaqəni artırır, yeni auditoriyalara çatır və rəqəmsal mövcudluğunu daha effektiv şəkildə gücləndirir."
+      }
+    },
+    "process": {
+      "title": "Sosial Media Marketinq Prosesimiz",
+      "subtitle": "Daha güclü brend mövcudluğu, auditoriya əlaqəsi və uzunmüddətli sosial media artımı yaratmaq üçün qurulmuş strukturlaşdırılmış proses.",
+      "step1": {
+        "title": "Auditoriya Araşdırması",
+        "desc": "Hədəf auditoriyanızı müəyyən edir və onların sosial media platformalarında necə davrandığını analiz edirik."
+      },
+      "step2": {
+        "title": "Strategiyanın Hazırlanması",
+        "desc": "Sosial media fəaliyyətlərini biznes məqsədləri ilə uyğunlaşdırmaq üçün strukturlaşdırılmış kontent və kampaniya strategiyası hazırlanır."
+      },
+      "step3": {
+        "title": "Kontentin Hazırlanması",
+        "desc": "Brend mesajınızı çatdıran və auditoriya əlaqəsini təşviq edən cəlbedici kontent hazırlayırıq."
+      },
+      "step4": {
+        "title": "Kampaniyanın İcrası",
+        "desc": "Brend tanınmasını, əlaqəni və trafik axınını artırmaq üçün sosial media kampaniyaları işə salınır."
+      },
+      "step5": {
+        "title": "Performansın İzlənməsi",
+        "desc": "Əlaqə göstəriciləri, əhatə dairəsi və auditoriya davranışı kampaniya performansını qiymətləndirmək üçün analiz olunur."
+      },
+      "step6": {
+        "title": "Davamlı Optimallaşdırma",
+        "desc": "Nəticələri yaxşılaşdırmaq və uzunmüddətli brend mövcudluğunu gücləndirmək üçün strategiyalar zamanla təkmilləşdirilir."
+      }
+    },
+    "solutions": {
+      "title": "Əsas Rəqəmsal Marketinq Xidmətlərimizi Kəşf Edin",
+      "subtitle": "Görünürlüğünüzü, trafikinizi və brend inkişafınızı gücləndirən əlaqəli rəqəmsal marketinq xidmətləri ilə tanış olun.",
+      "digitalmarketing": {
+        "title": "Rəqəmsal Marketinq",
+        "desc": "Görünürlüğü artırmaq, keyfiyyətli potensial müştərilər cəlb etmək və diqqəti ölçülə bilən biznes artımına çevirmək üçün hazırlanmış rəqəmsal marketinq strategiyaları ilə onlayn mövcudluğunuzu gücləndirin.",
+        "cta": "Rəqəmsal Marketinq Xidmətlərini Kəşf Edin"
+      },
+      "seo": {
+        "title": "SEO Xidmətləri",
+        "desc": "Texniki SEO, açar söz strategiyası, optimallaşdırılmış kontent və daha güclü sayt strukturu ilə axtarış sistemlərində görünürlüğünüzü artırın və uzunmüddətli orqanik trafik əldə edin.",
+        "cta": "SEO Xidmətlərimizə Baxın"
+      },
+      "sem": {
+        "title": "SEM Xidmətləri",
+        "desc": "Keyfiyyətli trafik, lead və reklam xərclərindən ölçülə bilən geri dönüş yaratmaq üçün qurulmuş strateji ödənişli axtarış kampaniyaları ilə yüksək niyyətli auditoriyalara daha sürətli çatın.",
+        "cta": "SEM Xidmətlərimizi Kəşf Edin"
+      },
+      "design": {
+        "title": "Dizayn",
+        "desc": "Vizual ardıcıllığı, auditoriya qavrayışını və rəqəmsal kampaniya performansını gücləndirən kreativ dizayn həlləri ilə brend kommunikasiya gücünüzü artırın.",
+        "cta": "Dizayn Xidmətlərini Kəşf Edin"
+      }
+    }
+  },
+  "design": {
+    "seo": {
+      "title": "Kreativ Dizayn Xidmətləri | YELTU Agency",
+      "desc": "Brendinizi gücləndirən, vizual ünsiyyəti yaxşılaşdıran və rəqəmsal marketinq performansını dəstəkləyən kreativ dizayn xidmətləri."
+    },
+    "hero": {
+      "title": "Brendinizi Yüksəldən və Marketinqinizi Gücləndirən Kreativ Dizayn Xidmətləri",
+      "hook": "Effektiv rəqəmsal marketinq güclü vizual ünsiyyətə əsaslanır. Kreativ dizayn xidmətlərimiz bizneslərə öz brendini aydın, peşəkar və yadda qalan şəkildə təqdim etməyə, eyni zamanda rəqəmsal platformalarda marketinq kampaniyalarını dəstəkləyən cəlbedici vizual məzmun yaratmağa kömək edir.",
+      "points": {
+        "identity": "Brend və Kimlik Dizaynı",
+        "marketing": "Marketinq Məzmunu Dizaynı",
+        "motion": "Motion Qrafika və Video İstehsalı"
+      },
+      "cta": "Kreativ Dizayn Layihənizə Başlayın"
+    },
+    "intro": {
+      "title": "Kreativ Dizayn Niyə Rəqəmsal Marketinq üçün Vacibdir",
+      "p1": "Vizual ünsiyyət müasir rəqəmsal marketinqdə əsas rol oynayır. Sosial media paylaşımlarından və reklam kreativlərindən tutmuş veb interfeyslərə və promo videolara qədər dizayn auditoriyanın brendinizi necə qəbul etdiyinə və onunla necə qarşılıqlı əlaqə qurduğuna birbaşa təsir göstərir. Güclü vizual materiallar bizneslərə diqqəti tez cəlb etməyə, mesajını aydın çatdırmağa və müxtəlif kanallar üzrə vahid brend kimliyini qorumağa kömək edir.",
+      "p2": "YELTU Agency-də biz kreativ düşüncəni marketinq strategiyası ilə birləşdirərək kampaniyaları dəstəkləyən, brend tanınmasını gücləndirən və rəqəmsal platformalarda auditoriya ilə əlaqəni artıran vizual materiallar hazırlayırıq."
+    },
+    "features": {
+      "title": "Güclü Rəqəmsal Brendinqin Arxasındakı Kreativ Sistemlər",
+      "identity": {
+        "title": "Brend Kimliyi Dizaynı",
+        "desc": "Güclü brend kimliyi bizneslərə tanınma və etibar qazandırır. Brendinq dizayn xidmətlərimizə loqo dizaynı, tipoqrafiya sistemləri, rəng palitraları və brend qaydaları daxildir ki, bu da brendinizin bütün rəqəmsal və fiziki platformalarda ardıcıl və peşəkar görünməsini təmin edir."
+      },
+      "marketing": {
+        "title": "Marketinq Vizual Dizaynı",
+        "desc": "Marketinq kampaniyaları diqqəti cəlb etmək və ideyaları sürətli çatdırmaq üçün güclü vizuallara ciddi şəkildə ehtiyac duyur. Kreativ dizayn xidmətlərimizə sosial media qrafikləri, reklam kreativləri, veb vizualları, promo bannerlər və rəqəmsal marketinq strategiyalarını dəstəkləmək və əlaqəni artırmaq üçün hazırlanmış marketinq materialları daxildir."
+      },
+      "uiux": {
+        "title": "UI / UX Dizaynı",
+        "desc": "İstifadəçi interfeysi və istifadəçi təcrübəsi dizaynı ziyarətçilərin veb saytınız və ya rəqəmsal məhsulunuzla necə qarşılıqlı əlaqə qurduğunda mühüm rol oynayır. UI/UX dizayn prosesimiz istifadə rahatlığına, vizual aydınlığa və intuitiv naviqasiyaya fokuslanaraq əlaqəni artırır, istifadəçi təcrübəsini yaxşılaşdırır və daha yüksək konversiya nəticələrini dəstəkləyir."
+      },
+      "photography": {
+        "title": "Məhsul Fotoqrafiyası və Vizual Məzmun",
+        "desc": "Yüksək keyfiyyətli vizual məzmun müasir marketinq üçün vacibdir. Peşəkar məhsul fotoqrafiyası və vizual materiallar bizneslərə məhsullarını veb saytlarda, sosial media platformalarında və reklam kampaniyalarında aydın və cəlbedici şəkildə təqdim etməyə kömək edir."
+      },
+      "motion": {
+        "title": "Motion Qrafika və Animasiya",
+        "desc": "Motion qrafika və animasiya brendlərə ideyaları dinamik və cəlbedici formada çatdırmağa imkan verir. Animasiya edilmiş vizuallar mürəkkəb mesajları sadələşdirir və veb saytlarda, təqdimatlarda və marketinq kampaniyalarında yadda qalan brend təcrübələri yaradır."
+      },
+      "video3d": {
+        "title": "3D Motion və Promo Video İstehsalı",
+        "desc": "Video məzmun rəqəmsal marketinqdə ən güclü alətlərdən birinə çevrilib. Kreativ komandamız rəqəmsal platformalarda diqqəti cəlb etmək və auditoriya əlaqəsini artırmaq üçün promo videolar, marketinq videoları, animasiya məzmunu və 3D motion vizuallar hazırlayır."
+      }
+    },
+    "deepdive": {
+      "h1": {
+        "title": "Kreativ Dizayn Rəqəmsal Marketinq Kampaniyalarını Necə Gücləndirir",
+        "p1": "Kreativ dizayn marketinq kampaniyalarını daha effektiv etmədə əsas rol oynayır. Yaxşı hazırlanmış vizuallar diqqəti tez cəlb edir və məlumatı aydın çatdırır, bu da auditoriyanın məhsul və ya xidmətlərinizin dəyərini daha yaxşı anlamasına kömək edir. Peşəkar kreativ dizayna investisiya edən bizneslər çox vaxt daha güclü əlaqə, daha yaxşı brend tanınması və rəqəmsal kanallar üzrə daha effektiv marketinq ünsiyyəti əldə edir."
+      },
+      "h2": {
+        "title": "Vizual Məzmun Brend Böyüməsi üçün Niyə Vacibdir",
+        "p1": "Bugünkü rəqəmsal mühitdə auditoriya vizual məlumatı mətndən xeyli daha sürətli qəbul edir. Güclü vizual məzmun bizneslərə fərqlənməyə, ideyaları daha təsirli şəkildə çatdırmağa və yadda qalan brend təcrübələri yaratmağa kömək edir. Yüksək keyfiyyətli dizayn brendinizin veb saytlarda, sosial media platformalarında və marketinq kampaniyalarında peşəkar və etibarlı görünməsini təmin edir."
+      }
+    },
+    "process": {
+      "title": "Kreativ Dizayn Prosesimiz",
+      "subtitle": "Brend istiqamətini rəqəmsal marketinq üçün güclü vizual materiallara çevirən strukturlaşdırılmış dizayn prosesi.",
+      "step1": {
+        "title": "Brendin Kəşfi",
+        "desc": "İlk mərhələdə brend kimliyinizi, hədəf auditoriyanızı və marketinq məqsədlərinizi anlayırıq."
+      },
+      "step2": {
+        "title": "Konseptin Hazırlanması",
+        "desc": "Kreativ konseptlər və vizual istiqamətlər brend strategiyanız əsasında hazırlanır."
+      },
+      "step3": {
+        "title": "Dizayn İstehsalı",
+        "desc": "Dizayn komandamız qrafiklər, layoutlar və multimedia elementləri daxil olmaqla vizual materiallar hazırlayır."
+      },
+      "step4": {
+        "title": "Məzmunun İnteqrasiyası",
+        "desc": "Dizayn materialları veb saytlar, sosial media platformaları və rəqəmsal marketinq kampaniyaları üçün optimallaşdırılır."
+      },
+      "step5": {
+        "title": "Yoxlama və Təkmilləşdirmə",
+        "desc": "Dizayn konseptləri rəy və performans meyarları əsasında təkmilləşdirilir."
+      },
+      "step6": {
+        "title": "Son Təqdimat",
+        "desc": "Yekun dizayn materialları hazırlanır və rəqəmsal platformalarla marketinq kanallarında istifadə üçün təqdim olunur."
+      }
+    },
+    "solutions": {
+      "title": "Əlaqəli Rəqəmsal Marketinq Xidmətlərini Kəşf Edin",
+      "subtitle": "Kreativ dizaynı görünürlük, trafik və əlaqəni gücləndirən daha geniş rəqəmsal strategiyalarla birləşdirin.",
+      "digitalmarketing": {
+        "title": "Rəqəmsal Marketinq",
+        "desc": "SEO, SEM, SMM və kreativ strategiyanın birlikdə görünürlüğü ölçülə bilən biznes böyüməsinə necə çevirdiyini kəşf edin.",
+        "cta": "Rəqəmsal Marketinqi Kəşf Et"
+      },
+      "seo": {
+        "title": "SEO Xidmətləri",
+        "desc": "Uzunmüddətli orqanik böyümə üçün hazırlanmış SEO sistemləri ilə axtarış görünürlüğünü yaxşılaşdırın və məzmun strategiyanızı gücləndirin.",
+        "cta": "SEO Xidmətlərini Kəşf Et"
+      },
+      "sem": {
+        "title": "SEM Xidmətləri",
+        "desc": "Dərhal görünürlük, keyfiyyətli trafik və ölçülə bilən nəticələr yaradan ödənişli axtarış strategiyaları ilə kampaniyalarınızı dəstəkləyin.",
+        "cta": "SEM Xidmətlərini Kəşf Et"
+      },
+      "smm": {
+        "title": "SMM Xidmətləri",
+        "desc": "Güclü kreativ kommunikasiya ilə dəstəklənən sosial media strategiyaları vasitəsilə auditoriya əlaqəsini və brend görünürlüğünü gücləndirin.",
+        "cta": "SMM Xidmətlərini Kəşf Et"
+      }
+    },
+    "closing": {
+      "title": "Rəqəmsal Marketinqinizi Gücləndirən Kreativ Dizayn",
+      "p1": "Güclü dizayn effektiv marketinq ünsiyyəti üçün vacibdir. Peşəkar kreativ materiallara investisiya edən bizneslər auditoriyanın diqqətini daha tez cəlb edir, mesajını daha aydın çatdırır və daha güclü brend tanınması yaradır.",
+      "p2": "YELTU Agency-də biz marketinq kampaniyalarını dəstəkləyən, brend kimliyini gücləndirən və veb saytlar, sosial media platformaları və reklam kanalları üzrə rəqəmsal təcrübəni yaxşılaşdıran vizual məzmun hazırlayırıq.",
+      "cta": "Kreativ Dizayn Layihənizə Başlayın",
+      "cards": {
+        "vision": {
+          "title": "Brend Vizyonunuzu Anlayın",
+          "desc": "Dəyərlərinizi və kommunikasiya üslubunuzu əks etdirən dizaynlar yaratmaq üçün brend kimliyinizi və marketinq məqsədlərinizi təhlil edirik."
+        },
+        "visuals": {
+          "title": "Cəlbedici Vizual Məzmun Yaradın",
+          "desc": "Dizayn komandamız diqqəti cəlb edən və fikirləri effektiv şəkildə çatdıran vizual materiallar hazırlayır."
+        },
+        "campaigns": {
+          "title": "Marketinq Kampaniyalarını Dəstəkləyin",
+          "desc": "Kreativ vizuallar rəqəmsal marketinq strategiyalarını gücləndirməyə və kampaniya performansını yaxşılaşdırmağa kömək edir."
+        },
+        "consistency": {
+          "title": "Ardıcıl Brend Kimliyini Qoruyun",
+          "desc": "Rəqəmsal platformalarda ardıcıl dizayn brendinizin tanınan və peşəkar qalmasını təmin edir."
+        }
+      }
+    }
   }
 }
 

@@ -4,91 +4,78 @@ import {
   Share2,
   Briefcase,
   Smartphone,
-  ShieldCheck
+  ShieldCheck,
+  Code2,
+  Target,
+  Megaphone,
 
 } from "lucide-react";
 
 const services = [
   {
-    icon: Code,
     title: "Web Development",
-    description:
-      "Build powerful, scalable web applications using modern frameworks.",
-    features: [ 
-      "Custom web apps",
-      "E-commerce",
-      "Business websites",
-      "API integration", 
-      "Performance optimization",
-      ], 
-    color: "from-blue-500 to-blue-600",
+    icon: Code2,
+    color: "from-blue-500 to-indigo-600",
+    path: "/services/web-development",
+    description: "Build powerful, scalable web solutions tailored to your business goals.",
+    features: [
+      {
+        label: "Custom web apps",
+        path: "/services/web-development/custom-web-apps",
+      },
+      {
+        label: "Business websites",
+        path: "/services/web-development/business-websites",
+      },
+      {
+        label: "E-commerce websites",
+        path: "/services/web-development/ecommerce",
+      },
+    ],
   },
   {
+    title: "Mobile Development",
     icon: Smartphone,
-    title: "App Development",
-    description:
-      "Native & cross-platform mobile apps with incredible speed and UX.",
-    features: [
-      "iOS & Android",
-      "Cross-platform",
-      "UI/UX design",
-      "Store optimization",
-      "Maintenance",
-    ],
     color: "from-cyan-500 to-blue-600",
-  },
-  {
-    icon: ShieldCheck, // or Server / Network
-    title: "IT Consulting",
-    description:
-      "Strategic IT consulting to align technology with your business goals, improve efficiency, and build scalable, secure systems.",
+    path: "/services/mobile-app-development",
+    description: "Native and cross-platform mobile apps designed for performance and usability.",
     features: [
-      "IT strategy",
-      "Digital transformation",
-      "System integration",
-      "Cloud & infrastructure",
-      "Security & compliance",
+      {
+        label: "iOS & Android",
+        path: "/services/mobile-app-development/ios-android-app-development",
+      },
+      {
+        label: "Cross Platform",
+        path: "/services/mobile-app-development/cross-platform-app-development",
+      },
+      {
+        label: "App Store Optimization",
+        path: "/services/mobile-app-development/app-store-optimization",
+      },
     ],
-    color: "from-violet-500 to-violet-600",
   },
   {
-    icon: Search,
-    title: "Search Engine Optimization",
-    description: "Increase rankings and drive organic traffic.",
-    features: [
-      "SEO audit",
-      "E-commerce SEO",
-      "Technical SEO",
-      "Local SEO",
-      "Taxonomy",
-    ],
-    color: "from-blue-500 to-violet-600",
-  },
-  {
-    icon: Share2,
-    title: "Digital Marketing",
-    description: "Engage audiences and grow your brand presence.",
-    features: [
-      "Content creation",
-      "SMM",
-      "E-mail marketing",
-      "Paid ads",
-      "Market research",
-    ],
-    color: "from-purple-500 to-pink-600",
-  },
-  {
-    icon: Briefcase,
     title: "Brand Strategy",
-    description: "Define a brand identity that your audience remembers.",
+    icon: Target,
+    color: "from-violet-500 to-purple-600",
+    path: "/services/brand-strategy",
+    description:
+      "Strategic brand positioning that helps your business communicate clearly and grow with consistency.",
+    features: [],
+  },
+  {
+    title: "Digital Marketing",
+    icon: Megaphone,
+    color: "from-pink-500 to-rose-600",
+    path: "/services/digital-marketing",
+    description:
+      "Integrated digital marketing services built to increase visibility, traffic, and conversions.",
     features: [
-      "Positioning",
-      "Visual identity",
-      "Brand guidelines",
-      "Communication strategy",
-      "Experience design",
+      { label: "SEO", path: "/services/digital-marketing/seo" },
+      { label: "SEM", path: "/services/digital-marketing/sem" },
+      { label: "SMM", path: "/services/digital-marketing/smm" },
+      { label: "Design", path: "/services/digital-marketing/design" },
     ],
-    color: "from-indigo-500 to-purple-600",
   },
 ];
 
