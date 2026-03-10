@@ -174,7 +174,7 @@ export function Footer({ onNavigate }) {
 
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-blue-500 mt-0.5" />
-                <span>Heydar Aliyev Ave 187, Baku 1029</span>
+                <span>{t("footer.address")}</span>
               </div>
             </div>
           </section>

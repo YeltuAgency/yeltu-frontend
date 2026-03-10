@@ -61,9 +61,9 @@
       "title": "SEO",
       "desc": "Effektiv SEO texnikaları ilə görünürlüyü, sıralamaları və trafiki artırın."
     },
-    "consulting": {
-      "title": "İT Konsultasiya",
-      "desc": "Düzgün rəqəmsal həlləri seçməyiniz üçün texniki məsləhətlər."
+    "smm": {
+      "title": "SMM",
+      "desc": "Açıq sosial media strategiyaları ilə auditoriya ilə əlaqə qurun və brendinizi inkişaf etdirin."
     },
     "allbutton": "Bütün Xidmətlərə Bax",
     "learnmore": "Ətraflı Bax",
@@ -105,6 +105,7 @@
   },
   "footer": {
     "tagline": "Müasir rəqəmsal təcrübələr yaradırıq.",
+    "address": "Heydər Əliyev pr. 187, Bakı 1029",
 
     "quicklinks": "Sürətli Keçidlər",
     "legal": "Məxfilik & Şərtlər",

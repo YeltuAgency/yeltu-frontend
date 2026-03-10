@@ -67,9 +67,9 @@
       "desc": "Improve visibility, ranking, and traffic with effective SEO techniques."
     },
 
-    "consulting": {
-      "title": "IT Consulting",
-      "desc": "Technical guidance to help you choose the right digital solutions."
+    "smm": {
+      "title": "SMM",
+      "desc": "Engaging social media strategies to connect with your audience and grow your brand."
     },
 
     "allbutton": "View All Services",
@@ -112,6 +112,7 @@
   },
   "footer": {
     "tagline": "Building modern digital experiences.",
+    "address": "Heydar Aliyev Ave 187, Baku 1029",
 
     "quicklinks": "Quick Links",
     "legal": "Privacy & Terms",

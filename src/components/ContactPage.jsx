@@ -461,12 +461,12 @@ export default function ContactPage() {
                 title="Yeltu location map"
                 aria-label="Google Maps location of Yeltu Agency"
                 loading="lazy"
-                src="https://www.google.com/maps?q=Baku+Azerbaijan&output=embed"
+                src="https://www.google.com/maps?q=Arena+Plaza,+Baku,+Azerbaijan&output=embed"
                 className="w-full h-full"
               />
 
               <a
-                href="https://maps.google.com/?q=Baku+Azerbaijan"
+                href="https://www.google.com/maps/place/Arena+Plaza/@40.4186835,49.9096823,17z/data=!3m1!4b1!4m6!3m5!1s0x403063393dc8b7bd:0x42a0a2998e0c092a!8m2!3d40.4186835!4d49.9096823!16s%2Fg%2F11lf7f9mv_?entry=ttu&g_ep=EgoyMDI2MDMwNS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open location in Google Maps"

@@ -5,9 +5,10 @@ import {
   Search,
   Users,
   Smartphone,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 
 // Animated letters component (JSX version)
@@ -52,6 +53,7 @@ const AnimatedText = ({ text, isHovered }) => {
 export default function ServicesSection({ onNavigate }) {
   const { t } = useLanguage();
   const [hoveredService, setHoveredService] = useState(null);
+  const navigate = useNavigate();
 
   const services = [
     {
@@ -61,6 +63,7 @@ export default function ServicesSection({ onNavigate }) {
       gradient: "from-blue-500 via-indigo-500 to-purple-600",
       iconBg: "from-blue-50 to-indigo-50",
       iconColor: "text-blue-600",
+      path: "services/web-development",
     },
     {
       icon: Smartphone,
@@ -69,6 +72,7 @@ export default function ServicesSection({ onNavigate }) {
       gradient: "from-purple-500 via-violet-500 to-fuchsia-600",
       iconBg: "from-purple-50 to-fuchsia-50",
       iconColor: "text-purple-600",
+      path: "services/mobile-app-development",
     },
     {
       icon: TrendingUp,
@@ -77,6 +81,7 @@ export default function ServicesSection({ onNavigate }) {
       gradient: "from-indigo-500 via-blue-500 to-cyan-600",
       iconBg: "from-indigo-50 to-blue-50",
       iconColor: "text-indigo-600",
+      path: "services/digital-marketing",
     },
     {
       icon: Palette,
@@ -85,6 +90,7 @@ export default function ServicesSection({ onNavigate }) {
       gradient: "from-rose-500 via-pink-500 to-orange-500",
       iconBg: "from-rose-50 to-pink-50",
       iconColor: "text-rose-600",
+      path: "services/brand-strategy",
     },
     {
       icon: Search,
@@ -93,22 +99,24 @@ export default function ServicesSection({ onNavigate }) {
       gradient: "from-emerald-500 via-teal-500 to-cyan-600",
       iconBg: "from-emerald-50 to-teal-50",
       iconColor: "text-emerald-600",
+      path: "services/digital-marketing/seo",
     },
     {
       icon: Users,
-      title: t("services.consulting.title"),
-      description: t("services.consulting.desc"),
+      title: t("services.smm.title"),
+      description: t("services.smm.desc"),
       gradient: "from-violet-500 via-purple-500 to-indigo-600",
       iconBg: "from-violet-50 to-purple-50",
       iconColor: "text-violet-600",
+      path: "services/digital-marketing/smm",
     },
   ];
 
   return (
     <section
-      className="relative pt-0 pb-24 bg-gradient-to-b"
+      className="relative pt-0 pb-16 md:pb-24 bg-gradient-to-b"
       style={{
-        backgroundColor: "#edf3fa"
+        backgroundColor: "#edf3fa",
       }}
     >
       {/* Texture & Background Effects */}
@@ -124,44 +132,37 @@ export default function ServicesSection({ onNavigate }) {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        {/* --- MAIN SPLIT LAYOUT --- */}
-        <div className="flex flex-col lg:flex-row gap-12 xl:gap-24 items-start">
-          
-          {/* --- LEFT SIDE: STICKY HEADER & CTA --- */}
-          <div className="lg:w-5/12 w-full lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center mb-16 lg:mb-0 pt-12 lg:pt-0">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 xl:gap-24 items-start">
+          {/* LEFT SIDE */}
+          <div className="lg:w-5/12 w-full lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center pt-0 lg:pt-0">
             <div className="text-left">
-              <div className="inline-flex items-center gap-3 px-6 py-3 mb-8 bg-white/80 backdrop-blur-xl rounded-full border border-slate-200 shadow-sm">
+              <div className="inline-flex items-center gap-3 px-6 py-3 mb-6 md:mb-8 bg-white/80 backdrop-blur-xl rounded-full border border-slate-200 shadow-sm">
                 <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
                 <span className="text-xs font-semibold bg-gradient-to-r from-slate-600 to-slate-800 bg-clip-text text-transparent uppercase tracking-[0.2em]">
                   {t("services.expertise")}
                 </span>
               </div>
 
-              <h2 className="
-                text-6xl md:text-7xl font-extrabold 
-                tracking-tight 
-                text-slate-900
-              ">
-                <span className="block text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light leading-[1.1] mb-4">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900">
+                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light leading-[1.1] mb-3 md:mb-4">
                   <span className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 bg-clip-text text-transparent">
                     {t("services.info.title1")}
                   </span>
                 </span>
-                <span className="block text-3xl md:text-4xl lg:text-5xl text-slate-500 font-light tracking-wide">
+                <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-slate-500 font-light tracking-wide">
                   {t("services.info.title2")}
                 </span>
               </h2>
 
-              <p className="text-lg md:text-xl text-slate-600 max-w-xl leading-relaxed mt-8">
+              <p className="text-base md:text-lg lg:text-xl text-slate-600 max-w-xl leading-relaxed mt-6 md:mt-8">
                 {t("services.info.description")}
               </p>
 
-              {/* CTA Button */}
-              <div className="mt-12">
+              {/* Desktop CTA only */}
+              <div className="hidden lg:block mt-8 md:mt-12">
                 <button
                   onClick={() => onNavigate("services")}
-                  className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white/80 backdrop-blur-xl rounded-full border border-slate-300 overflow-hidden transition-all duration-500 hover:bg-white hover:border-slate-400 hover:shadow-lg hover:shadow-slate-200/50 hover:-translate-y-1 w-full md:w-auto justify-center md:justify-start"
+                  className="group relative inline-flex items-center gap-3 px-8 md:px-10 py-4 md:py-5 bg-white/80 backdrop-blur-xl rounded-full border border-slate-300 overflow-hidden transition-all duration-500 hover:bg-white hover:border-slate-400 hover:shadow-lg hover:shadow-slate-200/50 hover:-translate-y-1 w-full md:w-auto justify-center md:justify-start"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
@@ -178,9 +179,9 @@ export default function ServicesSection({ onNavigate }) {
             </div>
           </div>
 
-          {/* --- RIGHT SIDE: SCROLLING GRID --- */}
-          <div className="lg:w-7/12 w-full pt-12 lg:pt-32">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-24 pb-32">
+          {/* RIGHT SIDE */}
+          <div className="lg:w-7/12 w-full pt-8 lg:pt-32">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 sm:gap-y-8 md:gap-y-12 pb-6 md:pb-16 lg:pb-32">
               {services.map((service, index) => {
                 const Icon = service.icon;
                 const isHovered = hoveredService === index;
@@ -188,17 +189,16 @@ export default function ServicesSection({ onNavigate }) {
                 return (
                   <div
                     key={index}
-                    // ✅ FIXED: Reduced height to 280px for a very compact look
-                    className="group relative cursor-pointer min-h-[280px]"
+                    className="group relative cursor-pointer min-h-[220px] sm:min-h-[240px] md:min-h-[260px]"
                     onMouseEnter={() => setHoveredService(index)}
                     onMouseLeave={() => setHoveredService(null)}
-                    onClick={() => onNavigate("services")}
+                    onClick={() => navigate(`/${service.path}`)}
                   >
                     <div
                       className={`absolute -inset-[1px] bg-gradient-to-br ${service.gradient} rounded-[2rem] opacity-0 group-hover:opacity-20 blur-2xl transition-all duration-700`}
                     />
 
-                    <div className="relative h-full bg-white/70 backdrop-blur-2xl rounded-[2rem] p-8 border border-slate-200/60 overflow-hidden transition-all duration-700 group-hover:bg-white/90 group-hover:border-slate-300/80 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-slate-200/50 flex flex-col">
+                    <div className="relative h-full bg-white/70 backdrop-blur-2xl rounded-[2rem] p-6 sm:p-7 md:p-8 border border-slate-200/60 overflow-hidden transition-all duration-700 group-hover:bg-white/90 group-hover:border-slate-300/80 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-slate-200/50 flex flex-col">
                       <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-slate-50/30 opacity-60" />
 
                       <div
@@ -209,17 +209,14 @@ export default function ServicesSection({ onNavigate }) {
 
                       <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-slate-100/40 to-transparent rounded-full blur-2xl" />
 
-                      {/* ✅ FLEX LAYOUT: Compact vertical spacing */}
                       <div className="relative space-y-4 flex-grow flex flex-col">
-                        
-                        {/* ✅ NEW LAYOUT: Icon and Title side-by-side */}
-                        <div className="flex items-center gap-5">
+                        <div className="flex items-center gap-4 sm:gap-5">
                           <div
-                            className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.iconBg} flex items-center justify-center flex-shrink-0 transition-all duration-500 shadow-sm`}
+                            className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${service.iconBg} flex items-center justify-center flex-shrink-0 transition-all duration-500 shadow-sm`}
                           >
                             <Icon
                               className={service.iconColor}
-                              size={28}
+                              size={24}
                               strokeWidth={1.5}
                               style={{
                                 animation: isHovered
@@ -230,30 +227,42 @@ export default function ServicesSection({ onNavigate }) {
                             />
                           </div>
 
-                          <h3 className="text-2xl font-semibold text-slate-800 leading-tight">
-                            <AnimatedText text={service.title} isHovered={isHovered} />
+                          <h3 className="text-xl sm:text-2xl font-semibold text-slate-800 leading-tight">
+                            <AnimatedText
+                              text={service.title}
+                              isHovered={isHovered}
+                            />
                           </h3>
                         </div>
 
-                        <p className="text-slate-600 leading-relaxed text-[15px] flex-grow">
+                        <p className="text-slate-600 leading-relaxed text-sm sm:text-[15px] flex-grow">
                           {service.description}
                         </p>
 
-                        <div className="flex items-center gap-2 pt-2 mt-auto">
-                          <span
-                            className={`text-base font-medium bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent transition-all duration-300 ${
-                              isHovered ? "opacity-100" : "opacity-0"
-                            }`}
+                        <div className="flex items-center gap-2 pt-1 mt-auto">
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              navigate(`/${service.path}`);
+                            }}
+                            className="flex items-center gap-2"
                           >
-                            {t("services.learnmore")}
-                          </span>
-                          <ArrowRight
-                            className={`w-5 h-5 transition-all duration-300 ${
-                              isHovered
-                                ? "translate-x-0 opacity-100"
-                                : "-translate-x-2 opacity-0"
-                            }`}
-                          />
+                            <span
+                              className={`text-sm sm:text-base font-medium bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent transition-all duration-300 ${
+                                isHovered ? "opacity-100" : "opacity-0"
+                              }`}
+                            >
+                              {t("services.learnmore")}
+                            </span>
+                            <ArrowRight
+                              className={`w-5 h-5 transition-all duration-300 ${
+                                isHovered
+                                  ? "translate-x-0 opacity-100"
+                                  : "-translate-x-2 opacity-0"
+                              }`}
+                            />
+                          </button>
                         </div>
                       </div>
 
@@ -265,8 +274,26 @@ export default function ServicesSection({ onNavigate }) {
                 );
               })}
             </div>
-          </div>
 
+            {/* Mobile CTA only - below cards */}
+            <div className="lg:hidden mt-2">
+              <button
+                onClick={() => onNavigate("services")}
+                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white/80 backdrop-blur-xl rounded-full border border-slate-300 overflow-hidden transition-all duration-500 hover:bg-white hover:border-slate-400 hover:shadow-lg hover:shadow-slate-200/50 w-full justify-center"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                <span className="relative z-10 text-base font-semibold text-slate-800">
+                  {t("services.allbutton")}
+                </span>
+                <ArrowRight className="relative z-10 w-4 h-4 text-slate-600 group-hover:translate-x-1 transition-transform duration-300" />
+              </button>
+
+              <p className="mt-4 text-sm text-slate-500 text-center">
+                {t("services.end")}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
