@@ -3,12 +3,10 @@ import { memo } from "react";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { useLanguage } from "../contexts/LanguageContext";
 
-function PlaceholderBentoCard({ project, index, setCursorVariant }) {
+function PlaceholderBentoCard({ project, index }) {
   return (
     <article
       className="group relative cursor-default rounded-3xl overflow-hidden bg-slate-900/70 border border-white/10"
-      onMouseEnter={() => setCursorVariant("hover")}
-      onMouseLeave={() => setCursorVariant("default")}
       aria-label={project.title || `Placeholder project ${index + 1}`}
     >
       <ImageWithFallback
@@ -42,7 +40,7 @@ function PlaceholderBentoCard({ project, index, setCursorVariant }) {
   );
 }
 
-function PortfolioBentoGrid({ projects, setCursorVariant }) {
+function PortfolioBentoGrid({ projects }) {
   const { t } = useLanguage();
 
   return (
@@ -76,7 +74,6 @@ function PortfolioBentoGrid({ projects, setCursorVariant }) {
               <PlaceholderBentoCard
                 project={project}
                 index={index}
-                setCursorVariant={setCursorVariant}
               />
             </li>
           ))}

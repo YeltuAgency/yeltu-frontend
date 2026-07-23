@@ -3,12 +3,10 @@ import { memo } from "react";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { useLanguage } from "../contexts/LanguageContext";
 
-function PlaceholderCard({ project, setCursorVariant }) {
+function PlaceholderCard({ project }) {
   return (
     <article
       className="group relative"
-      onMouseEnter={() => setCursorVariant("hover")}
-      onMouseLeave={() => setCursorVariant("default")}
       aria-label={project.title || "Featured project placeholder"}
     >
       <div
@@ -61,7 +59,7 @@ function PlaceholderCard({ project, setCursorVariant }) {
   );
 }
 
-function PortfolioFeatured({ projects, setCursorVariant }) {
+function PortfolioFeatured({ projects }) {
   const { t } = useLanguage();
 
   return (
@@ -96,7 +94,6 @@ function PortfolioFeatured({ projects, setCursorVariant }) {
           >
             <PlaceholderCard
               project={project}
-              setCursorVariant={setCursorVariant}
             />
           </li>
         ))}

@@ -223,7 +223,6 @@ export default function PortfolioPage() {
         <Suspense fallback={null}>
           <PortfolioFeatured
             projects={featuredTopTwo}
-            setCursorVariant={setCursorVariant}
           />
         </Suspense>
       )}
@@ -233,7 +232,6 @@ export default function PortfolioPage() {
         <Suspense fallback={null}>
           <PortfolioBentoGrid
             projects={projects}
-            setCursorVariant={setCursorVariant}
           />
         </Suspense>
       )}
@@ -267,8 +265,6 @@ export default function PortfolioPage() {
 
           <Button
             className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white px-10 py-6 text-lg font-bold rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all"
-            onMouseEnter={() => setCursorVariant("hover")}
-            onMouseLeave={() => setCursorVariant("default")}
             onClick={goContact}
           >
             {t("portfolio.cta.button") || "Start Your Project"}
