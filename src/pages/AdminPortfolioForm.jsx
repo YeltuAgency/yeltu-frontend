@@ -5,9 +5,9 @@ import ImageUpload from "../components/ImageUpload";
 import RichTextEditor from "../components/RichTextEditor";
 
 const emptyTranslations = {
-  en: { title: "", content: "" },
-  az: { title: "", content: "" },
-  ru: { title: "", content: "" },
+  en: { title: "", description: "" },
+  az: { title: "", description: "" },
+  ru: { title: "", description: "" },
 };
 
 export default function AdminPortfolioForm() {
@@ -85,6 +85,24 @@ export default function AdminPortfolioForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const requiredLanguages = ["en", "az", "ru"];
+
+    const missingLanguage = requiredLanguages.find((lang) => {
+      const title = translations[lang]?.title?.trim();
+      const description = translations[lang]?.description?.trim();
+
+      return !title || !description;
+    });
+
+    if (missingLanguage) {
+      setActiveLang(missingLanguage);
+
+      alert(
+        `${missingLanguage.toUpperCase()} title and description are required`
+      );
+
+      return;
+    }
     setLoading(true);
 
     try {
@@ -185,8 +203,10 @@ export default function AdminPortfolioForm() {
           </label>
 
           <RichTextEditor
-            value={translations[activeLang]?.content || ""}
-            onChange={(val) => handleChange(activeLang, "content", val)}
+            value={translations[activeLang]?.description || ""}
+            onChange={(val) =>
+              handleChange(activeLang, "description", val)
+            }
           />
         </div>
 
